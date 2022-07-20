@@ -1,0 +1,21 @@
+<instrumentationManifest xmlns="http://schemas.microsoft.com/win/2004/08/events">
+ <instrumentation xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:win="http://manifests.microsoft.com/win/2004/08/windows/events">
+  <events>
+
+   <provider name="Windows Kernel" guid="{e43445e0-0903-48c3-b878-ff0fccebdd04}">
+    <events>
+        <event value="60" symbol="PowerEvents/IdleExitLatency" version="2" task="PowerEvents" opcode="IdleExitLatency" template="0xdb5b87c3L"/>
+    </events>
+    <templates>
+     <template tid="0xdb5b87c3L">
+      <data name="Flags" inType="win:UInt32"/>
+      <data name="PlatformState" inType="win:UInt32"/>
+      <data name="ProcessorState" inType="win:UInt32"/>
+      <data name="ReturnLatency" inType="win:UInt32"/>
+      <data name="TotalLatency" inType="win:UInt32"/>
+     </template>
+    </templates>
+   </provider>
+  </events>
+ </instrumentation>
+</instrumentationManifest>

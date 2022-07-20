@@ -1,0 +1,13 @@
+<instrumentationManifest xmlns="http://schemas.microsoft.com/win/2004/08/events">
+ <instrumentation xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:win="http://manifests.microsoft.com/win/2004/08/windows/events">
+  <events>
+
+   <provider name="Windows Kernel" guid="{2ce9a149-effe-42f0-a635-a1d39e26c8f2}">
+    <events>
+    </events>
+    <templates>
+    </templates>
+   </provider>
+  </events>
+ </instrumentation>
+</instrumentationManifest>

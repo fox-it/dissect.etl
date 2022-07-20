@@ -1,0 +1,136 @@
+<instrumentationManifest xmlns="http://schemas.microsoft.com/win/2004/08/events">
+ <instrumentation xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:win="http://manifests.microsoft.com/win/2004/08/windows/events">
+  <events>
+
+   <provider name="Windows Kernel" guid="{3d6fa8d4-fe05-11d0-9dda-00c04fd7ba7c}">
+    <events>
+        <event value="35" symbol="DiskIo/DrvMjFnRet" version="1" task="DiskIo" opcode="DrvMjFnRet" template="V1_DriverMajorFunctionReturn"/>
+        <event value="52" symbol="DiskIo/DrvComplReq" version="1" task="DiskIo" opcode="DrvComplReq" template="0x879eff37L"/>
+        <event value="53" symbol="DiskIo/DrvComplReqRet" version="1" task="DiskIo" opcode="DrvComplReqRet" template="DriverMajorFunctionReturn"/>
+        <event value="10" symbol="DiskIo/Read" version="1" task="DiskIo" opcode="Read" template="DiskIo_V1_TypeGroup1"/>
+        <event value="11" symbol="DiskIo/Write" version="1" task="DiskIo" opcode="Write" template="DiskIo_V1_TypeGroup1"/>
+        <event value="34" symbol="DiskIo/DrvMjFnCall" version="1" task="DiskIo" opcode="DrvMjFnCall" template="V1_DriverMajorFunctionCall"/>
+        <event value="10" symbol="DiskIo/Read" version="0" task="DiskIo" opcode="Read" template="DiskIo_V0_TypeGroup1"/>
+        <event value="11" symbol="DiskIo/Write" version="0" task="DiskIo" opcode="Write" template="DiskIo_V0_TypeGroup1"/>
+        <event value="12" symbol="DiskIo/ReadInit" version="3" task="DiskIo" opcode="ReadInit" template="DiskIo_TypeGroup2"/>
+        <event value="13" symbol="DiskIo/WriteInit" version="3" task="DiskIo" opcode="WriteInit" template="DiskIo_TypeGroup2"/>
+        <event value="15" symbol="DiskIo/FlushInit" version="3" task="DiskIo" opcode="FlushInit" template="DiskIo_TypeGroup2"/>
+        <event value="58" symbol="DiskIo/OpticalReadInit" version="3" task="DiskIo" opcode="OpticalReadInit" template="DiskIo_TypeGroup2"/>
+        <event value="59" symbol="DiskIo/OpticalWriteInit" version="3" task="DiskIo" opcode="OpticalWriteInit" template="DiskIo_TypeGroup2"/>
+        <event value="60" symbol="DiskIo/OpticalFlushInit" version="3" task="DiskIo" opcode="OpticalFlushInit" template="DiskIo_TypeGroup2"/>
+        <event value="56" symbol="DiskIo/OpticalWrite" version="3" task="DiskIo" opcode="OpticalWrite" template="DiskIo_TypeGroup1"/>
+        <event value="10" symbol="DiskIo/Read" version="3" task="DiskIo" opcode="Read" template="DiskIo_TypeGroup1"/>
+        <event value="11" symbol="DiskIo/Write" version="3" task="DiskIo" opcode="Write" template="DiskIo_TypeGroup1"/>
+        <event value="55" symbol="DiskIo/OpticalRead" version="3" task="DiskIo" opcode="OpticalRead" template="DiskIo_TypeGroup1"/>
+        <event value="57" symbol="DiskIo/OpticalFlushBuffers" version="3" task="DiskIo" opcode="OpticalFlushBuffers" template="DiskIo_TypeGroup3"/>
+        <event value="14" symbol="DiskIo/FlushBuffers" version="3" task="DiskIo" opcode="FlushBuffers" template="DiskIo_TypeGroup3"/>
+        <event value="10" symbol="DiskIo/Read" version="2" task="DiskIo" opcode="Read" template="DiskIo_V2_TypeGroup1"/>
+        <event value="11" symbol="DiskIo/Write" version="2" task="DiskIo" opcode="Write" template="DiskIo_V2_TypeGroup1"/>
+        <event value="35" symbol="DiskIo/DrvMjFnRet" version="2" task="DiskIo" opcode="DrvMjFnRet" template="DriverMajorFunctionReturn"/>
+        <event value="37" symbol="DiskIo/DrvComplRout" version="2" task="DiskIo" opcode="DrvComplRout" template="0x7098d6d0L"/>
+        <event value="34" symbol="DiskIo/DrvMjFnCall" version="2" task="DiskIo" opcode="DrvMjFnCall" template="DriverMajorFunctionCall"/>
+        <event value="53" symbol="DiskIo/DrvComplReqRet" version="2" task="DiskIo" opcode="DrvComplReqRet" template="DriverMajorFunctionReturn"/>
+        <event value="14" symbol="DiskIo/FlushBuffers" version="2" task="DiskIo" opcode="FlushBuffers" template="DiskIo_V2_TypeGroup3"/>
+        <event value="12" symbol="DiskIo/ReadInit" version="2" task="DiskIo" opcode="ReadInit" template="DiskIo_V2_TypeGroup2"/>
+        <event value="13" symbol="DiskIo/WriteInit" version="2" task="DiskIo" opcode="WriteInit" template="DiskIo_V2_TypeGroup2"/>
+        <event value="15" symbol="DiskIo/FlushInit" version="2" task="DiskIo" opcode="FlushInit" template="DiskIo_V2_TypeGroup2"/>
+        <event value="52" symbol="DiskIo/DrvComplReq" version="2" task="DiskIo" opcode="DrvComplReq" template="0x879eff37L"/>
+    </events>
+    <templates>
+     <template tid="DiskIo_V2_TypeGroup3">
+      <data name="DiskNumber" inType="win:UInt32"/>
+      <data name="IrpFlags" inType="win:UInt32"/>
+      <data name="HighResResponseTime" inType="win:UInt64"/>
+      <data name="Irp" inType="win:Pointer"/>
+     </template>
+     <template tid="V1_DriverMajorFunctionCall">
+      <data name="UniqMatchId" inType="win:UInt32"/>
+      <data name="RoutineAddr" inType="win:Pointer"/>
+      <data name="Irp" inType="win:Pointer"/>
+      <data name="MajorFunction" inType="win:UInt32"/>
+      <data name="MinorFunction" inType="win:UInt32"/>
+      <data name="FileObject" inType="win:Pointer"/>
+     </template>
+     <template tid="DriverMajorFunctionReturn">
+      <data name="Irp" inType="win:Pointer"/>
+      <data name="UniqMatchId" inType="win:UInt32"/>
+     </template>
+     <template tid="DiskIo_V2_TypeGroup2">
+      <data name="Irp" inType="win:Pointer"/>
+     </template>
+     <template tid="DiskIo_V1_TypeGroup1">
+      <data name="DiskNumber" inType="win:UInt32"/>
+      <data name="IrpFlags" inType="win:UInt32"/>
+      <data name="TransferSize" inType="win:UInt32"/>
+      <data name="ResponseTime" inType="win:UInt32"/>
+      <data name="ByteOffset" inType="win:UInt64"/>
+      <data name="FileObject" inType="win:Pointer"/>
+      <data name="HighResResponseTime" inType="win:UInt64"/>
+     </template>
+     <template tid="DriverMajorFunctionCall">
+      <data name="MajorFunction" inType="win:UInt32"/>
+      <data name="MinorFunction" inType="win:UInt32"/>
+      <data name="RoutineAddr" inType="win:Pointer"/>
+      <data name="FileObject" inType="win:Pointer"/>
+      <data name="Irp" inType="win:Pointer"/>
+      <data name="UniqMatchId" inType="win:UInt32"/>
+     </template>
+     <template tid="DiskIo_V0_TypeGroup1">
+      <data name="DiskNumber" inType="win:UInt32"/>
+      <data name="IrpFlags" inType="win:UInt32"/>
+      <data name="TransferSize" inType="win:UInt32"/>
+      <data name="Reserved" inType="win:UInt32"/>
+      <data name="ByteOffset" inType="win:UInt64"/>
+      <data name="FileObject" inType="win:Pointer"/>
+     </template>
+     <template tid="V1_DriverMajorFunctionReturn">
+      <data name="UniqMatchId" inType="win:UInt32"/>
+      <data name="Irp" inType="win:Pointer"/>
+     </template>
+     <template tid="DiskIo_TypeGroup3">
+      <data name="DiskNumber" inType="win:UInt32"/>
+      <data name="IrpFlags" inType="win:UInt32"/>
+      <data name="HighResResponseTime" inType="win:UInt64"/>
+      <data name="Irp" inType="win:Pointer"/>
+      <data name="IssuingThreadId" inType="win:UInt32"/>
+     </template>
+     <template tid="0x879eff37L">
+      <data name="RoutineAddr" inType="win:Pointer"/>
+      <data name="Irp" inType="win:Pointer"/>
+      <data name="UniqMatchId" inType="win:UInt32"/>
+     </template>
+     <template tid="DiskIo_TypeGroup2">
+      <data name="Irp" inType="win:Pointer"/>
+      <data name="IssuingThreadId" inType="win:UInt32"/>
+     </template>
+     <template tid="DiskIo_TypeGroup1">
+      <data name="DiskNumber" inType="win:UInt32"/>
+      <data name="IrpFlags" inType="win:UInt32"/>
+      <data name="TransferSize" inType="win:UInt32"/>
+      <data name="Reserved" inType="win:UInt32"/>
+      <data name="ByteOffset" inType="win:UInt64"/>
+      <data name="FileObject" inType="win:Pointer"/>
+      <data name="Irp" inType="win:Pointer"/>
+      <data name="HighResResponseTime" inType="win:UInt64"/>
+      <data name="IssuingThreadId" inType="win:UInt32"/>
+     </template>
+     <template tid="0x7098d6d0L">
+      <data name="Routine" inType="win:Pointer"/>
+      <data name="IrpPtr" inType="win:Pointer"/>
+      <data name="UniqMatchId" inType="win:UInt32"/>
+     </template>
+     <template tid="DiskIo_V2_TypeGroup1">
+      <data name="DiskNumber" inType="win:UInt32"/>
+      <data name="IrpFlags" inType="win:UInt32"/>
+      <data name="TransferSize" inType="win:UInt32"/>
+      <data name="Reserved" inType="win:UInt32"/>
+      <data name="ByteOffset" inType="win:UInt64"/>
+      <data name="FileObject" inType="win:Pointer"/>
+      <data name="Irp" inType="win:Pointer"/>
+      <data name="HighResResponseTime" inType="win:UInt64"/>
+     </template>
+    </templates>
+   </provider>
+  </events>
+ </instrumentation>
+</instrumentationManifest>

@@ -1,0 +1,183 @@
+<instrumentationManifest xmlns="http://schemas.microsoft.com/win/2004/08/events">
+ <instrumentation xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:win="http://manifests.microsoft.com/win/2004/08/windows/events">
+  <events>
+
+   <provider name="Windows Kernel" guid="{222962ab-6180-4b88-a825-346b75f2a24a}">
+    <events>
+		<event value="33" symbol="HeapTraceProvider/Alloc" version="0" task="HeapTraceProvider" opcode="Alloc" template="0xacfc7218L"/>
+		<event value="54" symbol="HeapTraceProvider/AffinityManagerEnable" version="0" task="HeapTraceProvider" opcode="AffinityManagerEnable" template="0x9aa94a94L"/>
+		<event value="51" symbol="HeapTraceProvider/Commit" version="0" task="HeapTraceProvider" opcode="Commit" template="0xc6a2c043L"/>
+		<event value="52" symbol="HeapTraceProvider/Decommit" version="0" task="HeapTraceProvider" opcode="Decommit" template="0xc6a2c043L"/>
+		<event value="57" symbol="HeapTraceProvider/AffinitySlotChanged" version="0" task="HeapTraceProvider" opcode="AffinitySlotChanged" template="0xa3664ba4L"/>
+		<event value="58" symbol="HeapTraceProvider/SubsegmentReuseThresholdActivated" version="0" task="HeapTraceProvider" opcode="SubsegmentReuseThresholdActivated" template="0x32ebaf10L"/>
+		<event value="36" symbol="HeapTraceProvider/Free" version="0" task="HeapTraceProvider" opcode="Free" template="0x5390c417L"/>
+		<event value="48" symbol="HeapTraceProvider/SubsegmentFree" version="0" task="HeapTraceProvider" opcode="SubsegmentFree" template="0x6e07826bL"/>
+		<event value="49" symbol="HeapTraceProvider/SubsegmentAllocCached" version="0" task="HeapTraceProvider" opcode="SubsegmentAllocCached" template="0x6e07826bL"/>
+		<event value="50" symbol="HeapTraceProvider/SubsegmentFreeCached" version="0" task="HeapTraceProvider" opcode="SubsegmentFreeCached" template="0x6e07826bL"/>
+		<event value="47" symbol="HeapTraceProvider/SubsegmentAlloc" version="0" task="HeapTraceProvider" opcode="SubsegmentAlloc" template="0x6e07826bL"/>
+		<event value="34" symbol="HeapTraceProvider/ReAlloc" version="0" task="HeapTraceProvider" opcode="ReAlloc" template="0x8e1ade49L"/>
+		<event value="56" symbol="HeapTraceProvider/SubSegmentActivated" version="0" task="HeapTraceProvider" opcode="SubSegmentActivated" template="0x4f9fb3beL"/>
+		<event value="43" symbol="HeapTraceProvider/Lock" version="0" task="HeapTraceProvider" opcode="Lock" template="0x41be6c1fL"/>
+		<event value="35" symbol="HeapTraceProvider/Destroy" version="0" task="HeapTraceProvider" opcode="Destroy" template="0x41be6c1fL"/>
+		<event value="44" symbol="HeapTraceProvider/Unlock" version="0" task="HeapTraceProvider" opcode="Unlock" template="0x41be6c1fL"/>
+		<event value="45" symbol="HeapTraceProvider/Validate" version="0" task="HeapTraceProvider" opcode="Validate" template="0x41be6c1fL"/>
+		<event value="46" symbol="HeapTraceProvider/Walk" version="0" task="HeapTraceProvider" opcode="Walk" template="0x41be6c1fL"/>
+		<event value="38" symbol="HeapTraceProvider/SnapShot" version="0" task="HeapTraceProvider" opcode="SnapShot" template="0xc9e79482L"/>
+		<event value="55" symbol="HeapTraceProvider/AffinitySlotAssigned" version="0" task="HeapTraceProvider" opcode="AffinitySlotAssigned" template="0x5574afbfL"/>
+		<event value="32" symbol="HeapTraceProvider/Create" version="0" task="HeapTraceProvider" opcode="Create" template="0x2ab528bfL"/>
+		<event value="53" symbol="HeapTraceProvider/SubsegmentInit" version="0" task="HeapTraceProvider" opcode="SubsegmentInit" template="0x2f0afe9bL"/>
+		<event value="32" symbol="HeapTraceProvider/Create" version="0" task="HeapTraceProvider" opcode="Create" template="0x99dbf57dL"/>
+		<event value="38" symbol="HeapTraceProvider/SnapShot" version="0" task="HeapTraceProvider" opcode="SnapShot" template="0xebfbd466L"/>
+		<event value="42" symbol="HeapTraceProvider/Contract" version="0" task="HeapTraceProvider" opcode="Contract" template="0x91dedcccL"/>
+		<event value="37" symbol="HeapTraceProvider/Expand" version="0" task="HeapTraceProvider" opcode="Expand" template="0x1eccc791L"/>
+		<event value="33" symbol="HeapTrace/Alloc" version="2" task="HeapTrace" opcode="Alloc" template="0xacfc7218L"/>
+		<event value="54" symbol="HeapTrace/AffinityManagerEnable" version="2" task="HeapTrace" opcode="AffinityManagerEnable" template="0x9aa94a94L"/>
+		<event value="51" symbol="HeapTrace/Commit" version="2" task="HeapTrace" opcode="Commit" template="0xc6a2c043L"/>
+		<event value="52" symbol="HeapTrace/Decommit" version="2" task="HeapTrace" opcode="Decommit" template="0xc6a2c043L"/>
+		<event value="57" symbol="HeapTrace/AffinitySlotChanged" version="2" task="HeapTrace" opcode="AffinitySlotChanged" template="0xa3664ba4L"/>
+		<event value="58" symbol="HeapTrace/SubsegmentReuseThresholdActivated" version="2" task="HeapTrace" opcode="SubsegmentReuseThresholdActivated" template="0x32ebaf10L"/>
+		<event value="36" symbol="HeapTrace/Free" version="2" task="HeapTrace" opcode="Free" template="0x5390c417L"/>
+		<event value="48" symbol="HeapTrace/SubsegmentFree" version="2" task="HeapTrace" opcode="SubsegmentFree" template="0x6e07826bL"/>
+		<event value="49" symbol="HeapTrace/SubsegmentAllocCached" version="2" task="HeapTrace" opcode="SubsegmentAllocCached" template="0x6e07826bL"/>
+		<event value="50" symbol="HeapTrace/SubsegmentFreeCached" version="2" task="HeapTrace" opcode="SubsegmentFreeCached" template="0x6e07826bL"/>
+		<event value="47" symbol="HeapTrace/SubsegmentAlloc" version="2" task="HeapTrace" opcode="SubsegmentAlloc" template="0x6e07826bL"/>
+		<event value="34" symbol="HeapTrace/ReAlloc" version="2" task="HeapTrace" opcode="ReAlloc" template="0x8e1ade49L"/>
+		<event value="56" symbol="HeapTrace/SubSegmentActivated" version="2" task="HeapTrace" opcode="SubSegmentActivated" template="0x4f9fb3beL"/>
+		<event value="43" symbol="HeapTrace/Lock" version="2" task="HeapTrace" opcode="Lock" template="0x41be6c1fL"/>
+		<event value="35" symbol="HeapTrace/Destroy" version="2" task="HeapTrace" opcode="Destroy" template="0x41be6c1fL"/>
+		<event value="44" symbol="HeapTrace/Unlock" version="2" task="HeapTrace" opcode="Unlock" template="0x41be6c1fL"/>
+		<event value="45" symbol="HeapTrace/Validate" version="2" task="HeapTrace" opcode="Validate" template="0x41be6c1fL"/>
+		<event value="46" symbol="HeapTrace/Walk" version="2" task="HeapTrace" opcode="Walk" template="0x41be6c1fL"/>
+		<event value="38" symbol="HeapTrace/SnapShot" version="2" task="HeapTrace" opcode="SnapShot" template="0xc9e79482L"/>
+		<event value="55" symbol="HeapTrace/AffinitySlotAssigned" version="2" task="HeapTrace" opcode="AffinitySlotAssigned" template="0x5574afbfL"/>
+		<event value="32" symbol="HeapTrace/Create" version="2" task="HeapTrace" opcode="Create" template="0x2ab528bfL"/>
+		<event value="53" symbol="HeapTrace/SubsegmentInit" version="2" task="HeapTrace" opcode="SubsegmentInit" template="0x2f0afe9bL"/>
+		<event value="32" symbol="HeapTrace/Create" version="3" task="HeapTrace" opcode="Create" template="0x99dbf57dL"/>
+		<event value="38" symbol="HeapTrace/SnapShot" version="3" task="HeapTrace" opcode="SnapShot" template="0xebfbd466L"/>
+		<event value="42" symbol="HeapTrace/Contract" version="3" task="HeapTrace" opcode="Contract" template="0x91dedcccL"/>
+		<event value="37" symbol="HeapTrace/Expand" version="3" task="HeapTrace" opcode="Expand" template="0x1eccc791L"/>
+    </events>
+    <templates>
+     <template tid="0x91dedcccL">
+      <data name="HeapHandle" inType="win:UInt32"/>
+      <data name="DeCommittedSize" inType="win:SizeT"/>
+      <data name="DeCommitAddress" inType="win:UInt32"/>
+      <data name="FreeSpace" inType="win:SizeT"/>
+      <data name="CommittedSpace" inType="win:SizeT"/>
+      <data name="ReservedSpace" inType="win:SizeT"/>
+      <data name="NoOfUCRs" inType="win:UInt32"/>
+      <data name="AllocatedSpace" inType="win:SizeT"/>
+     </template>
+     <template tid="0x8e1ade49L">
+      <data name="HeapHandle" inType="win:UInt32"/>
+      <data name="NewAllocAddress" inType="win:UInt32"/>
+      <data name="OldAllocAddress" inType="win:UInt32"/>
+      <data name="NewAllocSize" inType="win:SizeT"/>
+      <data name="OldAllocSize" inType="win:SizeT"/>
+      <data name="SourceId" inType="win:UInt32"/>
+     </template>
+     <template tid="0xc6a2c043L">
+      <data name="HeapHandle" inType="win:UInt32"/>
+      <data name="Block" inType="win:UInt32"/>
+      <data name="Size" inType="win:SizeT"/>
+      <data name="Caller" inType="win:UInt32"/>
+     </template>
+     <template tid="0xebfbd466L">
+      <data name="HeapHandle" inType="win:UInt32"/>
+      <data name="FreeSpace" inType="win:SizeT"/>
+      <data name="CommittedSpace" inType="win:SizeT"/>
+      <data name="ReservedSpace" inType="win:SizeT"/>
+      <data name="HeapFlags" inType="win:UInt32"/>
+      <data name="ProcessId" inType="win:UInt32"/>
+      <data name="LargeUCRSpace" inType="win:SizeT"/>
+      <data name="FreeListLength" inType="win:UInt32"/>
+      <data name="UCRLength" inType="win:UInt32"/>
+      <data name="AllocatedSpace" inType="win:SizeT"/>
+     </template>
+     <template tid="0x2ab528bfL">
+      <data name="HeapHandle" inType="win:UInt32"/>
+      <data name="HeapFlags" inType="win:UInt32"/>
+     </template>
+     <template tid="0x4f9fb3beL">
+      <data name="HeapHandle" inType="win:UInt32"/>
+      <data name="SubSegment" inType="win:UInt32"/>
+     </template>
+     <template tid="0x2f0afe9bL">
+      <data name="HeapHandle" inType="win:UInt32"/>
+      <data name="SubSegment" inType="win:UInt32"/>
+      <data name="BlockSize" inType="win:SizeT"/>
+      <data name="BlockCount" inType="win:SizeT"/>
+      <data name="AffinityIndex" inType="win:UInt32"/>
+     </template>
+     <template tid="0x32ebaf10L">
+      <data name="Heap" inType="win:UInt32"/>
+      <data name="SubSegment" inType="win:UInt32"/>
+      <data name="BucketIndex" inType="win:UInt32"/>
+     </template>
+     <template tid="0xa3664ba4L">
+      <data name="Heap" inType="win:UInt32"/>
+      <data name="SubSegment" inType="win:UInt32"/>
+      <data name="SlotIndex" inType="win:UInt32"/>
+     </template>
+     <template tid="0x41be6c1fL">
+      <data name="HeapHandle" inType="win:UInt32"/>
+     </template>
+     <template tid="0xc9e79482L">
+      <data name="HeapHandle" inType="win:UInt32"/>
+      <data name="FreeSpace" inType="win:SizeT"/>
+      <data name="CommittedSpace" inType="win:SizeT"/>
+      <data name="ReservedSpace" inType="win:SizeT"/>
+      <data name="HeapFlags" inType="win:UInt32"/>
+      <data name="ProcessId" inType="win:UInt32"/>
+      <data name="LargeUCRSpace" inType="win:SizeT"/>
+      <data name="FreeListLength" inType="win:UInt32"/>
+      <data name="UCRLength" inType="win:UInt32"/>
+     </template>
+     <template tid="0x5574afbfL">
+      <data name="SlotIndex" inType="win:UInt32"/>
+     </template>
+     <template tid="0xacfc7218L">
+      <data name="HeapHandle" inType="win:UInt32"/>
+      <data name="AllocSize" inType="win:SizeT"/>
+      <data name="AllocAddress" inType="win:UInt32"/>
+      <data name="SourceId" inType="win:UInt32"/>
+     </template>
+     <template tid="0x5390c417L">
+      <data name="HeapHandle" inType="win:UInt32"/>
+      <data name="FreeAddress" inType="win:UInt32"/>
+      <data name="SourceId" inType="win:UInt32"/>
+     </template>
+     <template tid="0x6e07826bL">
+      <data name="HeapHandle" inType="win:UInt32"/>
+      <data name="SubSegment" inType="win:UInt32"/>
+      <data name="SubSegmentSize" inType="win:SizeT"/>
+      <data name="BlockSize" inType="win:SizeT"/>
+     </template>
+     <template tid="0x9aa94a94L">
+      <data name="HeapHandle" inType="win:UInt32"/>
+      <data name="BucketIndex" inType="win:UInt32"/>
+     </template>
+     <template tid="0x99dbf57dL">
+      <data name="HeapHandle" inType="win:UInt32"/>
+      <data name="HeapFlags" inType="win:UInt32"/>
+      <data name="ReservedSpace" inType="win:SizeT"/>
+      <data name="CommittedSpace" inType="win:SizeT"/>
+      <data name="AllocatedSpace" inType="win:SizeT"/>
+     </template>
+     <template tid="0xd4cbb29L">
+     </template>
+     <template tid="0x1eccc791L">
+      <data name="HeapHandle" inType="win:UInt32"/>
+      <data name="CommittedSize" inType="win:SizeT"/>
+      <data name="CommitAddress" inType="win:UInt32"/>
+      <data name="FreeSpace" inType="win:SizeT"/>
+      <data name="CommittedSpace" inType="win:SizeT"/>
+      <data name="ReservedSpace" inType="win:SizeT"/>
+      <data name="NoOfUCRs" inType="win:UInt32"/>
+      <data name="AllocatedSpace" inType="win:SizeT"/>
+     </template>
+    </templates>
+   </provider>
+  </events>
+ </instrumentation>
+</instrumentationManifest>

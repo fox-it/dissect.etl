@@ -1,0 +1,147 @@
+<instrumentationManifest xmlns="http://schemas.microsoft.com/win/2004/08/events">
+ <instrumentation xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:win="http://manifests.microsoft.com/win/2004/08/windows/events">
+  <events>
+
+   <provider name="Windows Kernel" guid="{ae53722e-c863-11d2-8659-00c04fa321a1}">
+    <events>
+        <event value="40" symbol="Registry/HiveDirty" version="2" task="Registry" opcode="HiveDirty" template="0xbbbd80daL"/>
+        <event value="35" symbol="Registry/Config" version="2" task="Registry" opcode="Config" template="0x2423d536L"/>
+        <event value="37" symbol="Registry/HiveDestroy" version="2" task="Registry" opcode="HiveDestroy" template="0xbf11cb27L"/>
+        <event value="34" symbol="Registry/Counters" version="2" task="Registry" opcode="Counters" template="0xee13e046L"/>
+        <event value="10" symbol="Registry/Create" version="2" task="Registry" opcode="Create" template="0xd39192b0L"/>
+        <event value="11" symbol="Registry/Open" version="2" task="Registry" opcode="Open" template="0xd39192b0L"/>
+        <event value="12" symbol="Registry/Delete" version="2" task="Registry" opcode="Delete" template="0xd39192b0L"/>
+        <event value="13" symbol="Registry/Query" version="2" task="Registry" opcode="Query" template="0xd39192b0L"/>
+        <event value="14" symbol="Registry/SetValue" version="2" task="Registry" opcode="SetValue" template="0xd39192b0L"/>
+        <event value="15" symbol="Registry/DeleteValue" version="2" task="Registry" opcode="DeleteValue" template="0xd39192b0L"/>
+        <event value="16" symbol="Registry/QueryValue" version="2" task="Registry" opcode="QueryValue" template="0xd39192b0L"/>
+        <event value="17" symbol="Registry/EnumerateKey" version="2" task="Registry" opcode="EnumerateKey" template="0xd39192b0L"/>
+        <event value="18" symbol="Registry/EnumerateValueKey" version="2" task="Registry" opcode="EnumerateValueKey" template="0xd39192b0L"/>
+        <event value="19" symbol="Registry/QueryMultipleValue" version="2" task="Registry" opcode="QueryMultipleValue" template="0xd39192b0L"/>
+        <event value="20" symbol="Registry/SetInformation" version="2" task="Registry" opcode="SetInformation" template="0xd39192b0L"/>
+        <event value="21" symbol="Registry/Flush" version="2" task="Registry" opcode="Flush" template="0xd39192b0L"/>
+        <event value="22" symbol="Registry/KCBCreate" version="2" task="Registry" opcode="KCBCreate" template="0xd39192b0L"/>
+        <event value="23" symbol="Registry/KCBDelete" version="2" task="Registry" opcode="KCBDelete" template="0xd39192b0L"/>
+        <event value="24" symbol="Registry/KCBRundownBegin" version="2" task="Registry" opcode="KCBRundownBegin" template="0xd39192b0L"/>
+        <event value="25" symbol="Registry/KCBRundownEnd" version="2" task="Registry" opcode="KCBRundownEnd" template="0xd39192b0L"/>
+        <event value="26" symbol="Registry/Virtualize" version="2" task="Registry" opcode="Virtualize" template="0xd39192b0L"/>
+        <event value="27" symbol="Registry/Close" version="2" task="Registry" opcode="Close" template="0xd39192b0L"/>
+        <event value="28" symbol="Registry/SetSecurity" version="2" task="Registry" opcode="SetSecurity" template="0xd39192b0L"/>
+        <event value="29" symbol="Registry/QuerySecurity" version="2" task="Registry" opcode="QuerySecurity" template="0xd39192b0L"/>
+        <event value="36" symbol="Registry/HiveInit" version="2" task="Registry" opcode="HiveInit" template="0xfc39433eL"/>
+        <event value="32" symbol="Registry/TxRRollback" version="2" task="Registry" opcode="TxRRollback" template="0xd79f5e7aL"/>
+        <event value="30" symbol="Registry/TxRCommit" version="2" task="Registry" opcode="TxRCommit" template="0xd79f5e7aL"/>
+        <event value="31" symbol="Registry/TxRPrepare" version="2" task="Registry" opcode="TxRPrepare" template="0xd79f5e7aL"/>
+        <event value="39" symbol="Registry/HiveDCEnd" version="2" task="Registry" opcode="HiveDCEnd" template="0x12889635L"/>
+        <event value="48" symbol="Registry/ChangeNotify" version="2" task="Registry" opcode="ChangeNotify" template="0xa83254edL"/>
+        <event value="38" symbol="Registry/HiveLink" version="2" task="Registry" opcode="HiveLink" template="0xd23e50e8L"/>
+        <event value="10" symbol="Registry/Create" version="0" task="Registry" opcode="Create" template="0xbbeff87L"/>
+        <event value="11" symbol="Registry/Open" version="0" task="Registry" opcode="Open" template="0xbbeff87L"/>
+        <event value="12" symbol="Registry/Delete" version="0" task="Registry" opcode="Delete" template="0xbbeff87L"/>
+        <event value="13" symbol="Registry/Query" version="0" task="Registry" opcode="Query" template="0xbbeff87L"/>
+        <event value="14" symbol="Registry/SetValue" version="0" task="Registry" opcode="SetValue" template="0xbbeff87L"/>
+        <event value="15" symbol="Registry/DeleteValue" version="0" task="Registry" opcode="DeleteValue" template="0xbbeff87L"/>
+        <event value="16" symbol="Registry/QueryValue" version="0" task="Registry" opcode="QueryValue" template="0xbbeff87L"/>
+        <event value="17" symbol="Registry/EnumerateKey" version="0" task="Registry" opcode="EnumerateKey" template="0xbbeff87L"/>
+        <event value="18" symbol="Registry/EnumerateValueKey" version="0" task="Registry" opcode="EnumerateValueKey" template="0xbbeff87L"/>
+        <event value="19" symbol="Registry/QueryMultipleValue" version="0" task="Registry" opcode="QueryMultipleValue" template="0xbbeff87L"/>
+        <event value="20" symbol="Registry/SetInformation" version="0" task="Registry" opcode="SetInformation" template="0xbbeff87L"/>
+        <event value="21" symbol="Registry/Flush" version="0" task="Registry" opcode="Flush" template="0xbbeff87L"/>
+        <event value="10" symbol="Registry/Create" version="1" task="Registry" opcode="Create" template="0x8a15ac56L"/>
+        <event value="11" symbol="Registry/Open" version="1" task="Registry" opcode="Open" template="0x8a15ac56L"/>
+        <event value="12" symbol="Registry/Delete" version="1" task="Registry" opcode="Delete" template="0x8a15ac56L"/>
+        <event value="13" symbol="Registry/Query" version="1" task="Registry" opcode="Query" template="0x8a15ac56L"/>
+        <event value="14" symbol="Registry/SetValue" version="1" task="Registry" opcode="SetValue" template="0x8a15ac56L"/>
+        <event value="15" symbol="Registry/DeleteValue" version="1" task="Registry" opcode="DeleteValue" template="0x8a15ac56L"/>
+        <event value="16" symbol="Registry/QueryValue" version="1" task="Registry" opcode="QueryValue" template="0x8a15ac56L"/>
+        <event value="17" symbol="Registry/EnumerateKey" version="1" task="Registry" opcode="EnumerateKey" template="0x8a15ac56L"/>
+        <event value="18" symbol="Registry/EnumerateValueKey" version="1" task="Registry" opcode="EnumerateValueKey" template="0x8a15ac56L"/>
+        <event value="19" symbol="Registry/QueryMultipleValue" version="1" task="Registry" opcode="QueryMultipleValue" template="0x8a15ac56L"/>
+        <event value="20" symbol="Registry/SetInformation" version="1" task="Registry" opcode="SetInformation" template="0x8a15ac56L"/>
+        <event value="21" symbol="Registry/Flush" version="1" task="Registry" opcode="Flush" template="0x8a15ac56L"/>
+        <event value="22" symbol="Registry/RunDown" version="1" task="Registry" opcode="RunDown" template="0x8a15ac56L"/>
+    </events>
+    <templates>
+     <template tid="0xee13e046L">
+      <data name="Counter1" inType="win:UInt64"/>
+      <data name="Counter2" inType="win:UInt64"/>
+      <data name="Counter3" inType="win:UInt64"/>
+      <data name="Counter4" inType="win:UInt64"/>
+      <data name="Counter5" inType="win:UInt64"/>
+      <data name="Counter6" inType="win:UInt64"/>
+      <data name="Counter7" inType="win:UInt64"/>
+      <data name="Counter8" inType="win:UInt64"/>
+      <data name="Counter9" inType="win:UInt64"/>
+      <data name="Counter10" inType="win:UInt64"/>
+      <data name="Counter11" inType="win:UInt64"/>
+     </template>
+     <template tid="0xa83254edL">
+      <data name="Notification" inType="win:Pointer"/>
+      <data name="KeyHandle" inType="win:Pointer"/>
+      <data name="Type" inType="win:UInt8"/>
+      <data name="WatchSubtree" inType="win:UInt8"/>
+      <data name="Primary" inType="win:UInt8"/>
+     </template>
+     <template tid="0xd39192b0L">
+      <data name="InitialTime" inType="win:SInt64"/>
+      <data name="Status" inType="win:UInt32"/>
+      <data name="Index" inType="win:UInt32"/>
+      <data name="KeyHandle" inType="win:Pointer"/>
+      <data name="KeyName" inType="win:WString"/>
+     </template>
+     <template tid="0x2423d536L">
+      <data name="CurrentControlSet" inType="win:UInt32"/>
+     </template>
+     <template tid="0x8a15ac56L">
+      <data name="Status" inType="win:Pointer"/>
+      <data name="KeyHandle" inType="win:Pointer"/>
+      <data name="ElapsedTime" inType="win:SInt64"/>
+      <data name="Index" inType="win:UInt32"/>
+      <data name="KeyName" inType="win:WString"/>
+     </template>
+     <template tid="0xd79f5e7aL">
+      <data name="TxrGUID" inType="win:GUID"/>
+      <data name="Status" inType="win:UInt32"/>
+      <data name="UowCount" inType="win:UInt32"/>
+      <data name="OperationTime" inType="win:UInt64"/>
+      <data name="Hive" inType="win:WString"/>
+     </template>
+     <template tid="0xfc39433eL">
+      <data name="Hive" inType="win:Pointer"/>
+      <data name="OperationType" inType="win:UInt32"/>
+      <data name="PoolTag" inType="win:UInt32"/>
+      <data name="Size" inType="win:UInt32"/>
+      <data name="FileName" inType="win:WString"/>
+     </template>
+     <template tid="0xbbbd80daL">
+      <data name="Hive" inType="win:Pointer"/>
+      <data name="LinkPath" inType="win:WString"/>
+      <data name="DirtyReason" inType="win:UInt32"/>
+     </template>
+     <template tid="0xbf11cb27L">
+      <data name="Hive" inType="win:Pointer"/>
+      <data name="FileName" inType="win:WString"/>
+      <data name="Path" inType="win:WString"/>
+     </template>
+     <template tid="0x12889635L">
+      <data name="Size" inType="win:UInt64"/>
+      <data name="Hive" inType="win:Pointer"/>
+      <data name="LoadedKeyCount" inType="win:UInt32"/>
+      <data name="FileName" inType="win:WString"/>
+      <data name="LinkPath" inType="win:WString"/>
+     </template>
+     <template tid="0xbbeff87L">
+      <data name="Status" inType="win:Pointer"/>
+      <data name="KeyHandle" inType="win:Pointer"/>
+      <data name="ElapsedTime" inType="win:SInt64"/>
+      <data name="KeyName" inType="win:WString"/>
+     </template>
+     <template tid="0xd23e50e8L">
+      <data name="Hive" inType="win:Pointer"/>
+      <data name="Path" inType="win:WString"/>
+     </template>
+    </templates>
+   </provider>
+  </events>
+ </instrumentation>
+</instrumentationManifest>

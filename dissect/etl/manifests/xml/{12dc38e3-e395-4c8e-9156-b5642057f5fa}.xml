@@ -1,0 +1,144 @@
+<instrumentationManifest xmlns="http://schemas.microsoft.com/win/2004/08/events">
+ <instrumentation xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:win="http://manifests.microsoft.com/win/2004/08/windows/events">
+  <events>
+   <provider name="Microsoft-Windows-PrintDialogs3D" guid="{12dc38e3-e395-4c8e-9156-b5642057f5fa}" resourceFileName="Microsoft-Windows-PrintDialogs3D" messageFileName="Microsoft-Windows-PrintDialogs3D" symbol="MicrosoftWindowsPrintDialogs3D" source="Xml" >
+    <keywords>
+    </keywords>
+    <tasks>
+     <task name="task_0" message="$(string.task_task_0)" value="0"/>
+     <task name="PrintDialogs3D_Dll" message="$(string.task_PrintDialogs3D_Dll)" value="100"/>
+     <task name="PrintDialogs3D_Factory" message="$(string.task_PrintDialogs3D_Factory)" value="101"/>
+     <task name="PrintDialogs3D_ShowPrintPreferencesDlg" message="$(string.task_PrintDialogs3D_ShowPrintPreferencesDlg)" value="102"/>
+     <task name="PrintDialogs3D_CreateXPSPrintPreviewHandlerFromFile" message="$(string.task_PrintDialogs3D_CreateXPSPrintPreviewHandlerFromFile)" value="103"/>
+     <task name="PrintDialogs3D_CreateXPSPrintPreviewHandlerFromOM" message="$(string.task_PrintDialogs3D_CreateXPSPrintPreviewHandlerFromOM)" value="104"/>
+     <task name="PrintDialogs3D_Print" message="$(string.task_PrintDialogs3D_Print)" value="105"/>
+     <task name="PrintDialogs3D_MoreOptions" message="$(string.task_PrintDialogs3D_MoreOptions)" value="106"/>
+     <task name="PrintDialogs3D_PreviewRender" message="$(string.task_PrintDialogs3D_PreviewRender)" value="107"/>
+     <task name="PrintDialogs3D_PreviewCreateDeviceResource" message="$(string.task_PrintDialogs3D_PreviewCreateDeviceResource)" value="108"/>
+     <task name="PrintDialogs3D_StartPreview" message="$(string.task_PrintDialogs3D_StartPreview)" value="109"/>
+     <task name="PrintDialogs3D_PreviewManagerCreate" message="$(string.task_PrintDialogs3D_PreviewManagerCreate)" value="110"/>
+     <task name="PrintDialogs3D_PreviewManagerEndPage" message="$(string.task_PrintDialogs3D_PreviewManagerEndPage)" value="111"/>
+     <task name="PrintDialogs3D_PreviewManagerStart" message="$(string.task_PrintDialogs3D_PreviewManagerStart)" value="112"/>
+     <task name="PrintDialogs3D_PreviewManagerRetrieveImage" message="$(string.task_PrintDialogs3D_PreviewManagerRetrieveImage)" value="113"/>
+     <task name="PrintDialogs3D_PreviewManagerDoPreviewWork" message="$(string.task_PrintDialogs3D_PreviewManagerDoPreviewWork)" value="114"/>
+     <task name="PrintDialogs3D_StartPrintExperience" message="$(string.task_PrintDialogs3D_StartPrintExperience)" value="115"/>
+     <task name="PrintDialogs3D_ShowSelectorUI" message="$(string.task_PrintDialogs3D_ShowSelectorUI)" value="116"/>
+     <task name="PrintDialogs3D_ChangeSetting" message="$(string.task_PrintDialogs3D_ChangeSetting)" value="117"/>
+     <task name="PrintDialogs3D_PreviewNextPage" message="$(string.task_PrintDialogs3D_PreviewNextPage)" value="118"/>
+     <task name="PrintDialogs3D_PreviewPrevPage" message="$(string.task_PrintDialogs3D_PreviewPrevPage)" value="119"/>
+     <task name="PrintDialogs3D_BindPrinter" message="$(string.task_PrintDialogs3D_BindPrinter)" value="120"/>
+     <task name="PrintDialogs3D_EnsureDocSource" message="$(string.task_PrintDialogs3D_EnsureDocSource)" value="121"/>
+     <task name="PrintDialogs3D_Paginate" message="$(string.task_PrintDialogs3D_Paginate)" value="122"/>
+     <task name="PrintDialogs3D_MakePage" message="$(string.task_PrintDialogs3D_MakePage)" value="123"/>
+     <task name="PrintDialogs3D_PreviewAddPage" message="$(string.task_PrintDialogs3D_PreviewAddPage)" value="124"/>
+     <task name="PrintDialogs3D_PreviewTransferPage" message="$(string.task_PrintDialogs3D_PreviewTransferPage)" value="125"/>
+     <task name="PrintDialogs3D_PaginateRequest" message="$(string.task_PrintDialogs3D_PaginateRequest)" value="126"/>
+     <task name="PrintDialogs3D_MakePageRequest" message="$(string.task_PrintDialogs3D_MakePageRequest)" value="127"/>
+    </tasks>
+    <events>
+     <event value="1" symbol="PrintDialogs3D_DllStart" version="0" task="PrintDialogs3D_Dll" opcode="win:Start" level="win:Informational"/>
+     <event value="2" symbol="PrintDialogs3D_DllStop" version="0" task="PrintDialogs3D_Dll" opcode="win:Stop" level="win:Informational"/>
+     <event value="3" symbol="PrintDialogs3D_FactoryStart" version="0" task="PrintDialogs3D_Factory" opcode="win:Start" level="win:Informational"/>
+     <event value="4" symbol="PrintDialogs3D_FactoryStop" version="0" task="PrintDialogs3D_Factory" opcode="win:Stop" level="win:Informational" template="PrintDialogs3D_FactoryStopArgs"/>
+     <event value="5" symbol="PrintDialogs3D_ShowPrintPreferencesDlgStart" version="0" task="PrintDialogs3D_ShowPrintPreferencesDlg" opcode="win:Start" level="win:Informational"/>
+     <event value="6" symbol="PrintDialogs3D_ShowPrintPreferencesDlgStop" version="0" task="PrintDialogs3D_ShowPrintPreferencesDlg" opcode="win:Stop" level="win:Informational" template="PrintDialogs3D_FactoryStopArgs"/>
+     <event value="7" symbol="PrintDialogs3D_CreateXPSPrintPreviewHandlerFromFileStart" version="0" task="PrintDialogs3D_CreateXPSPrintPreviewHandlerFromFile" opcode="win:Start" level="win:Informational"/>
+     <event value="8" symbol="PrintDialogs3D_CreateXPSPrintPreviewHandlerFromFileStop" version="0" task="PrintDialogs3D_CreateXPSPrintPreviewHandlerFromFile" opcode="win:Stop" level="win:Informational" template="PrintDialogs3D_FactoryStopArgs"/>
+     <event value="9" symbol="PrintDialogs3D_CreateXPSPrintPreviewHandlerFromOMStart" version="0" task="PrintDialogs3D_CreateXPSPrintPreviewHandlerFromOM" opcode="win:Start" level="win:Informational"/>
+     <event value="10" symbol="PrintDialogs3D_CreateXPSPrintPreviewHandlerFromOMStop" version="0" task="PrintDialogs3D_CreateXPSPrintPreviewHandlerFromOM" opcode="win:Stop" level="win:Informational" template="PrintDialogs3D_FactoryStopArgs"/>
+     <event value="11" symbol="PrintDialogs3D_PrintStart" version="0" task="PrintDialogs3D_Print" opcode="win:Start" level="win:Informational"/>
+     <event value="12" symbol="PrintDialogs3D_PrintStop" version="0" task="PrintDialogs3D_Print" opcode="win:Stop" level="win:Informational" template="PrintDialogs3D_FactoryStopArgs"/>
+     <event value="13" symbol="PrintDialogs3D_MoreOptionsStart" version="0" task="PrintDialogs3D_MoreOptions" opcode="win:Start" level="win:Informational"/>
+     <event value="14" symbol="PrintDialogs3D_MoreOptionsStop" version="0" task="PrintDialogs3D_MoreOptions" opcode="win:Stop" level="win:Informational" template="PrintDialogs3D_FactoryStopArgs"/>
+     <event value="15" symbol="PrintDialogs3D_PreviewRenderStart" version="0" task="PrintDialogs3D_PreviewRender" opcode="win:Start" level="win:Informational"/>
+     <event value="16" symbol="PrintDialogs3D_PreviewRenderStop" version="0" task="PrintDialogs3D_PreviewRender" opcode="win:Stop" level="win:Informational"/>
+     <event value="17" symbol="PrintDialogs3D_PreviewCreateDeviceResourceStart" version="0" task="PrintDialogs3D_PreviewCreateDeviceResource" opcode="win:Start" level="win:Informational"/>
+     <event value="18" symbol="PrintDialogs3D_PreviewCreateDeviceResourceStop" version="0" task="PrintDialogs3D_PreviewCreateDeviceResource" opcode="win:Stop" level="win:Informational" template="PrintDialogs3D_FactoryStopArgs"/>
+     <event value="19" symbol="PrintDialogs3D_StartPreviewStart" version="0" task="PrintDialogs3D_StartPreview" opcode="win:Start" level="win:Informational"/>
+     <event value="20" symbol="PrintDialogs3D_StartPreviewStop" version="0" task="PrintDialogs3D_StartPreview" opcode="win:Stop" level="win:Informational" template="PrintDialogs3D_FactoryStopArgs"/>
+     <event value="21" symbol="PrintDialogs3D_PreviewManagerCreateStart" version="0" task="PrintDialogs3D_PreviewManagerCreate" opcode="win:Start" level="win:Informational"/>
+     <event value="22" symbol="PrintDialogs3D_PreviewManagerCreateStop" version="0" task="PrintDialogs3D_PreviewManagerCreate" opcode="win:Stop" level="win:Informational" template="PrintDialogs3D_FactoryStopArgs"/>
+     <event value="23" symbol="PrintDialogs3D_PreviewManagerEndPageStart" version="0" task="PrintDialogs3D_PreviewManagerEndPage" opcode="win:Start" level="win:Informational"/>
+     <event value="24" symbol="PrintDialogs3D_PreviewManagerEndPageStop" version="0" task="PrintDialogs3D_PreviewManagerEndPage" opcode="win:Stop" level="win:Informational" template="PrintDialogs3D_FactoryStopArgs"/>
+     <event value="25" symbol="PrintDialogs3D_PreviewManagerStart" version="0" task="PrintDialogs3D_PreviewManagerStart" opcode="win:Start" level="win:Informational"/>
+     <event value="26" symbol="PrintDialogs3D_PreviewManagerStartStop" version="0" task="PrintDialogs3D_PreviewManagerStart" opcode="win:Stop" level="win:Informational" template="PrintDialogs3D_FactoryStopArgs"/>
+     <event value="27" symbol="PrintDialogs3D_PreviewManagerRetrieveImageStart" version="0" task="PrintDialogs3D_PreviewManagerRetrieveImage" opcode="win:Start" level="win:Informational"/>
+     <event value="28" symbol="PrintDialogs3D_PreviewManagerRetrieveImageStop" version="0" task="PrintDialogs3D_PreviewManagerRetrieveImage" opcode="win:Stop" level="win:Informational" template="PrintDialogs3D_FactoryStopArgs"/>
+     <event value="29" symbol="PrintDialogs3D_PreviewManagerDoPreviewWorkStart" version="0" task="PrintDialogs3D_PreviewManagerDoPreviewWork" opcode="win:Start" level="win:Informational"/>
+     <event value="30" symbol="PrintDialogs3D_PreviewManagerDoPreviewWorkStop" version="0" task="PrintDialogs3D_PreviewManagerDoPreviewWork" opcode="win:Stop" level="win:Informational" template="PrintDialogs3D_FactoryStopArgs"/>
+     <event value="31" symbol="PrintDialogs3D_StartPrintExperienceStart" version="0" task="PrintDialogs3D_StartPrintExperience" opcode="win:Start" level="win:Informational"/>
+     <event value="32" symbol="PrintDialogs3D_StartPrintExperienceStop" version="0" task="PrintDialogs3D_StartPrintExperience" opcode="win:Stop" level="win:Informational" template="PrintDialogs3D_FactoryStopArgs"/>
+     <event value="33" symbol="PrintDialogs3D_ShowSelectorUIStart" version="0" task="PrintDialogs3D_ShowSelectorUI" opcode="win:Start" level="win:Informational"/>
+     <event value="34" symbol="PrintDialogs3D_ShowSelectorUIStop" version="0" task="PrintDialogs3D_ShowSelectorUI" opcode="win:Stop" level="win:Informational" template="PrintDialogs3D_FactoryStopArgs"/>
+     <event value="35" symbol="PrintDialogs3D_ChangeSettingStart" version="0" task="PrintDialogs3D_ChangeSetting" opcode="win:Start" level="win:Informational"/>
+     <event value="36" symbol="PrintDialogs3D_ChangeSettingStop" version="0" task="PrintDialogs3D_ChangeSetting" opcode="win:Stop" level="win:Informational" template="PrintDialogs3D_FactoryStopArgs"/>
+     <event value="37" symbol="PrintDialogs3D_PreviewNextPageStart" version="0" task="PrintDialogs3D_PreviewNextPage" opcode="win:Start" level="win:Informational"/>
+     <event value="38" symbol="PrintDialogs3D_PreviewNextPageStop" version="0" task="PrintDialogs3D_PreviewNextPage" opcode="win:Stop" level="win:Informational"/>
+     <event value="39" symbol="PrintDialogs3D_PreviewPrevPageStart" version="0" task="PrintDialogs3D_PreviewPrevPage" opcode="win:Start" level="win:Informational"/>
+     <event value="40" symbol="PrintDialogs3D_PreviewPrevPageStop" version="0" task="PrintDialogs3D_PreviewPrevPage" opcode="win:Stop" level="win:Informational"/>
+     <event value="41" symbol="task_0Stop" version="0" task="task_0" opcode="win:Stop" level="win:Informational" template="task_0StopArgs"/>
+     <event value="42" symbol="PrintDialogs3D_BindPrinterStart" version="0" task="PrintDialogs3D_BindPrinter" opcode="win:Start" level="win:Informational"/>
+     <event value="43" symbol="PrintDialogs3D_BindPrinterStop" version="0" task="PrintDialogs3D_BindPrinter" opcode="win:Stop" level="win:Informational" template="PrintDialogs3D_FactoryStopArgs"/>
+     <event value="44" symbol="PrintDialogs3D_EnsureDocSourceStart" version="0" task="PrintDialogs3D_EnsureDocSource" opcode="win:Start" level="win:Informational"/>
+     <event value="45" symbol="PrintDialogs3D_EnsureDocSourceStop" version="0" task="PrintDialogs3D_EnsureDocSource" opcode="win:Stop" level="win:Informational" template="PrintDialogs3D_FactoryStopArgs"/>
+     <event value="46" symbol="PrintDialogs3D_PaginateStart" version="0" task="PrintDialogs3D_Paginate" opcode="win:Start" level="win:Informational"/>
+     <event value="47" symbol="PrintDialogs3D_PaginateStop" version="0" task="PrintDialogs3D_Paginate" opcode="win:Stop" level="win:Informational" template="PrintDialogs3D_FactoryStopArgs"/>
+     <event value="48" symbol="PrintDialogs3D_MakePageStart" version="0" task="PrintDialogs3D_MakePage" opcode="win:Start" level="win:Informational"/>
+     <event value="49" symbol="PrintDialogs3D_MakePageStop" version="0" task="PrintDialogs3D_MakePage" opcode="win:Stop" level="win:Informational" template="PrintDialogs3D_FactoryStopArgs"/>
+     <event value="50" symbol="PrintDialogs3D_PreviewAddPageStart" version="0" task="PrintDialogs3D_PreviewAddPage" opcode="win:Start" level="win:Informational"/>
+     <event value="51" symbol="PrintDialogs3D_PreviewAddPageStop" version="0" task="PrintDialogs3D_PreviewAddPage" opcode="win:Stop" level="win:Informational" template="PrintDialogs3D_FactoryStopArgs"/>
+     <event value="52" symbol="PrintDialogs3D_PreviewTransferPageStart" version="0" task="PrintDialogs3D_PreviewTransferPage" opcode="win:Start" level="win:Informational"/>
+     <event value="53" symbol="PrintDialogs3D_PreviewTransferPageStop" version="0" task="PrintDialogs3D_PreviewTransferPage" opcode="win:Stop" level="win:Informational" template="PrintDialogs3D_FactoryStopArgs"/>
+     <event value="54" symbol="PrintDialogs3D_PaginateRequestStart" version="0" task="PrintDialogs3D_PaginateRequest" opcode="win:Start" level="win:Informational"/>
+     <event value="55" symbol="PrintDialogs3D_PaginateRequestStop" version="0" task="PrintDialogs3D_PaginateRequest" opcode="win:Stop" level="win:Informational" template="PrintDialogs3D_FactoryStopArgs"/>
+     <event value="56" symbol="PrintDialogs3D_MakePageRequestStart" version="0" task="PrintDialogs3D_MakePageRequest" opcode="win:Start" level="win:Informational"/>
+     <event value="57" symbol="PrintDialogs3D_MakePageRequestStop" version="0" task="PrintDialogs3D_MakePageRequest" opcode="win:Stop" level="win:Informational" template="PrintDialogs3D_FactoryStopArgs"/>
+    </events>
+    <templates>
+     <template tid="PrintDialogs3D_FactoryStopArgs">
+      <data name="HResult" inType="win:UInt32"/>
+     </template>
+     <template tid="task_0StopArgs">
+      <data name="SessionID" inType="win:UInt32"/>
+      <data name="DeviceInstanceID" inType="win:UnicodeString"/>
+     </template>
+    </templates>
+   </provider>
+  </events>
+ </instrumentation>
+ <localization>
+  <resources culture="en-US">
+   <stringTable>
+    <string id="task_task_0" value="task_0"/>
+    <string id="task_PrintDialogs3D_Dll" value="PrintDialogs3D_Dll"/>
+    <string id="task_PrintDialogs3D_Factory" value="PrintDialogs3D_Factory"/>
+    <string id="task_PrintDialogs3D_ShowPrintPreferencesDlg" value="PrintDialogs3D_ShowPrintPreferencesDlg"/>
+    <string id="task_PrintDialogs3D_CreateXPSPrintPreviewHandlerFromFile" value="PrintDialogs3D_CreateXPSPrintPreviewHandlerFromFile"/>
+    <string id="task_PrintDialogs3D_CreateXPSPrintPreviewHandlerFromOM" value="PrintDialogs3D_CreateXPSPrintPreviewHandlerFromOM"/>
+    <string id="task_PrintDialogs3D_Print" value="PrintDialogs3D_Print"/>
+    <string id="task_PrintDialogs3D_MoreOptions" value="PrintDialogs3D_MoreOptions"/>
+    <string id="task_PrintDialogs3D_PreviewRender" value="PrintDialogs3D_PreviewRender"/>
+    <string id="task_PrintDialogs3D_PreviewCreateDeviceResource" value="PrintDialogs3D_PreviewCreateDeviceResource"/>
+    <string id="task_PrintDialogs3D_StartPreview" value="PrintDialogs3D_StartPreview"/>
+    <string id="task_PrintDialogs3D_PreviewManagerCreate" value="PrintDialogs3D_PreviewManagerCreate"/>
+    <string id="task_PrintDialogs3D_PreviewManagerEndPage" value="PrintDialogs3D_PreviewManagerEndPage"/>
+    <string id="task_PrintDialogs3D_PreviewManagerStart" value="PrintDialogs3D_PreviewManagerStart"/>
+    <string id="task_PrintDialogs3D_PreviewManagerRetrieveImage" value="PrintDialogs3D_PreviewManagerRetrieveImage"/>
+    <string id="task_PrintDialogs3D_PreviewManagerDoPreviewWork" value="PrintDialogs3D_PreviewManagerDoPreviewWork"/>
+    <string id="task_PrintDialogs3D_StartPrintExperience" value="PrintDialogs3D_StartPrintExperience"/>
+    <string id="task_PrintDialogs3D_ShowSelectorUI" value="PrintDialogs3D_ShowSelectorUI"/>
+    <string id="task_PrintDialogs3D_ChangeSetting" value="PrintDialogs3D_ChangeSetting"/>
+    <string id="task_PrintDialogs3D_PreviewNextPage" value="PrintDialogs3D_PreviewNextPage"/>
+    <string id="task_PrintDialogs3D_PreviewPrevPage" value="PrintDialogs3D_PreviewPrevPage"/>
+    <string id="task_PrintDialogs3D_BindPrinter" value="PrintDialogs3D_BindPrinter"/>
+    <string id="task_PrintDialogs3D_EnsureDocSource" value="PrintDialogs3D_EnsureDocSource"/>
+    <string id="task_PrintDialogs3D_Paginate" value="PrintDialogs3D_Paginate"/>
+    <string id="task_PrintDialogs3D_MakePage" value="PrintDialogs3D_MakePage"/>
+    <string id="task_PrintDialogs3D_PreviewAddPage" value="PrintDialogs3D_PreviewAddPage"/>
+    <string id="task_PrintDialogs3D_PreviewTransferPage" value="PrintDialogs3D_PreviewTransferPage"/>
+    <string id="task_PrintDialogs3D_PaginateRequest" value="PrintDialogs3D_PaginateRequest"/>
+    <string id="task_PrintDialogs3D_MakePageRequest" value="PrintDialogs3D_MakePageRequest"/>
+   </stringTable>
+  </resources>
+ </localization>
+</instrumentationManifest>

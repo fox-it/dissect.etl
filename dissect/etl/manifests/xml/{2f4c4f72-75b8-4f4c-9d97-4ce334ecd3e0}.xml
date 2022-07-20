@@ -1,0 +1,115 @@
+<instrumentationManifest xmlns="http://schemas.microsoft.com/win/2004/08/events">
+ <instrumentation xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:win="http://manifests.microsoft.com/win/2004/08/windows/events">
+  <events>
+   <provider name="Microsoft-Windows-OOBE-Machine-Plugins" guid="{2f4c4f72-75b8-4f4c-9d97-4ce334ecd3e0}" resourceFileName="Microsoft-Windows-OOBE-Machine-Plugins" messageFileName="Microsoft-Windows-OOBE-Machine-Plugins" symbol="MicrosoftWindowsOOBEMachinePlugins" source="Xml" >
+    <keywords>
+     <keyword name="msoobe" message="$(string.keyword_msoobe)" mask="0x1"/>
+    </keywords>
+    <tasks>
+     <task name="CreateDirectoryJunctions" message="$(string.task_CreateDirectoryJunctions)" value="6201"/>
+     <task name="WindowsRecoveryEnvironment" message="$(string.task_WindowsRecoveryEnvironment)" value="6202"/>
+     <task name="RemoveAdminProfile" message="$(string.task_RemoveAdminProfile)" value="6203"/>
+     <task name="CreateUserAccount" message="$(string.task_CreateUserAccount)" value="6204"/>
+     <task name="HidPairing_PairingNotifications" message="$(string.task_HidPairing_PairingNotifications)" value="6220"/>
+     <task name="HidPairing_StartPairing" message="$(string.task_HidPairing_StartPairing)" value="6221"/>
+     <task name="NotifyUILanguageChangeTask" message="$(string.task_NotifyUILanguageChangeTask)" value="6230"/>
+     <task name="InstallPIDTask" message="$(string.task_InstallPIDTask)" value="6241"/>
+     <task name="WriteOEMDataTask" message="$(string.task_WriteOEMDataTask)" value="6242"/>
+     <task name="AccentColorSelection" message="$(string.task_AccentColorSelection)" value="6250"/>
+     <task name="NetworkInitialize" message="$(string.task_NetworkInitialize)" value="6260"/>
+     <task name="RegionSelection" message="$(string.task_RegionSelection)" value="6270"/>
+     <task name="LocaleSelection" message="$(string.task_LocaleSelection)" value="6271"/>
+     <task name="KeyboardSelection" message="$(string.task_KeyboardSelection)" value="6272"/>
+     <task name="SortRegions" message="$(string.task_SortRegions)" value="6273"/>
+     <task name="SortLocales" message="$(string.task_SortLocales)" value="6274"/>
+     <task name="SortTimezones" message="$(string.task_SortTimezones)" value="6275"/>
+     <task name="TimezoneSelection" message="$(string.task_TimezoneSelection)" value="6276"/>
+     <task name="ZdpTask" message="$(string.task_ZdpTask)" value="6277"/>
+     <task name="ZdpScan" message="$(string.task_ZdpScan)" value="6278"/>
+     <task name="ZdpDownload" message="$(string.task_ZdpDownload)" value="6279"/>
+     <task name="ZdpInstall" message="$(string.task_ZdpInstall)" value="6280"/>
+    </tasks>
+    <events>
+     <event value="5203" symbol="CreateDirectoryJunctions" version="0" task="CreateDirectoryJunctions" level="win:Informational" keywords="msoobe" template="CreateDirectoryJunctionsArgs"/>
+     <event value="5204" symbol="WindowsRecoveryEnvironment" version="0" task="WindowsRecoveryEnvironment" level="win:Informational" keywords="msoobe" template="CreateDirectoryJunctionsArgs"/>
+     <event value="5205" symbol="RemoveAdminProfile" version="0" task="RemoveAdminProfile" level="win:Informational" keywords="msoobe" template="CreateDirectoryJunctionsArgs"/>
+     <event value="5220" symbol="HidPairing_PairingNotifications" version="0" task="HidPairing_PairingNotifications" level="win:Informational" keywords="msoobe"/>
+     <event value="5221" symbol="HidPairing_PairingNotifications5221" version="0" task="HidPairing_PairingNotifications" level="win:Informational" keywords="msoobe"/>
+     <event value="5222" symbol="HidPairing_PairingNotifications5222" version="0" task="HidPairing_PairingNotifications" level="win:Informational" keywords="msoobe"/>
+     <event value="5223" symbol="HidPairing_PairingNotifications5223" version="0" task="HidPairing_PairingNotifications" level="win:Informational" keywords="msoobe" template="CreateDirectoryJunctionsArgs"/>
+     <event value="5224" symbol="HidPairing_PairingNotifications5224" version="0" task="HidPairing_PairingNotifications" level="win:Informational" keywords="msoobe"/>
+     <event value="5225" symbol="HidPairing_PairingNotifications5225" version="0" task="HidPairing_PairingNotifications" level="win:Informational" keywords="msoobe" template="CreateDirectoryJunctionsArgs"/>
+     <event value="5226" symbol="HidPairing_PairingNotifications5226" version="0" task="HidPairing_PairingNotifications" level="win:Informational" keywords="msoobe" template="CreateDirectoryJunctionsArgs"/>
+     <event value="5227" symbol="HidPairing_PairingNotifications5227" version="0" task="HidPairing_PairingNotifications" level="win:Informational" keywords="msoobe" template="CreateDirectoryJunctionsArgs"/>
+     <event value="5228" symbol="NotifyUILanguageChangeTaskStart" version="0" task="NotifyUILanguageChangeTask" opcode="win:Start" level="win:Informational" keywords="msoobe"/>
+     <event value="5229" symbol="NotifyUILanguageChangeTaskStop" version="0" task="NotifyUILanguageChangeTask" opcode="win:Stop" level="win:Informational" keywords="msoobe" template="CreateDirectoryJunctionsArgs"/>
+     <event value="5232" symbol="InstallPIDTaskStart" version="0" task="InstallPIDTask" opcode="win:Start" level="win:Informational" keywords="msoobe"/>
+     <event value="5233" symbol="InstallPIDTaskStop" version="0" task="InstallPIDTask" opcode="win:Stop" level="win:Informational" keywords="msoobe" template="CreateDirectoryJunctionsArgs"/>
+     <event value="5235" symbol="AccentColorSelection" version="0" task="AccentColorSelection" level="win:Informational" keywords="msoobe" template="CreateDirectoryJunctionsArgs"/>
+     <event value="5236" symbol="NetworkInitializeStart" version="0" task="NetworkInitialize" opcode="win:Start" level="win:Informational" keywords="msoobe"/>
+     <event value="5237" symbol="NetworkInitializeStop" version="0" task="NetworkInitialize" opcode="win:Stop" level="win:Informational" keywords="msoobe" template="CreateDirectoryJunctionsArgs"/>
+     <event value="5238" symbol="HidPairing_StartPairing" version="0" task="HidPairing_StartPairing" level="win:Informational" keywords="msoobe"/>
+     <event value="5239" symbol="HidPairing_StartPairing5239" version="0" task="HidPairing_StartPairing" level="win:Informational" keywords="msoobe" template="CreateDirectoryJunctionsArgs"/>
+     <event value="5240" symbol="RegionSelection" version="0" task="RegionSelection" level="win:Informational" keywords="msoobe" template="CreateDirectoryJunctionsArgs"/>
+     <event value="5241" symbol="LocaleSelection" version="0" task="LocaleSelection" level="win:Informational" keywords="msoobe" template="CreateDirectoryJunctionsArgs"/>
+     <event value="5242" symbol="KeyboardSelection" version="0" task="KeyboardSelection" level="win:Informational" keywords="msoobe" template="KeyboardSelectionArgs"/>
+     <event value="5243" symbol="CreateUserAccount" version="0" task="CreateUserAccount" level="win:Informational" keywords="msoobe" template="CreateDirectoryJunctionsArgs"/>
+     <event value="5244" symbol="WriteOEMDataTaskStart" version="0" task="WriteOEMDataTask" opcode="win:Start" level="win:Informational" keywords="msoobe"/>
+     <event value="5245" symbol="WriteOEMDataTaskStop" version="0" task="WriteOEMDataTask" opcode="win:Stop" level="win:Informational" keywords="msoobe" template="CreateDirectoryJunctionsArgs"/>
+     <event value="5246" symbol="SortRegionsStart" version="0" task="SortRegions" opcode="win:Start" level="win:Informational" keywords="msoobe"/>
+     <event value="5247" symbol="SortRegionsStop" version="0" task="SortRegions" opcode="win:Stop" level="win:Informational" keywords="msoobe"/>
+     <event value="5248" symbol="SortLocalesStart" version="0" task="SortLocales" opcode="win:Start" level="win:Informational" keywords="msoobe"/>
+     <event value="5249" symbol="SortLocalesStop" version="0" task="SortLocales" opcode="win:Stop" level="win:Informational" keywords="msoobe"/>
+     <event value="5250" symbol="SortTimezonesStart" version="0" task="SortTimezones" opcode="win:Start" level="win:Informational" keywords="msoobe"/>
+     <event value="5251" symbol="SortTimezonesStop" version="0" task="SortTimezones" opcode="win:Stop" level="win:Informational" keywords="msoobe"/>
+     <event value="5252" symbol="TimezoneSelection" version="0" task="TimezoneSelection" level="win:Informational" keywords="msoobe" template="KeyboardSelectionArgs"/>
+     <event value="5253" symbol="ZdpTaskStart" version="0" task="ZdpTask" opcode="win:Start" level="win:Informational" keywords="msoobe"/>
+     <event value="5254" symbol="ZdpTaskStop" version="0" task="ZdpTask" opcode="win:Stop" level="win:Informational" keywords="msoobe"/>
+     <event value="5255" symbol="ZdpScanStart" version="0" task="ZdpScan" opcode="win:Start" level="win:Informational" keywords="msoobe"/>
+     <event value="5256" symbol="ZdpScanStop" version="0" task="ZdpScan" opcode="win:Stop" level="win:Informational" keywords="msoobe" template="CreateDirectoryJunctionsArgs"/>
+     <event value="5257" symbol="ZdpDownloadStart" version="0" task="ZdpDownload" opcode="win:Start" level="win:Informational" keywords="msoobe" template="CreateDirectoryJunctionsArgs"/>
+     <event value="5258" symbol="ZdpDownloadStop" version="0" task="ZdpDownload" opcode="win:Stop" level="win:Informational" keywords="msoobe"/>
+     <event value="5259" symbol="ZdpInstallStart" version="0" task="ZdpInstall" opcode="win:Start" level="win:Informational" keywords="msoobe"/>
+     <event value="5260" symbol="ZdpInstallStop" version="0" task="ZdpInstall" opcode="win:Stop" level="win:Informational" keywords="msoobe"/>
+    </events>
+    <templates>
+     <template tid="CreateDirectoryJunctionsArgs">
+      <data name="DWORD" inType="win:UInt32"/>
+     </template>
+     <template tid="KeyboardSelectionArgs">
+      <data name="String" inType="win:UnicodeString"/>
+     </template>
+    </templates>
+   </provider>
+  </events>
+ </instrumentation>
+ <localization>
+  <resources culture="en-US">
+   <stringTable>
+    <string id="keyword_msoobe" value="msoobe"/>
+    <string id="task_CreateDirectoryJunctions" value="CreateDirectoryJunctions"/>
+    <string id="task_WindowsRecoveryEnvironment" value="WindowsRecoveryEnvironment"/>
+    <string id="task_RemoveAdminProfile" value="RemoveAdminProfile"/>
+    <string id="task_CreateUserAccount" value="CreateUserAccount"/>
+    <string id="task_HidPairing_PairingNotifications" value="HidPairing_PairingNotifications"/>
+    <string id="task_HidPairing_StartPairing" value="HidPairing_StartPairing"/>
+    <string id="task_NotifyUILanguageChangeTask" value="NotifyUILanguageChangeTask"/>
+    <string id="task_InstallPIDTask" value="InstallPIDTask"/>
+    <string id="task_WriteOEMDataTask" value="WriteOEMDataTask"/>
+    <string id="task_AccentColorSelection" value="AccentColorSelection"/>
+    <string id="task_NetworkInitialize" value="NetworkInitialize"/>
+    <string id="task_RegionSelection" value="RegionSelection"/>
+    <string id="task_LocaleSelection" value="LocaleSelection"/>
+    <string id="task_KeyboardSelection" value="KeyboardSelection"/>
+    <string id="task_SortRegions" value="SortRegions"/>
+    <string id="task_SortLocales" value="SortLocales"/>
+    <string id="task_SortTimezones" value="SortTimezones"/>
+    <string id="task_TimezoneSelection" value="TimezoneSelection"/>
+    <string id="task_ZdpTask" value="ZdpTask"/>
+    <string id="task_ZdpScan" value="ZdpScan"/>
+    <string id="task_ZdpDownload" value="ZdpDownload"/>
+    <string id="task_ZdpInstall" value="ZdpInstall"/>
+   </stringTable>
+  </resources>
+ </localization>
+</instrumentationManifest>

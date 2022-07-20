@@ -1,0 +1,28 @@
+<instrumentationManifest xmlns="http://schemas.microsoft.com/win/2004/08/events">
+ <instrumentation xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:win="http://manifests.microsoft.com/win/2004/08/windows/events">
+  <events>
+
+   <provider name="Windows Kernel" guid="{45d8cccd-539f-4b72-a8b7-5c683142609a}">
+    <events>
+        <event value="34" symbol="ALPC/ALPC-Receive-Message" version="2" task="ALPC" opcode="ALPC-Receive-Message" template="0x3d0d4f80L"/>
+        <event value="35" symbol="ALPC/ALPC-Wait-For-Reply" version="2" task="ALPC" opcode="ALPC-Wait-For-Reply" template="0x3d0d4f80L"/>
+        <event value="33" symbol="ALPC/ALPC-Send-Message" version="2" task="ALPC" opcode="ALPC-Send-Message" template="0x3d0d4f80L"/>
+        <event value="37" symbol="ALPC/ALPC-Unwait" version="2" task="ALPC" opcode="ALPC-Unwait" template="0x61e804b6L"/>
+        <event value="36" symbol="ALPC/ALPC-Wait-For-New-Message" version="2" task="ALPC" opcode="ALPC-Wait-For-New-Message" template="0x6774509fL"/>
+    </events>
+    <templates>
+     <template tid="0x6774509fL">
+      <data name="IsServerPort" inType="win:UInt32"/>
+      <data name="PortName" inType="win:WString"/>
+     </template>
+     <template tid="0x3d0d4f80L">
+      <data name="MessageID" inType="win:UInt32"/>
+     </template>
+     <template tid="0x61e804b6L">
+      <data name="Status" inType="win:UInt32"/>
+     </template>
+    </templates>
+   </provider>
+  </events>
+ </instrumentation>
+</instrumentationManifest>

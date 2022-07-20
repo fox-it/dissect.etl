@@ -1,0 +1,146 @@
+<instrumentationManifest xmlns="http://schemas.microsoft.com/win/2004/08/events">
+ <instrumentation xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:win="http://manifests.microsoft.com/win/2004/08/windows/events">
+  <events>
+   <provider name="Microsoft-Windows-DataCollectionService" guid="{3b416199-2c3b-4c28-98b8-f7165f5936f0}" resourceFileName="Microsoft-Windows-DataCollectionService" messageFileName="Microsoft-Windows-DataCollectionService" symbol="MicrosoftWindowsDataCollectionService" source="Xml" >
+    <keywords>
+     <keyword name="Error" message="$(string.keyword_Error)" mask="0x1"/>
+     <keyword name="Performance" message="$(string.keyword_Performance)" mask="0x2"/>
+     <keyword name="Verbose" message="$(string.keyword_Verbose)" mask="0x4"/>
+    </keywords>
+    <tasks>
+     <task name="task_0" message="$(string.task_task_0)" value="0"/>
+     <task name="CrowdsourcingService_PrepareUpload" message="$(string.task_CrowdsourcingService_PrepareUpload)" value="1"/>
+     <task name="CrowdsourcingService_UploadFiles" message="$(string.task_CrowdsourcingService_UploadFiles)" value="2"/>
+     <task name="CrowdsourcingService_ReadDataFile" message="$(string.task_CrowdsourcingService_ReadDataFile)" value="3"/>
+     <task name="CrowdsourcingService_PostDataFile" message="$(string.task_CrowdsourcingService_PostDataFile)" value="4"/>
+     <task name="CrowdsourcingService_RecieveData" message="$(string.task_CrowdsourcingService_RecieveData)" value="5"/>
+    </tasks>
+    <events>
+     <event value="10" symbol="task_0" version="0" task="task_0" level="win:Error" keywords="Error" template="task_0Args"/>
+     <event value="11" symbol="task_011" version="0" task="task_0" level="win:Error" keywords="Error" template="task_011Args"/>
+     <event value="12" symbol="task_012" version="0" task="task_0" level="win:Warning" keywords="Error" template="task_0Args"/>
+     <event value="13" symbol="task_013" version="0" task="task_0" level="win:Warning" keywords="Error" template="task_011Args"/>
+     <event value="14" symbol="task_014" version="0" task="task_0" level="win:Informational" keywords="Verbose" template="task_014Args"/>
+     <event value="15" symbol="task_015" version="0" task="task_0" level="win:Informational" keywords="Verbose" template="task_015Args"/>
+     <event value="16" symbol="task_016" version="0" task="task_0" level="win:Informational" keywords="Verbose" template="task_016Args"/>
+     <event value="17" symbol="task_017" version="0" task="task_0" level="win:Informational" keywords="Verbose" template="task_017Args"/>
+     <event value="18" symbol="task_018" version="0" task="task_0" level="win:Informational" keywords="Verbose" template="task_018Args"/>
+     <event value="19" symbol="task_019" version="0" task="task_0" level="win:Error" keywords="Error" template="task_019Args"/>
+     <event value="20" symbol="task_020" version="0" task="task_0" level="win:Error" keywords="Error" template="task_020Args"/>
+     <event value="100" symbol="task_0100" version="0" task="task_0" level="win:Informational" keywords="Verbose"/>
+     <event value="101" symbol="task_0101" version="0" task="task_0" level="win:Informational" keywords="Verbose"/>
+     <event value="102" symbol="task_0102" version="0" task="task_0" level="win:Informational" keywords="Verbose"/>
+     <event value="103" symbol="task_0103" version="0" task="task_0" level="win:Informational" keywords="Verbose"/>
+     <event value="104" symbol="task_0104" version="0" task="task_0" level="win:Informational" keywords="Verbose" template="task_0104Args"/>
+     <event value="105" symbol="task_0105" version="0" task="task_0" level="win:Verbose" keywords="Verbose" template="task_0105Args"/>
+     <event value="106" symbol="task_0106" version="0" task="task_0" level="win:Error" keywords="Error" template="task_0106Args"/>
+     <event value="120" symbol="CrowdsourcingService_PrepareUploadStart" version="0" task="CrowdsourcingService_PrepareUpload" opcode="win:Start" level="win:Informational" keywords="Performance"/>
+     <event value="121" symbol="CrowdsourcingService_PrepareUploadStop" version="0" task="CrowdsourcingService_PrepareUpload" opcode="win:Stop" level="win:Informational" keywords="Performance"/>
+     <event value="130" symbol="CrowdsourcingService_UploadFilesStart" version="0" task="CrowdsourcingService_UploadFiles" opcode="win:Start" level="win:Informational" keywords="Performance" template="CrowdsourcingService_UploadFilesStartArgs"/>
+     <event value="131" symbol="CrowdsourcingService_UploadFilesStop" version="0" task="CrowdsourcingService_UploadFiles" opcode="win:Stop" level="win:Informational" keywords="Performance" template="CrowdsourcingService_UploadFilesStopArgs"/>
+     <event value="132" symbol="CrowdsourcingService_ReadDataFileStart" version="0" task="CrowdsourcingService_ReadDataFile" opcode="win:Start" level="win:Verbose" keywords="Performance" template="CrowdsourcingService_ReadDataFileStartArgs"/>
+     <event value="133" symbol="CrowdsourcingService_ReadDataFileStop" version="0" task="CrowdsourcingService_ReadDataFile" opcode="win:Stop" level="win:Verbose" keywords="Performance" template="CrowdsourcingService_ReadDataFileStopArgs"/>
+     <event value="134" symbol="CrowdsourcingService_PostDataFileStart" version="0" task="CrowdsourcingService_PostDataFile" opcode="win:Start" level="win:Verbose" keywords="Performance" template="CrowdsourcingService_PostDataFileStartArgs"/>
+     <event value="135" symbol="CrowdsourcingService_PostDataFileStop" version="0" task="CrowdsourcingService_PostDataFile" opcode="win:Stop" level="win:Verbose" keywords="Performance" template="CrowdsourcingService_PostDataFileStopArgs"/>
+     <event value="136" symbol="CrowdsourcingService_RecieveDataStart" version="0" task="CrowdsourcingService_RecieveData" opcode="win:Start" level="win:Verbose" keywords="Performance" template="CrowdsourcingService_RecieveDataStartArgs"/>
+    </events>
+    <templates>
+     <template tid="task_0Args">
+      <data name="dwTag" inType="win:UInt32"/>
+      <data name="dwError" inType="win:UInt32"/>
+     </template>
+     <template tid="task_011Args">
+      <data name="dwTag" inType="win:UInt32"/>
+      <data name="hr" inType="win:UInt32"/>
+     </template>
+     <template tid="task_014Args">
+      <data name="dwTag" inType="win:UInt32"/>
+     </template>
+     <template tid="task_015Args">
+      <data name="dwTag" inType="win:UInt32"/>
+      <data name="nInt" inType="win:UInt32"/>
+     </template>
+     <template tid="task_016Args">
+      <data name="dwTag" inType="win:UInt32"/>
+      <data name="strString" inType="win:UnicodeString"/>
+     </template>
+     <template tid="task_017Args">
+      <data name="dwTag" inType="win:UInt32"/>
+      <data name="strString" inType="win:UnicodeString"/>
+      <data name="nInt" inType="win:UInt32"/>
+     </template>
+     <template tid="task_018Args">
+      <data name="dwTag" inType="win:UInt32"/>
+      <data name="strString1" inType="win:UnicodeString"/>
+      <data name="strString2" inType="win:UnicodeString"/>
+     </template>
+     <template tid="task_019Args">
+      <data name="dwTag" inType="win:UInt32"/>
+      <data name="nInt" inType="win:UInt32"/>
+      <data name="strString" inType="win:UnicodeString"/>
+     </template>
+     <template tid="task_020Args">
+      <data name="dwTag" inType="win:UInt32"/>
+      <data name="nInt1" inType="win:UInt32"/>
+      <data name="nInt2" inType="win:UInt32"/>
+     </template>
+     <template tid="task_0104Args">
+      <data name="dwError" inType="win:UInt32"/>
+      <data name="bFailureReason" inType="win:UInt8"/>
+     </template>
+     <template tid="task_0105Args">
+      <data name="dwError" inType="win:UInt32"/>
+      <data name="szServerName" inType="win:UnicodeString"/>
+     </template>
+     <template tid="task_0106Args">
+      <data name="szSettingName" inType="win:UnicodeString"/>
+     </template>
+     <template tid="CrowdsourcingService_UploadFilesStartArgs">
+      <data name="bTriggerSource" inType="win:UInt8"/>
+     </template>
+     <template tid="CrowdsourcingService_UploadFilesStopArgs">
+      <data name="dwNumFilesUploaded" inType="win:UInt32"/>
+     </template>
+     <template tid="CrowdsourcingService_ReadDataFileStartArgs">
+      <data name="szHttpObjectNames" inType="win:UnicodeString"/>
+      <data name="szFullpath" inType="win:UnicodeString"/>
+     </template>
+     <template tid="CrowdsourcingService_ReadDataFileStopArgs">
+      <data name="dwError" inType="win:UInt32"/>
+      <data name="cbFileSize" inType="win:UInt32"/>
+      <data name="cbRead" inType="win:UInt32"/>
+     </template>
+     <template tid="CrowdsourcingService_PostDataFileStartArgs">
+      <data name="szHttpObjectName" inType="win:UnicodeString"/>
+      <data name="cchHeader" inType="win:UInt32"/>
+      <data name="cchBody" inType="win:UInt32"/>
+      <data name="szHeaders" inType="win:UnicodeString"/>
+     </template>
+     <template tid="CrowdsourcingService_PostDataFileStopArgs">
+      <data name="dwError" inType="win:UInt32"/>
+      <data name="dwHttpStatusCode" inType="win:UInt32"/>
+     </template>
+     <template tid="CrowdsourcingService_RecieveDataStartArgs">
+      <data name="guidSessionId" inType="win:GUID"/>
+      <data name="dwPayloadSize" inType="win:UInt32"/>
+     </template>
+    </templates>
+   </provider>
+  </events>
+ </instrumentation>
+ <localization>
+  <resources culture="en-US">
+   <stringTable>
+    <string id="keyword_Error" value="Error"/>
+    <string id="keyword_Performance" value="Performance"/>
+    <string id="keyword_Verbose" value="Verbose"/>
+    <string id="task_task_0" value="task_0"/>
+    <string id="task_CrowdsourcingService_PrepareUpload" value="CrowdsourcingService_PrepareUpload"/>
+    <string id="task_CrowdsourcingService_UploadFiles" value="CrowdsourcingService_UploadFiles"/>
+    <string id="task_CrowdsourcingService_ReadDataFile" value="CrowdsourcingService_ReadDataFile"/>
+    <string id="task_CrowdsourcingService_PostDataFile" value="CrowdsourcingService_PostDataFile"/>
+    <string id="task_CrowdsourcingService_RecieveData" value="CrowdsourcingService_RecieveData"/>
+   </stringTable>
+  </resources>
+ </localization>
+</instrumentationManifest>

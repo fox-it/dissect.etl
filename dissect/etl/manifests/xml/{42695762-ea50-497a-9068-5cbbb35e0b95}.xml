@@ -1,0 +1,50 @@
+<instrumentationManifest xmlns="http://schemas.microsoft.com/win/2004/08/events">
+ <instrumentation xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:win="http://manifests.microsoft.com/win/2004/08/windows/events">
+  <events>
+
+   <provider name="Windows Kernel" guid="{42695762-ea50-497a-9068-5cbbb35e0b95}">
+    <events>
+		<event value="34" symbol="WnfProvider/Callback" version="0" task="WnfProvider" opcode="Callback" template="0xcc4cc2b0L"/>
+		<event value="35" symbol="WnfProvider/Publish" version="0" task="WnfProvider" opcode="Publish" template="0x871d2d6cL"/>
+		<event value="36" symbol="WnfProvider/NameSubRundown" version="0" task="WnfProvider" opcode="NameSubRundown" template="0xb1312336L"/>
+		<event value="32" symbol="WnfProvider/Subscribe" version="0" task="WnfProvider" opcode="Subscribe" template="0xbfaaa4d2L"/>
+		<event value="33" symbol="WnfProvider/Unsubscribe" version="0" task="WnfProvider" opcode="Unsubscribe" template="0xbfaaa4d2L"/>
+		<event value="34" symbol="WNFTrace/Callback" version="2" task="WNFTrace" opcode="Callback" template="0xcc4cc2b0L"/>
+		<event value="35" symbol="WNFTrace/Publish" version="2" task="WNFTrace" opcode="Publish" template="0x871d2d6cL"/>
+		<event value="36" symbol="WNFTrace/NameSubRundown" version="2" task="WNFTrace" opcode="NameSubRundown" template="0xb1312336L"/>
+		<event value="32" symbol="WNFTrace/Subscribe" version="2" task="WNFTrace" opcode="Subscribe" template="0xbfaaa4d2L"/>
+		<event value="33" symbol="WNFTrace/Unsubscribe" version="2" task="WNFTrace" opcode="Unsubscribe" template="0xbfaaa4d2L"/>
+    </events>
+    <templates>
+     <template tid="0xbfaaa4d2L">
+      <data name="StateName" inType="win:HexInt64"/>
+      <data name="Subscription" inType="win:UInt32"/>
+      <data name="NameSub" inType="win:UInt32"/>
+      <data name="Callback" inType="win:UInt32"/>
+      <data name="RefCount" inType="win:UInt32"/>
+      <data name="DeliveryFlags" inType="win:HexInt32"/>
+     </template>
+     <template tid="0xb1312336L">
+      <data name="StateName" inType="win:HexInt64"/>
+      <data name="NameSub" inType="win:UInt32"/>
+     </template>
+     <template tid="0x871d2d6cL">
+      <data name="StateName" inType="win:HexInt64"/>
+      <data name="DataLength" inType="win:UInt32"/>
+     </template>
+     <template tid="0xd4cbb29L">
+     </template>
+     <template tid="0xcc4cc2b0L">
+      <data name="StateName" inType="win:HexInt64"/>
+      <data name="Subscription" inType="win:UInt32"/>
+      <data name="NameSub" inType="win:UInt32"/>
+      <data name="Callback" inType="win:UInt32"/>
+      <data name="ChangeStamp" inType="win:UInt32"/>
+      <data name="DeliveryFlags" inType="win:HexInt32"/>
+      <data name="Return" inType="win:HexInt32"/>
+     </template>
+    </templates>
+   </provider>
+  </events>
+ </instrumentation>
+</instrumentationManifest>

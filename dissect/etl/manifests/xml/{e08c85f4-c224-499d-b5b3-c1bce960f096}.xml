@@ -1,0 +1,408 @@
+<instrumentationManifest xmlns="http://schemas.microsoft.com/win/2004/08/events">
+ <instrumentation xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:win="http://manifests.microsoft.com/win/2004/08/windows/events">
+  <events>
+   <provider name="Microsoft-Windows-Telephony-PhoneOm" guid="{e08c85f4-c224-499d-b5b3-c1bce960f096}" resourceFileName="Microsoft-Windows-Telephony-PhoneOm" messageFileName="Microsoft-Windows-Telephony-PhoneOm" symbol="MicrosoftWindowsTelephonyPhoneOm" source="Xml" >
+    <keywords>
+     <keyword name="Error" message="$(string.keyword_Error)" mask="0x1"/>
+     <keyword name="Performance" message="$(string.keyword_Performance)" mask="0x2"/>
+     <keyword name="Debug" message="$(string.keyword_Debug)" mask="0x4"/>
+     <keyword name="PhoneDefault" message="$(string.keyword_PhoneDefault)" mask="0x8"/>
+     <keyword name="CONTROLLER" message="$(string.keyword_CONTROLLER)" mask="0x10"/>
+     <keyword name="CellularProvider" message="$(string.keyword_CellularProvider)" mask="0x20"/>
+     <keyword name="PHONEUI" message="$(string.keyword_PHONEUI)" mask="0x40"/>
+     <keyword name="Callhistory" message="$(string.keyword_Callhistory)" mask="0x100"/>
+     <keyword name="CDMA" message="$(string.keyword_CDMA)" mask="0x200"/>
+     <keyword name="VVM" message="$(string.keyword_VVM)" mask="0x400"/>
+     <keyword name="MISC" message="$(string.keyword_MISC)" mask="0x1000"/>
+     <keyword name="PhoneOM" message="$(string.keyword_PhoneOM)" mask="0x2000"/>
+     <keyword name="Warning" message="$(string.keyword_Warning)" mask="0x4000000000"/>
+     <keyword name="StateTransition" message="$(string.keyword_StateTransition)" mask="0x8000000000"/>
+    </keywords>
+    <tasks>
+     <task name="task_0" message="$(string.task_task_0)" value="0"/>
+     <task name="SimSecEnsureLine" message="$(string.task_SimSecEnsureLine)" value="10"/>
+     <task name="SimSecGetPinLockState" message="$(string.task_SimSecGetPinLockState)" value="11"/>
+     <task name="SimSecGetPersoCheckState" message="$(string.task_SimSecGetPersoCheckState)" value="12"/>
+     <task name="SimSecGetPersoDeactivationState" message="$(string.task_SimSecGetPersoDeactivationState)" value="13"/>
+     <task name="SimSecEnablePin" message="$(string.task_SimSecEnablePin)" value="14"/>
+     <task name="SimSecUnblockPin" message="$(string.task_SimSecUnblockPin)" value="15"/>
+     <task name="SimSecUnlockPin" message="$(string.task_SimSecUnlockPin)" value="16"/>
+     <task name="SimSecUnlockPerso" message="$(string.task_SimSecUnlockPerso)" value="17"/>
+     <task name="SimSecChangePin" message="$(string.task_SimSecChangePin)" value="18"/>
+     <task name="StartCall" message="$(string.task_StartCall)" value="19"/>
+     <task name="SimSecChangePin2" message="$(string.task_SimSecChangePin2)" value="20"/>
+     <task name="SimSecUnblockPin2" message="$(string.task_SimSecUnblockPin2)" value="21"/>
+    </tasks>
+    <maps>
+     <valueMap name="PhoneApi">
+      <map value="0x0" message="$(string.map_PhoneApiPhoneApiInitialize)"/>
+      <map value="0x1" message="$(string.map_PhoneApiPhoneApiUninitialize)"/>
+      <map value="0x2" message="$(string.map_PhoneApiPhoneIsEmergencyNumber)"/>
+      <map value="0x3" message="$(string.map_PhoneApiPhoneGetDefaultOutgoingLine)"/>
+      <map value="0x4" message="$(string.map_PhoneApiPhoneIsImmediateDialString)"/>
+      <map value="0x5" message="$(string.map_PhoneApiPhoneIsDtmfWaitPending)"/>
+      <map value="0x6" message="$(string.map_PhoneApiPhoneExecutePendingDtmfWait)"/>
+      <map value="0x7" message="$(string.map_PhoneApiPhoneCallVoicemail)"/>
+      <map value="0x8" message="$(string.map_PhoneApiPhoneGetCellularApiComponentInfo)"/>
+      <map value="0x9" message="$(string.map_PhoneApiPhoneGetVoicemailNumberAndOverrideInfo)"/>
+      <map value="0xa" message="$(string.map_PhoneApiPhoneInitiateRetrievalOfCIDRestrictionSupport)"/>
+      <map value="0xb" message="$(string.map_PhoneApiPhoneRefreshCallForwardingState)"/>
+      <map value="0xc" message="$(string.map_PhoneApiPhoneDial)"/>
+      <map value="0xd" message="$(string.map_PhoneApiPhoneEnd)"/>
+      <map value="0xe" message="$(string.map_PhoneApiPhoneSwap)"/>
+      <map value="0xf" message="$(string.map_PhoneApiPhoneSetHold)"/>
+      <map value="0x10" message="$(string.map_PhoneApiPhoneFlash)"/>
+      <map value="0x11" message="$(string.map_PhoneApiPhoneConference)"/>
+      <map value="0x12" message="$(string.map_PhoneApiPhonePrivate)"/>
+      <map value="0x13" message="$(string.map_PhoneApiPhoneSetMute)"/>
+      <map value="0x14" message="$(string.map_PhoneApiPhoneSetSpeaker)"/>
+      <map value="0x15" message="$(string.map_PhoneApiPhoneEnableBluetoothHandsFree)"/>
+      <map value="0x16" message="$(string.map_PhoneApiPhoneSendDTMF)"/>
+      <map value="0x17" message="$(string.map_PhoneApiPhoneSendDTMFStart)"/>
+      <map value="0x18" message="$(string.map_PhoneApiPhoneSendDTMFStop)"/>
+      <map value="0x19" message="$(string.map_PhoneApiPhoneAcceptIncoming)"/>
+      <map value="0x1a" message="$(string.map_PhoneApiPhoneAcceptIncomingEx)"/>
+      <map value="0x1b" message="$(string.map_PhoneApiPhoneDropAccept)"/>
+      <map value="0x1c" message="$(string.map_PhoneApiPhoneDropAcceptEx)"/>
+      <map value="0x1d" message="$(string.map_PhoneApiPhoneExitEmergencyMode)"/>
+      <map value="0x1e" message="$(string.map_PhoneApiPhoneGetCallInfo)"/>
+      <map value="0x1f" message="$(string.map_PhoneApiPhoneGetCallState)"/>
+      <map value="0x20" message="$(string.map_PhoneApiPhoneGetElapsedTime)"/>
+      <map value="0x21" message="$(string.map_PhoneApiPhoneGetSpeaker)"/>
+      <map value="0x22" message="$(string.map_PhoneApiPhoneGetBluetoothHandsFreeState)"/>
+      <map value="0x23" message="$(string.map_PhoneApiPhoneGetWiredHeadsetState)"/>
+      <map value="0x24" message="$(string.map_PhoneApiPhoneGetAvailableActions)"/>
+      <map value="0x25" message="$(string.map_PhoneApiPhoneIsActionAvailable)"/>
+      <map value="0x26" message="$(string.map_PhoneApiPhoneGetState)"/>
+      <map value="0x27" message="$(string.map_PhoneApiPhoneGetCallCounts)"/>
+      <map value="0x28" message="$(string.map_PhoneApiPhoneGetMute)"/>
+      <map value="0x29" message="$(string.map_PhoneApiPhoneGetCallsInConference)"/>
+      <map value="0x2a" message="$(string.map_PhoneApiPhoneGetNetworkAlert)"/>
+      <map value="0x2b" message="$(string.map_PhoneApiPhoneMapPlusToDialingPrefix)"/>
+      <map value="0x2c" message="$(string.map_PhoneApiPhoneMapIddPrefixToPlus)"/>
+      <map value="0x2d" message="$(string.map_PhoneApiPhoneGetAssistedDialNumber)"/>
+      <map value="0x2e" message="$(string.map_PhoneApiPhoneGetAssistedDialSetting)"/>
+      <map value="0x2f" message="$(string.map_PhoneApiPhoneAddListener)"/>
+      <map value="0x30" message="$(string.map_PhoneApiPhoneRemoveListener)"/>
+      <map value="0x31" message="$(string.map_PhoneApiPhoneStartVisualVoicemailSync)"/>
+      <map value="0x32" message="$(string.map_PhoneApiPhoneSaveVvmPassword)"/>
+      <map value="0x33" message="$(string.map_PhoneApiPhoneSupportsLocalVvmConfig)"/>
+      <map value="0x36" message="$(string.map_PhoneApiPhoneClearIdleCallsFromController)"/>
+      <map value="0x38" message="$(string.map_PhoneApiPhoneSimUnlock)"/>
+      <map value="0x39" message="$(string.map_PhoneApiPhoneSimUnlockDebug)"/>
+      <map value="0x3a" message="$(string.map_PhoneApiPhoneSimEnablePinLock)"/>
+      <map value="0x3b" message="$(string.map_PhoneApiPhoneSimDisablePinLock)"/>
+      <map value="0x3c" message="$(string.map_PhoneApiPhoneSimChangePin)"/>
+      <map value="0x3d" message="$(string.map_PhoneApiPhoneSimUIClosed)"/>
+      <map value="0x3e" message="$(string.map_PhoneApiPhoneSimGetPin2)"/>
+      <map value="0x3f" message="$(string.map_PhoneApiPhoneSimChangePin2)"/>
+      <map value="0x40" message="$(string.map_PhoneApiPhoneSimNotifyPin2Available)"/>
+      <map value="0x41" message="$(string.map_PhoneApiPhoneFormatPhoneNumber)"/>
+      <map value="0x42" message="$(string.map_PhoneApiPhoneIsVvmSetupComplete)"/>
+      <map value="0x43" message="$(string.map_PhoneApiPhoneMarkVvmSetupComplete)"/>
+      <map value="0x44" message="$(string.map_PhoneApiPhoneSpamFilteringEnabled)"/>
+      <map value="0x45" message="$(string.map_PhoneApiPhoneReinitiateCallerIdLookup)"/>
+      <map value="0x46" message="$(string.map_PhoneApiPhoneGetPreferredCallUpgradeLine)"/>
+      <map value="0x47" message="$(string.map_PhoneApiPhoneInitiateCallUpgrade)"/>
+      <map value="0x48" message="$(string.map_PhoneApiPhoneRejectIncoming)"/>
+      <map value="0x4c" message="$(string.map_PhoneApiPhoneIsVoiceRoamingRestrictionActive)"/>
+      <map value="0x4d" message="$(string.map_PhoneApiPhoneSetForegroundLine)"/>
+      <map value="0x4e" message="$(string.map_PhoneApiPhoneGetAggregateBranding)"/>
+      <map value="0x4f" message="$(string.map_PhoneApiPhoneGetBrandingText)"/>
+      <map value="0x50" message="$(string.map_PhoneApiPhoneSetPreferredCallUpgradeLine)"/>
+      <map value="0x51" message="$(string.map_PhoneApiPhoneSetReminderInfo)"/>
+      <map value="0x52" message="$(string.map_PhoneApiPhoneWaitSimSecurityReady)"/>
+      <map value="0x53" message="$(string.map_PhoneApiPhoneConfirmNonSeamlessUpgrade)"/>
+      <map value="0x54" message="$(string.map_PhoneApiPhoneCancelNonSeamlessUpgrade)"/>
+      <map value="0x55" message="$(string.map_PhoneApiPhoneSetLocalVideo)"/>
+      <map value="0x56" message="$(string.map_PhoneApiPhoneAddVideo)"/>
+      <map value="0x57" message="$(string.map_PhoneApiPhoneDropVideo)"/>
+      <map value="0x58" message="$(string.map_PhoneApiPhoneAcceptVideo)"/>
+      <map value="0x59" message="$(string.map_PhoneApiPhoneRejectVideo)"/>
+      <map value="0x5a" message="$(string.map_PhoneApiPhoneSetVideoPaused)"/>
+      <map value="0x5b" message="$(string.map_PhoneApiPhoneModifyVideoCallingSetting)"/>
+      <map value="0x5c" message="$(string.map_PhoneApiPhoneRefreshVideoCallingSetting)"/>
+      <map value="0x5d" message="$(string.map_PhoneApiPhoneIsVideoCallingSwitchActionable)"/>
+      <map value="0x5e" message="$(string.map_PhoneApiPhoneIsVideoCallingEnabled)"/>
+      <map value="0x5f" message="$(string.map_PhoneApiPhoneGetLinePublicInfo)"/>
+      <map value="0x60" message="$(string.map_PhoneApiPhonePublicDial)"/>
+      <map value="0x61" message="$(string.map_PhoneApiPhoneSetCallOriginInfo)"/>
+      <map value="0x62" message="$(string.map_PhoneApiPhoneIsPhoneNumberInBlockList)"/>
+      <map value="0x63" message="$(string.map_PhoneApiPhoneSetSpecificTypeActiveApp)"/>
+      <map value="0x64" message="$(string.map_PhoneApiPhoneGetSpecificTypeActiveApp)"/>
+      <map value="0x65" message="$(string.map_PhoneApiPhoneGetSpecificTypeAppList)"/>
+      <map value="0x66" message="$(string.map_PhoneApiPhoneSetActiveSpamFilterApp)"/>
+      <map value="0x67" message="$(string.map_PhoneApiPhoneGetActiveSpamFilterApp)"/>
+      <map value="0x68" message="$(string.map_PhoneApiPhoneHandleAppUninstallByType)"/>
+      <map value="0x69" message="$(string.map_PhoneApiPhoneStartRecording)"/>
+      <map value="0x6a" message="$(string.map_PhoneApiPhonePauseRecording)"/>
+      <map value="0x6b" message="$(string.map_PhoneApiPhoneFinishRecording)"/>
+      <map value="0x6c" message="$(string.map_PhoneApiPhoneGetVideoCapabilities)"/>
+      <map value="0x6d" message="$(string.map_PhoneApiPhoneSetBlockPrivateNumbersSetting)"/>
+      <map value="0x6e" message="$(string.map_PhoneApiPhoneGetBlockPrivateNumbersSetting)"/>
+      <map value="0x6f" message="$(string.map_PhoneApiPhoneSetBlockUnknownNumbersSetting)"/>
+      <map value="0x70" message="$(string.map_PhoneApiPhoneGetBlockUnknownNumbersSetting)"/>
+      <map value="0x71" message="$(string.map_PhoneApiPhoneSetFilerAppBlockList)"/>
+      <map value="0x72" message="$(string.map_PhoneApiPhoneGetLinePublicSettings)"/>
+      <map value="0x73" message="$(string.map_PhoneApiPhoneRefreshEcbmState)"/>
+      <map value="0x74" message="$(string.map_PhoneApiPhoneGetVideoCapabilitySharingSettings)"/>
+      <map value="0x75" message="$(string.map_PhoneApiPhoneSetVideoCapabilitySharingSettings)"/>
+      <map value="0x76" message="$(string.map_PhoneApiPhoneGetDeviceSupportsVideoCalling)"/>
+      <map value="0x77" message="$(string.map_PhoneApiPhoneGetRecordingApplications)"/>
+      <map value="0x78" message="$(string.map_PhoneApiPhoneSetRecordingApplication)"/>
+      <map value="0x79" message="$(string.map_PhoneApiPhoneGetShouldMuteKeypad)"/>
+      <map value="0x7a" message="$(string.map_PhoneApiPhoneExplicitCallTransfer)"/>
+      <map value="0x7b" message="$(string.map_PhoneApiPhoneMarkDataAffinityNotificationSeen)"/>
+      <map value="0x7c" message="$(string.map_PhoneApiPhoneCallCapabilityAccessCheck)"/>
+      <map value="0x7d" message="$(string.map_PhoneApiPhoneSetCallerAsActiveAppByType)"/>
+     </valueMap>
+    </maps>
+    <events>
+     <event value="1" symbol="task_0" version="0" task="task_0" level="win:Error" keywords="Error" template="task_0Args"/>
+     <event value="2" symbol="task_02" version="0" task="task_0" level="win:Warning" keywords="Warning" template="task_0Args"/>
+     <event value="5" symbol="task_05" version="0" task="task_0" level="win:Informational" keywords="Debug" template="task_05Args"/>
+     <event value="102" symbol="task_0102" version="0" task="task_0" level="win:Informational" keywords="StateTransition" template="task_0102Args"/>
+     <event value="103" symbol="task_0103" version="0" task="task_0" level="win:Informational" keywords="PhoneOM" template="task_0103Args"/>
+     <event value="104" symbol="task_0104" version="0" task="task_0" level="win:Informational" keywords="StateTransition" template="task_0102Args"/>
+     <event value="105" symbol="task_0105" version="0" task="task_0" level="win:Informational" keywords="PhoneOM" template="task_0103Args"/>
+     <event value="106" symbol="task_0106" version="0" task="task_0" level="win:Informational" keywords="PhoneOM"/>
+     <event value="107" symbol="task_0107" version="0" task="task_0" level="win:Informational" keywords="PhoneOM"/>
+     <event value="200" symbol="SimSecEnsureLineStart" version="0" task="SimSecEnsureLine" opcode="win:Start" level="win:Verbose" keywords="Performance"/>
+     <event value="201" symbol="SimSecEnsureLineStop" version="0" task="SimSecEnsureLine" opcode="win:Stop" level="win:Verbose" keywords="Performance"/>
+     <event value="202" symbol="SimSecGetPinLockStateStart" version="0" task="SimSecGetPinLockState" opcode="win:Start" level="win:Verbose" keywords="Performance"/>
+     <event value="203" symbol="SimSecGetPinLockStateStop" version="0" task="SimSecGetPinLockState" opcode="win:Stop" level="win:Verbose" keywords="Performance"/>
+     <event value="204" symbol="SimSecGetPersoCheckStateStart" version="0" task="SimSecGetPersoCheckState" opcode="win:Start" level="win:Verbose" keywords="Performance"/>
+     <event value="205" symbol="SimSecGetPersoCheckStateStop" version="0" task="SimSecGetPersoCheckState" opcode="win:Stop" level="win:Verbose" keywords="Performance"/>
+     <event value="206" symbol="SimSecGetPersoDeactivationStateStart" version="0" task="SimSecGetPersoDeactivationState" opcode="win:Start" level="win:Verbose" keywords="Performance"/>
+     <event value="207" symbol="SimSecGetPersoDeactivationStateStop" version="0" task="SimSecGetPersoDeactivationState" opcode="win:Stop" level="win:Verbose" keywords="Performance"/>
+     <event value="208" symbol="SimSecEnablePinStart" version="0" task="SimSecEnablePin" opcode="win:Start" level="win:Verbose" keywords="Performance"/>
+     <event value="209" symbol="SimSecEnablePinStop" version="0" task="SimSecEnablePin" opcode="win:Stop" level="win:Verbose" keywords="Performance"/>
+     <event value="210" symbol="SimSecUnblockPinStart" version="0" task="SimSecUnblockPin" opcode="win:Start" level="win:Verbose" keywords="Performance"/>
+     <event value="211" symbol="SimSecUnblockPinStop" version="0" task="SimSecUnblockPin" opcode="win:Stop" level="win:Verbose" keywords="Performance"/>
+     <event value="212" symbol="SimSecUnlockPinStart" version="0" task="SimSecUnlockPin" opcode="win:Start" level="win:Verbose" keywords="Performance"/>
+     <event value="213" symbol="SimSecUnlockPinStop" version="0" task="SimSecUnlockPin" opcode="win:Stop" level="win:Verbose" keywords="Performance"/>
+     <event value="214" symbol="SimSecUnlockPersoStart" version="0" task="SimSecUnlockPerso" opcode="win:Start" level="win:Verbose" keywords="Performance"/>
+     <event value="215" symbol="SimSecUnlockPersoStop" version="0" task="SimSecUnlockPerso" opcode="win:Stop" level="win:Verbose" keywords="Performance"/>
+     <event value="216" symbol="SimSecChangePinStart" version="0" task="SimSecChangePin" opcode="win:Start" level="win:Verbose" keywords="Performance"/>
+     <event value="217" symbol="SimSecChangePinStop" version="0" task="SimSecChangePin" opcode="win:Stop" level="win:Verbose" keywords="Performance"/>
+     <event value="218" symbol="StartCallStart" version="0" task="StartCall" opcode="win:Start" level="win:Verbose" keywords="Performance"/>
+     <event value="219" symbol="task_0219" version="0" task="task_0" level="win:Warning" keywords="Warning" template="task_0219Args"/>
+     <event value="220" symbol="SimSecChangePin2Start" version="0" task="SimSecChangePin2" opcode="win:Start" level="win:Verbose" keywords="Performance"/>
+     <event value="221" symbol="SimSecChangePin2Stop" version="0" task="SimSecChangePin2" opcode="win:Stop" level="win:Verbose" keywords="Performance"/>
+     <event value="222" symbol="SimSecUnblockPin2Start" version="0" task="SimSecUnblockPin2" opcode="win:Start" level="win:Verbose" keywords="Performance"/>
+     <event value="223" symbol="SimSecUnblockPin2Stop" version="0" task="SimSecUnblockPin2" opcode="win:Stop" level="win:Verbose" keywords="Performance"/>
+     <event value="224" symbol="task_0224" version="0" task="task_0" level="win:Informational" keywords="StateTransition" template="task_0224Args"/>
+     <event value="225" symbol="task_0225" version="0" task="task_0" level="win:Informational" keywords="StateTransition" template="task_0224Args"/>
+     <event value="226" symbol="task_0226" version="0" task="task_0" level="win:Informational" keywords="StateTransition" template="task_0224Args"/>
+     <event value="227" symbol="task_0227" version="0" task="task_0" level="win:Informational" keywords="StateTransition" template="task_0224Args"/>
+     <event value="228" symbol="task_0228" version="0" task="task_0" level="win:Error" keywords="Error" template="task_0228Args"/>
+     <event value="229" symbol="task_0229" version="0" task="task_0" level="win:Informational" keywords="PhoneOM" template="task_0229Args"/>
+     <event value="230" symbol="task_0230" version="0" task="task_0" level="win:Informational" keywords="PhoneOM" template="task_0230Args"/>
+     <event value="231" symbol="task_0231" version="0" task="task_0" level="win:Informational" keywords="PhoneOM" template="task_0231Args"/>
+     <event value="232" symbol="task_0232" version="0" task="task_0" level="win:Informational" keywords="PhoneOM" template="task_0232Args"/>
+     <event value="233" symbol="task_0233" version="0" task="task_0" level="win:Error" keywords="PhoneOM"/>
+     <event value="234" symbol="task_0234" version="0" task="task_0" level="win:Informational" keywords="PhoneOM" template="task_0234Args"/>
+    </events>
+    <templates>
+     <template tid="task_0Args">
+      <data name="P1_HResult" inType="win:Int32"/>
+      <data name="P2_String" inType="win:AnsiString"/>
+      <data name="P3_UInt32" inType="win:UInt32"/>
+     </template>
+     <template tid="task_05Args">
+      <data name="Prop_UnicodeString" inType="win:UnicodeString"/>
+     </template>
+     <template tid="task_0102Args">
+      <data name="P1_Ptr" inType="win:Pointer"/>
+      <data name="P2_String" inType="win:UnicodeString"/>
+     </template>
+     <template tid="task_0103Args">
+      <data name="P1_Ptr" inType="win:Pointer"/>
+     </template>
+     <template tid="task_0219Args">
+      <data name="P1_UInt32" inType="win:UInt32"/>
+     </template>
+     <template tid="task_0224Args">
+      <data name="Pointer" inType="win:Pointer"/>
+     </template>
+     <template tid="task_0228Args">
+      <data name="Pointer" inType="win:Pointer"/>
+      <data name="Result" inType="win:Int32"/>
+     </template>
+     <template tid="task_0229Args">
+      <data name="Api" inType="win:UInt32" map="PhoneApi"/>
+     </template>
+     <template tid="task_0230Args">
+      <data name="Api" inType="win:UInt32"/>
+      <data name="Call" inType="win:UInt32"/>
+     </template>
+     <template tid="task_0231Args">
+      <data name="Api" inType="win:UInt32"/>
+      <data name="Call" inType="win:UInt32"/>
+      <data name="Call2" inType="win:UInt32"/>
+     </template>
+     <template tid="task_0232Args">
+      <data name="Api" inType="win:UInt32"/>
+      <data name="Line" inType="win:GUID"/>
+     </template>
+     <template tid="task_0234Args">
+      <data name="Line" inType="win:GUID"/>
+     </template>
+    </templates>
+   </provider>
+  </events>
+ </instrumentation>
+ <localization>
+  <resources culture="en-US">
+   <stringTable>
+    <string id="keyword_Error" value="Error"/>
+    <string id="keyword_Performance" value="Performance"/>
+    <string id="keyword_Debug" value="Debug"/>
+    <string id="keyword_PhoneDefault" value="PhoneDefault"/>
+    <string id="keyword_CONTROLLER" value="CONTROLLER"/>
+    <string id="keyword_CellularProvider" value="CellularProvider"/>
+    <string id="keyword_PHONEUI" value="PHONEUI"/>
+    <string id="keyword_Callhistory" value="Callhistory"/>
+    <string id="keyword_CDMA" value="CDMA"/>
+    <string id="keyword_VVM" value="VVM"/>
+    <string id="keyword_MISC" value="MISC"/>
+    <string id="keyword_PhoneOM" value="PhoneOM"/>
+    <string id="keyword_Warning" value="Warning"/>
+    <string id="keyword_StateTransition" value="StateTransition"/>
+    <string id="task_task_0" value="task_0"/>
+    <string id="task_SimSecEnsureLine" value="SimSecEnsureLine"/>
+    <string id="task_SimSecGetPinLockState" value="SimSecGetPinLockState"/>
+    <string id="task_SimSecGetPersoCheckState" value="SimSecGetPersoCheckState"/>
+    <string id="task_SimSecGetPersoDeactivationState" value="SimSecGetPersoDeactivationState"/>
+    <string id="task_SimSecEnablePin" value="SimSecEnablePin"/>
+    <string id="task_SimSecUnblockPin" value="SimSecUnblockPin"/>
+    <string id="task_SimSecUnlockPin" value="SimSecUnlockPin"/>
+    <string id="task_SimSecUnlockPerso" value="SimSecUnlockPerso"/>
+    <string id="task_SimSecChangePin" value="SimSecChangePin"/>
+    <string id="task_StartCall" value="StartCall"/>
+    <string id="task_SimSecChangePin2" value="SimSecChangePin2"/>
+    <string id="task_SimSecUnblockPin2" value="SimSecUnblockPin2"/>
+    <string id="map_PhoneApiPhoneApiInitialize" value="PhoneApiInitialize"/>
+    <string id="map_PhoneApiPhoneApiUninitialize" value="PhoneApiUninitialize"/>
+    <string id="map_PhoneApiPhoneIsEmergencyNumber" value="PhoneIsEmergencyNumber"/>
+    <string id="map_PhoneApiPhoneGetDefaultOutgoingLine" value="PhoneGetDefaultOutgoingLine"/>
+    <string id="map_PhoneApiPhoneIsImmediateDialString" value="PhoneIsImmediateDialString"/>
+    <string id="map_PhoneApiPhoneIsDtmfWaitPending" value="PhoneIsDtmfWaitPending"/>
+    <string id="map_PhoneApiPhoneExecutePendingDtmfWait" value="PhoneExecutePendingDtmfWait"/>
+    <string id="map_PhoneApiPhoneCallVoicemail" value="PhoneCallVoicemail"/>
+    <string id="map_PhoneApiPhoneGetCellularApiComponentInfo" value="PhoneGetCellularApiComponentInfo"/>
+    <string id="map_PhoneApiPhoneGetVoicemailNumberAndOverrideInfo" value="PhoneGetVoicemailNumberAndOverrideInfo"/>
+    <string id="map_PhoneApiPhoneInitiateRetrievalOfCIDRestrictionSupport" value="PhoneInitiateRetrievalOfCIDRestrictionSupport"/>
+    <string id="map_PhoneApiPhoneRefreshCallForwardingState" value="PhoneRefreshCallForwardingState"/>
+    <string id="map_PhoneApiPhoneDial" value="PhoneDial"/>
+    <string id="map_PhoneApiPhoneEnd" value="PhoneEnd"/>
+    <string id="map_PhoneApiPhoneSwap" value="PhoneSwap"/>
+    <string id="map_PhoneApiPhoneSetHold" value="PhoneSetHold"/>
+    <string id="map_PhoneApiPhoneFlash" value="PhoneFlash"/>
+    <string id="map_PhoneApiPhoneConference" value="PhoneConference"/>
+    <string id="map_PhoneApiPhonePrivate" value="PhonePrivate"/>
+    <string id="map_PhoneApiPhoneSetMute" value="PhoneSetMute"/>
+    <string id="map_PhoneApiPhoneSetSpeaker" value="PhoneSetSpeaker"/>
+    <string id="map_PhoneApiPhoneEnableBluetoothHandsFree" value="PhoneEnableBluetoothHandsFree"/>
+    <string id="map_PhoneApiPhoneSendDTMF" value="PhoneSendDTMF"/>
+    <string id="map_PhoneApiPhoneSendDTMFStart" value="PhoneSendDTMFStart"/>
+    <string id="map_PhoneApiPhoneSendDTMFStop" value="PhoneSendDTMFStop"/>
+    <string id="map_PhoneApiPhoneAcceptIncoming" value="PhoneAcceptIncoming"/>
+    <string id="map_PhoneApiPhoneAcceptIncomingEx" value="PhoneAcceptIncomingEx"/>
+    <string id="map_PhoneApiPhoneDropAccept" value="PhoneDropAccept"/>
+    <string id="map_PhoneApiPhoneDropAcceptEx" value="PhoneDropAcceptEx"/>
+    <string id="map_PhoneApiPhoneExitEmergencyMode" value="PhoneExitEmergencyMode"/>
+    <string id="map_PhoneApiPhoneGetCallInfo" value="PhoneGetCallInfo"/>
+    <string id="map_PhoneApiPhoneGetCallState" value="PhoneGetCallState"/>
+    <string id="map_PhoneApiPhoneGetElapsedTime" value="PhoneGetElapsedTime"/>
+    <string id="map_PhoneApiPhoneGetSpeaker" value="PhoneGetSpeaker"/>
+    <string id="map_PhoneApiPhoneGetBluetoothHandsFreeState" value="PhoneGetBluetoothHandsFreeState"/>
+    <string id="map_PhoneApiPhoneGetWiredHeadsetState" value="PhoneGetWiredHeadsetState"/>
+    <string id="map_PhoneApiPhoneGetAvailableActions" value="PhoneGetAvailableActions"/>
+    <string id="map_PhoneApiPhoneIsActionAvailable" value="PhoneIsActionAvailable"/>
+    <string id="map_PhoneApiPhoneGetState" value="PhoneGetState"/>
+    <string id="map_PhoneApiPhoneGetCallCounts" value="PhoneGetCallCounts"/>
+    <string id="map_PhoneApiPhoneGetMute" value="PhoneGetMute"/>
+    <string id="map_PhoneApiPhoneGetCallsInConference" value="PhoneGetCallsInConference"/>
+    <string id="map_PhoneApiPhoneGetNetworkAlert" value="PhoneGetNetworkAlert"/>
+    <string id="map_PhoneApiPhoneMapPlusToDialingPrefix" value="PhoneMapPlusToDialingPrefix"/>
+    <string id="map_PhoneApiPhoneMapIddPrefixToPlus" value="PhoneMapIddPrefixToPlus"/>
+    <string id="map_PhoneApiPhoneGetAssistedDialNumber" value="PhoneGetAssistedDialNumber"/>
+    <string id="map_PhoneApiPhoneGetAssistedDialSetting" value="PhoneGetAssistedDialSetting"/>
+    <string id="map_PhoneApiPhoneAddListener" value="PhoneAddListener"/>
+    <string id="map_PhoneApiPhoneRemoveListener" value="PhoneRemoveListener"/>
+    <string id="map_PhoneApiPhoneStartVisualVoicemailSync" value="PhoneStartVisualVoicemailSync"/>
+    <string id="map_PhoneApiPhoneSaveVvmPassword" value="PhoneSaveVvmPassword"/>
+    <string id="map_PhoneApiPhoneSupportsLocalVvmConfig" value="PhoneSupportsLocalVvmConfig"/>
+    <string id="map_PhoneApiPhoneClearIdleCallsFromController" value="PhoneClearIdleCallsFromController"/>
+    <string id="map_PhoneApiPhoneSimUnlock" value="PhoneSimUnlock"/>
+    <string id="map_PhoneApiPhoneSimUnlockDebug" value="PhoneSimUnlockDebug"/>
+    <string id="map_PhoneApiPhoneSimEnablePinLock" value="PhoneSimEnablePinLock"/>
+    <string id="map_PhoneApiPhoneSimDisablePinLock" value="PhoneSimDisablePinLock"/>
+    <string id="map_PhoneApiPhoneSimChangePin" value="PhoneSimChangePin"/>
+    <string id="map_PhoneApiPhoneSimUIClosed" value="PhoneSimUIClosed"/>
+    <string id="map_PhoneApiPhoneSimGetPin2" value="PhoneSimGetPin2"/>
+    <string id="map_PhoneApiPhoneSimChangePin2" value="PhoneSimChangePin2"/>
+    <string id="map_PhoneApiPhoneSimNotifyPin2Available" value="PhoneSimNotifyPin2Available"/>
+    <string id="map_PhoneApiPhoneFormatPhoneNumber" value="PhoneFormatPhoneNumber"/>
+    <string id="map_PhoneApiPhoneIsVvmSetupComplete" value="PhoneIsVvmSetupComplete"/>
+    <string id="map_PhoneApiPhoneMarkVvmSetupComplete" value="PhoneMarkVvmSetupComplete"/>
+    <string id="map_PhoneApiPhoneSpamFilteringEnabled" value="PhoneSpamFilteringEnabled"/>
+    <string id="map_PhoneApiPhoneReinitiateCallerIdLookup" value="PhoneReinitiateCallerIdLookup"/>
+    <string id="map_PhoneApiPhoneGetPreferredCallUpgradeLine" value="PhoneGetPreferredCallUpgradeLine"/>
+    <string id="map_PhoneApiPhoneInitiateCallUpgrade" value="PhoneInitiateCallUpgrade"/>
+    <string id="map_PhoneApiPhoneRejectIncoming" value="PhoneRejectIncoming"/>
+    <string id="map_PhoneApiPhoneIsVoiceRoamingRestrictionActive" value="PhoneIsVoiceRoamingRestrictionActive"/>
+    <string id="map_PhoneApiPhoneSetForegroundLine" value="PhoneSetForegroundLine"/>
+    <string id="map_PhoneApiPhoneGetAggregateBranding" value="PhoneGetAggregateBranding"/>
+    <string id="map_PhoneApiPhoneGetBrandingText" value="PhoneGetBrandingText"/>
+    <string id="map_PhoneApiPhoneSetPreferredCallUpgradeLine" value="PhoneSetPreferredCallUpgradeLine"/>
+    <string id="map_PhoneApiPhoneSetReminderInfo" value="PhoneSetReminderInfo"/>
+    <string id="map_PhoneApiPhoneWaitSimSecurityReady" value="PhoneWaitSimSecurityReady"/>
+    <string id="map_PhoneApiPhoneConfirmNonSeamlessUpgrade" value="PhoneConfirmNonSeamlessUpgrade"/>
+    <string id="map_PhoneApiPhoneCancelNonSeamlessUpgrade" value="PhoneCancelNonSeamlessUpgrade"/>
+    <string id="map_PhoneApiPhoneSetLocalVideo" value="PhoneSetLocalVideo"/>
+    <string id="map_PhoneApiPhoneAddVideo" value="PhoneAddVideo"/>
+    <string id="map_PhoneApiPhoneDropVideo" value="PhoneDropVideo"/>
+    <string id="map_PhoneApiPhoneAcceptVideo" value="PhoneAcceptVideo"/>
+    <string id="map_PhoneApiPhoneRejectVideo" value="PhoneRejectVideo"/>
+    <string id="map_PhoneApiPhoneSetVideoPaused" value="PhoneSetVideoPaused"/>
+    <string id="map_PhoneApiPhoneModifyVideoCallingSetting" value="PhoneModifyVideoCallingSetting"/>
+    <string id="map_PhoneApiPhoneRefreshVideoCallingSetting" value="PhoneRefreshVideoCallingSetting"/>
+    <string id="map_PhoneApiPhoneIsVideoCallingSwitchActionable" value="PhoneIsVideoCallingSwitchActionable"/>
+    <string id="map_PhoneApiPhoneIsVideoCallingEnabled" value="PhoneIsVideoCallingEnabled"/>
+    <string id="map_PhoneApiPhoneGetLinePublicInfo" value="PhoneGetLinePublicInfo"/>
+    <string id="map_PhoneApiPhonePublicDial" value="PhonePublicDial"/>
+    <string id="map_PhoneApiPhoneSetCallOriginInfo" value="PhoneSetCallOriginInfo"/>
+    <string id="map_PhoneApiPhoneIsPhoneNumberInBlockList" value="PhoneIsPhoneNumberInBlockList"/>
+    <string id="map_PhoneApiPhoneSetSpecificTypeActiveApp" value="PhoneSetSpecificTypeActiveApp"/>
+    <string id="map_PhoneApiPhoneGetSpecificTypeActiveApp" value="PhoneGetSpecificTypeActiveApp"/>
+    <string id="map_PhoneApiPhoneGetSpecificTypeAppList" value="PhoneGetSpecificTypeAppList"/>
+    <string id="map_PhoneApiPhoneSetActiveSpamFilterApp" value="PhoneSetActiveSpamFilterApp"/>
+    <string id="map_PhoneApiPhoneGetActiveSpamFilterApp" value="PhoneGetActiveSpamFilterApp"/>
+    <string id="map_PhoneApiPhoneHandleAppUninstallByType" value="PhoneHandleAppUninstallByType"/>
+    <string id="map_PhoneApiPhoneStartRecording" value="PhoneStartRecording"/>
+    <string id="map_PhoneApiPhonePauseRecording" value="PhonePauseRecording"/>
+    <string id="map_PhoneApiPhoneFinishRecording" value="PhoneFinishRecording"/>
+    <string id="map_PhoneApiPhoneGetVideoCapabilities" value="PhoneGetVideoCapabilities"/>
+    <string id="map_PhoneApiPhoneSetBlockPrivateNumbersSetting" value="PhoneSetBlockPrivateNumbersSetting"/>
+    <string id="map_PhoneApiPhoneGetBlockPrivateNumbersSetting" value="PhoneGetBlockPrivateNumbersSetting"/>
+    <string id="map_PhoneApiPhoneSetBlockUnknownNumbersSetting" value="PhoneSetBlockUnknownNumbersSetting"/>
+    <string id="map_PhoneApiPhoneGetBlockUnknownNumbersSetting" value="PhoneGetBlockUnknownNumbersSetting"/>
+    <string id="map_PhoneApiPhoneSetFilerAppBlockList" value="PhoneSetFilerAppBlockList"/>
+    <string id="map_PhoneApiPhoneGetLinePublicSettings" value="PhoneGetLinePublicSettings"/>
+    <string id="map_PhoneApiPhoneRefreshEcbmState" value="PhoneRefreshEcbmState"/>
+    <string id="map_PhoneApiPhoneGetVideoCapabilitySharingSettings" value="PhoneGetVideoCapabilitySharingSettings"/>
+    <string id="map_PhoneApiPhoneSetVideoCapabilitySharingSettings" value="PhoneSetVideoCapabilitySharingSettings"/>
+    <string id="map_PhoneApiPhoneGetDeviceSupportsVideoCalling" value="PhoneGetDeviceSupportsVideoCalling"/>
+    <string id="map_PhoneApiPhoneGetRecordingApplications" value="PhoneGetRecordingApplications"/>
+    <string id="map_PhoneApiPhoneSetRecordingApplication" value="PhoneSetRecordingApplication"/>
+    <string id="map_PhoneApiPhoneGetShouldMuteKeypad" value="PhoneGetShouldMuteKeypad"/>
+    <string id="map_PhoneApiPhoneExplicitCallTransfer" value="PhoneExplicitCallTransfer"/>
+    <string id="map_PhoneApiPhoneMarkDataAffinityNotificationSeen" value="PhoneMarkDataAffinityNotificationSeen"/>
+    <string id="map_PhoneApiPhoneCallCapabilityAccessCheck" value="PhoneCallCapabilityAccessCheck"/>
+    <string id="map_PhoneApiPhoneSetCallerAsActiveAppByType" value="PhoneSetCallerAsActiveAppByType"/>
+   </stringTable>
+  </resources>
+ </localization>
+</instrumentationManifest>

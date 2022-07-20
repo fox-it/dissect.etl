@@ -1,0 +1,88 @@
+<instrumentationManifest xmlns="http://schemas.microsoft.com/win/2004/08/events">
+ <instrumentation xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:win="http://manifests.microsoft.com/win/2004/08/windows/events">
+  <events>
+   <provider name="Microsoft-Windows-USBVideo" guid="{da1d1dbd-3186-4fa2-bc2d-075efd9e43e2}" resourceFileName="Microsoft-Windows-USBVideo" messageFileName="Microsoft-Windows-USBVideo" symbol="MicrosoftWindowsUSBVideo" source="Xml" >
+    <keywords>
+    </keywords>
+    <tasks>
+     <task name="USBVideo_Power" message="$(string.task_USBVideo_Power)" value="101"/>
+     <task name="USBVideo_StartUSBVideoDevice" message="$(string.task_USBVideo_StartUSBVideoDevice)" value="103"/>
+     <task name="USBVideo_StopUSBVideoDevice" message="$(string.task_USBVideo_StopUSBVideoDevice)" value="104"/>
+     <task name="USBVideo_FillUserBuffer" message="$(string.task_USBVideo_FillUserBuffer)" value="105"/>
+     <task name="USBVideo_UserBufferStarvation" message="$(string.task_USBVideo_UserBufferStarvation)" value="106"/>
+     <task name="USBVideo_USBPayloadError" message="$(string.task_USBVideo_USBPayloadError)" value="107"/>
+     <task name="USBVideo_USBBufferOverrun" message="$(string.task_USBVideo_USBBufferOverrun)" value="108"/>
+    </tasks>
+    <events>
+     <event value="200" symbol="USBVideo_PowerStart" version="0" task="USBVideo_Power" opcode="win:Start" level="win:Informational" template="USBVideo_PowerStartArgs"/>
+     <event value="201" symbol="USBVideo_PowerStop" version="0" task="USBVideo_Power" opcode="win:Stop" level="win:Informational" template="USBVideo_PowerStartArgs"/>
+     <event value="202" symbol="USBVideo_PowerStart202" version="0" task="USBVideo_Power" opcode="win:Start" level="win:Informational" template="USBVideo_PowerStartArgs"/>
+     <event value="203" symbol="USBVideo_PowerStop203" version="0" task="USBVideo_Power" opcode="win:Stop" level="win:Informational" template="USBVideo_PowerStartArgs"/>
+     <event value="204" symbol="USBVideo_StartUSBVideoDeviceStart" version="0" task="USBVideo_StartUSBVideoDevice" opcode="win:Start" level="win:Informational" template="USBVideo_PowerStartArgs"/>
+     <event value="205" symbol="USBVideo_StartUSBVideoDeviceStop" version="0" task="USBVideo_StartUSBVideoDevice" opcode="win:Stop" level="win:Informational" template="USBVideo_PowerStartArgs"/>
+     <event value="206" symbol="USBVideo_StopUSBVideoDeviceStart" version="0" task="USBVideo_StopUSBVideoDevice" opcode="win:Start" level="win:Informational" template="USBVideo_PowerStartArgs"/>
+     <event value="207" symbol="USBVideo_StopUSBVideoDeviceStop" version="0" task="USBVideo_StopUSBVideoDevice" opcode="win:Stop" level="win:Informational" template="USBVideo_PowerStartArgs"/>
+     <event value="208" symbol="USBVideo_FillUserBufferStart" version="0" task="USBVideo_FillUserBuffer" opcode="win:Start" level="win:Informational" template="USBVideo_FillUserBufferStartArgs"/>
+     <event value="209" symbol="USBVideo_FillUserBufferStop" version="0" task="USBVideo_FillUserBuffer" opcode="win:Stop" level="win:Informational" template="USBVideo_FillUserBufferStartArgs"/>
+     <event value="210" symbol="USBVideo_UserBufferStarvation" version="0" task="USBVideo_UserBufferStarvation" level="win:Warning"/>
+     <event value="211" symbol="USBVideo_USBPayloadError" version="0" task="USBVideo_USBPayloadError" level="win:Warning"/>
+     <event value="212" symbol="USBVideo_USBBufferOverrun" version="0" task="USBVideo_USBBufferOverrun" level="win:Warning"/>
+     <event value="213" symbol="USBVideo_PowerStart213" version="0" task="USBVideo_Power" opcode="win:Start" level="win:Informational" template="USBVideo_PowerStart213Args"/>
+     <event value="214" symbol="USBVideo_PowerStop214" version="0" task="USBVideo_Power" opcode="win:Stop" level="win:Informational" template="USBVideo_PowerStart213Args"/>
+     <event value="215" symbol="USBVideo_PowerStart215" version="0" task="USBVideo_Power" opcode="win:Start" level="win:Informational" template="USBVideo_PowerStart215Args"/>
+     <event value="216" symbol="USBVideo_PowerStop216" version="0" task="USBVideo_Power" opcode="win:Stop" level="win:Informational" template="USBVideo_PowerStartArgs"/>
+     <event value="217" symbol="USBVideo_PowerSuspend" version="0" task="USBVideo_Power" opcode="win:Suspend" level="win:Informational" template="USBVideo_PowerSuspendArgs"/>
+     <event value="218" symbol="USBVideo_PowerResume" version="0" task="USBVideo_Power" opcode="win:Resume" level="win:Informational" template="USBVideo_PowerResumeArgs"/>
+     <event value="219" symbol="USBVideo_Power" version="0" task="USBVideo_Power" level="win:Warning" template="USBVideo_PowerStartArgs"/>
+     <event value="220" symbol="USBVideo_Power220" version="0" task="USBVideo_Power" level="win:Informational" template="USBVideo_PowerStartArgs"/>
+     <event value="221" symbol="USBVideo_Power221" version="0" task="USBVideo_Power" level="win:Warning" template="USBVideo_PowerStartArgs"/>
+    </events>
+    <templates>
+     <template tid="USBVideo_PowerStartArgs">
+      <data name="DeviceObject" inType="win:Pointer"/>
+     </template>
+     <template tid="USBVideo_FillUserBufferStartArgs">
+      <data name="pBuf" inType="win:Pointer"/>
+      <data name="ulBytesCopied" inType="win:UInt32"/>
+     </template>
+     <template tid="USBVideo_PowerStart213Args">
+      <data name="DeviceObject" inType="win:Pointer"/>
+      <data name="FilterInstanceCount" inType="win:Int32"/>
+      <data name="ActiveStreamCount" inType="win:UInt32"/>
+      <data name="ConnectedStandbyState" inType="win:UInt32"/>
+      <data name="ntStatus" inType="win:UInt32"/>
+     </template>
+     <template tid="USBVideo_PowerStart215Args">
+      <data name="DeviceObject" inType="win:Pointer"/>
+      <data name="SystemState" inType="win:UInt32"/>
+      <data name="DeviceState" inType="win:UInt32"/>
+      <data name="DevicePowerStage" inType="win:UInt32"/>
+      <data name="ntStatus" inType="win:UInt32"/>
+     </template>
+     <template tid="USBVideo_PowerSuspendArgs">
+      <data name="DeviceObject" inType="win:Pointer"/>
+      <data name="Irp" inType="win:Pointer"/>
+     </template>
+     <template tid="USBVideo_PowerResumeArgs">
+      <data name="DeviceObject" inType="win:Pointer"/>
+      <data name="Irp" inType="win:Pointer"/>
+      <data name="ntStatus" inType="win:UInt32"/>
+     </template>
+    </templates>
+   </provider>
+  </events>
+ </instrumentation>
+ <localization>
+  <resources culture="en-US">
+   <stringTable>
+    <string id="task_USBVideo_Power" value="USBVideo_Power"/>
+    <string id="task_USBVideo_StartUSBVideoDevice" value="USBVideo_StartUSBVideoDevice"/>
+    <string id="task_USBVideo_StopUSBVideoDevice" value="USBVideo_StopUSBVideoDevice"/>
+    <string id="task_USBVideo_FillUserBuffer" value="USBVideo_FillUserBuffer"/>
+    <string id="task_USBVideo_UserBufferStarvation" value="USBVideo_UserBufferStarvation"/>
+    <string id="task_USBVideo_USBPayloadError" value="USBVideo_USBPayloadError"/>
+    <string id="task_USBVideo_USBBufferOverrun" value="USBVideo_USBBufferOverrun"/>
+   </stringTable>
+  </resources>
+ </localization>
+</instrumentationManifest>

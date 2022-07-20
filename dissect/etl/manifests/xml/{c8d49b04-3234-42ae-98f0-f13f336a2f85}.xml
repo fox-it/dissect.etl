@@ -1,0 +1,317 @@
+<instrumentationManifest xmlns="http://schemas.microsoft.com/win/2004/08/events">
+ <instrumentation xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:win="http://manifests.microsoft.com/win/2004/08/windows/events">
+  <events>
+   <provider name="Microsoft-Windows-Narrator-Inproc" guid="{c8d49b04-3234-42ae-98f0-f13f336a2f85}" resourceFileName="Microsoft-Windows-Narrator-Inproc" messageFileName="Microsoft-Windows-Narrator-Inproc" symbol="MicrosoftWindowsNarratorInproc" source="Xml" >
+    <keywords>
+     <keyword name="PerfInstrumentation" message="$(string.keyword_PerfInstrumentation)" mask="0x10000"/>
+     <keyword name="PerfDiagnostics" message="$(string.keyword_PerfDiagnostics)" mask="0x20000"/>
+    </keywords>
+    <tasks>
+     <task name="ModeChange" message="$(string.task_ModeChange)" value="9"/>
+     <task name="QueueAppEvent" message="$(string.task_QueueAppEvent)" value="25"/>
+     <task name="TouchModeSwitch" message="$(string.task_TouchModeSwitch)" value="31"/>
+     <task name="OSKToggled" message="$(string.task_OSKToggled)" value="35"/>
+     <task name="ScreenRotatedInproc" message="$(string.task_ScreenRotatedInproc)" value="37"/>
+     <task name="TaskbarIsFlashing" message="$(string.task_TaskbarIsFlashing)" value="39"/>
+     <task name="ExplorerStateChange" message="$(string.task_ExplorerStateChange)" value="41"/>
+     <task name="ToggleSelectionMode" message="$(string.task_ToggleSelectionMode)" value="45"/>
+     <task name="ProcessNarratorCommand" message="$(string.task_ProcessNarratorCommand)" value="47"/>
+     <task name="NarratorPlaySoundInproc" message="$(string.task_NarratorPlaySoundInproc)" value="50"/>
+     <task name="EventQueued" message="$(string.task_EventQueued)" value="51"/>
+     <task name="ProcessInputEvent" message="$(string.task_ProcessInputEvent)" value="52"/>
+     <task name="NarratorGetElementFromPoint" message="$(string.task_NarratorGetElementFromPoint)" value="53"/>
+     <task name="InvestigateUpdateTextPattern" message="$(string.task_InvestigateUpdateTextPattern)" value="55"/>
+     <task name="TextPatternUpdateCursor" message="$(string.task_TextPatternUpdateCursor)" value="57"/>
+     <task name="RenderFocusInproc" message="$(string.task_RenderFocusInproc)" value="60"/>
+     <task name="NavigationOriginId" message="$(string.task_NavigationOriginId)" value="69"/>
+     <task name="NavigationTargetId" message="$(string.task_NavigationTargetId)" value="71"/>
+     <task name="UiaFocusVerification" message="$(string.task_UiaFocusVerification)" value="74"/>
+     <task name="UiaSecondFocusVerification" message="$(string.task_UiaSecondFocusVerification)" value="76"/>
+     <task name="ClearEventQueue" message="$(string.task_ClearEventQueue)" value="98"/>
+     <task name="GetTargetTextPatternElementInproc" message="$(string.task_GetTargetTextPatternElementInproc)" value="104"/>
+     <task name="FindNextOrPreviousHeader" message="$(string.task_FindNextOrPreviousHeader)" value="108"/>
+     <task name="DetermineActionSequence" message="$(string.task_DetermineActionSequence)" value="112"/>
+     <task name="TextEventPreprocessing" message="$(string.task_TextEventPreprocessing)" value="121"/>
+     <task name="InitializeTextPatternState" message="$(string.task_InitializeTextPatternState)" value="123"/>
+     <task name="CheckTextEventDelta" message="$(string.task_CheckTextEventDelta)" value="125"/>
+     <task name="GenerateTextEventTextChange" message="$(string.task_GenerateTextEventTextChange)" value="127"/>
+     <task name="TextEventParentUpdate" message="$(string.task_TextEventParentUpdate)" value="129"/>
+     <task name="ElementTextGeneration" message="$(string.task_ElementTextGeneration)" value="133"/>
+     <task name="GenerateTextPatternText" message="$(string.task_GenerateTextPatternText)" value="135"/>
+     <task name="FindTextPatternActionElement" message="$(string.task_FindTextPatternActionElement)" value="137"/>
+     <task name="InternalGetTextPatternUnitChange" message="$(string.task_InternalGetTextPatternUnitChange)" value="139"/>
+     <task name="SaveCharactersAroundTextCursor" message="$(string.task_SaveCharactersAroundTextCursor)" value="141"/>
+     <task name="GenerateNonDegenerateTextChange" message="$(string.task_GenerateNonDegenerateTextChange)" value="143"/>
+     <task name="ShutdownFocusMonitor" message="$(string.task_ShutdownFocusMonitor)" value="145"/>
+     <task name="ShutdownMouseMonitor" message="$(string.task_ShutdownMouseMonitor)" value="147"/>
+     <task name="ShutdownTouchMonitor" message="$(string.task_ShutdownTouchMonitor)" value="149"/>
+     <task name="ShutdownSystemMonitor" message="$(string.task_ShutdownSystemMonitor)" value="153"/>
+     <task name="BreakChunkIntoFormats" message="$(string.task_BreakChunkIntoFormats)" value="156"/>
+     <task name="GetFormatReading" message="$(string.task_GetFormatReading)" value="158"/>
+     <task name="DetailedReadingData" message="$(string.task_DetailedReadingData)" value="160"/>
+     <task name="EventQProcess" message="$(string.task_EventQProcess)" value="162"/>
+     <task name="RebuildCache" message="$(string.task_RebuildCache)" value="164"/>
+     <task name="IsInprocEnabledInproc" message="$(string.task_IsInprocEnabledInproc)" value="166"/>
+     <task name="CancellationCheck" message="$(string.task_CancellationCheck)" value="168"/>
+     <task name="UiaFocusEventReceived" message="$(string.task_UiaFocusEventReceived)" value="170"/>
+     <task name="FocusProcessingEnqueued" message="$(string.task_FocusProcessingEnqueued)" value="172"/>
+     <task name="NarratorPerformanceScenarioInproc" message="$(string.task_NarratorPerformanceScenarioInproc)" value="174"/>
+     <task name="IsElementInPeripheralUIInproc" message="$(string.task_IsElementInPeripheralUIInproc)" value="176"/>
+     <task name="IsElementOnSoftKeyboardInproc" message="$(string.task_IsElementOnSoftKeyboardInproc)" value="182"/>
+     <task name="ProcessTextPatternCommand" message="$(string.task_ProcessTextPatternCommand)" value="188"/>
+     <task name="JumpToHeading" message="$(string.task_JumpToHeading)" value="190"/>
+     <task name="PlaceCaret" message="$(string.task_PlaceCaret)" value="194"/>
+     <task name="ProcessSelectionChange" message="$(string.task_ProcessSelectionChange)" value="196"/>
+     <task name="ProcessDegenerateSelection" message="$(string.task_ProcessDegenerateSelection)" value="200"/>
+     <task name="GetChunkedText" message="$(string.task_GetChunkedText)" value="202"/>
+     <task name="GetChunk" message="$(string.task_GetChunk)" value="204"/>
+     <task name="IsPlaceCaretPosition" message="$(string.task_IsPlaceCaretPosition)" value="206"/>
+     <task name="UiaAutomationEventHandler" message="$(string.task_UiaAutomationEventHandler)" value="208"/>
+     <task name="AutomationEventProcessingEnqueued" message="$(string.task_AutomationEventProcessingEnqueued)" value="212"/>
+     <task name="TextSelectionChangedEventProcessing" message="$(string.task_TextSelectionChangedEventProcessing)" value="214"/>
+    </tasks>
+    <events>
+     <event value="9" symbol="ModeChange" version="0" task="ModeChange" level="win:Informational" keywords="PerfInstrumentation" template="ModeChangeArgs"/>
+     <event value="25" symbol="QueueAppEvent" version="0" task="QueueAppEvent" level="win:Informational" keywords="PerfInstrumentation" template="QueueAppEventArgs"/>
+     <event value="31" symbol="TouchModeSwitch" version="0" task="TouchModeSwitch" level="win:Informational" keywords="PerfInstrumentation" template="TouchModeSwitchArgs"/>
+     <event value="35" symbol="OSKToggled" version="0" task="OSKToggled" level="win:Informational" keywords="PerfInstrumentation" template="OSKToggledArgs"/>
+     <event value="37" symbol="ScreenRotatedInproc" version="0" task="ScreenRotatedInproc" level="win:Informational" keywords="PerfInstrumentation" template="ScreenRotatedInprocArgs"/>
+     <event value="39" symbol="TaskbarIsFlashing" version="0" task="TaskbarIsFlashing" level="win:Informational" keywords="PerfInstrumentation"/>
+     <event value="41" symbol="ExplorerStateChange" version="0" task="ExplorerStateChange" level="win:Informational" keywords="PerfInstrumentation" template="ExplorerStateChangeArgs"/>
+     <event value="45" symbol="ToggleSelectionMode" version="0" task="ToggleSelectionMode" level="win:Informational" keywords="PerfInstrumentation" template="ToggleSelectionModeArgs"/>
+     <event value="47" symbol="ProcessNarratorCommandStart" version="0" task="ProcessNarratorCommand" opcode="win:Start" level="win:Informational" keywords="PerfInstrumentation" template="ProcessNarratorCommandStartArgs"/>
+     <event value="48" symbol="ProcessNarratorCommandStop" version="0" task="ProcessNarratorCommand" opcode="win:Stop" level="win:Informational" keywords="PerfInstrumentation" template="ProcessNarratorCommandStartArgs"/>
+     <event value="50" symbol="NarratorPlaySoundInproc" version="0" task="NarratorPlaySoundInproc" level="win:Informational" keywords="PerfInstrumentation" template="NarratorPlaySoundInprocArgs"/>
+     <event value="51" symbol="EventQueued" version="0" task="EventQueued" level="win:Informational" keywords="PerfInstrumentation" template="EventQueuedArgs"/>
+     <event value="52" symbol="ProcessInputEventStart" version="0" task="ProcessInputEvent" opcode="win:Start" level="win:Informational" keywords="PerfInstrumentation" template="ProcessInputEventStartArgs"/>
+     <event value="53" symbol="NarratorGetElementFromPointStart" version="0" task="NarratorGetElementFromPoint" opcode="win:Start" level="win:Informational" keywords="PerfInstrumentation" template="NarratorGetElementFromPointStartArgs"/>
+     <event value="54" symbol="NarratorGetElementFromPointStop" version="0" task="NarratorGetElementFromPoint" opcode="win:Stop" level="win:Informational" keywords="PerfInstrumentation" template="NarratorGetElementFromPointStartArgs"/>
+     <event value="55" symbol="InvestigateUpdateTextPatternStart" version="0" task="InvestigateUpdateTextPattern" opcode="win:Start" level="win:Informational" keywords="PerfInstrumentation" template="NarratorGetElementFromPointStartArgs"/>
+     <event value="56" symbol="InvestigateUpdateTextPatternStop" version="0" task="InvestigateUpdateTextPattern" opcode="win:Stop" level="win:Informational" keywords="PerfInstrumentation" template="NarratorGetElementFromPointStartArgs"/>
+     <event value="57" symbol="TextPatternUpdateCursorStart" version="0" task="TextPatternUpdateCursor" opcode="win:Start" level="win:Informational" keywords="PerfInstrumentation" template="NarratorGetElementFromPointStartArgs"/>
+     <event value="58" symbol="TextPatternUpdateCursorStop" version="0" task="TextPatternUpdateCursor" opcode="win:Stop" level="win:Informational" keywords="PerfInstrumentation" template="NarratorGetElementFromPointStartArgs"/>
+     <event value="60" symbol="RenderFocusInprocStart" version="0" task="RenderFocusInproc" opcode="win:Start" level="win:Informational" keywords="PerfInstrumentation" template="NarratorGetElementFromPointStartArgs"/>
+     <event value="61" symbol="RenderFocusInprocStop" version="0" task="RenderFocusInproc" opcode="win:Stop" level="win:Informational" keywords="PerfInstrumentation" template="NarratorGetElementFromPointStartArgs"/>
+     <event value="66" symbol="ProcessInputEventStop" version="0" task="ProcessInputEvent" opcode="win:Stop" level="win:Informational" keywords="PerfInstrumentation" template="ProcessInputEventStartArgs"/>
+     <event value="69" symbol="NavigationOriginIdStart" version="0" task="NavigationOriginId" opcode="win:Start" level="win:Informational" keywords="PerfInstrumentation" template="NarratorGetElementFromPointStartArgs"/>
+     <event value="70" symbol="NavigationOriginIdStop" version="0" task="NavigationOriginId" opcode="win:Stop" level="win:Informational" keywords="PerfInstrumentation" template="NarratorGetElementFromPointStartArgs"/>
+     <event value="71" symbol="NavigationTargetIdStart" version="0" task="NavigationTargetId" opcode="win:Start" level="win:Informational" keywords="PerfInstrumentation" template="NarratorGetElementFromPointStartArgs"/>
+     <event value="72" symbol="NavigationTargetIdStop" version="0" task="NavigationTargetId" opcode="win:Stop" level="win:Informational" keywords="PerfInstrumentation" template="NarratorGetElementFromPointStartArgs"/>
+     <event value="74" symbol="UiaFocusVerificationStart" version="0" task="UiaFocusVerification" opcode="win:Start" level="win:Informational" keywords="PerfInstrumentation" template="UiaFocusVerificationStartArgs"/>
+     <event value="75" symbol="UiaFocusVerificationStop" version="0" task="UiaFocusVerification" opcode="win:Stop" level="win:Informational" keywords="PerfInstrumentation" template="UiaFocusVerificationStartArgs"/>
+     <event value="76" symbol="UiaSecondFocusVerificationStart" version="0" task="UiaSecondFocusVerification" opcode="win:Start" level="win:Informational" keywords="PerfInstrumentation" template="NarratorGetElementFromPointStartArgs"/>
+     <event value="77" symbol="UiaSecondFocusVerificationStop" version="0" task="UiaSecondFocusVerification" opcode="win:Stop" level="win:Informational" keywords="PerfInstrumentation" template="NarratorGetElementFromPointStartArgs"/>
+     <event value="98" symbol="ClearEventQueueStart" version="0" task="ClearEventQueue" opcode="win:Start" level="win:Informational" keywords="PerfInstrumentation"/>
+     <event value="99" symbol="ClearEventQueueStop" version="0" task="ClearEventQueue" opcode="win:Stop" level="win:Informational" keywords="PerfInstrumentation"/>
+     <event value="104" symbol="GetTargetTextPatternElementInprocStart" version="0" task="GetTargetTextPatternElementInproc" opcode="win:Start" level="win:Informational" keywords="PerfInstrumentation" template="NarratorGetElementFromPointStartArgs"/>
+     <event value="105" symbol="GetTargetTextPatternElementInprocStop" version="0" task="GetTargetTextPatternElementInproc" opcode="win:Stop" level="win:Informational" keywords="PerfInstrumentation" template="NarratorGetElementFromPointStartArgs"/>
+     <event value="108" symbol="FindNextOrPreviousHeaderStart" version="0" task="FindNextOrPreviousHeader" opcode="win:Start" level="win:Informational" keywords="PerfInstrumentation" template="NarratorGetElementFromPointStartArgs"/>
+     <event value="109" symbol="FindNextOrPreviousHeaderStart109" version="0" task="FindNextOrPreviousHeader" opcode="win:Start" level="win:Informational" keywords="PerfInstrumentation" template="NarratorGetElementFromPointStartArgs"/>
+     <event value="112" symbol="DetermineActionSequenceStart" version="0" task="DetermineActionSequence" opcode="win:Start" level="win:Informational" keywords="PerfInstrumentation" template="NarratorGetElementFromPointStartArgs"/>
+     <event value="113" symbol="DetermineActionSequenceStop" version="0" task="DetermineActionSequence" opcode="win:Stop" level="win:Informational" keywords="PerfInstrumentation" template="NarratorGetElementFromPointStartArgs"/>
+     <event value="121" symbol="TextEventPreprocessingStart" version="0" task="TextEventPreprocessing" opcode="win:Start" level="win:Informational" keywords="PerfInstrumentation"/>
+     <event value="122" symbol="TextEventPreprocessingStop" version="0" task="TextEventPreprocessing" opcode="win:Stop" level="win:Informational" keywords="PerfInstrumentation"/>
+     <event value="123" symbol="InitializeTextPatternStateStart" version="0" task="InitializeTextPatternState" opcode="win:Start" level="win:Informational" keywords="PerfInstrumentation" template="NarratorGetElementFromPointStartArgs"/>
+     <event value="124" symbol="InitializeTextPatternStateStop" version="0" task="InitializeTextPatternState" opcode="win:Stop" level="win:Informational" keywords="PerfInstrumentation" template="NarratorGetElementFromPointStartArgs"/>
+     <event value="125" symbol="CheckTextEventDeltaStart" version="0" task="CheckTextEventDelta" opcode="win:Start" level="win:Informational" keywords="PerfInstrumentation" template="NarratorGetElementFromPointStartArgs"/>
+     <event value="126" symbol="CheckTextEventDeltaStop" version="0" task="CheckTextEventDelta" opcode="win:Stop" level="win:Informational" keywords="PerfInstrumentation" template="NarratorGetElementFromPointStartArgs"/>
+     <event value="127" symbol="GenerateTextEventTextChangeStart" version="0" task="GenerateTextEventTextChange" opcode="win:Start" level="win:Informational" keywords="PerfInstrumentation" template="NarratorGetElementFromPointStartArgs"/>
+     <event value="128" symbol="GenerateTextEventTextChangeStop" version="0" task="GenerateTextEventTextChange" opcode="win:Stop" level="win:Informational" keywords="PerfInstrumentation" template="NarratorGetElementFromPointStartArgs"/>
+     <event value="129" symbol="TextEventParentUpdateStart" version="0" task="TextEventParentUpdate" opcode="win:Start" level="win:Informational" keywords="PerfInstrumentation" template="NarratorGetElementFromPointStartArgs"/>
+     <event value="130" symbol="TextEventParentUpdateStop" version="0" task="TextEventParentUpdate" opcode="win:Stop" level="win:Informational" keywords="PerfInstrumentation" template="NarratorGetElementFromPointStartArgs"/>
+     <event value="133" symbol="ElementTextGenerationStart" version="0" task="ElementTextGeneration" opcode="win:Start" level="win:Informational" keywords="PerfInstrumentation" template="NarratorGetElementFromPointStartArgs"/>
+     <event value="134" symbol="ElementTextGenerationStop" version="0" task="ElementTextGeneration" opcode="win:Stop" level="win:Informational" keywords="PerfInstrumentation" template="NarratorGetElementFromPointStartArgs"/>
+     <event value="135" symbol="GenerateTextPatternTextStart" version="0" task="GenerateTextPatternText" opcode="win:Start" level="win:Informational" keywords="PerfInstrumentation" template="NarratorGetElementFromPointStartArgs"/>
+     <event value="136" symbol="GenerateTextPatternTextStop" version="0" task="GenerateTextPatternText" opcode="win:Stop" level="win:Informational" keywords="PerfInstrumentation" template="NarratorGetElementFromPointStartArgs"/>
+     <event value="137" symbol="FindTextPatternActionElementStart" version="0" task="FindTextPatternActionElement" opcode="win:Start" level="win:Informational" keywords="PerfInstrumentation" template="NarratorGetElementFromPointStartArgs"/>
+     <event value="138" symbol="FindTextPatternActionElementStop" version="0" task="FindTextPatternActionElement" opcode="win:Stop" level="win:Informational" keywords="PerfInstrumentation" template="NarratorGetElementFromPointStartArgs"/>
+     <event value="139" symbol="InternalGetTextPatternUnitChangeStart" version="0" task="InternalGetTextPatternUnitChange" opcode="win:Start" level="win:Informational" keywords="PerfInstrumentation" template="NarratorGetElementFromPointStartArgs"/>
+     <event value="140" symbol="InternalGetTextPatternUnitChangeStop" version="0" task="InternalGetTextPatternUnitChange" opcode="win:Stop" level="win:Informational" keywords="PerfInstrumentation" template="NarratorGetElementFromPointStartArgs"/>
+     <event value="141" symbol="SaveCharactersAroundTextCursorStart" version="0" task="SaveCharactersAroundTextCursor" opcode="win:Start" level="win:Informational" keywords="PerfInstrumentation" template="NarratorGetElementFromPointStartArgs"/>
+     <event value="142" symbol="SaveCharactersAroundTextCursorStop" version="0" task="SaveCharactersAroundTextCursor" opcode="win:Stop" level="win:Informational" keywords="PerfInstrumentation" template="NarratorGetElementFromPointStartArgs"/>
+     <event value="143" symbol="GenerateNonDegenerateTextChangeStart" version="0" task="GenerateNonDegenerateTextChange" opcode="win:Start" level="win:Informational" keywords="PerfInstrumentation" template="NarratorGetElementFromPointStartArgs"/>
+     <event value="144" symbol="GenerateNonDegenerateTextChangeStop" version="0" task="GenerateNonDegenerateTextChange" opcode="win:Stop" level="win:Informational" keywords="PerfInstrumentation" template="NarratorGetElementFromPointStartArgs"/>
+     <event value="145" symbol="ShutdownFocusMonitorStart" version="0" task="ShutdownFocusMonitor" opcode="win:Start" level="win:Informational" keywords="PerfInstrumentation"/>
+     <event value="146" symbol="ShutdownFocusMonitorStop" version="0" task="ShutdownFocusMonitor" opcode="win:Stop" level="win:Informational" keywords="PerfInstrumentation"/>
+     <event value="147" symbol="ShutdownMouseMonitorStart" version="0" task="ShutdownMouseMonitor" opcode="win:Start" level="win:Informational" keywords="PerfInstrumentation"/>
+     <event value="148" symbol="ShutdownMouseMonitorStop" version="0" task="ShutdownMouseMonitor" opcode="win:Stop" level="win:Informational" keywords="PerfInstrumentation"/>
+     <event value="149" symbol="ShutdownTouchMonitorStart" version="0" task="ShutdownTouchMonitor" opcode="win:Start" level="win:Informational" keywords="PerfInstrumentation"/>
+     <event value="150" symbol="ShutdownTouchMonitorStop" version="0" task="ShutdownTouchMonitor" opcode="win:Stop" level="win:Informational" keywords="PerfInstrumentation"/>
+     <event value="153" symbol="ShutdownSystemMonitorStart" version="0" task="ShutdownSystemMonitor" opcode="win:Start" level="win:Informational" keywords="PerfInstrumentation"/>
+     <event value="154" symbol="ShutdownSystemMonitorStop" version="0" task="ShutdownSystemMonitor" opcode="win:Stop" level="win:Informational" keywords="PerfInstrumentation"/>
+     <event value="156" symbol="BreakChunkIntoFormatsStart" version="0" task="BreakChunkIntoFormats" opcode="win:Start" level="win:Informational" keywords="PerfInstrumentation" template="NarratorGetElementFromPointStartArgs"/>
+     <event value="157" symbol="BreakChunkIntoFormatsStop" version="0" task="BreakChunkIntoFormats" opcode="win:Stop" level="win:Informational" keywords="PerfInstrumentation" template="NarratorGetElementFromPointStartArgs"/>
+     <event value="158" symbol="GetFormatReadingStart" version="0" task="GetFormatReading" opcode="win:Start" level="win:Informational" keywords="PerfInstrumentation" template="NarratorGetElementFromPointStartArgs"/>
+     <event value="159" symbol="GetFormatReadingStop" version="0" task="GetFormatReading" opcode="win:Stop" level="win:Informational" keywords="PerfInstrumentation" template="NarratorGetElementFromPointStartArgs"/>
+     <event value="160" symbol="DetailedReadingDataStart" version="0" task="DetailedReadingData" opcode="win:Start" level="win:Informational" keywords="PerfInstrumentation"/>
+     <event value="161" symbol="DetailedReadingDataStop" version="0" task="DetailedReadingData" opcode="win:Stop" level="win:Informational" keywords="PerfInstrumentation"/>
+     <event value="162" symbol="EventQProcessStart" version="0" task="EventQProcess" opcode="win:Start" level="win:Informational" keywords="PerfInstrumentation" template="EventQProcessStartArgs"/>
+     <event value="163" symbol="EventQProcessStop" version="0" task="EventQProcess" opcode="win:Stop" level="win:Informational" keywords="PerfInstrumentation" template="EventQProcessStartArgs"/>
+     <event value="164" symbol="RebuildCacheStart" version="0" task="RebuildCache" opcode="win:Start" level="win:Informational" keywords="PerfInstrumentation"/>
+     <event value="165" symbol="RebuildCacheStart165" version="0" task="RebuildCache" opcode="win:Start" level="win:Informational" keywords="PerfInstrumentation"/>
+     <event value="166" symbol="IsInprocEnabledInprocStart" version="0" task="IsInprocEnabledInproc" opcode="win:Start" level="win:Informational" keywords="PerfInstrumentation"/>
+     <event value="167" symbol="IsInprocEnabledInprocStop" version="0" task="IsInprocEnabledInproc" opcode="win:Stop" level="win:Informational" keywords="PerfInstrumentation"/>
+     <event value="168" symbol="CancellationCheckStart" version="0" task="CancellationCheck" opcode="win:Start" level="win:Informational" keywords="PerfInstrumentation"/>
+     <event value="169" symbol="CancellationCheckStop" version="0" task="CancellationCheck" opcode="win:Stop" level="win:Informational" keywords="PerfInstrumentation"/>
+     <event value="170" symbol="UiaFocusEventReceivedStart" version="0" task="UiaFocusEventReceived" opcode="win:Start" level="win:Informational" keywords="PerfInstrumentation" template="UiaFocusVerificationStartArgs"/>
+     <event value="171" symbol="UiaFocusEventReceivedStop" version="0" task="UiaFocusEventReceived" opcode="win:Stop" level="win:Informational" keywords="PerfInstrumentation" template="UiaFocusVerificationStartArgs"/>
+     <event value="172" symbol="FocusProcessingEnqueuedStart" version="0" task="FocusProcessingEnqueued" opcode="win:Start" level="win:Informational" keywords="PerfInstrumentation"/>
+     <event value="173" symbol="FocusProcessingEnqueuedStop" version="0" task="FocusProcessingEnqueued" opcode="win:Stop" level="win:Informational" keywords="PerfInstrumentation"/>
+     <event value="174" symbol="NarratorPerformanceScenarioInprocStart" version="0" task="NarratorPerformanceScenarioInproc" opcode="win:Start" level="win:Informational" keywords="PerfInstrumentation" template="NarratorPerformanceScenarioInprocStartArgs"/>
+     <event value="175" symbol="NarratorPerformanceScenarioInprocStop" version="0" task="NarratorPerformanceScenarioInproc" opcode="win:Stop" level="win:Informational" keywords="PerfInstrumentation" template="NarratorPerformanceScenarioInprocStartArgs"/>
+     <event value="176" symbol="IsElementInPeripheralUIInprocStart" version="0" task="IsElementInPeripheralUIInproc" opcode="win:Start" level="win:Informational" keywords="PerfInstrumentation"/>
+     <event value="177" symbol="IsElementInPeripheralUIInprocStop" version="0" task="IsElementInPeripheralUIInproc" opcode="win:Stop" level="win:Informational" keywords="PerfInstrumentation" template="IsElementInPeripheralUIInprocStopArgs"/>
+     <event value="182" symbol="IsElementOnSoftKeyboardInprocStart" version="0" task="IsElementOnSoftKeyboardInproc" opcode="win:Start" level="win:Informational" keywords="PerfInstrumentation"/>
+     <event value="183" symbol="IsElementOnSoftKeyboardInprocStop" version="0" task="IsElementOnSoftKeyboardInproc" opcode="win:Stop" level="win:Informational" keywords="PerfInstrumentation"/>
+     <event value="188" symbol="ProcessTextPatternCommandStart" version="0" task="ProcessTextPatternCommand" opcode="win:Start" level="win:Informational" keywords="PerfInstrumentation"/>
+     <event value="189" symbol="ProcessTextPatternCommandStop" version="0" task="ProcessTextPatternCommand" opcode="win:Stop" level="win:Informational" keywords="PerfInstrumentation"/>
+     <event value="190" symbol="JumpToHeadingStart" version="0" task="JumpToHeading" opcode="win:Start" level="win:Informational" keywords="PerfInstrumentation"/>
+     <event value="191" symbol="JumpToHeadingStop" version="0" task="JumpToHeading" opcode="win:Stop" level="win:Informational" keywords="PerfInstrumentation"/>
+     <event value="194" symbol="PlaceCaretStart" version="0" task="PlaceCaret" opcode="win:Start" level="win:Informational" keywords="PerfInstrumentation"/>
+     <event value="195" symbol="PlaceCaretStop" version="0" task="PlaceCaret" opcode="win:Stop" level="win:Informational" keywords="PerfInstrumentation"/>
+     <event value="196" symbol="ProcessSelectionChangeStart" version="0" task="ProcessSelectionChange" opcode="win:Start" level="win:Informational" keywords="PerfInstrumentation"/>
+     <event value="197" symbol="ProcessSelectionChangeStop" version="0" task="ProcessSelectionChange" opcode="win:Stop" level="win:Informational" keywords="PerfInstrumentation"/>
+     <event value="200" symbol="ProcessDegenerateSelectionStart" version="0" task="ProcessDegenerateSelection" opcode="win:Start" level="win:Informational" keywords="PerfInstrumentation"/>
+     <event value="201" symbol="ProcessDegenerateSelectionStop" version="0" task="ProcessDegenerateSelection" opcode="win:Stop" level="win:Informational" keywords="PerfInstrumentation"/>
+     <event value="202" symbol="GetChunkedTextStart" version="0" task="GetChunkedText" opcode="win:Start" level="win:Informational" keywords="PerfInstrumentation"/>
+     <event value="203" symbol="GetChunkedTextStop" version="0" task="GetChunkedText" opcode="win:Stop" level="win:Informational" keywords="PerfInstrumentation"/>
+     <event value="204" symbol="GetChunkStart" version="0" task="GetChunk" opcode="win:Start" level="win:Informational" keywords="PerfInstrumentation"/>
+     <event value="205" symbol="GetChunkStop" version="0" task="GetChunk" opcode="win:Stop" level="win:Informational" keywords="PerfInstrumentation"/>
+     <event value="206" symbol="IsPlaceCaretPositionStart" version="0" task="IsPlaceCaretPosition" opcode="win:Start" level="win:Informational" keywords="PerfInstrumentation"/>
+     <event value="207" symbol="IsPlaceCaretPositionStop" version="0" task="IsPlaceCaretPosition" opcode="win:Stop" level="win:Informational" keywords="PerfInstrumentation"/>
+     <event value="208" symbol="UiaAutomationEventHandlerStart" version="0" task="UiaAutomationEventHandler" opcode="win:Start" level="win:Informational" keywords="PerfInstrumentation"/>
+     <event value="209" symbol="UiaAutomationEventHandlerStop" version="0" task="UiaAutomationEventHandler" opcode="win:Stop" level="win:Informational" keywords="PerfInstrumentation"/>
+     <event value="212" symbol="AutomationEventProcessingEnqueuedStart" version="0" task="AutomationEventProcessingEnqueued" opcode="win:Start" level="win:Informational" keywords="PerfInstrumentation"/>
+     <event value="213" symbol="AutomationEventProcessingEnqueuedStop" version="0" task="AutomationEventProcessingEnqueued" opcode="win:Stop" level="win:Informational" keywords="PerfInstrumentation"/>
+     <event value="214" symbol="TextSelectionChangedEventProcessingStart" version="0" task="TextSelectionChangedEventProcessing" opcode="win:Start" level="win:Informational" keywords="PerfInstrumentation"/>
+     <event value="215" symbol="TextSelectionChangedEventProcessingStop" version="0" task="TextSelectionChangedEventProcessing" opcode="win:Stop" level="win:Informational" keywords="PerfInstrumentation"/>
+    </events>
+    <templates>
+     <template tid="ModeChangeArgs">
+      <data name="NewMode" inType="win:Int32"/>
+     </template>
+     <template tid="QueueAppEventArgs">
+      <data name="Priority" inType="win:Int32"/>
+      <data name="EventClass" inType="win:UnicodeString"/>
+      <data name="Parameter" inType="win:Int32"/>
+     </template>
+     <template tid="TouchModeSwitchArgs">
+      <data name="IsWindowActive" inType="win:Int32"/>
+     </template>
+     <template tid="OSKToggledArgs">
+      <data name="CurrentOSKState" inType="win:Int32"/>
+     </template>
+     <template tid="ScreenRotatedInprocArgs">
+      <data name="CurrentOrientation" inType="win:Int32"/>
+     </template>
+     <template tid="ExplorerStateChangeArgs">
+      <data name="CurrentState" inType="win:Int32"/>
+     </template>
+     <template tid="ToggleSelectionModeArgs">
+      <data name="SeletionModeEnabled" inType="win:Int32"/>
+     </template>
+     <template tid="ProcessNarratorCommandStartArgs">
+      <data name="Command" inType="win:Int32"/>
+     </template>
+     <template tid="NarratorPlaySoundInprocArgs">
+      <data name="SoundResourceId" inType="win:Int32"/>
+     </template>
+     <template tid="EventQueuedArgs">
+      <data name="EventType" inType="win:UnicodeString"/>
+      <data name="EventId" inType="win:Int32"/>
+      <data name="Priority" inType="win:Int32"/>
+     </template>
+     <template tid="ProcessInputEventStartArgs">
+      <data name="EventType" inType="win:UnicodeString"/>
+      <data name="EventId" inType="win:Int32"/>
+     </template>
+     <template tid="NarratorGetElementFromPointStartArgs">
+      <data name="EventId" inType="win:Int32"/>
+     </template>
+     <template tid="UiaFocusVerificationStartArgs">
+      <data name="ElementAddress" inType="win:Int32"/>
+     </template>
+     <template tid="EventQProcessStartArgs">
+      <data name="MessageType" inType="win:Int32"/>
+     </template>
+     <template tid="NarratorPerformanceScenarioInprocStartArgs">
+      <data name="NarratorPerfScenario" inType="win:Int32"/>
+     </template>
+     <template tid="IsElementInPeripheralUIInprocStopArgs">
+      <data name="IsElementInPeripheralUI" inType="win:Int32"/>
+     </template>
+    </templates>
+   </provider>
+  </events>
+ </instrumentation>
+ <localization>
+  <resources culture="en-US">
+   <stringTable>
+    <string id="keyword_PerfInstrumentation" value="PerfInstrumentation"/>
+    <string id="keyword_PerfDiagnostics" value="PerfDiagnostics"/>
+    <string id="task_ModeChange" value="ModeChange"/>
+    <string id="task_QueueAppEvent" value="QueueAppEvent"/>
+    <string id="task_TouchModeSwitch" value="TouchModeSwitch"/>
+    <string id="task_OSKToggled" value="OSKToggled"/>
+    <string id="task_ScreenRotatedInproc" value="ScreenRotatedInproc"/>
+    <string id="task_TaskbarIsFlashing" value="TaskbarIsFlashing"/>
+    <string id="task_ExplorerStateChange" value="ExplorerStateChange"/>
+    <string id="task_ToggleSelectionMode" value="ToggleSelectionMode"/>
+    <string id="task_ProcessNarratorCommand" value="ProcessNarratorCommand"/>
+    <string id="task_NarratorPlaySoundInproc" value="NarratorPlaySoundInproc"/>
+    <string id="task_EventQueued" value="EventQueued"/>
+    <string id="task_ProcessInputEvent" value="ProcessInputEvent"/>
+    <string id="task_NarratorGetElementFromPoint" value="NarratorGetElementFromPoint"/>
+    <string id="task_InvestigateUpdateTextPattern" value="InvestigateUpdateTextPattern"/>
+    <string id="task_TextPatternUpdateCursor" value="TextPatternUpdateCursor"/>
+    <string id="task_RenderFocusInproc" value="RenderFocusInproc"/>
+    <string id="task_NavigationOriginId" value="NavigationOriginId"/>
+    <string id="task_NavigationTargetId" value="NavigationTargetId"/>
+    <string id="task_UiaFocusVerification" value="UiaFocusVerification"/>
+    <string id="task_UiaSecondFocusVerification" value="UiaSecondFocusVerification"/>
+    <string id="task_ClearEventQueue" value="ClearEventQueue"/>
+    <string id="task_GetTargetTextPatternElementInproc" value="GetTargetTextPatternElementInproc"/>
+    <string id="task_FindNextOrPreviousHeader" value="FindNextOrPreviousHeader"/>
+    <string id="task_DetermineActionSequence" value="DetermineActionSequence"/>
+    <string id="task_TextEventPreprocessing" value="TextEventPreprocessing"/>
+    <string id="task_InitializeTextPatternState" value="InitializeTextPatternState"/>
+    <string id="task_CheckTextEventDelta" value="CheckTextEventDelta"/>
+    <string id="task_GenerateTextEventTextChange" value="GenerateTextEventTextChange"/>
+    <string id="task_TextEventParentUpdate" value="TextEventParentUpdate"/>
+    <string id="task_ElementTextGeneration" value="ElementTextGeneration"/>
+    <string id="task_GenerateTextPatternText" value="GenerateTextPatternText"/>
+    <string id="task_FindTextPatternActionElement" value="FindTextPatternActionElement"/>
+    <string id="task_InternalGetTextPatternUnitChange" value="InternalGetTextPatternUnitChange"/>
+    <string id="task_SaveCharactersAroundTextCursor" value="SaveCharactersAroundTextCursor"/>
+    <string id="task_GenerateNonDegenerateTextChange" value="GenerateNonDegenerateTextChange"/>
+    <string id="task_ShutdownFocusMonitor" value="ShutdownFocusMonitor"/>
+    <string id="task_ShutdownMouseMonitor" value="ShutdownMouseMonitor"/>
+    <string id="task_ShutdownTouchMonitor" value="ShutdownTouchMonitor"/>
+    <string id="task_ShutdownSystemMonitor" value="ShutdownSystemMonitor"/>
+    <string id="task_BreakChunkIntoFormats" value="BreakChunkIntoFormats"/>
+    <string id="task_GetFormatReading" value="GetFormatReading"/>
+    <string id="task_DetailedReadingData" value="DetailedReadingData"/>
+    <string id="task_EventQProcess" value="EventQProcess"/>
+    <string id="task_RebuildCache" value="RebuildCache"/>
+    <string id="task_IsInprocEnabledInproc" value="IsInprocEnabledInproc"/>
+    <string id="task_CancellationCheck" value="CancellationCheck"/>
+    <string id="task_UiaFocusEventReceived" value="UiaFocusEventReceived"/>
+    <string id="task_FocusProcessingEnqueued" value="FocusProcessingEnqueued"/>
+    <string id="task_NarratorPerformanceScenarioInproc" value="NarratorPerformanceScenarioInproc"/>
+    <string id="task_IsElementInPeripheralUIInproc" value="IsElementInPeripheralUIInproc"/>
+    <string id="task_IsElementOnSoftKeyboardInproc" value="IsElementOnSoftKeyboardInproc"/>
+    <string id="task_ProcessTextPatternCommand" value="ProcessTextPatternCommand"/>
+    <string id="task_JumpToHeading" value="JumpToHeading"/>
+    <string id="task_PlaceCaret" value="PlaceCaret"/>
+    <string id="task_ProcessSelectionChange" value="ProcessSelectionChange"/>
+    <string id="task_ProcessDegenerateSelection" value="ProcessDegenerateSelection"/>
+    <string id="task_GetChunkedText" value="GetChunkedText"/>
+    <string id="task_GetChunk" value="GetChunk"/>
+    <string id="task_IsPlaceCaretPosition" value="IsPlaceCaretPosition"/>
+    <string id="task_UiaAutomationEventHandler" value="UiaAutomationEventHandler"/>
+    <string id="task_AutomationEventProcessingEnqueued" value="AutomationEventProcessingEnqueued"/>
+    <string id="task_TextSelectionChangedEventProcessing" value="TextSelectionChangedEventProcessing"/>
+   </stringTable>
+  </resources>
+ </localization>
+</instrumentationManifest>

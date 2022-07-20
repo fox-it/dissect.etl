@@ -1,0 +1,30 @@
+<instrumentationManifest xmlns="http://schemas.microsoft.com/win/2004/08/events">
+ <instrumentation xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:win="http://manifests.microsoft.com/win/2004/08/windows/events">
+  <events>
+
+   <provider name="Windows Kernel" guid="{f8f10121-b617-4a56-868b-9df1b27fe32c}">
+    <events>
+        <event value="34" symbol="MMCSSTrace/Scheduler" version="0" task="MMCSSTrace" opcode="Scheduler" template="0xa58f9ee9L"/>
+        <event value="35" symbol="MMCSSTrace/Wakeup" version="0" task="MMCSSTrace" opcode="Wakeup" template="0x7827380cL"/>
+        <event value="32" symbol="MMCSSTrace/Start" version="0" task="MMCSSTrace" opcode="Start" template="0xd4cbb29L"/>
+        <event value="33" symbol="MMCSSTrace/Stop" version="0" task="MMCSSTrace" opcode="Stop" template="0xd4cbb29L"/>
+        <event value="36" symbol="MMCSSTrace/Sleep" version="0" task="MMCSSTrace" opcode="Sleep" template="0xd4cbb29L"/>
+        <event value="37" symbol="MMCSSTrace/SleepResp" version="0" task="MMCSSTrace" opcode="SleepResp" template="0xd4cbb29L"/>
+    </events>
+    <templates>
+     <template tid="0x7827380cL">
+      <data name="Reason" inType="win:UInt32"/>
+     </template>
+     <template tid="0xa58f9ee9L">
+      <data name="ScheduledPID" inType="win:UInt32"/>
+      <data name="ScheduledTID" inType="win:UInt32"/>
+      <data name="SchedulingPriority" inType="win:UInt32"/>
+      <data name="TaskIndex" inType="win:UInt32"/>
+     </template>
+     <template tid="0xd4cbb29L">
+     </template>
+    </templates>
+   </provider>
+  </events>
+ </instrumentation>
+</instrumentationManifest>

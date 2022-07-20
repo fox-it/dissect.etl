@@ -1,0 +1,95 @@
+<instrumentationManifest xmlns="http://schemas.microsoft.com/win/2004/08/events">
+ <instrumentation xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:win="http://manifests.microsoft.com/win/2004/08/windows/events">
+  <events>
+
+   <provider name="Windows Kernel" guid="{3d6fa8d3-fe05-11d0-9dda-00c04fd7ba7c}">
+    <events>
+        <event value="32" symbol="PageFault/HardFault" version="2" task="PageFault" opcode="HardFault" template="0x4062caa6L"/>
+        <event value="128" symbol="PageFault/VirtualAllocDCStart" version="2" task="PageFault" opcode="VirtualAllocDCStart" template="0xe667950L"/>
+        <event value="129" symbol="PageFault/VirtualAllocDCEnd" version="2" task="PageFault" opcode="VirtualAllocDCEnd" template="0xe667950L"/>
+        <event value="98" symbol="PageFault/VirtualAlloc" version="2" task="PageFault" opcode="VirtualAlloc" template="0xc076952fL"/>
+        <event value="99" symbol="PageFault/VirtualFree" version="2" task="PageFault" opcode="VirtualFree" template="0xc076952fL"/>
+        <event value="134" symbol="PageFault/MemResetInfo" version="2" task="PageFault" opcode="MemResetInfo" template="0x717eddb6L"/>
+        <event value="100" symbol="PageFault/HRRundown" version="2" task="PageFault" opcode="HRRundown" template="0x508e0d4cL"/>
+        <event value="104" symbol="PageFault/HRDestroy" version="2" task="PageFault" opcode="HRDestroy" template="0xb148ccceL"/>
+        <event value="10" symbol="PageFault/TransitionFault" version="2" task="PageFault" opcode="TransitionFault" template="0xb17aafa7L"/>
+        <event value="11" symbol="PageFault/DemandZeroFault" version="2" task="PageFault" opcode="DemandZeroFault" template="0xb17aafa7L"/>
+        <event value="12" symbol="PageFault/CopyOnWrite" version="2" task="PageFault" opcode="CopyOnWrite" template="0xb17aafa7L"/>
+        <event value="13" symbol="PageFault/GuardPageFault" version="2" task="PageFault" opcode="GuardPageFault" template="0xb17aafa7L"/>
+        <event value="14" symbol="PageFault/HardPageFault" version="2" task="PageFault" opcode="HardPageFault" template="0xb17aafa7L"/>
+        <event value="15" symbol="PageFault/AccessViolation" version="2" task="PageFault" opcode="AccessViolation" template="0xb17aafa7L"/>
+        <event value="105" symbol="PageFault/ImageLoadBacked" version="2" task="PageFault" opcode="ImageLoadBacked" template="0xc1c5a3c9L"/>
+        <event value="102" symbol="PageFault/HRReserve" version="2" task="PageFault" opcode="HRReserve" template="0x69114465L"/>
+        <event value="103" symbol="PageFault/HRRelease" version="2" task="PageFault" opcode="HRRelease" template="0x69114465L"/>
+        <event value="101" symbol="PageFault/HRCreate" version="2" task="PageFault" opcode="HRCreate" template="0x4cfad473L"/>
+        <event value="127" symbol="PageFault/VirtualRotate" version="2" task="PageFault" opcode="VirtualRotate" template="0x717eddb6L"/>
+        <event value="100" symbol="PageFault/HRRundown" version="3" task="PageFault" opcode="HRRundown" template="0xe2cf45dbL"/>
+    </events>
+    <templates>
+     <template tid="0x69114465L">
+      <data name="HeapHandle" inType="win:Pointer"/>
+      <data name="HRAddress" inType="win:Pointer"/>
+      <data name="HRSize" inType="win:SizeT"/>
+     </template>
+     <template tid="0xc1c5a3c9L">
+      <data name="FileObject" inType="win:Pointer"/>
+      <data name="DeviceChar" inType="win:UInt32"/>
+      <data name="FileChar" inType="win:UInt16"/>
+      <data name="LoadFlags" inType="win:UInt16"/>
+     </template>
+     <template tid="0x508e0d4cL">
+      <data name="HeapHandle" inType="win:Pointer"/>
+      <data name="HRFlags" inType="win:UInt32"/>
+      <data name="HRPid" inType="win:UInt32"/>
+      <data name="HRRangeCount" inType="win:UInt32"/>
+     </template>
+     <template tid="0xe2cf45dbL">
+      <data name="HeapHandle" inType="win:Pointer"/>
+      <data name="HRFlags" inType="win:UInt32"/>
+      <data name="HRPid" inType="win:UInt32"/>
+      <data name="HRRangeCount" inType="win:UInt32"/>
+      <data name="Reserved" inType="win:UInt32"/>
+     </template>
+     <template tid="0xb148ccceL">
+      <data name="HeapHandle" inType="win:Pointer"/>
+     </template>
+     <template tid="0xe667950L">
+      <data name="BaseAddress" inType="win:Pointer"/>
+      <data name="RegionSize" inType="win:SizeT"/>
+      <data name="ProcessId" inType="win:UInt32"/>
+      <data name="Flags" inType="win:UInt32"/>
+      <data name="CommitSizeInBytes" inType="win:SizeT"/>
+     </template>
+     <template tid="0xb17aafa7L">
+      <data name="VirtualAddress" inType="win:Pointer"/>
+      <data name="ProgramCounter" inType="win:Pointer"/>
+     </template>
+     <template tid="0x717eddb6L">
+      <data name="BaseAddress" inType="win:Pointer"/>
+      <data name="SizeInBytes" inType="win:SizeT"/>
+      <data name="Flags" inType="win:UInt32"/>
+     </template>
+     <template tid="0x4cfad473L">
+      <data name="HeapHandle" inType="win:Pointer"/>
+      <data name="FirstRangeSize" inType="win:SizeT"/>
+      <data name="HRCreateFlags" inType="win:UInt32"/>
+     </template>
+     <template tid="0xc076952fL">
+      <data name="BaseAddress" inType="win:Pointer"/>
+      <data name="RegionSize" inType="win:SizeT"/>
+      <data name="ProcessId" inType="win:UInt32"/>
+      <data name="Flags" inType="win:UInt32"/>
+     </template>
+     <template tid="0x4062caa6L">
+      <data name="InitialTime" inType="win:Pointer"/>
+      <data name="ReadOffset" inType="win:UInt64"/>
+      <data name="VirtualAddress" inType="win:Pointer"/>
+      <data name="FileObject" inType="win:Pointer"/>
+      <data name="TThreadId" inType="win:UInt32"/>
+      <data name="ByteCount" inType="win:UInt32"/>
+     </template>
+    </templates>
+   </provider>
+  </events>
+ </instrumentation>
+</instrumentationManifest>

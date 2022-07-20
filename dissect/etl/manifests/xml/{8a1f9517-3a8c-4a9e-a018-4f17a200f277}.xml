@@ -1,0 +1,772 @@
+<instrumentationManifest xmlns="http://schemas.microsoft.com/win/2004/08/events">
+ <instrumentation xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:win="http://manifests.microsoft.com/win/2004/08/windows/events">
+  <events>
+   <provider name="Microsoft-Windows-BTH-BTHPORT" guid="{8a1f9517-3a8c-4a9e-a018-4f17a200f277}" resourceFileName="Microsoft-Windows-BTH-BTHPORT" messageFileName="Microsoft-Windows-BTH-BTHPORT" symbol="MicrosoftWindowsBTHBTHPORT" source="Xml" >
+    <keywords>
+     <keyword name="Performance" message="$(string.keyword_Performance)" mask="0x1"/>
+    </keywords>
+    <tasks>
+     <task name="task_0" message="$(string.task_task_0)" value="0"/>
+    </tasks>
+    <maps>
+     <valueMap name="L2CAP_Sent_Status">
+      <map value="0x0" message="$(string.map_L2CAP_Sent_StatusL2CAP received a packet)"/>
+      <map value="0x1" message="$(string.map_L2CAP_Sent_StatusL2CAP is completing a packet)"/>
+     </valueMap>
+     <valueMap name="HCI_Sent_Status">
+      <map value="0x0" message="$(string.map_HCI_Sent_StatusSending packet to radio)"/>
+      <map value="0x1" message="$(string.map_HCI_Sent_StatusPacket received from radio)"/>
+      <map value="0x2" message="$(string.map_HCI_Sent_StatusPacket timed out)"/>
+     </valueMap>
+     <valueMap name="BTH_RADIO_STATE">
+      <map value="0x0" message="$(string.map_BTH_RADIO_STATERadio State Unknown)"/>
+      <map value="0x1" message="$(string.map_BTH_RADIO_STATERadio On Pending)"/>
+      <map value="0x2" message="$(string.map_BTH_RADIO_STATERadio On)"/>
+      <map value="0x3" message="$(string.map_BTH_RADIO_STATERadio Off Pending)"/>
+      <map value="0x4" message="$(string.map_BTH_RADIO_STATERadio Off)"/>
+     </valueMap>
+     <valueMap name="SYSTEM_POWER_STATE">
+      <map value="0x0" message="$(string.map_SYSTEM_POWER_STATEUnspecified)"/>
+      <map value="0x1" message="$(string.map_SYSTEM_POWER_STATES0)"/>
+      <map value="0x2" message="$(string.map_SYSTEM_POWER_STATES1)"/>
+      <map value="0x3" message="$(string.map_SYSTEM_POWER_STATES2)"/>
+      <map value="0x4" message="$(string.map_SYSTEM_POWER_STATES3)"/>
+      <map value="0x5" message="$(string.map_SYSTEM_POWER_STATES4-Hibernate)"/>
+      <map value="0x6" message="$(string.map_SYSTEM_POWER_STATES5-Shutdown)"/>
+      <map value="0x7" message="$(string.map_SYSTEM_POWER_STATES6)"/>
+     </valueMap>
+     <valueMap name="DEVICE_POWER_STATE">
+      <map value="0x0" message="$(string.map_DEVICE_POWER_STATEUnspecified)"/>
+      <map value="0x1" message="$(string.map_DEVICE_POWER_STATED0)"/>
+      <map value="0x2" message="$(string.map_DEVICE_POWER_STATED1)"/>
+      <map value="0x3" message="$(string.map_DEVICE_POWER_STATED2)"/>
+      <map value="0x4" message="$(string.map_DEVICE_POWER_STATED3)"/>
+     </valueMap>
+    </maps>
+    <events>
+     <event value="227" symbol="task_0" version="0" task="task_0" level="win:Informational" template="task_0Args"/>
+     <event value="228" symbol="task_0228" version="0" task="task_0" level="win:Informational" template="task_0228Args"/>
+     <event value="229" symbol="task_0229" version="0" task="task_0" level="win:Informational" template="task_0229Args"/>
+     <event value="230" symbol="task_0230" version="0" task="task_0" level="win:Informational" template="task_0230Args"/>
+     <event value="231" symbol="task_0231" version="0" task="task_0" level="win:Informational" template="task_0231Args"/>
+     <event value="232" symbol="task_0232" version="0" task="task_0" level="win:Informational" template="task_0232Args"/>
+     <event value="233" symbol="task_0233" version="0" task="task_0" level="win:Informational" template="task_0232Args"/>
+     <event value="234" symbol="task_0234" version="0" task="task_0" level="win:Informational" template="task_0234Args"/>
+     <event value="235" symbol="task_0235" version="0" task="task_0" level="win:Informational" template="task_0234Args"/>
+     <event value="236" symbol="task_0236" version="0" task="task_0" level="win:Informational" template="task_0236Args"/>
+     <event value="237" symbol="task_0237" version="0" task="task_0" level="win:Informational" template="task_0237Args"/>
+     <event value="238" symbol="task_0238" version="0" task="task_0" level="win:Informational" template="task_0238Args"/>
+     <event value="239" symbol="task_0239" version="0" task="task_0" level="win:Informational" template="task_0239Args"/>
+     <event value="240" symbol="task_0240" version="0" task="task_0" level="win:Informational" template="task_0240Args"/>
+     <event value="241" symbol="task_0241" version="0" task="task_0" level="win:Informational" template="task_0241Args"/>
+     <event value="242" symbol="task_0242" version="0" task="task_0" level="win:Informational" template="task_0242Args"/>
+     <event value="243" symbol="task_0243" version="0" task="task_0" level="win:Informational" template="task_0243Args"/>
+     <event value="244" symbol="task_0244" version="0" task="task_0" level="win:Informational" template="task_0244Args"/>
+     <event value="245" symbol="task_0245" version="0" task="task_0" level="win:Informational" template="task_0245Args"/>
+     <event value="246" symbol="task_0246" version="0" task="task_0" level="win:Informational" template="task_0246Args"/>
+     <event value="247" symbol="task_0247" version="0" task="task_0" level="win:Informational" template="task_0247Args"/>
+     <event value="248" symbol="task_0248" version="0" task="task_0" level="win:Informational" template="task_0248Args"/>
+     <event value="249" symbol="task_0249" version="0" task="task_0" level="win:Informational" template="task_0249Args"/>
+     <event value="250" symbol="task_0250" version="0" task="task_0" level="win:Informational" template="task_0250Args"/>
+     <event value="251" symbol="task_0251" version="0" task="task_0" level="win:Informational" template="task_0251Args"/>
+     <event value="252" symbol="task_0252" version="0" task="task_0" level="win:Informational" template="task_0252Args"/>
+     <event value="253" symbol="task_0253" version="0" task="task_0" level="win:Informational" template="task_0238Args"/>
+     <event value="254" symbol="task_0254" version="0" task="task_0" level="win:Informational" template="task_0254Args"/>
+     <event value="255" symbol="task_0255" version="0" task="task_0" level="win:Informational" template="task_0255Args"/>
+     <event value="256" symbol="task_0256" version="0" task="task_0" level="win:Informational" template="task_0256Args"/>
+     <event value="257" symbol="task_0257" version="0" task="task_0" level="win:Informational" template="task_0257Args"/>
+     <event value="258" symbol="task_0258" version="0" task="task_0" level="win:Informational" template="task_0258Args"/>
+     <event value="261" symbol="task_0261" version="0" task="task_0" level="win:Informational" template="task_0261Args"/>
+     <event value="262" symbol="task_0262" version="0" task="task_0" level="win:Informational" template="task_0262Args"/>
+     <event value="263" symbol="task_0263" version="0" task="task_0" level="win:Informational" template="task_0263Args"/>
+     <event value="264" symbol="task_0264" version="0" task="task_0" level="win:Informational" template="task_0264Args"/>
+     <event value="265" symbol="task_0265" version="0" task="task_0" level="win:Informational" template="task_0265Args"/>
+     <event value="266" symbol="task_0266" version="0" task="task_0" level="win:Informational" template="task_0266Args"/>
+     <event value="267" symbol="task_0267" version="0" task="task_0" level="win:Informational" template="task_0267Args"/>
+     <event value="302" symbol="task_0302" version="0" task="task_0" level="win:Informational" template="task_0302Args"/>
+     <event value="310" symbol="task_0310" version="0" task="task_0" level="win:Informational" template="task_0310Args"/>
+     <event value="311" symbol="task_0311" version="0" task="task_0" level="win:Informational" template="task_0311Args"/>
+     <event value="312" symbol="task_0312" version="0" task="task_0" level="win:Informational" template="task_0312Args"/>
+     <event value="313" symbol="task_0313" version="0" task="task_0" level="win:Informational" template="task_0313Args"/>
+     <event value="314" symbol="task_0314" version="0" task="task_0" level="win:Informational" template="task_0314Args"/>
+     <event value="402" symbol="task_0402" version="0" task="task_0" level="win:Informational" template="task_0402Args"/>
+    </events>
+    <templates>
+     <template tid="task_0Args">
+      <data name="SentStatus" inType="win:UInt8" map="L2CAP_Sent_Status"/>
+      <data name="Code" inType="win:UInt8"/>
+      <data name="Identifier" inType="win:UInt8"/>
+      <data name="Length" inType="win:UInt16"/>
+      <data name="Reason" inType="win:UInt16"/>
+     </template>
+     <template tid="task_0228Args">
+      <data name="SentStatus" inType="win:UInt8"/>
+      <data name="Code" inType="win:UInt8"/>
+      <data name="Identifier" inType="win:UInt8"/>
+      <data name="Length" inType="win:UInt16"/>
+      <data name="Psm" inType="win:UInt16"/>
+      <data name="SCID" inType="win:UInt16"/>
+     </template>
+     <template tid="task_0229Args">
+      <data name="SentStatus" inType="win:UInt8"/>
+      <data name="Code" inType="win:UInt8"/>
+      <data name="Identifier" inType="win:UInt8"/>
+      <data name="Length" inType="win:UInt16"/>
+      <data name="DCID" inType="win:UInt16"/>
+      <data name="SCID" inType="win:UInt16"/>
+      <data name="Result" inType="win:UInt16"/>
+      <data name="Status" inType="win:UInt16"/>
+     </template>
+     <template tid="task_0230Args">
+      <data name="SentStatus" inType="win:UInt8"/>
+      <data name="Code" inType="win:UInt8"/>
+      <data name="Identifier" inType="win:UInt8"/>
+      <data name="Length" inType="win:UInt16"/>
+      <data name="DCID" inType="win:UInt16"/>
+      <data name="Flags" inType="win:UInt16"/>
+     </template>
+     <template tid="task_0231Args">
+      <data name="SentStatus" inType="win:UInt8"/>
+      <data name="Code" inType="win:UInt8"/>
+      <data name="Identifier" inType="win:UInt8"/>
+      <data name="Length" inType="win:UInt16"/>
+      <data name="SCID" inType="win:UInt16"/>
+      <data name="Flags" inType="win:UInt16"/>
+      <data name="Result" inType="win:UInt16"/>
+     </template>
+     <template tid="task_0232Args">
+      <data name="SentStatus" inType="win:UInt8"/>
+      <data name="Code" inType="win:UInt8"/>
+      <data name="Identifier" inType="win:UInt8"/>
+      <data name="Length" inType="win:UInt16"/>
+      <data name="DCID" inType="win:UInt16"/>
+      <data name="SCID" inType="win:UInt16"/>
+     </template>
+     <template tid="task_0234Args">
+      <data name="SentStatus" inType="win:UInt8"/>
+      <data name="Code" inType="win:UInt8"/>
+      <data name="Identifier" inType="win:UInt8"/>
+      <data name="Length" inType="win:UInt16"/>
+     </template>
+     <template tid="task_0236Args">
+      <data name="SentStatus" inType="win:UInt8"/>
+      <data name="Code" inType="win:UInt8"/>
+      <data name="Identifier" inType="win:UInt8"/>
+      <data name="Length" inType="win:UInt16"/>
+      <data name="InfoType" inType="win:UInt16"/>
+     </template>
+     <template tid="task_0237Args">
+      <data name="SentStatus" inType="win:UInt8"/>
+      <data name="Code" inType="win:UInt8"/>
+      <data name="Identifier" inType="win:UInt8"/>
+      <data name="Length" inType="win:UInt16"/>
+      <data name="InfoType" inType="win:UInt16"/>
+      <data name="Result" inType="win:UInt16"/>
+     </template>
+     <template tid="task_0238Args">
+      <data name="SentStatus" inType="win:UInt8"/>
+      <data name="LE_Flink" inType="win:UInt64"/>
+      <data name="LE_Blink" inType="win:UInt64"/>
+      <data name="Length" inType="win:UInt32"/>
+      <data name="Version" inType="win:UInt16"/>
+      <data name="Type" inType="win:UInt16"/>
+      <data name="BthportFlags" inType="win:UInt32"/>
+      <data name="Status" inType="win:UInt32"/>
+      <data name="BtStatus" inType="win:UInt8"/>
+      <data name="BTHPORT_CONTEXT_SIZE" inType="win:UInt8"/>
+      <data name="Context" inType="win:UInt64" count="BTHPORT_CONTEXT_SIZE"/>
+      <data name="ClientContext" inType="win:UInt64" count="BTHPORT_CONTEXT_SIZE"/>
+      <data name="BTHPORT_RESERVED_FIELD_SIZE" inType="win:UInt8"/>
+      <data name="Reserved" inType="win:UInt32" count="BTHPORT_RESERVED_FIELD_SIZE"/>
+      <data name="BtAddress" inType="win:UInt64"/>
+     </template>
+     <template tid="task_0239Args">
+      <data name="SentStatus" inType="win:UInt8"/>
+      <data name="LE_Flink" inType="win:UInt64"/>
+      <data name="LE_Blink" inType="win:UInt64"/>
+      <data name="Length" inType="win:UInt32"/>
+      <data name="Version" inType="win:UInt16"/>
+      <data name="Type" inType="win:UInt16"/>
+      <data name="BthportFlags" inType="win:UInt32"/>
+      <data name="Status" inType="win:UInt32"/>
+      <data name="BtStatus" inType="win:UInt8"/>
+      <data name="BTHPORT_CONTEXT_SIZE" inType="win:UInt8"/>
+      <data name="Context" inType="win:UInt64" count="BTHPORT_CONTEXT_SIZE"/>
+      <data name="ClientContext" inType="win:UInt64" count="BTHPORT_CONTEXT_SIZE"/>
+      <data name="BTHPORT_RESERVED_FIELD_SIZE" inType="win:UInt8"/>
+      <data name="Reserved" inType="win:UInt32" count="BTHPORT_RESERVED_FIELD_SIZE"/>
+      <data name="RSSI" inType="win:UInt8"/>
+      <data name="MaxPowerLevel" inType="win:UInt8"/>
+      <data name="CurrentPowerLevel" inType="win:UInt8"/>
+     </template>
+     <template tid="task_0240Args">
+      <data name="SentStatus" inType="win:UInt8"/>
+      <data name="LE_Flink" inType="win:UInt64"/>
+      <data name="LE_Blink" inType="win:UInt64"/>
+      <data name="Length" inType="win:UInt32"/>
+      <data name="Version" inType="win:UInt16"/>
+      <data name="Type" inType="win:UInt16"/>
+      <data name="BthportFlags" inType="win:UInt32"/>
+      <data name="Status" inType="win:UInt32"/>
+      <data name="BtStatus" inType="win:UInt8"/>
+      <data name="BTHPORT_CONTEXT_SIZE" inType="win:UInt8"/>
+      <data name="Context" inType="win:UInt64" count="BTHPORT_CONTEXT_SIZE"/>
+      <data name="ClientContext" inType="win:UInt64" count="BTHPORT_CONTEXT_SIZE"/>
+      <data name="BTHPORT_RESERVED_FIELD_SIZE" inType="win:UInt8"/>
+      <data name="Reserved" inType="win:UInt32" count="BTHPORT_RESERVED_FIELD_SIZE"/>
+      <data name="StringLength" inType="win:UInt32"/>
+      <data name="DeviceInterfaceString" inType="win:UnicodeString" length="StringLength"/>
+     </template>
+     <template tid="task_0241Args">
+      <data name="SentStatus" inType="win:UInt8"/>
+      <data name="LE_Flink" inType="win:UInt64"/>
+      <data name="LE_Blink" inType="win:UInt64"/>
+      <data name="Length" inType="win:UInt32"/>
+      <data name="Version" inType="win:UInt16"/>
+      <data name="Type" inType="win:UInt16"/>
+      <data name="BthportFlags" inType="win:UInt32"/>
+      <data name="Status" inType="win:UInt32"/>
+      <data name="BtStatus" inType="win:UInt8"/>
+      <data name="BTHPORT_CONTEXT_SIZE" inType="win:UInt8"/>
+      <data name="Context" inType="win:UInt64" count="BTHPORT_CONTEXT_SIZE"/>
+      <data name="ClientContext" inType="win:UInt64" count="BTHPORT_CONTEXT_SIZE"/>
+      <data name="BTHPORT_RESERVED_FIELD_SIZE" inType="win:UInt8"/>
+      <data name="Reserved" inType="win:UInt32" count="BTHPORT_RESERVED_FIELD_SIZE"/>
+      <data name="Flags" inType="win:UInt32"/>
+      <data name="NumAddresses" inType="win:UInt32"/>
+      <data name="BtAddresses" inType="win:UInt64" count="NumAddresses"/>
+     </template>
+     <template tid="task_0242Args">
+      <data name="SentStatus" inType="win:UInt8"/>
+      <data name="LE_Flink" inType="win:UInt64"/>
+      <data name="LE_Blink" inType="win:UInt64"/>
+      <data name="Length" inType="win:UInt32"/>
+      <data name="Version" inType="win:UInt16"/>
+      <data name="Type" inType="win:UInt16"/>
+      <data name="BthportFlags" inType="win:UInt32"/>
+      <data name="Status" inType="win:UInt32"/>
+      <data name="BtStatus" inType="win:UInt8"/>
+      <data name="BTHPORT_CONTEXT_SIZE" inType="win:UInt8"/>
+      <data name="Context" inType="win:UInt64" count="BTHPORT_CONTEXT_SIZE"/>
+      <data name="ClientContext" inType="win:UInt64" count="BTHPORT_CONTEXT_SIZE"/>
+      <data name="BTHPORT_RESERVED_FIELD_SIZE" inType="win:UInt8"/>
+      <data name="Reserved" inType="win:UInt32" count="BTHPORT_RESERVED_FIELD_SIZE"/>
+      <data name="BtAddress" inType="win:UInt64"/>
+      <data name="PSM" inType="win:UInt16"/>
+      <data name="IndicationFlags" inType="win:UInt32"/>
+      <data name="IndicationCallbackContext" inType="win:UInt64"/>
+      <data name="ReferenceObject" inType="win:UInt64"/>
+      <data name="ServerHandle" inType="win:UInt64"/>
+     </template>
+     <template tid="task_0243Args">
+      <data name="SentStatus" inType="win:UInt8"/>
+      <data name="LE_Flink" inType="win:UInt64"/>
+      <data name="LE_Blink" inType="win:UInt64"/>
+      <data name="Length" inType="win:UInt32"/>
+      <data name="Version" inType="win:UInt16"/>
+      <data name="Type" inType="win:UInt16"/>
+      <data name="BthportFlags" inType="win:UInt32"/>
+      <data name="Status" inType="win:UInt32"/>
+      <data name="BtStatus" inType="win:UInt8"/>
+      <data name="BTHPORT_CONTEXT_SIZE" inType="win:UInt8"/>
+      <data name="Context" inType="win:UInt64" count="BTHPORT_CONTEXT_SIZE"/>
+      <data name="ClientContext" inType="win:UInt64" count="BTHPORT_CONTEXT_SIZE"/>
+      <data name="BTHPORT_RESERVED_FIELD_SIZE" inType="win:UInt8"/>
+      <data name="Reserved" inType="win:UInt32" count="BTHPORT_RESERVED_FIELD_SIZE"/>
+      <data name="BtAddress" inType="win:UInt64"/>
+      <data name="ServerHandle" inType="win:UInt64"/>
+      <data name="Psm" inType="win:UInt16"/>
+     </template>
+     <template tid="task_0244Args">
+      <data name="SentStatus" inType="win:UInt8"/>
+      <data name="LE_Flink" inType="win:UInt64"/>
+      <data name="LE_Blink" inType="win:UInt64"/>
+      <data name="Length" inType="win:UInt32"/>
+      <data name="Version" inType="win:UInt16"/>
+      <data name="Type" inType="win:UInt16"/>
+      <data name="BthportFlags" inType="win:UInt32"/>
+      <data name="Status" inType="win:UInt32"/>
+      <data name="BtStatus" inType="win:UInt8"/>
+      <data name="BTHPORT_CONTEXT_SIZE" inType="win:UInt8"/>
+      <data name="Context" inType="win:UInt64" count="BTHPORT_CONTEXT_SIZE"/>
+      <data name="ClientContext" inType="win:UInt64" count="BTHPORT_CONTEXT_SIZE"/>
+      <data name="BTHPORT_RESERVED_FIELD_SIZE" inType="win:UInt8"/>
+      <data name="Reserved" inType="win:UInt32" count="BTHPORT_RESERVED_FIELD_SIZE"/>
+      <data name="ChannelHandle" inType="win:UInt64"/>
+      <data name="Psm_Valid" inType="win:UInt8"/>
+      <data name="Response" inType="win:UInt16"/>
+      <data name="ResponseStatus" inType="win:UInt16"/>
+      <data name="Psm" inType="win:UInt16"/>
+      <data name="ChannelFlags" inType="win:UInt32"/>
+      <data name="BtAddress" inType="win:UInt64"/>
+      <data name="ConfigOut_Flags" inType="win:UInt32"/>
+      <data name="ConfigOut_Mtu_Min" inType="win:UInt16"/>
+      <data name="ConfigOut_Mtu_Preferred" inType="win:UInt16"/>
+      <data name="ConfigOut_Mtu_Max" inType="win:UInt16"/>
+      <data name="ConfigOut_FlushTO_Min" inType="win:UInt16"/>
+      <data name="ConfigOut_FlushTO_Preferred" inType="win:UInt16"/>
+      <data name="ConfigOut_FlushTO_Max" inType="win:UInt16"/>
+      <data name="ConfigOut_Flow_Flags" inType="win:UInt8"/>
+      <data name="ConfigOut_Flow_ServiceType" inType="win:UInt8"/>
+      <data name="ConfigOut_Flow_TokenRate" inType="win:UInt32"/>
+      <data name="ConfigOut_Flow_TokenBucketSize" inType="win:UInt32"/>
+      <data name="ConfigOut_Flow_PeakBandwidth" inType="win:UInt32"/>
+      <data name="ConfigOut_Flow_Latency" inType="win:UInt32"/>
+      <data name="ConfigOut_Flow_DelayVariation" inType="win:UInt32"/>
+      <data name="ConfigOut_LinkTO" inType="win:UInt16"/>
+      <data name="ConfigOut_NumExtraOptions" inType="win:UInt32"/>
+      <data name="ConfigOut_ExtraOptions_Open_Channel" inType="win:69" count="ConfigOut_NumExtraOptions"/>
+      <data name="ConfigOut_ServiceType" inType="win:UInt8"/>
+      <data name="ConfigOut_Latency" inType="win:UInt32"/>
+      <data name="ConfigOut_ModeConfig_Valid" inType="win:UInt8"/>
+      <data name="ConfigOut_ModeConfig_Flags" inType="win:UInt32"/>
+      <data name="ConfigOut_MC_RAF_Mode" inType="win:UInt8"/>
+      <data name="ConfigOut_MC_RAF_TxWindowSize" inType="win:UInt8"/>
+      <data name="ConfigOut_MC_RAF_MaxTransmit" inType="win:UInt8"/>
+      <data name="ConfigOut_MC_RAF_RetransmissionTO" inType="win:UInt16"/>
+      <data name="ConfigOut_MC_RAF_MonitorTO" inType="win:UInt16"/>
+      <data name="ConfigOut_MC_RAF_MaxPDUSize" inType="win:UInt16"/>
+      <data name="ConfigOut_Fcs_Valid" inType="win:UInt8"/>
+      <data name="ConfigOut_Fcs" inType="win:UInt16"/>
+      <data name="ConfigOut_ExtendedFlowSpec_Valid" inType="win:UInt8"/>
+      <data name="ConfigOut_EFS_Identifier" inType="win:UInt8"/>
+      <data name="ConfigOut_EFS_ServiceType" inType="win:UInt8"/>
+      <data name="ConfigOut_EFS_MaxSDUSize" inType="win:UInt16"/>
+      <data name="ConfigOut_EFS_SDUInterArrivalTime" inType="win:UInt32"/>
+      <data name="ConfigOut_EFS_AccessLatency" inType="win:UInt32"/>
+      <data name="ConfigOut_EFS_FlushTimeout" inType="win:UInt32"/>
+      <data name="ConfigOut_ExtendedWindowSize_Valid" inType="win:UInt8"/>
+      <data name="ConfigOut_ExtendedWindowSize" inType="win:UInt16"/>
+      <data name="ConfigIn_Flags" inType="win:UInt32"/>
+      <data name="ConfigIn_Mtu_Min" inType="win:UInt16"/>
+      <data name="ConfigIn_Mtu_Preferred" inType="win:UInt16"/>
+      <data name="ConfigIn_Mtu_Max" inType="win:UInt16"/>
+      <data name="ConfigIn_FlushTO_Min" inType="win:UInt16"/>
+      <data name="ConfigIn_FlushTO_Max" inType="win:UInt16"/>
+      <data name="CallbackFlags" inType="win:UInt32"/>
+      <data name="CallbackContext" inType="win:UInt64"/>
+      <data name="ReferenceObject" inType="win:UInt64"/>
+      <data name="IncomingQueueDepth" inType="win:UInt8"/>
+     </template>
+     <template tid="task_0245Args">
+      <data name="SentStatus" inType="win:UInt8"/>
+      <data name="LE_Flink" inType="win:UInt64"/>
+      <data name="LE_Blink" inType="win:UInt64"/>
+      <data name="Length" inType="win:UInt32"/>
+      <data name="Version" inType="win:UInt16"/>
+      <data name="Type" inType="win:UInt16"/>
+      <data name="BthportFlags" inType="win:UInt32"/>
+      <data name="Status" inType="win:UInt32"/>
+      <data name="BtStatus" inType="win:UInt8"/>
+      <data name="BTHPORT_CONTEXT_SIZE" inType="win:UInt8"/>
+      <data name="Context" inType="win:UInt64" count="BTHPORT_CONTEXT_SIZE"/>
+      <data name="ClientContext" inType="win:UInt64" count="BTHPORT_CONTEXT_SIZE"/>
+      <data name="BTHPORT_RESERVED_FIELD_SIZE" inType="win:UInt8"/>
+      <data name="Reserved" inType="win:UInt32" count="BTHPORT_RESERVED_FIELD_SIZE"/>
+      <data name="BtAddress" inType="win:UInt64"/>
+      <data name="ChannelHandle" inType="win:UInt64"/>
+     </template>
+     <template tid="task_0246Args">
+      <data name="SentStatus" inType="win:UInt8"/>
+      <data name="LE_Flink" inType="win:UInt64"/>
+      <data name="LE_Blink" inType="win:UInt64"/>
+      <data name="Length" inType="win:UInt32"/>
+      <data name="Version" inType="win:UInt16"/>
+      <data name="Type" inType="win:UInt16"/>
+      <data name="BthportFlags" inType="win:UInt32"/>
+      <data name="Status" inType="win:UInt32"/>
+      <data name="BtStatus" inType="win:UInt8"/>
+      <data name="BTHPORT_CONTEXT_SIZE" inType="win:UInt8"/>
+      <data name="Context" inType="win:UInt64" count="BTHPORT_CONTEXT_SIZE"/>
+      <data name="ClientContext" inType="win:UInt64" count="BTHPORT_CONTEXT_SIZE"/>
+      <data name="BTHPORT_RESERVED_FIELD_SIZE" inType="win:UInt8"/>
+      <data name="Reserved" inType="win:UInt32" count="BTHPORT_RESERVED_FIELD_SIZE"/>
+      <data name="BtAddress" inType="win:UInt64"/>
+      <data name="ChannelHandle" inType="win:UInt64"/>
+      <data name="NewChannelFlags" inType="win:UInt32"/>
+      <data name="FailedChannelFlags" inType="win:UInt32"/>
+     </template>
+     <template tid="task_0247Args">
+      <data name="SentStatus" inType="win:UInt8"/>
+      <data name="LE_Flink" inType="win:UInt64"/>
+      <data name="LE_Blink" inType="win:UInt64"/>
+      <data name="Length" inType="win:UInt32"/>
+      <data name="Version" inType="win:UInt16"/>
+      <data name="Type" inType="win:UInt16"/>
+      <data name="BthportFlags" inType="win:UInt32"/>
+      <data name="Status" inType="win:UInt32"/>
+      <data name="BtStatus" inType="win:UInt8"/>
+      <data name="BTHPORT_CONTEXT_SIZE" inType="win:UInt8"/>
+      <data name="Context" inType="win:UInt64" count="BTHPORT_CONTEXT_SIZE"/>
+      <data name="ClientContext" inType="win:UInt64" count="BTHPORT_CONTEXT_SIZE"/>
+      <data name="BTHPORT_RESERVED_FIELD_SIZE" inType="win:UInt8"/>
+      <data name="Reserved" inType="win:UInt32" count="BTHPORT_RESERVED_FIELD_SIZE"/>
+      <data name="BtAddress" inType="win:UInt64"/>
+      <data name="ChannelHandle" inType="win:UInt64"/>
+      <data name="TransferFlags" inType="win:UInt32"/>
+      <data name="BufferSize" inType="win:UInt32"/>
+      <data name="BufferStartSize" inType="win:UInt32"/>
+      <data name="BufferStart" inType="win:Binary" length="BufferStartSize"/>
+      <data name="BufferEndSize" inType="win:UInt32"/>
+      <data name="BufferEnd" inType="win:Binary" length="BufferEndSize"/>
+      <data name="Timeout" inType="win:UInt64"/>
+      <data name="RemainingBufferSize" inType="win:UInt32"/>
+     </template>
+     <template tid="task_0248Args">
+      <data name="SentStatus" inType="win:UInt8"/>
+      <data name="LE_Flink" inType="win:UInt64"/>
+      <data name="LE_Blink" inType="win:UInt64"/>
+      <data name="Length" inType="win:UInt32"/>
+      <data name="Version" inType="win:UInt16"/>
+      <data name="Type" inType="win:UInt16"/>
+      <data name="BthportFlags" inType="win:UInt32"/>
+      <data name="Status" inType="win:UInt32"/>
+      <data name="BtStatus" inType="win:UInt8"/>
+      <data name="BTHPORT_CONTEXT_SIZE" inType="win:UInt8"/>
+      <data name="Context" inType="win:UInt64" count="BTHPORT_CONTEXT_SIZE"/>
+      <data name="ClientContext" inType="win:UInt64" count="BTHPORT_CONTEXT_SIZE"/>
+      <data name="BTHPORT_RESERVED_FIELD_SIZE" inType="win:UInt8"/>
+      <data name="Reserved" inType="win:UInt32" count="BTHPORT_RESERVED_FIELD_SIZE"/>
+      <data name="BtAddress" inType="win:UInt64"/>
+      <data name="ChannelHandle" inType="win:UInt64"/>
+      <data name="Property_Type" inType="win:UInt16"/>
+      <data name="Property_Size" inType="win:UInt8"/>
+      <data name="Property" inType="win:UInt64" count="Property_Size"/>
+     </template>
+     <template tid="task_0249Args">
+      <data name="SentStatus" inType="win:UInt8"/>
+      <data name="LE_Flink" inType="win:UInt64"/>
+      <data name="LE_Blink" inType="win:UInt64"/>
+      <data name="Length" inType="win:UInt32"/>
+      <data name="Version" inType="win:UInt16"/>
+      <data name="Type" inType="win:UInt16"/>
+      <data name="BthportFlags" inType="win:UInt32"/>
+      <data name="Status" inType="win:UInt32"/>
+      <data name="BtStatus" inType="win:UInt8"/>
+      <data name="BTHPORT_CONTEXT_SIZE" inType="win:UInt8"/>
+      <data name="Context" inType="win:UInt64" count="BTHPORT_CONTEXT_SIZE"/>
+      <data name="ClientContext" inType="win:UInt64" count="BTHPORT_CONTEXT_SIZE"/>
+      <data name="BTHPORT_RESERVED_FIELD_SIZE" inType="win:UInt8"/>
+      <data name="Reserved" inType="win:UInt32" count="BTHPORT_RESERVED_FIELD_SIZE"/>
+      <data name="BtAddress" inType="win:UInt64"/>
+      <data name="PingRequestLength" inType="win:UInt8"/>
+      <data name="PingRequestData" inType="win:Binary" length="PingRequestLength"/>
+      <data name="PingResponseLength" inType="win:UInt8"/>
+      <data name="PingResponseData" inType="win:Binary" length="PingResponseLength"/>
+     </template>
+     <template tid="task_0250Args">
+      <data name="SentStatus" inType="win:UInt8"/>
+      <data name="LE_Flink" inType="win:UInt64"/>
+      <data name="LE_Blink" inType="win:UInt64"/>
+      <data name="Length" inType="win:UInt32"/>
+      <data name="Version" inType="win:UInt16"/>
+      <data name="Type" inType="win:UInt16"/>
+      <data name="BthportFlags" inType="win:UInt32"/>
+      <data name="Status" inType="win:UInt32"/>
+      <data name="BtStatus" inType="win:UInt8"/>
+      <data name="BTHPORT_CONTEXT_SIZE" inType="win:UInt8"/>
+      <data name="Context" inType="win:UInt64" count="BTHPORT_CONTEXT_SIZE"/>
+      <data name="ClientContext" inType="win:UInt64" count="BTHPORT_CONTEXT_SIZE"/>
+      <data name="BTHPORT_RESERVED_FIELD_SIZE" inType="win:UInt8"/>
+      <data name="Reserved" inType="win:UInt32" count="BTHPORT_RESERVED_FIELD_SIZE"/>
+      <data name="BtAddress" inType="win:UInt64"/>
+      <data name="InfoType" inType="win:UInt16"/>
+      <data name="Result" inType="win:UInt16"/>
+      <data name="DataLength" inType="win:UInt8"/>
+      <data name="Data" inType="win:UInt8" count="DataLength"/>
+     </template>
+     <template tid="task_0251Args">
+      <data name="SentStatus" inType="win:UInt8"/>
+      <data name="LE_Flink" inType="win:UInt64"/>
+      <data name="LE_Blink" inType="win:UInt64"/>
+      <data name="Length" inType="win:UInt32"/>
+      <data name="Version" inType="win:UInt16"/>
+      <data name="Type" inType="win:UInt16"/>
+      <data name="BthportFlags" inType="win:UInt32"/>
+      <data name="Status" inType="win:UInt32"/>
+      <data name="BtStatus" inType="win:UInt8"/>
+      <data name="BTHPORT_CONTEXT_SIZE" inType="win:UInt8"/>
+      <data name="Context" inType="win:UInt64" count="BTHPORT_CONTEXT_SIZE"/>
+      <data name="ClientContext" inType="win:UInt64" count="BTHPORT_CONTEXT_SIZE"/>
+      <data name="BTHPORT_RESERVED_FIELD_SIZE" inType="win:UInt8"/>
+      <data name="Reserved" inType="win:UInt32" count="BTHPORT_RESERVED_FIELD_SIZE"/>
+      <data name="Psm" inType="win:UInt16"/>
+     </template>
+     <template tid="task_0252Args">
+      <data name="SentStatus" inType="win:UInt8"/>
+      <data name="LE_Flink" inType="win:UInt64"/>
+      <data name="LE_Blink" inType="win:UInt64"/>
+      <data name="Length" inType="win:UInt32"/>
+      <data name="Version" inType="win:UInt16"/>
+      <data name="Type" inType="win:UInt16"/>
+      <data name="BthportFlags" inType="win:UInt32"/>
+      <data name="Status" inType="win:UInt32"/>
+      <data name="BtStatus" inType="win:UInt8"/>
+      <data name="BTHPORT_CONTEXT_SIZE" inType="win:UInt8"/>
+      <data name="Context" inType="win:UInt64" count="BTHPORT_CONTEXT_SIZE"/>
+      <data name="ClientContext" inType="win:UInt64" count="BTHPORT_CONTEXT_SIZE"/>
+      <data name="BTHPORT_RESERVED_FIELD_SIZE" inType="win:UInt8"/>
+      <data name="Reserved" inType="win:UInt32" count="BTHPORT_RESERVED_FIELD_SIZE"/>
+      <data name="BtAddress" inType="win:UInt64"/>
+      <data name="AclMode" inType="win:UInt8"/>
+     </template>
+     <template tid="task_0254Args">
+      <data name="SentStatus" inType="win:UInt8"/>
+      <data name="LE_Flink" inType="win:UInt64"/>
+      <data name="LE_Blink" inType="win:UInt64"/>
+      <data name="Length" inType="win:UInt32"/>
+      <data name="Version" inType="win:UInt16"/>
+      <data name="Type" inType="win:UInt16"/>
+      <data name="BthportFlags" inType="win:UInt32"/>
+      <data name="Status" inType="win:UInt32"/>
+      <data name="BtStatus" inType="win:UInt8"/>
+      <data name="BTHPORT_CONTEXT_SIZE" inType="win:UInt8"/>
+      <data name="Context" inType="win:UInt64" count="BTHPORT_CONTEXT_SIZE"/>
+      <data name="ClientContext" inType="win:UInt64" count="BTHPORT_CONTEXT_SIZE"/>
+      <data name="BTHPORT_RESERVED_FIELD_SIZE" inType="win:UInt8"/>
+      <data name="Reserved" inType="win:UInt32" count="BTHPORT_RESERVED_FIELD_SIZE"/>
+      <data name="BtAddress" inType="win:UInt64"/>
+      <data name="ChannelHandle" inType="win:UInt64"/>
+      <data name="Sniff_Max_Interval" inType="win:UInt16"/>
+      <data name="Sniff_Min_Interval" inType="win:UInt16"/>
+      <data name="Sniff_Attempt" inType="win:UInt16"/>
+      <data name="Sniff_Timeout" inType="win:UInt16"/>
+     </template>
+     <template tid="task_0255Args">
+      <data name="SentStatus" inType="win:UInt8"/>
+      <data name="LE_Flink" inType="win:UInt64"/>
+      <data name="LE_Blink" inType="win:UInt64"/>
+      <data name="Length" inType="win:UInt32"/>
+      <data name="Version" inType="win:UInt16"/>
+      <data name="Type" inType="win:UInt16"/>
+      <data name="BthportFlags" inType="win:UInt32"/>
+      <data name="Status" inType="win:UInt32"/>
+      <data name="BtStatus" inType="win:UInt8"/>
+      <data name="BTHPORT_CONTEXT_SIZE" inType="win:UInt8"/>
+      <data name="Context" inType="win:UInt64" count="BTHPORT_CONTEXT_SIZE"/>
+      <data name="ClientContext" inType="win:UInt64" count="BTHPORT_CONTEXT_SIZE"/>
+      <data name="BTHPORT_RESERVED_FIELD_SIZE" inType="win:UInt8"/>
+      <data name="Reserved" inType="win:UInt32" count="BTHPORT_RESERVED_FIELD_SIZE"/>
+      <data name="BtAddress" inType="win:UInt64"/>
+      <data name="ChannelHandle" inType="win:UInt64"/>
+      <data name="Beacon_Max_Interval" inType="win:UInt16"/>
+      <data name="Beacon_Min_Interval" inType="win:UInt16"/>
+     </template>
+     <template tid="task_0256Args">
+      <data name="SentStatus" inType="win:UInt8"/>
+      <data name="LE_Flink" inType="win:UInt64"/>
+      <data name="LE_Blink" inType="win:UInt64"/>
+      <data name="Length" inType="win:UInt32"/>
+      <data name="Version" inType="win:UInt16"/>
+      <data name="Type" inType="win:UInt16"/>
+      <data name="BthportFlags" inType="win:UInt32"/>
+      <data name="Status" inType="win:UInt32"/>
+      <data name="BtStatus" inType="win:UInt8"/>
+      <data name="BTHPORT_CONTEXT_SIZE" inType="win:UInt8"/>
+      <data name="Context" inType="win:UInt64" count="BTHPORT_CONTEXT_SIZE"/>
+      <data name="ClientContext" inType="win:UInt64" count="BTHPORT_CONTEXT_SIZE"/>
+      <data name="BTHPORT_RESERVED_FIELD_SIZE" inType="win:UInt8"/>
+      <data name="Reserved" inType="win:UInt32" count="BTHPORT_RESERVED_FIELD_SIZE"/>
+      <data name="BtAddress" inType="win:UInt64"/>
+      <data name="ChannelHandle" inType="win:UInt64"/>
+      <data name="Hold_Mode_Max_Interval" inType="win:UInt16"/>
+      <data name="Hold_Mode_Min_Interval" inType="win:UInt16"/>
+     </template>
+     <template tid="task_0257Args">
+      <data name="SentStatus" inType="win:UInt8"/>
+      <data name="LE_Flink" inType="win:UInt64"/>
+      <data name="LE_Blink" inType="win:UInt64"/>
+      <data name="Length" inType="win:UInt32"/>
+      <data name="Version" inType="win:UInt16"/>
+      <data name="Type" inType="win:UInt16"/>
+      <data name="BthportFlags" inType="win:UInt32"/>
+      <data name="Status" inType="win:UInt32"/>
+      <data name="BtStatus" inType="win:UInt8"/>
+      <data name="BTHPORT_CONTEXT_SIZE" inType="win:UInt8"/>
+      <data name="Context" inType="win:UInt64" count="BTHPORT_CONTEXT_SIZE"/>
+      <data name="ClientContext" inType="win:UInt64" count="BTHPORT_CONTEXT_SIZE"/>
+      <data name="BTHPORT_RESERVED_FIELD_SIZE" inType="win:UInt8"/>
+      <data name="Reserved" inType="win:UInt32" count="BTHPORT_RESERVED_FIELD_SIZE"/>
+      <data name="BtAddress" inType="win:UInt64"/>
+      <data name="PacketType" inType="win:UInt8"/>
+     </template>
+     <template tid="task_0258Args">
+      <data name="SentStatus" inType="win:UInt8"/>
+     </template>
+     <template tid="task_0261Args">
+      <data name="Child_Activity_ID" inType="win:GUID"/>
+      <data name="Related_Activity_ID" inType="win:GUID"/>
+     </template>
+     <template tid="task_0262Args">
+      <data name="Num_HCI_Packets" inType="win:UInt32"/>
+     </template>
+     <template tid="task_0263Args">
+      <data name="SentStatus" inType="win:UInt8" map="HCI_Sent_Status"/>
+      <data name="Connection_Handle" inType="win:UInt16"/>
+      <data name="Packet_Boundary_Flag" inType="win:UInt8"/>
+      <data name="Broadcast_Flag" inType="win:UInt8"/>
+      <data name="Buffer_Length" inType="win:UInt16"/>
+      <data name="PDU_Length" inType="win:UInt16"/>
+      <data name="Channel_ID" inType="win:UInt16"/>
+      <data name="Code" inType="win:UInt8"/>
+      <data name="Identifier" inType="win:UInt8"/>
+      <data name="Signal_Length" inType="win:UInt16"/>
+      <data name="Data_Length" inType="win:UInt16"/>
+      <data name="Data" inType="win:Binary" length="Data_Length"/>
+     </template>
+     <template tid="task_0264Args">
+      <data name="SentStatus" inType="win:UInt8"/>
+      <data name="Connection_Handle" inType="win:UInt16"/>
+      <data name="Packet_Boundary_Flag" inType="win:UInt8"/>
+      <data name="Broadcast_Flag" inType="win:UInt8"/>
+      <data name="Buffer_Length" inType="win:UInt16"/>
+      <data name="PDU_Length" inType="win:UInt16"/>
+      <data name="Channel_ID" inType="win:UInt16"/>
+      <data name="Code" inType="win:UInt8"/>
+      <data name="Identifier" inType="win:UInt8"/>
+      <data name="Signal_Length" inType="win:UInt16"/>
+      <data name="Data_Length" inType="win:UInt16"/>
+      <data name="Data" inType="win:Binary" length="Data_Length"/>
+     </template>
+     <template tid="task_0265Args">
+      <data name="SentStatus" inType="win:UInt8"/>
+      <data name="LE_Flink" inType="win:UInt64"/>
+      <data name="LE_Blink" inType="win:UInt64"/>
+      <data name="Length" inType="win:UInt32"/>
+      <data name="Version" inType="win:UInt16"/>
+      <data name="Type" inType="win:UInt16"/>
+      <data name="BthportFlags" inType="win:UInt32"/>
+      <data name="Status" inType="win:UInt32"/>
+      <data name="BtStatus" inType="win:UInt8"/>
+      <data name="BTHPORT_CONTEXT_SIZE" inType="win:UInt8"/>
+      <data name="Context" inType="win:UInt64" count="BTHPORT_CONTEXT_SIZE"/>
+      <data name="ClientContext" inType="win:UInt64" count="BTHPORT_CONTEXT_SIZE"/>
+      <data name="BTHPORT_RESERVED_FIELD_SIZE" inType="win:UInt8"/>
+      <data name="Reserved" inType="win:UInt32" count="BTHPORT_RESERVED_FIELD_SIZE"/>
+      <data name="FixedChannel" inType="win:UInt16"/>
+      <data name="Flags" inType="win:UInt32"/>
+      <data name="IndicationCallback" inType="win:UInt64"/>
+      <data name="IndicationCallbackContext" inType="win:UInt64"/>
+      <data name="ReferenceObject" inType="win:UInt64"/>
+      <data name="FixedChannelServerHandle" inType="win:UInt64"/>
+     </template>
+     <template tid="task_0266Args">
+      <data name="SentStatus" inType="win:UInt8"/>
+      <data name="LE_Flink" inType="win:UInt64"/>
+      <data name="LE_Blink" inType="win:UInt64"/>
+      <data name="Length" inType="win:UInt32"/>
+      <data name="Version" inType="win:UInt16"/>
+      <data name="Type" inType="win:UInt16"/>
+      <data name="BthportFlags" inType="win:UInt32"/>
+      <data name="Status" inType="win:UInt32"/>
+      <data name="BtStatus" inType="win:UInt8"/>
+      <data name="BTHPORT_CONTEXT_SIZE" inType="win:UInt8"/>
+      <data name="Context" inType="win:UInt64" count="BTHPORT_CONTEXT_SIZE"/>
+      <data name="ClientContext" inType="win:UInt64" count="BTHPORT_CONTEXT_SIZE"/>
+      <data name="BTHPORT_RESERVED_FIELD_SIZE" inType="win:UInt8"/>
+      <data name="Reserved" inType="win:UInt32" count="BTHPORT_RESERVED_FIELD_SIZE"/>
+      <data name="FixedChannelServerHandle" inType="win:UInt64"/>
+     </template>
+     <template tid="task_0267Args">
+      <data name="SentStatus" inType="win:UInt8"/>
+      <data name="LE_Flink" inType="win:UInt64"/>
+      <data name="LE_Blink" inType="win:UInt64"/>
+      <data name="Length" inType="win:UInt32"/>
+      <data name="Version" inType="win:UInt16"/>
+      <data name="Type" inType="win:UInt16"/>
+      <data name="BthportFlags" inType="win:UInt32"/>
+      <data name="Status" inType="win:UInt32"/>
+      <data name="BtStatus" inType="win:UInt8"/>
+      <data name="BTHPORT_CONTEXT_SIZE" inType="win:UInt8"/>
+      <data name="Context" inType="win:UInt64" count="BTHPORT_CONTEXT_SIZE"/>
+      <data name="ClientContext" inType="win:UInt64" count="BTHPORT_CONTEXT_SIZE"/>
+      <data name="BTHPORT_RESERVED_FIELD_SIZE" inType="win:UInt8"/>
+      <data name="Reserved" inType="win:UInt32" count="BTHPORT_RESERVED_FIELD_SIZE"/>
+      <data name="bthAddr" inType="win:UInt64"/>
+      <data name="DataTransferFlags" inType="win:UInt32"/>
+      <data name="DataLength" inType="win:UInt8"/>
+      <data name="DataStartSize" inType="win:UInt32"/>
+      <data name="DataStart" inType="win:Binary" length="DataStartSize"/>
+      <data name="DataEndSize" inType="win:UInt32"/>
+      <data name="DataEnd" inType="win:Binary" length="DataEndSize"/>
+     </template>
+     <template tid="task_0302Args">
+      <data name="SentStatus" inType="win:UInt8"/>
+      <data name="LE_Flink" inType="win:UInt64"/>
+      <data name="LE_Blink" inType="win:UInt64"/>
+      <data name="Length" inType="win:UInt32"/>
+      <data name="Version" inType="win:UInt16"/>
+      <data name="Type" inType="win:UInt16"/>
+      <data name="BthportFlags" inType="win:UInt32"/>
+      <data name="Status" inType="win:UInt32"/>
+      <data name="BtStatus" inType="win:UInt8"/>
+      <data name="BTHPORT_CONTEXT_SIZE" inType="win:UInt8"/>
+      <data name="Context" inType="win:UInt64" count="BTHPORT_CONTEXT_SIZE"/>
+      <data name="ClientContext" inType="win:UInt64" count="BTHPORT_CONTEXT_SIZE"/>
+      <data name="BTHPORT_RESERVED_FIELD_SIZE" inType="win:UInt8"/>
+      <data name="Reserved" inType="win:UInt32" count="BTHPORT_RESERVED_FIELD_SIZE"/>
+      <data name="bthAddr" inType="win:UInt64"/>
+      <data name="DataTransferFlags" inType="win:UInt32"/>
+     </template>
+     <template tid="task_0310Args">
+      <data name="RadioState" inType="win:UInt32"/>
+     </template>
+     <template tid="task_0311Args">
+      <data name="RadioState" inType="win:UInt32" map="BTH_RADIO_STATE"/>
+     </template>
+     <template tid="task_0312Args">
+      <data name="RadioState" inType="win:UInt32"/>
+      <data name="CompleteStatus" inType="win:UInt32"/>
+     </template>
+     <template tid="task_0313Args">
+      <data name="SystemPowerState" inType="win:UInt32" map="SYSTEM_POWER_STATE"/>
+      <data name="DevicePowerState" inType="win:UInt32" map="DEVICE_POWER_STATE"/>
+     </template>
+     <template tid="task_0314Args">
+      <data name="SystemPowerState" inType="win:UInt32"/>
+      <data name="DevicePowerState" inType="win:UInt32"/>
+      <data name="CompleteStatus" inType="win:UInt32"/>
+     </template>
+     <template tid="task_0402Args">
+      <data name="CommandPacketsAllowed" inType="win:UInt8"/>
+      <data name="AclWriteCredits" inType="win:UInt16"/>
+      <data name="BIP_Type" inType="win:UInt8"/>
+      <data name="BIP_DataLen" inType="win:UInt32"/>
+      <data name="BIP_Data" inType="win:Binary" length="BIP_DataLen"/>
+     </template>
+    </templates>
+   </provider>
+  </events>
+ </instrumentation>
+ <localization>
+  <resources culture="en-US">
+   <stringTable>
+    <string id="keyword_Performance" value="Performance"/>
+    <string id="task_task_0" value="task_0"/>
+    <string id="map_L2CAP_Sent_StatusL2CAP received a packet" value="L2CAP received a packet"/>
+    <string id="map_L2CAP_Sent_StatusL2CAP is completing a packet" value="L2CAP is completing a packet"/>
+    <string id="map_HCI_Sent_StatusSending packet to radio" value="Sending packet to radio"/>
+    <string id="map_HCI_Sent_StatusPacket received from radio" value="Packet received from radio"/>
+    <string id="map_HCI_Sent_StatusPacket timed out" value="Packet timed out"/>
+    <string id="map_BTH_RADIO_STATERadio State Unknown" value="Radio State Unknown"/>
+    <string id="map_BTH_RADIO_STATERadio On Pending" value="Radio On Pending"/>
+    <string id="map_BTH_RADIO_STATERadio On" value="Radio On"/>
+    <string id="map_BTH_RADIO_STATERadio Off Pending" value="Radio Off Pending"/>
+    <string id="map_BTH_RADIO_STATERadio Off" value="Radio Off"/>
+    <string id="map_SYSTEM_POWER_STATEUnspecified" value="Unspecified"/>
+    <string id="map_SYSTEM_POWER_STATES0" value="S0"/>
+    <string id="map_SYSTEM_POWER_STATES1" value="S1"/>
+    <string id="map_SYSTEM_POWER_STATES2" value="S2"/>
+    <string id="map_SYSTEM_POWER_STATES3" value="S3"/>
+    <string id="map_SYSTEM_POWER_STATES4-Hibernate" value="S4-Hibernate"/>
+    <string id="map_SYSTEM_POWER_STATES5-Shutdown" value="S5-Shutdown"/>
+    <string id="map_SYSTEM_POWER_STATES6" value="S6"/>
+    <string id="map_DEVICE_POWER_STATEUnspecified" value="Unspecified"/>
+    <string id="map_DEVICE_POWER_STATED0" value="D0"/>
+    <string id="map_DEVICE_POWER_STATED1" value="D1"/>
+    <string id="map_DEVICE_POWER_STATED2" value="D2"/>
+    <string id="map_DEVICE_POWER_STATED3" value="D3"/>
+   </stringTable>
+  </resources>
+ </localization>
+</instrumentationManifest>

@@ -1,0 +1,51 @@
+<instrumentationManifest xmlns="http://schemas.microsoft.com/win/2004/08/events">
+ <instrumentation xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:win="http://manifests.microsoft.com/win/2004/08/windows/events">
+  <events>
+   <provider name="Microsoft-Windows-Display" guid="{6ece3302-fee1-4ea9-8b88-086d459ed976}" resourceFileName="Microsoft-Windows-Display" messageFileName="Microsoft-Windows-Display" symbol="MicrosoftWindowsDisplay" source="Xml" >
+    <keywords>
+     <keyword name="DisplayCPL" message="$(string.keyword_DisplayCPL)" mask="0x10000"/>
+    </keywords>
+    <tasks>
+     <task name="DisplayCpl_InitializePage" message="$(string.task_DisplayCpl_InitializePage)" value="101"/>
+     <task name="DisplayCpl_OpenCustomDPIDialog" message="$(string.task_DisplayCpl_OpenCustomDPIDialog)" value="105"/>
+     <task name="DisplayCpl_ApplyButtonClicked" message="$(string.task_DisplayCpl_ApplyButtonClicked)" value="113">
+>
+      <opcodes>
+       <opcode name="Showrestartprompt" message="$(string.opcode_DisplayCpl_ApplyButtonClickedShowrestartprompt)" value="34"/>
+      </opcodes>
+     </task>
+     <task name="DisplayCpl_SettingsPage_EnumAllDisplays" message="$(string.task_DisplayCpl_SettingsPage_EnumAllDisplays)" value="120"/>
+     <task name="DisplayCpl_EnumerateStereo3DModes" message="$(string.task_DisplayCpl_EnumerateStereo3DModes)" value="129"/>
+    </tasks>
+    <events>
+     <event value="101" symbol="DisplayCpl_InitializePageStart" version="0" task="DisplayCpl_InitializePage" opcode="win:Start" level="win:Informational"/>
+     <event value="102" symbol="DisplayCpl_InitializePageStop" version="0" task="DisplayCpl_InitializePage" opcode="win:Stop" level="win:Informational"/>
+     <event value="105" symbol="DisplayCpl_OpenCustomDPIDialogStart" version="0" task="DisplayCpl_OpenCustomDPIDialog" opcode="win:Start" level="win:Informational" keywords="DisplayCPL"/>
+     <event value="106" symbol="DisplayCpl_OpenCustomDPIDialogStop" version="0" task="DisplayCpl_OpenCustomDPIDialog" opcode="win:Stop" level="win:Informational" keywords="DisplayCPL"/>
+     <event value="113" symbol="DisplayCpl_ApplyButtonClickedStart" version="0" task="DisplayCpl_ApplyButtonClicked" opcode="win:Start" level="win:Informational" keywords="DisplayCPL"/>
+     <event value="114" symbol="DisplayCpl_ApplyButtonClickedShowrestartprompt" version="0" task="DisplayCpl_ApplyButtonClicked" opcode="Showrestartprompt" level="win:Informational" keywords="DisplayCPL"/>
+     <event value="115" symbol="DisplayCpl_ApplyButtonClickedStop" version="0" task="DisplayCpl_ApplyButtonClicked" opcode="win:Stop" level="win:Informational" keywords="DisplayCPL"/>
+     <event value="120" symbol="DisplayCpl_SettingsPage_EnumAllDisplaysStart" version="0" task="DisplayCpl_SettingsPage_EnumAllDisplays" opcode="win:Start" level="win:Informational" keywords="DisplayCPL"/>
+     <event value="121" symbol="DisplayCpl_SettingsPage_EnumAllDisplaysStop" version="0" task="DisplayCpl_SettingsPage_EnumAllDisplays" opcode="win:Stop" level="win:Informational" keywords="DisplayCPL"/>
+     <event value="129" symbol="DisplayCpl_EnumerateStereo3DModesStart" version="0" task="DisplayCpl_EnumerateStereo3DModes" opcode="win:Start" level="win:Informational" keywords="DisplayCPL"/>
+     <event value="130" symbol="DisplayCpl_EnumerateStereo3DModesStop" version="0" task="DisplayCpl_EnumerateStereo3DModes" opcode="win:Stop" level="win:Informational" keywords="DisplayCPL"/>
+    </events>
+    <templates>
+    </templates>
+   </provider>
+  </events>
+ </instrumentation>
+ <localization>
+  <resources culture="en-US">
+   <stringTable>
+    <string id="keyword_DisplayCPL" value="DisplayCPL"/>
+    <string id="task_DisplayCpl_InitializePage" value="DisplayCpl_InitializePage"/>
+    <string id="task_DisplayCpl_OpenCustomDPIDialog" value="DisplayCpl_OpenCustomDPIDialog"/>
+    <string id="task_DisplayCpl_ApplyButtonClicked" value="DisplayCpl_ApplyButtonClicked"/>
+    <string id="opcode_DisplayCpl_ApplyButtonClickedShowrestartprompt" value="Showrestartprompt"/>
+    <string id="task_DisplayCpl_SettingsPage_EnumAllDisplays" value="DisplayCpl_SettingsPage_EnumAllDisplays"/>
+    <string id="task_DisplayCpl_EnumerateStereo3DModes" value="DisplayCpl_EnumerateStereo3DModes"/>
+   </stringTable>
+  </resources>
+ </localization>
+</instrumentationManifest>

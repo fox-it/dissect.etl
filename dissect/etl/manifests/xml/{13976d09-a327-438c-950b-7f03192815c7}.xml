@@ -1,0 +1,19 @@
+<instrumentationManifest xmlns="http://schemas.microsoft.com/win/2004/08/events">
+ <instrumentation xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:win="http://manifests.microsoft.com/win/2004/08/windows/events">
+  <events>
+
+   <provider name="Windows Kernel" guid="{13976d09-a327-438c-950b-7f03192815c7}">
+    <events>
+        <event value="32" symbol="Debugger/DebugPrint" version="2" task="Debugger" opcode="DebugPrint" template="0x9db2396cL"/>
+    </events>
+    <templates>
+     <template tid="0x9db2396cL">
+      <data name="Component" inType="win:UInt32"/>
+      <data name="Level" inType="win:UInt32"/>
+      <data name="Message" inType="win:String"/>
+     </template>
+    </templates>
+   </provider>
+  </events>
+ </instrumentation>
+</instrumentationManifest>

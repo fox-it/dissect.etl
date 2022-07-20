@@ -1,0 +1,144 @@
+<instrumentationManifest xmlns="http://schemas.microsoft.com/win/2004/08/events">
+ <instrumentation xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:win="http://manifests.microsoft.com/win/2004/08/windows/events">
+  <events>
+   <provider name="Microsoft-Windows-PrintDialogs" guid="{27e76321-1e5b-4a82-ba0c-26e978f15072}" resourceFileName="Microsoft-Windows-PrintDialogs" messageFileName="Microsoft-Windows-PrintDialogs" symbol="MicrosoftWindowsPrintDialogs" source="Xml" >
+    <keywords>
+    </keywords>
+    <tasks>
+     <task name="task_0" message="$(string.task_task_0)" value="0"/>
+     <task name="PrintDialogs_Dll" message="$(string.task_PrintDialogs_Dll)" value="100"/>
+     <task name="PrintDialogs_Factory" message="$(string.task_PrintDialogs_Factory)" value="101"/>
+     <task name="PrintDialogs_ShowPrintPreferencesDlg" message="$(string.task_PrintDialogs_ShowPrintPreferencesDlg)" value="102"/>
+     <task name="PrintDialogs_CreateXPSPrintPreviewHandlerFromFile" message="$(string.task_PrintDialogs_CreateXPSPrintPreviewHandlerFromFile)" value="103"/>
+     <task name="PrintDialogs_CreateXPSPrintPreviewHandlerFromOM" message="$(string.task_PrintDialogs_CreateXPSPrintPreviewHandlerFromOM)" value="104"/>
+     <task name="PrintDialogs_Print" message="$(string.task_PrintDialogs_Print)" value="105"/>
+     <task name="PrintDialogs_MoreOptions" message="$(string.task_PrintDialogs_MoreOptions)" value="106"/>
+     <task name="PrintDialogs_PreviewRender" message="$(string.task_PrintDialogs_PreviewRender)" value="107"/>
+     <task name="PrintDialogs_PreviewCreateDeviceResource" message="$(string.task_PrintDialogs_PreviewCreateDeviceResource)" value="108"/>
+     <task name="PrintDialogs_StartPreview" message="$(string.task_PrintDialogs_StartPreview)" value="109"/>
+     <task name="PrintDialogs_PreviewManagerCreate" message="$(string.task_PrintDialogs_PreviewManagerCreate)" value="110"/>
+     <task name="PrintDialogs_PreviewManagerEndPage" message="$(string.task_PrintDialogs_PreviewManagerEndPage)" value="111"/>
+     <task name="PrintDialogs_PreviewManagerStart" message="$(string.task_PrintDialogs_PreviewManagerStart)" value="112"/>
+     <task name="PrintDialogs_PreviewManagerRetrieveImage" message="$(string.task_PrintDialogs_PreviewManagerRetrieveImage)" value="113"/>
+     <task name="PrintDialogs_PreviewManagerDoPreviewWork" message="$(string.task_PrintDialogs_PreviewManagerDoPreviewWork)" value="114"/>
+     <task name="PrintDialogs_StartPrintExperience" message="$(string.task_PrintDialogs_StartPrintExperience)" value="115"/>
+     <task name="PrintDialogs_ShowSelectorUI" message="$(string.task_PrintDialogs_ShowSelectorUI)" value="116"/>
+     <task name="PrintDialogs_ChangeSetting" message="$(string.task_PrintDialogs_ChangeSetting)" value="117"/>
+     <task name="PrintDialogs_PreviewNextPage" message="$(string.task_PrintDialogs_PreviewNextPage)" value="118"/>
+     <task name="PrintDialogs_PreviewPrevPage" message="$(string.task_PrintDialogs_PreviewPrevPage)" value="119"/>
+     <task name="PrintDialogs_BindPrinter" message="$(string.task_PrintDialogs_BindPrinter)" value="120"/>
+     <task name="PrintDialogs_EnsureDocSource" message="$(string.task_PrintDialogs_EnsureDocSource)" value="121"/>
+     <task name="PrintDialogs_Paginate" message="$(string.task_PrintDialogs_Paginate)" value="122"/>
+     <task name="PrintDialogs_MakePage" message="$(string.task_PrintDialogs_MakePage)" value="123"/>
+     <task name="PrintDialogs_PreviewAddPage" message="$(string.task_PrintDialogs_PreviewAddPage)" value="124"/>
+     <task name="PrintDialogs_PreviewTransferPage" message="$(string.task_PrintDialogs_PreviewTransferPage)" value="125"/>
+     <task name="PrintDialogs_PaginateRequest" message="$(string.task_PrintDialogs_PaginateRequest)" value="126"/>
+     <task name="PrintDialogs_MakePageRequest" message="$(string.task_PrintDialogs_MakePageRequest)" value="127"/>
+    </tasks>
+    <events>
+     <event value="1" symbol="PrintDialogs_DllStart" version="0" task="PrintDialogs_Dll" opcode="win:Start" level="win:Informational"/>
+     <event value="2" symbol="PrintDialogs_DllStop" version="0" task="PrintDialogs_Dll" opcode="win:Stop" level="win:Informational"/>
+     <event value="3" symbol="PrintDialogs_FactoryStart" version="0" task="PrintDialogs_Factory" opcode="win:Start" level="win:Informational"/>
+     <event value="4" symbol="PrintDialogs_FactoryStop" version="0" task="PrintDialogs_Factory" opcode="win:Stop" level="win:Informational" template="PrintDialogs_FactoryStopArgs"/>
+     <event value="5" symbol="PrintDialogs_ShowPrintPreferencesDlgStart" version="0" task="PrintDialogs_ShowPrintPreferencesDlg" opcode="win:Start" level="win:Informational"/>
+     <event value="6" symbol="PrintDialogs_ShowPrintPreferencesDlgStop" version="0" task="PrintDialogs_ShowPrintPreferencesDlg" opcode="win:Stop" level="win:Informational" template="PrintDialogs_FactoryStopArgs"/>
+     <event value="7" symbol="PrintDialogs_CreateXPSPrintPreviewHandlerFromFileStart" version="0" task="PrintDialogs_CreateXPSPrintPreviewHandlerFromFile" opcode="win:Start" level="win:Informational"/>
+     <event value="8" symbol="PrintDialogs_CreateXPSPrintPreviewHandlerFromFileStop" version="0" task="PrintDialogs_CreateXPSPrintPreviewHandlerFromFile" opcode="win:Stop" level="win:Informational" template="PrintDialogs_FactoryStopArgs"/>
+     <event value="9" symbol="PrintDialogs_CreateXPSPrintPreviewHandlerFromOMStart" version="0" task="PrintDialogs_CreateXPSPrintPreviewHandlerFromOM" opcode="win:Start" level="win:Informational"/>
+     <event value="10" symbol="PrintDialogs_CreateXPSPrintPreviewHandlerFromOMStop" version="0" task="PrintDialogs_CreateXPSPrintPreviewHandlerFromOM" opcode="win:Stop" level="win:Informational" template="PrintDialogs_FactoryStopArgs"/>
+     <event value="11" symbol="PrintDialogs_PrintStart" version="0" task="PrintDialogs_Print" opcode="win:Start" level="win:Informational"/>
+     <event value="12" symbol="PrintDialogs_PrintStop" version="0" task="PrintDialogs_Print" opcode="win:Stop" level="win:Informational" template="PrintDialogs_FactoryStopArgs"/>
+     <event value="13" symbol="PrintDialogs_MoreOptionsStart" version="0" task="PrintDialogs_MoreOptions" opcode="win:Start" level="win:Informational"/>
+     <event value="14" symbol="PrintDialogs_MoreOptionsStop" version="0" task="PrintDialogs_MoreOptions" opcode="win:Stop" level="win:Informational" template="PrintDialogs_FactoryStopArgs"/>
+     <event value="15" symbol="PrintDialogs_PreviewRenderStart" version="0" task="PrintDialogs_PreviewRender" opcode="win:Start" level="win:Informational"/>
+     <event value="16" symbol="PrintDialogs_PreviewRenderStop" version="0" task="PrintDialogs_PreviewRender" opcode="win:Stop" level="win:Informational"/>
+     <event value="17" symbol="PrintDialogs_PreviewCreateDeviceResourceStart" version="0" task="PrintDialogs_PreviewCreateDeviceResource" opcode="win:Start" level="win:Informational"/>
+     <event value="18" symbol="PrintDialogs_PreviewCreateDeviceResourceStop" version="0" task="PrintDialogs_PreviewCreateDeviceResource" opcode="win:Stop" level="win:Informational" template="PrintDialogs_FactoryStopArgs"/>
+     <event value="19" symbol="PrintDialogs_StartPreviewStart" version="0" task="PrintDialogs_StartPreview" opcode="win:Start" level="win:Informational"/>
+     <event value="20" symbol="PrintDialogs_StartPreviewStop" version="0" task="PrintDialogs_StartPreview" opcode="win:Stop" level="win:Informational" template="PrintDialogs_FactoryStopArgs"/>
+     <event value="21" symbol="PrintDialogs_PreviewManagerCreateStart" version="0" task="PrintDialogs_PreviewManagerCreate" opcode="win:Start" level="win:Informational"/>
+     <event value="22" symbol="PrintDialogs_PreviewManagerCreateStop" version="0" task="PrintDialogs_PreviewManagerCreate" opcode="win:Stop" level="win:Informational" template="PrintDialogs_FactoryStopArgs"/>
+     <event value="23" symbol="PrintDialogs_PreviewManagerEndPageStart" version="0" task="PrintDialogs_PreviewManagerEndPage" opcode="win:Start" level="win:Informational"/>
+     <event value="24" symbol="PrintDialogs_PreviewManagerEndPageStop" version="0" task="PrintDialogs_PreviewManagerEndPage" opcode="win:Stop" level="win:Informational" template="PrintDialogs_FactoryStopArgs"/>
+     <event value="25" symbol="PrintDialogs_PreviewManagerStart" version="0" task="PrintDialogs_PreviewManagerStart" opcode="win:Start" level="win:Informational"/>
+     <event value="26" symbol="PrintDialogs_PreviewManagerStartStop" version="0" task="PrintDialogs_PreviewManagerStart" opcode="win:Stop" level="win:Informational" template="PrintDialogs_FactoryStopArgs"/>
+     <event value="27" symbol="PrintDialogs_PreviewManagerRetrieveImageStart" version="0" task="PrintDialogs_PreviewManagerRetrieveImage" opcode="win:Start" level="win:Informational"/>
+     <event value="28" symbol="PrintDialogs_PreviewManagerRetrieveImageStop" version="0" task="PrintDialogs_PreviewManagerRetrieveImage" opcode="win:Stop" level="win:Informational" template="PrintDialogs_FactoryStopArgs"/>
+     <event value="29" symbol="PrintDialogs_PreviewManagerDoPreviewWorkStart" version="0" task="PrintDialogs_PreviewManagerDoPreviewWork" opcode="win:Start" level="win:Informational"/>
+     <event value="30" symbol="PrintDialogs_PreviewManagerDoPreviewWorkStop" version="0" task="PrintDialogs_PreviewManagerDoPreviewWork" opcode="win:Stop" level="win:Informational" template="PrintDialogs_FactoryStopArgs"/>
+     <event value="31" symbol="PrintDialogs_StartPrintExperienceStart" version="0" task="PrintDialogs_StartPrintExperience" opcode="win:Start" level="win:Informational"/>
+     <event value="32" symbol="PrintDialogs_StartPrintExperienceStop" version="0" task="PrintDialogs_StartPrintExperience" opcode="win:Stop" level="win:Informational" template="PrintDialogs_FactoryStopArgs"/>
+     <event value="33" symbol="PrintDialogs_ShowSelectorUIStart" version="0" task="PrintDialogs_ShowSelectorUI" opcode="win:Start" level="win:Informational"/>
+     <event value="34" symbol="PrintDialogs_ShowSelectorUIStop" version="0" task="PrintDialogs_ShowSelectorUI" opcode="win:Stop" level="win:Informational" template="PrintDialogs_FactoryStopArgs"/>
+     <event value="35" symbol="PrintDialogs_ChangeSettingStart" version="0" task="PrintDialogs_ChangeSetting" opcode="win:Start" level="win:Informational"/>
+     <event value="36" symbol="PrintDialogs_ChangeSettingStop" version="0" task="PrintDialogs_ChangeSetting" opcode="win:Stop" level="win:Informational" template="PrintDialogs_FactoryStopArgs"/>
+     <event value="37" symbol="PrintDialogs_PreviewNextPageStart" version="0" task="PrintDialogs_PreviewNextPage" opcode="win:Start" level="win:Informational"/>
+     <event value="38" symbol="PrintDialogs_PreviewNextPageStop" version="0" task="PrintDialogs_PreviewNextPage" opcode="win:Stop" level="win:Informational"/>
+     <event value="39" symbol="PrintDialogs_PreviewPrevPageStart" version="0" task="PrintDialogs_PreviewPrevPage" opcode="win:Start" level="win:Informational"/>
+     <event value="40" symbol="PrintDialogs_PreviewPrevPageStop" version="0" task="PrintDialogs_PreviewPrevPage" opcode="win:Stop" level="win:Informational"/>
+     <event value="41" symbol="task_0Stop" version="0" task="task_0" opcode="win:Stop" level="win:Informational" template="task_0StopArgs"/>
+     <event value="42" symbol="PrintDialogs_BindPrinterStart" version="0" task="PrintDialogs_BindPrinter" opcode="win:Start" level="win:Informational"/>
+     <event value="43" symbol="PrintDialogs_BindPrinterStop" version="0" task="PrintDialogs_BindPrinter" opcode="win:Stop" level="win:Informational" template="PrintDialogs_FactoryStopArgs"/>
+     <event value="44" symbol="PrintDialogs_EnsureDocSourceStart" version="0" task="PrintDialogs_EnsureDocSource" opcode="win:Start" level="win:Informational"/>
+     <event value="45" symbol="PrintDialogs_EnsureDocSourceStop" version="0" task="PrintDialogs_EnsureDocSource" opcode="win:Stop" level="win:Informational" template="PrintDialogs_FactoryStopArgs"/>
+     <event value="46" symbol="PrintDialogs_PaginateStart" version="0" task="PrintDialogs_Paginate" opcode="win:Start" level="win:Informational"/>
+     <event value="47" symbol="PrintDialogs_PaginateStop" version="0" task="PrintDialogs_Paginate" opcode="win:Stop" level="win:Informational" template="PrintDialogs_FactoryStopArgs"/>
+     <event value="48" symbol="PrintDialogs_MakePageStart" version="0" task="PrintDialogs_MakePage" opcode="win:Start" level="win:Informational"/>
+     <event value="49" symbol="PrintDialogs_MakePageStop" version="0" task="PrintDialogs_MakePage" opcode="win:Stop" level="win:Informational" template="PrintDialogs_FactoryStopArgs"/>
+     <event value="50" symbol="PrintDialogs_PreviewAddPageStart" version="0" task="PrintDialogs_PreviewAddPage" opcode="win:Start" level="win:Informational"/>
+     <event value="51" symbol="PrintDialogs_PreviewAddPageStop" version="0" task="PrintDialogs_PreviewAddPage" opcode="win:Stop" level="win:Informational" template="PrintDialogs_FactoryStopArgs"/>
+     <event value="52" symbol="PrintDialogs_PreviewTransferPageStart" version="0" task="PrintDialogs_PreviewTransferPage" opcode="win:Start" level="win:Informational"/>
+     <event value="53" symbol="PrintDialogs_PreviewTransferPageStop" version="0" task="PrintDialogs_PreviewTransferPage" opcode="win:Stop" level="win:Informational" template="PrintDialogs_FactoryStopArgs"/>
+     <event value="54" symbol="PrintDialogs_PaginateRequestStart" version="0" task="PrintDialogs_PaginateRequest" opcode="win:Start" level="win:Informational"/>
+     <event value="55" symbol="PrintDialogs_PaginateRequestStop" version="0" task="PrintDialogs_PaginateRequest" opcode="win:Stop" level="win:Informational" template="PrintDialogs_FactoryStopArgs"/>
+     <event value="56" symbol="PrintDialogs_MakePageRequestStart" version="0" task="PrintDialogs_MakePageRequest" opcode="win:Start" level="win:Informational"/>
+     <event value="57" symbol="PrintDialogs_MakePageRequestStop" version="0" task="PrintDialogs_MakePageRequest" opcode="win:Stop" level="win:Informational" template="PrintDialogs_FactoryStopArgs"/>
+    </events>
+    <templates>
+     <template tid="PrintDialogs_FactoryStopArgs">
+      <data name="HResult" inType="win:UInt32"/>
+     </template>
+     <template tid="task_0StopArgs">
+      <data name="SessionID" inType="win:UInt32"/>
+      <data name="DeviceInstanceID" inType="win:UnicodeString"/>
+     </template>
+    </templates>
+   </provider>
+  </events>
+ </instrumentation>
+ <localization>
+  <resources culture="en-US">
+   <stringTable>
+    <string id="task_task_0" value="task_0"/>
+    <string id="task_PrintDialogs_Dll" value="PrintDialogs_Dll"/>
+    <string id="task_PrintDialogs_Factory" value="PrintDialogs_Factory"/>
+    <string id="task_PrintDialogs_ShowPrintPreferencesDlg" value="PrintDialogs_ShowPrintPreferencesDlg"/>
+    <string id="task_PrintDialogs_CreateXPSPrintPreviewHandlerFromFile" value="PrintDialogs_CreateXPSPrintPreviewHandlerFromFile"/>
+    <string id="task_PrintDialogs_CreateXPSPrintPreviewHandlerFromOM" value="PrintDialogs_CreateXPSPrintPreviewHandlerFromOM"/>
+    <string id="task_PrintDialogs_Print" value="PrintDialogs_Print"/>
+    <string id="task_PrintDialogs_MoreOptions" value="PrintDialogs_MoreOptions"/>
+    <string id="task_PrintDialogs_PreviewRender" value="PrintDialogs_PreviewRender"/>
+    <string id="task_PrintDialogs_PreviewCreateDeviceResource" value="PrintDialogs_PreviewCreateDeviceResource"/>
+    <string id="task_PrintDialogs_StartPreview" value="PrintDialogs_StartPreview"/>
+    <string id="task_PrintDialogs_PreviewManagerCreate" value="PrintDialogs_PreviewManagerCreate"/>
+    <string id="task_PrintDialogs_PreviewManagerEndPage" value="PrintDialogs_PreviewManagerEndPage"/>
+    <string id="task_PrintDialogs_PreviewManagerStart" value="PrintDialogs_PreviewManagerStart"/>
+    <string id="task_PrintDialogs_PreviewManagerRetrieveImage" value="PrintDialogs_PreviewManagerRetrieveImage"/>
+    <string id="task_PrintDialogs_PreviewManagerDoPreviewWork" value="PrintDialogs_PreviewManagerDoPreviewWork"/>
+    <string id="task_PrintDialogs_StartPrintExperience" value="PrintDialogs_StartPrintExperience"/>
+    <string id="task_PrintDialogs_ShowSelectorUI" value="PrintDialogs_ShowSelectorUI"/>
+    <string id="task_PrintDialogs_ChangeSetting" value="PrintDialogs_ChangeSetting"/>
+    <string id="task_PrintDialogs_PreviewNextPage" value="PrintDialogs_PreviewNextPage"/>
+    <string id="task_PrintDialogs_PreviewPrevPage" value="PrintDialogs_PreviewPrevPage"/>
+    <string id="task_PrintDialogs_BindPrinter" value="PrintDialogs_BindPrinter"/>
+    <string id="task_PrintDialogs_EnsureDocSource" value="PrintDialogs_EnsureDocSource"/>
+    <string id="task_PrintDialogs_Paginate" value="PrintDialogs_Paginate"/>
+    <string id="task_PrintDialogs_MakePage" value="PrintDialogs_MakePage"/>
+    <string id="task_PrintDialogs_PreviewAddPage" value="PrintDialogs_PreviewAddPage"/>
+    <string id="task_PrintDialogs_PreviewTransferPage" value="PrintDialogs_PreviewTransferPage"/>
+    <string id="task_PrintDialogs_PaginateRequest" value="PrintDialogs_PaginateRequest"/>
+    <string id="task_PrintDialogs_MakePageRequest" value="PrintDialogs_MakePageRequest"/>
+   </stringTable>
+  </resources>
+ </localization>
+</instrumentationManifest>

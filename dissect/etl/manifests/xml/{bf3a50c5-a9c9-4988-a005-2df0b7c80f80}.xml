@@ -1,0 +1,63 @@
+<instrumentationManifest xmlns="http://schemas.microsoft.com/win/2004/08/events">
+ <instrumentation xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:win="http://manifests.microsoft.com/win/2004/08/windows/events">
+  <events>
+
+   <provider name="Windows Kernel" guid="{bf3a50c5-a9c9-4988-a005-2df0b7c80f80}">
+    <events>
+        <event value="17" symbol="UdpIp/Fail" version="2" task="UdpIp" opcode="Fail" template="0xde416463L"/>
+        <event value="26" symbol="UdpIp/SendIPV6" version="2" task="UdpIp" opcode="SendIPV6" template="0xafb7234L"/>
+        <event value="27" symbol="UdpIp/RecvIPV6" version="2" task="UdpIp" opcode="RecvIPV6" template="0xafb7234L"/>
+        <event value="10" symbol="UdpIp/SendIPV4" version="2" task="UdpIp" opcode="SendIPV4" template="0xa662c7a2L"/>
+        <event value="11" symbol="UdpIp/RecvIPV4" version="2" task="UdpIp" opcode="RecvIPV4" template="0xa662c7a2L"/>
+        <event value="10" symbol="UdpIp/Send" version="0" task="UdpIp" opcode="Send" template="0x6b7e88d8L"/>
+        <event value="11" symbol="UdpIp/Recv" version="0" task="UdpIp" opcode="Recv" template="0x6b7e88d8L"/>
+        <event value="10" symbol="UdpIp/Send" version="1" task="UdpIp" opcode="Send" template="0xa1644d50L"/>
+        <event value="11" symbol="UdpIp/Recv" version="1" task="UdpIp" opcode="Recv" template="0xa1644d50L"/>
+    </events>
+    <templates>
+     <template tid="0x6b7e88d8L">
+      <data name="context" inType="win:Pointer"/>
+      <data name="saddr" inType="win:IPAddrV4"/>
+      <data name="sport" inType="win:UInt16"/>
+      <data name="size" inType="win:UInt16"/>
+      <data name="daddr" inType="win:IPAddrV4"/>
+      <data name="dport" inType="win:UInt16"/>
+      <data name="dsize" inType="win:UInt16"/>
+     </template>
+     <template tid="0xa1644d50L">
+      <data name="PID" inType="win:UInt32"/>
+      <data name="size" inType="win:UInt32"/>
+      <data name="daddr" inType="win:IPAddrV4"/>
+      <data name="saddr" inType="win:IPAddrV4"/>
+      <data name="dport" inType="win:UInt16"/>
+      <data name="sport" inType="win:UInt16"/>
+     </template>
+     <template tid="0xa662c7a2L">
+      <data name="PID" inType="win:UInt32"/>
+      <data name="size" inType="win:UInt32"/>
+      <data name="daddr" inType="win:IPAddrV4"/>
+      <data name="saddr" inType="win:IPAddrV4"/>
+      <data name="dport" inType="win:UInt16"/>
+      <data name="sport" inType="win:UInt16"/>
+      <data name="seqnum" inType="win:UInt32"/>
+      <data name="connid" inType="win:UInt32"/>
+     </template>
+     <template tid="0xde416463L">
+      <data name="Proto" inType="win:UInt16"/>
+      <data name="FailureCode" inType="win:UInt16"/>
+     </template>
+     <template tid="0xafb7234L">
+      <data name="PID" inType="win:UInt32"/>
+      <data name="size" inType="win:UInt32"/>
+      <data name="daddr" inType="win:IPAddrV6"/>
+      <data name="saddr" inType="win:IPAddrV6"/>
+      <data name="dport" inType="win:UInt16"/>
+      <data name="sport" inType="win:UInt16"/>
+      <data name="seqnum" inType="win:UInt32"/>
+      <data name="connid" inType="win:UInt32"/>
+     </template>
+    </templates>
+   </provider>
+  </events>
+ </instrumentation>
+</instrumentationManifest>

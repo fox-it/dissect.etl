@@ -1,0 +1,165 @@
+<instrumentationManifest xmlns="http://schemas.microsoft.com/win/2004/08/events">
+ <instrumentation xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:win="http://manifests.microsoft.com/win/2004/08/windows/events">
+  <events>
+
+   <provider name="Windows Kernel" guid="{ce1dbfb4-137e-4da6-87b0-3f59aa102cbc}">
+    <events>
+        <event value="34" symbol="PerfInfo/Mark" version="0" task="PerfInfo" opcode="Mark" template="0xd6a48836L"/>
+        <event value="108" symbol="PerfInfo/FinalizeKTimer2" version="2" task="PerfInfo" opcode="FinalizeKTimer2" template="0x7c529c47L"/>
+        <event value="96" symbol="PerfInfo/WdfISR" version="2" task="PerfInfo" opcode="WdfISR" template="0xcddadb84L"/>
+        <event value="97" symbol="PerfInfo/WdfPassiveISR" version="2" task="PerfInfo" opcode="WdfPassiveISR" template="0xcddadb84L"/>
+        <event value="98" symbol="PerfInfo/WdfDPC" version="2" task="PerfInfo" opcode="WdfDPC" template="0xcddadb84L"/>
+        <event value="92" symbol="PerfInfo/ISR-Unexpected" version="2" task="PerfInfo" opcode="ISR-Unexpected" template="0x16f342aL"/>
+        <event value="46" symbol="PerfInfo/SampleProf" version="2" task="PerfInfo" opcode="SampleProf" template="0xc36574a0L"/>
+        <event value="106" symbol="PerfInfo/CancelKTimer2" version="2" task="PerfInfo" opcode="CancelKTimer2" template="0x3f6ca3c0L"/>
+        <event value="47" symbol="PerfInfo/PmcCounterProf" version="2" task="PerfInfo" opcode="PmcCounterProf" template="0xdc8c0e9aL"/>
+        <event value="48" symbol="PerfInfo/PmcCtrConfig" version="2" task="PerfInfo" opcode="PmcCtrConfig" template="0xe40f526aL"/>
+        <event value="52" symbol="PerfInfo/SysClExit" version="2" task="PerfInfo" opcode="SysClExit" template="0x1feb71a2L"/>
+        <event value="50" symbol="PerfInfo/ISR-MSI" version="2" task="PerfInfo" opcode="ISR-MSI" template="0xa95b98f9L"/>
+        <event value="107" symbol="PerfInfo/DisableKTimer2" version="2" task="PerfInfo" opcode="DisableKTimer2" template="0x64005465L"/>
+        <event value="104" symbol="PerfInfo/SetKTimer2" version="2" task="PerfInfo" opcode="SetKTimer2" template="0x332520a1L"/>
+        <event value="105" symbol="PerfInfo/ExpireKTimer2" version="2" task="PerfInfo" opcode="ExpireKTimer2" template="0x332520a1L"/>
+        <event value="67" symbol="PerfInfo/ISR" version="2" task="PerfInfo" opcode="ISR" template="0xecb3ebf8L"/>
+        <event value="95" symbol="PerfInfo/ISR-PASS" version="2" task="PerfInfo" opcode="ISR-PASS" template="0xecb3ebf8L"/>
+        <event value="51" symbol="PerfInfo/SysClEnter" version="2" task="PerfInfo" opcode="SysClEnter" template="0xe15353bbL"/>
+        <event value="93" symbol="PerfInfo/IoStartTimer" version="2" task="PerfInfo" opcode="IoStartTimer" template="0x970d3e50L"/>
+        <event value="94" symbol="PerfInfo/IoStopTimer" version="2" task="PerfInfo" opcode="IoStopTimer" template="0x970d3e50L"/>
+        <event value="103" symbol="PerfInfo/WdfWorkItem" version="2" task="PerfInfo" opcode="WdfWorkItem" template="0xcddadb84L"/>
+        <event value="58" symbol="PerfInfo/DebuggerEnabled" version="2" task="PerfInfo" opcode="DebuggerEnabled" template="0xd4cbb29L"/>
+        <event value="72" symbol="PerfInfo/SetInterval" version="2" task="PerfInfo" opcode="SetInterval" template="0x8dbfc2c8L"/>
+        <event value="73" symbol="PerfInfo/CollectionStart" version="2" task="PerfInfo" opcode="CollectionStart" template="0x8dbfc2c8L"/>
+        <event value="74" symbol="PerfInfo/CollectionEnd" version="2" task="PerfInfo" opcode="CollectionEnd" template="0x8dbfc2c8L"/>
+        <event value="66" symbol="PerfInfo/ThreadedDPC" version="2" task="PerfInfo" opcode="ThreadedDPC" template="0xf7330198L"/>
+        <event value="68" symbol="PerfInfo/DPC" version="2" task="PerfInfo" opcode="DPC" template="0xf7330198L"/>
+        <event value="69" symbol="PerfInfo/TimerDPC" version="2" task="PerfInfo" opcode="TimerDPC" template="0xf7330198L"/>
+        <event value="70" symbol="PerfInfo/IOTimer" version="2" task="PerfInfo" opcode="IOTimer" template="0xf7330198L"/>
+        <event value="75" symbol="PerfInfo/CollectionStart" version="2" task="PerfInfo" opcode="CollectionStart" template="0x615c47a5L"/>
+        <event value="76" symbol="PerfInfo/CollectionEnd" version="2" task="PerfInfo" opcode="CollectionEnd" template="0x615c47a5L"/>
+        <event value="73" symbol="PerfInfo/CollectionStart" version="3" task="PerfInfo" opcode="CollectionStart" template="0xc8c15d1fL"/>
+        <event value="74" symbol="PerfInfo/CollectionEnd" version="3" task="PerfInfo" opcode="CollectionEnd" template="0xc8c15d1fL"/>
+        <event value="75" symbol="PerfInfo/CollectionStart" version="3" task="PerfInfo" opcode="CollectionStart" template="0xf6dddf93L"/>
+        <event value="76" symbol="PerfInfo/CollectionEnd" version="3" task="PerfInfo" opcode="CollectionEnd" template="0xf6dddf93L"/>
+        <event value="46" symbol="PerfInfo/SampleProf" version="1" task="PerfInfo" opcode="SampleProf" template="0x69f51716L"/>
+        <event value="68" symbol="PerfInfo/DPC" version="1" task="PerfInfo" opcode="DPC" template="0xf7330198L"/>
+        <event value="69" symbol="PerfInfo/TimerDPC" version="1" task="PerfInfo" opcode="TimerDPC" template="0xf7330198L"/>
+        <event value="67" symbol="PerfInfo/ISR" version="1" task="PerfInfo" opcode="ISR" template="0xce58b455L"/>
+        <event value="95" symbol="PerfInfo/ISR-PASS" version="1" task="PerfInfo" opcode="ISR-PASS" template="0xce58b455L"/>
+    </events>
+    <templates>
+     <template tid="0x1feb71a2L">
+      <data name="SysCallNtStatus" inType="win:UInt32"/>
+     </template>
+     <template tid="0x3f6ca3c0L">
+      <data name="Timer" inType="win:Pointer"/>
+     </template>
+     <template tid="0xc36574a0L">
+      <data name="InstructionPointer" inType="win:Pointer"/>
+      <data name="ThreadId" inType="win:UInt32"/>
+      <data name="Count" inType="win:UInt16"/>
+      <data name="Reserved" inType="win:UInt16"/>
+     </template>
+     <template tid="0xd6a48836L">
+      <data name="Message" inType="win:String"/>
+      <data name="Padding" inType="win:WChar" max="1"/>
+     </template>
+     <template tid="0xc8c15d1fL">
+      <data name="Source" inType="win:UInt32"/>
+      <data name="NewInterval" inType="win:UInt32"/>
+      <data name="OldInterval" inType="win:UInt32"/>
+      <data name="SourceName" inType="win:WString"/>
+     </template>
+     <template tid="0xa95b98f9L">
+      <data name="InitialTime" inType="win:Pointer"/>
+      <data name="Routine" inType="win:Pointer"/>
+      <data name="ReturnValue" inType="win:UInt8"/>
+      <data name="Vector" inType="win:UInt16"/>
+      <data name="Reserved" inType="win:UInt8"/>
+      <data name="MessageNumber" inType="win:UInt32"/>
+     </template>
+     <template tid="0x615c47a5L">
+      <data name="SpinLockSpinThreshold" inType="win:UInt32"/>
+      <data name="SpinLockContentionSampleRate" inType="win:UInt32"/>
+      <data name="SpinLockAcquireSampleRate" inType="win:UInt32"/>
+     </template>
+     <template tid="0xcddadb84L">
+      <data name="Routine" inType="win:Pointer"/>
+     </template>
+     <template tid="0x332520a1L">
+      <data name="DueTime" inType="win:UInt64"/>
+      <data name="MaximumDueTime" inType="win:UInt64"/>
+      <data name="Period" inType="win:UInt64"/>
+      <data name="Timer" inType="win:Pointer"/>
+      <data name="Callback" inType="win:Pointer"/>
+      <data name="CallbackContext" inType="win:Pointer"/>
+      <data name="TimerFlags" inType="win:UInt8"/>
+     </template>
+     <template tid="0xf7330198L">
+      <data name="InitialTime" inType="win:Pointer"/>
+      <data name="Routine" inType="win:Pointer"/>
+     </template>
+     <template tid="0x64005465L">
+      <data name="Timer" inType="win:Pointer"/>
+      <data name="DisableCallback" inType="win:Pointer"/>
+      <data name="DisableContext" inType="win:Pointer"/>
+      <data name="TimerFlags" inType="win:UInt8"/>
+     </template>
+     <template tid="0x69f51716L">
+      <data name="InstructionPointer" inType="win:Pointer"/>
+      <data name="ThreadId" inType="win:UInt32"/>
+      <data name="Count" inType="win:UInt16"/>
+     </template>
+     <template tid="0xe40f526aL">
+      <data name="CounterCount" inType="win:UInt32"/>
+      <data name="CounterName" inType="win:WString"/>
+     </template>
+     <template tid="0x970d3e50L">
+      <data name="DeviceObject" inType="win:Pointer"/>
+      <data name="TimerRoutine" inType="win:Pointer"/>
+     </template>
+     <template tid="0x7c529c47L">
+      <data name="Timer" inType="win:Pointer"/>
+      <data name="DisableCallback" inType="win:Pointer"/>
+      <data name="DisableContext" inType="win:Pointer"/>
+     </template>
+     <template tid="0xf6dddf93L">
+      <data name="SpinLockSpinThreshold" inType="win:UInt32"/>
+      <data name="SpinLockContentionSampleRate" inType="win:UInt32"/>
+      <data name="SpinLockAcquireSampleRate" inType="win:UInt32"/>
+      <data name="SpinLockHoldThreshold" inType="win:UInt32"/>
+     </template>
+     <template tid="0xecb3ebf8L">
+      <data name="InitialTime" inType="win:Pointer"/>
+      <data name="Routine" inType="win:Pointer"/>
+      <data name="ReturnValue" inType="win:UInt8"/>
+      <data name="Vector" inType="win:UInt16"/>
+      <data name="Reserved" inType="win:UInt8"/>
+     </template>
+     <template tid="0xdc8c0e9aL">
+      <data name="InstructionPointer" inType="win:Pointer"/>
+      <data name="ThreadId" inType="win:UInt32"/>
+      <data name="ProfileSource" inType="win:UInt16"/>
+      <data name="Reserved" inType="win:UInt16"/>
+     </template>
+     <template tid="0x16f342aL">
+      <data name="Vector" inType="win:UInt16"/>
+     </template>
+     <template tid="0xce58b455L">
+      <data name="InitialTime" inType="win:Pointer"/>
+      <data name="Routine" inType="win:Pointer"/>
+      <data name="ReturnValue" inType="win:UInt32"/>
+     </template>
+     <template tid="0x8dbfc2c8L">
+      <data name="Source" inType="win:UInt32"/>
+      <data name="NewInterval" inType="win:UInt32"/>
+      <data name="OldInterval" inType="win:UInt32"/>
+     </template>
+     <template tid="0xe15353bbL">
+      <data name="SysCallAddress" inType="win:Pointer"/>
+     </template>
+     <template tid="0xd4cbb29L">
+     </template>
+    </templates>
+   </provider>
+  </events>
+ </instrumentation>
+</instrumentationManifest>

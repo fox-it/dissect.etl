@@ -1,0 +1,2096 @@
+<instrumentationManifest xmlns="http://schemas.microsoft.com/win/2004/08/events">
+ <instrumentation xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:win="http://manifests.microsoft.com/win/2004/08/windows/events">
+  <events>
+
+   <provider name="Windows Kernel" guid="{9e814aad-3204-11d2-9a82-006008a86939}">
+    <events>
+        <event value="40" symbol="MSNT_SystemTrace/MapFileDCEnd" version="0" task="MSNT_SystemTrace" opcode="MapFileDCEnd" template="0x9782c89eL"/>
+        <event value="37" symbol="MSNT_SystemTrace/MapFile" version="0" task="MSNT_SystemTrace" opcode="MapFile" template="0x9782c89eL"/>
+        <event value="38" symbol="MSNT_SystemTrace/UnmapFile" version="0" task="MSNT_SystemTrace" opcode="UnmapFile" template="0x9782c89eL"/>
+        <event value="39" symbol="MSNT_SystemTrace/MapFileDCStart" version="0" task="MSNT_SystemTrace" opcode="MapFileDCStart" template="0x9782c89eL"/>
+        <event value="72" symbol="MSNT_SystemTrace/DirEnum" version="0" task="MSNT_SystemTrace" opcode="DirEnum" template="0x80b042c9L"/>
+        <event value="77" symbol="MSNT_SystemTrace/DirNotify" version="0" task="MSNT_SystemTrace" opcode="DirNotify" template="0x80b042c9L"/>
+        <event value="76" symbol="MSNT_SystemTrace/OperationEnd" version="0" task="MSNT_SystemTrace" opcode="OperationEnd" template="0x6630125L"/>
+        <event value="65" symbol="MSNT_SystemTrace/Cleanup" version="0" task="MSNT_SystemTrace" opcode="Cleanup" template="0xb0fc99adL"/>
+        <event value="66" symbol="MSNT_SystemTrace/Close" version="0" task="MSNT_SystemTrace" opcode="Close" template="0xb0fc99adL"/>
+        <event value="73" symbol="MSNT_SystemTrace/Flush" version="0" task="MSNT_SystemTrace" opcode="Flush" template="0xb0fc99adL"/>
+        <event value="67" symbol="MSNT_SystemTrace/Read" version="0" task="MSNT_SystemTrace" opcode="Read" template="0x8d125a05L"/>
+        <event value="68" symbol="MSNT_SystemTrace/Write" version="0" task="MSNT_SystemTrace" opcode="Write" template="0x8d125a05L"/>
+        <event value="74" symbol="MSNT_SystemTrace/QueryInfo" version="0" task="MSNT_SystemTrace" opcode="QueryInfo" template="0xf30f9662L"/>
+        <event value="75" symbol="MSNT_SystemTrace/FSControl" version="0" task="MSNT_SystemTrace" opcode="FSControl" template="0xf30f9662L"/>
+        <event value="69" symbol="MSNT_SystemTrace/SetInfo" version="0" task="MSNT_SystemTrace" opcode="SetInfo" template="0xf30f9662L"/>
+        <event value="70" symbol="MSNT_SystemTrace/Delete" version="0" task="MSNT_SystemTrace" opcode="Delete" template="0xf30f9662L"/>
+        <event value="71" symbol="MSNT_SystemTrace/Rename" version="0" task="MSNT_SystemTrace" opcode="Rename" template="0xf30f9662L"/>
+        <event value="0" symbol="MSNT_SystemTrace/Name" version="0" task="MSNT_SystemTrace" opcode="Name" template="0xebfd9007L"/>
+        <event value="32" symbol="MSNT_SystemTrace/FileCreate" version="0" task="MSNT_SystemTrace" opcode="FileCreate" template="0xebfd9007L"/>
+        <event value="35" symbol="MSNT_SystemTrace/FileDelete" version="0" task="MSNT_SystemTrace" opcode="FileDelete" template="0xebfd9007L"/>
+        <event value="36" symbol="MSNT_SystemTrace/FileRundown" version="0" task="MSNT_SystemTrace" opcode="FileRundown" template="0xebfd9007L"/>
+        <event value="64" symbol="MSNT_SystemTrace/Create" version="0" task="MSNT_SystemTrace" opcode="Create" template="0x3e4b4feL"/>
+        <event value="34" symbol="MSNT_SystemTrace/Mark" version="0" task="MSNT_SystemTrace" opcode="Mark" template="0xd6a48836L"/>
+        <event value="50" symbol="MSNT_SystemTrace/ReferenceObject" version="0" task="MSNT_SystemTrace" opcode="ReferenceObject" template="0x68ddc114L"/>
+        <event value="51" symbol="MSNT_SystemTrace/DereferenceObject" version="0" task="MSNT_SystemTrace" opcode="DereferenceObject" template="0x68ddc114L"/>
+        <event value="36" symbol="MSNT_SystemTrace/TypeDCStart" version="0" task="MSNT_SystemTrace" opcode="TypeDCStart" template="0x444634a4L"/>
+        <event value="37" symbol="MSNT_SystemTrace/TypeDCEnd" version="0" task="MSNT_SystemTrace" opcode="TypeDCEnd" template="0x444634a4L"/>
+        <event value="38" symbol="MSNT_SystemTrace/HandleDCStart" version="0" task="MSNT_SystemTrace" opcode="HandleDCStart" template="0x8ed4e890L"/>
+        <event value="39" symbol="MSNT_SystemTrace/HandleDCEnd" version="0" task="MSNT_SystemTrace" opcode="HandleDCEnd" template="0x8ed4e890L"/>
+        <event value="48" symbol="MSNT_SystemTrace/CreateObject" version="0" task="MSNT_SystemTrace" opcode="CreateObject" template="0x5188ddd6L"/>
+        <event value="49" symbol="MSNT_SystemTrace/DeleteObject" version="0" task="MSNT_SystemTrace" opcode="DeleteObject" template="0x5188ddd6L"/>
+        <event value="34" symbol="MSNT_SystemTrace/DuplicateHandle" version="0" task="MSNT_SystemTrace" opcode="DuplicateHandle" template="0x5a7b9572L"/>
+        <event value="32" symbol="MSNT_SystemTrace/CreateHandle" version="0" task="MSNT_SystemTrace" opcode="CreateHandle" template="0x46833e4L"/>
+        <event value="33" symbol="MSNT_SystemTrace/CloseHandle" version="0" task="MSNT_SystemTrace" opcode="CloseHandle" template="0x46833e4L"/>
+        <event value="32" symbol="MSNT_SystemTrace/HardFault" version="0" task="MSNT_SystemTrace" opcode="HardFault" template="0x4062caa6L"/>
+        <event value="128" symbol="MSNT_SystemTrace/VirtualAllocDCStart" version="0" task="MSNT_SystemTrace" opcode="VirtualAllocDCStart" template="0xe667950L"/>
+        <event value="129" symbol="MSNT_SystemTrace/VirtualAllocDCEnd" version="0" task="MSNT_SystemTrace" opcode="VirtualAllocDCEnd" template="0xe667950L"/>
+        <event value="98" symbol="MSNT_SystemTrace/VirtualAlloc" version="0" task="MSNT_SystemTrace" opcode="VirtualAlloc" template="0xc076952fL"/>
+        <event value="99" symbol="MSNT_SystemTrace/VirtualFree" version="0" task="MSNT_SystemTrace" opcode="VirtualFree" template="0xc076952fL"/>
+        <event value="134" symbol="MSNT_SystemTrace/MemResetInfo" version="0" task="MSNT_SystemTrace" opcode="MemResetInfo" template="0x717eddb6L"/>
+        <event value="100" symbol="MSNT_SystemTrace/HRRundown" version="0" task="MSNT_SystemTrace" opcode="HRRundown" template="0x508e0d4cL"/>
+        <event value="104" symbol="MSNT_SystemTrace/HRDestroy" version="0" task="MSNT_SystemTrace" opcode="HRDestroy" template="0xb148ccceL"/>
+        <event value="10" symbol="MSNT_SystemTrace/TransitionFault" version="0" task="MSNT_SystemTrace" opcode="TransitionFault" template="0xb17aafa7L"/>
+        <event value="11" symbol="MSNT_SystemTrace/DemandZeroFault" version="0" task="MSNT_SystemTrace" opcode="DemandZeroFault" template="0xb17aafa7L"/>
+        <event value="12" symbol="MSNT_SystemTrace/CopyOnWrite" version="0" task="MSNT_SystemTrace" opcode="CopyOnWrite" template="0xb17aafa7L"/>
+        <event value="13" symbol="MSNT_SystemTrace/GuardPageFault" version="0" task="MSNT_SystemTrace" opcode="GuardPageFault" template="0xb17aafa7L"/>
+        <event value="14" symbol="MSNT_SystemTrace/HardPageFault" version="0" task="MSNT_SystemTrace" opcode="HardPageFault" template="0xb17aafa7L"/>
+        <event value="15" symbol="MSNT_SystemTrace/AccessViolation" version="0" task="MSNT_SystemTrace" opcode="AccessViolation" template="0xb17aafa7L"/>
+        <event value="105" symbol="MSNT_SystemTrace/ImageLoadBacked" version="0" task="MSNT_SystemTrace" opcode="ImageLoadBacked" template="0xc1c5a3c9L"/>
+        <event value="102" symbol="MSNT_SystemTrace/HRReserve" version="0" task="MSNT_SystemTrace" opcode="HRReserve" template="0x69114465L"/>
+        <event value="103" symbol="MSNT_SystemTrace/HRRelease" version="0" task="MSNT_SystemTrace" opcode="HRRelease" template="0x69114465L"/>
+        <event value="101" symbol="MSNT_SystemTrace/HRCreate" version="0" task="MSNT_SystemTrace" opcode="HRCreate" template="0x4cfad473L"/>
+        <event value="127" symbol="MSNT_SystemTrace/VirtualRotate" version="0" task="MSNT_SystemTrace" opcode="VirtualRotate" template="0x717eddb6L"/>
+        <event value="108" symbol="MSNT_SystemTrace/FinalizeKTimer2" version="0" task="MSNT_SystemTrace" opcode="FinalizeKTimer2" template="0x7c529c47L"/>
+        <event value="96" symbol="MSNT_SystemTrace/WdfISR" version="0" task="MSNT_SystemTrace" opcode="WdfISR" template="0xcddadb84L"/>
+        <event value="97" symbol="MSNT_SystemTrace/WdfPassiveISR" version="0" task="MSNT_SystemTrace" opcode="WdfPassiveISR" template="0xcddadb84L"/>
+        <event value="98" symbol="MSNT_SystemTrace/WdfDPC" version="0" task="MSNT_SystemTrace" opcode="WdfDPC" template="0xcddadb84L"/>
+        <event value="92" symbol="MSNT_SystemTrace/ISR-Unexpected" version="0" task="MSNT_SystemTrace" opcode="ISR-Unexpected" template="0x16f342aL"/>
+        <event value="46" symbol="MSNT_SystemTrace/SampleProf" version="0" task="MSNT_SystemTrace" opcode="SampleProf" template="0xc36574a0L"/>
+        <event value="106" symbol="MSNT_SystemTrace/CancelKTimer2" version="0" task="MSNT_SystemTrace" opcode="CancelKTimer2" template="0x3f6ca3c0L"/>
+        <event value="47" symbol="MSNT_SystemTrace/PmcCounterProf" version="0" task="MSNT_SystemTrace" opcode="PmcCounterProf" template="0xdc8c0e9aL"/>
+        <event value="48" symbol="MSNT_SystemTrace/PmcCtrConfig" version="0" task="MSNT_SystemTrace" opcode="PmcCtrConfig" template="0xe40f526aL"/>
+        <event value="52" symbol="MSNT_SystemTrace/SysClExit" version="0" task="MSNT_SystemTrace" opcode="SysClExit" template="0x1feb71a2L"/>
+        <event value="50" symbol="MSNT_SystemTrace/ISR-MSI" version="0" task="MSNT_SystemTrace" opcode="ISR-MSI" template="0xa95b98f9L"/>
+        <event value="107" symbol="MSNT_SystemTrace/DisableKTimer2" version="0" task="MSNT_SystemTrace" opcode="DisableKTimer2" template="0x64005465L"/>
+        <event value="104" symbol="MSNT_SystemTrace/SetKTimer2" version="0" task="MSNT_SystemTrace" opcode="SetKTimer2" template="0x332520a1L"/>
+        <event value="105" symbol="MSNT_SystemTrace/ExpireKTimer2" version="0" task="MSNT_SystemTrace" opcode="ExpireKTimer2" template="0x332520a1L"/>
+        <event value="67" symbol="MSNT_SystemTrace/ISR" version="0" task="MSNT_SystemTrace" opcode="ISR" template="0xecb3ebf8L"/>
+        <event value="95" symbol="MSNT_SystemTrace/ISR-PASS" version="0" task="MSNT_SystemTrace" opcode="ISR-PASS" template="0xecb3ebf8L"/>
+        <event value="51" symbol="MSNT_SystemTrace/SysClEnter" version="0" task="MSNT_SystemTrace" opcode="SysClEnter" template="0xe15353bbL"/>
+        <event value="93" symbol="MSNT_SystemTrace/IoStartTimer" version="0" task="MSNT_SystemTrace" opcode="IoStartTimer" template="0x970d3e50L"/>
+        <event value="94" symbol="MSNT_SystemTrace/IoStopTimer" version="0" task="MSNT_SystemTrace" opcode="IoStopTimer" template="0x970d3e50L"/>
+        <event value="103" symbol="MSNT_SystemTrace/WdfWorkItem" version="0" task="MSNT_SystemTrace" opcode="WdfWorkItem" template="0xcddadb84L"/>
+        <event value="58" symbol="MSNT_SystemTrace/DebuggerEnabled" version="0" task="MSNT_SystemTrace" opcode="DebuggerEnabled" template="0xd4cbb29L"/>
+        <event value="72" symbol="MSNT_SystemTrace/SetInterval" version="0" task="MSNT_SystemTrace" opcode="SetInterval" template="0x8dbfc2c8L"/>
+        <event value="73" symbol="MSNT_SystemTrace/CollectionStart" version="0" task="MSNT_SystemTrace" opcode="CollectionStart" template="0x8dbfc2c8L"/>
+        <event value="74" symbol="MSNT_SystemTrace/CollectionEnd" version="0" task="MSNT_SystemTrace" opcode="CollectionEnd" template="0x8dbfc2c8L"/>
+        <event value="66" symbol="MSNT_SystemTrace/ThreadedDPC" version="0" task="MSNT_SystemTrace" opcode="ThreadedDPC" template="0xf7330198L"/>
+        <event value="68" symbol="MSNT_SystemTrace/DPC" version="0" task="MSNT_SystemTrace" opcode="DPC" template="0xf7330198L"/>
+        <event value="69" symbol="MSNT_SystemTrace/TimerDPC" version="0" task="MSNT_SystemTrace" opcode="TimerDPC" template="0xf7330198L"/>
+        <event value="70" symbol="MSNT_SystemTrace/IOTimer" version="0" task="MSNT_SystemTrace" opcode="IOTimer" template="0xf7330198L"/>
+        <event value="75" symbol="MSNT_SystemTrace/CollectionStart" version="0" task="MSNT_SystemTrace" opcode="CollectionStart" template="0x615c47a5L"/>
+        <event value="76" symbol="MSNT_SystemTrace/CollectionEnd" version="0" task="MSNT_SystemTrace" opcode="CollectionEnd" template="0x615c47a5L"/>
+        <event value="17" symbol="MSNT_SystemTrace/Fail" version="0" task="MSNT_SystemTrace" opcode="Fail" template="0xde416463L"/>
+        <event value="26" symbol="MSNT_SystemTrace/SendIPV6" version="0" task="MSNT_SystemTrace" opcode="SendIPV6" template="0xafb7234L"/>
+        <event value="27" symbol="MSNT_SystemTrace/RecvIPV6" version="0" task="MSNT_SystemTrace" opcode="RecvIPV6" template="0xafb7234L"/>
+        <event value="10" symbol="MSNT_SystemTrace/SendIPV4" version="0" task="MSNT_SystemTrace" opcode="SendIPV4" template="0xa662c7a2L"/>
+        <event value="11" symbol="MSNT_SystemTrace/RecvIPV4" version="0" task="MSNT_SystemTrace" opcode="RecvIPV4" template="0xa662c7a2L"/>
+        <event value="67" symbol="MSNT_SystemTrace/AutoBoost Clear Floor" version="0" task="MSNT_SystemTrace" opcode="AutoBoost Clear Floor" template="0xcfcd7699L"/>
+        <event value="57" symbol="MSNT_SystemTrace/WorkerThread" version="0" task="MSNT_SystemTrace" opcode="WorkerThread" template="0x75f3d8e8L"/>
+        <event value="62" symbol="MSNT_SystemTrace/Kernel Queue Enqueue" version="0" task="MSNT_SystemTrace" opcode="Kernel Queue Enqueue" template="0xe6f5032fL"/>
+        <event value="36" symbol="MSNT_SystemTrace/CSwitch" version="0" task="MSNT_SystemTrace" opcode="CSwitch" template="0x65ba5f68L"/>
+        <event value="69" symbol="MSNT_SystemTrace/SubProcessTag Changed" version="0" task="MSNT_SystemTrace" opcode="SubProcessTag Changed" template="0x3d98ab4cL"/>
+        <event value="41" symbol="MSNT_SystemTrace/SpinLock" version="0" task="MSNT_SystemTrace" opcode="SpinLock" template="0x7e798ee8L"/>
+        <event value="61" symbol="MSNT_SystemTrace/Thread Migration" version="0" task="MSNT_SystemTrace" opcode="Thread Migration" template="0xdb6b1931L"/>
+        <event value="63" symbol="MSNT_SystemTrace/Kernel Queue Dequeue" version="0" task="MSNT_SystemTrace" opcode="Kernel Queue Dequeue" template="0x92816abdL"/>
+        <event value="66" symbol="MSNT_SystemTrace/AutoBoost Set Floor" version="0" task="MSNT_SystemTrace" opcode="AutoBoost Set Floor" template="0xca18698L"/>
+        <event value="53" symbol="MSNT_SystemTrace/ThreadAffinity" version="0" task="MSNT_SystemTrace" opcode="ThreadAffinity" template="0x3a0bcdcbL"/>
+        <event value="64" symbol="MSNT_SystemTrace/Start" version="0" task="MSNT_SystemTrace" opcode="Start" template="0xe8fecf3eL"/>
+        <event value="65" symbol="MSNT_SystemTrace/End" version="0" task="MSNT_SystemTrace" opcode="End" template="0xe8fecf3eL"/>
+        <event value="72" symbol="MSNT_SystemTrace/SetName" version="0" task="MSNT_SystemTrace" opcode="SetName" template="0x3be4124aL"/>
+        <event value="37" symbol="MSNT_SystemTrace/CompCS" version="0" task="MSNT_SystemTrace" opcode="CompCS" template="0xd4cbb29L"/>
+        <event value="68" symbol="MSNT_SystemTrace/AutoBoost Entry Exhaustion" version="0" task="MSNT_SystemTrace" opcode="AutoBoost Entry Exhaustion" template="0x8c77fa30L"/>
+        <event value="50" symbol="MSNT_SystemTrace/ReadyThread" version="0" task="MSNT_SystemTrace" opcode="ReadyThread" template="0x54988e5bL"/>
+        <event value="60" symbol="MSNT_SystemTrace/AntiStarvationBoost" version="0" task="MSNT_SystemTrace" opcode="AntiStarvationBoost" template="0x533880adL"/>
+        <event value="1" symbol="MSNT_SystemTrace/Start" version="0" task="MSNT_SystemTrace" opcode="Start" template="0x3b8d9629L"/>
+        <event value="2" symbol="MSNT_SystemTrace/End" version="0" task="MSNT_SystemTrace" opcode="End" template="0x3b8d9629L"/>
+        <event value="3" symbol="MSNT_SystemTrace/DCStart" version="0" task="MSNT_SystemTrace" opcode="DCStart" template="0x3b8d9629L"/>
+        <event value="4" symbol="MSNT_SystemTrace/DCEnd" version="0" task="MSNT_SystemTrace" opcode="DCEnd" template="0x3b8d9629L"/>
+        <event value="10" symbol="MSNT_SystemTrace/Send" version="0" task="MSNT_SystemTrace" opcode="Send" template="0x6b7e88d8L"/>
+        <event value="11" symbol="MSNT_SystemTrace/Recv" version="0" task="MSNT_SystemTrace" opcode="Recv" template="0x6b7e88d8L"/>
+        <event value="34" symbol="MSNT_SystemTrace/KeyCreate" version="0" task="MSNT_SystemTrace" opcode="KeyCreate" template="0x9ad5e6faL"/>
+        <event value="35" symbol="MSNT_SystemTrace/KeyDelete" version="0" task="MSNT_SystemTrace" opcode="KeyDelete" template="0x9ad5e6faL"/>
+        <event value="36" symbol="MSNT_SystemTrace/KeyRundown" version="0" task="MSNT_SystemTrace" opcode="KeyRundown" template="0x9ad5e6faL"/>
+        <event value="37" symbol="MSNT_SystemTrace/StackKeyKernel" version="0" task="MSNT_SystemTrace" opcode="StackKeyKernel" template="0x9ea581aL"/>
+        <event value="38" symbol="MSNT_SystemTrace/StackKeyUser" version="0" task="MSNT_SystemTrace" opcode="StackKeyUser" template="0x9ea581aL"/>
+        <event value="32" symbol="MSNT_SystemTrace/Stack" version="0" task="MSNT_SystemTrace" opcode="Stack" template="0x77f82d3bL"/>
+        <event value="35" symbol="MSNT_SystemTrace/DrvMjFnRet" version="0" task="MSNT_SystemTrace" opcode="DrvMjFnRet" template="0x7b22ae70L"/>
+        <event value="52" symbol="MSNT_SystemTrace/DrvComplReq" version="0" task="MSNT_SystemTrace" opcode="DrvComplReq" template="0x879eff37L"/>
+        <event value="53" symbol="MSNT_SystemTrace/DrvComplReqRet" version="0" task="MSNT_SystemTrace" opcode="DrvComplReqRet" template="0x27125e59L"/>
+        <event value="10" symbol="MSNT_SystemTrace/Read" version="0" task="MSNT_SystemTrace" opcode="Read" template="0xd2679eafL"/>
+        <event value="11" symbol="MSNT_SystemTrace/Write" version="0" task="MSNT_SystemTrace" opcode="Write" template="0xd2679eafL"/>
+        <event value="34" symbol="MSNT_SystemTrace/DrvMjFnCall" version="0" task="MSNT_SystemTrace" opcode="DrvMjFnCall" template="0x73c493edL"/>
+        <event value="36" symbol="MSNT_SystemTrace/CSwitch" version="0" task="MSNT_SystemTrace" opcode="CSwitch" template="0xf4a9250cL"/>
+        <event value="33" symbol="MSNT_SystemTrace/DSwitchEnd" version="0" task="MSNT_SystemTrace" opcode="DSwitchEnd" template="0xa6e43bc4L"/>
+        <event value="34" symbol="MSNT_SystemTrace/ScheduledPark" version="0" task="MSNT_SystemTrace" opcode="ScheduledPark" template="0xaf0876adL"/>
+        <event value="35" symbol="MSNT_SystemTrace/Disassociate" version="0" task="MSNT_SystemTrace" opcode="Disassociate" template="0x4b85c247L"/>
+        <event value="32" symbol="MSNT_SystemTrace/DSwitchStart" version="0" task="MSNT_SystemTrace" opcode="DSwitchStart" template="0xa6e43bc4L"/>
+        <event value="73" symbol="MSNT_SystemTrace/CollectionStart" version="0" task="MSNT_SystemTrace" opcode="CollectionStart" template="0xc8c15d1fL"/>
+        <event value="74" symbol="MSNT_SystemTrace/CollectionEnd" version="0" task="MSNT_SystemTrace" opcode="CollectionEnd" template="0xc8c15d1fL"/>
+        <event value="75" symbol="MSNT_SystemTrace/CollectionStart" version="0" task="MSNT_SystemTrace" opcode="CollectionStart" template="0xf6dddf93L"/>
+        <event value="76" symbol="MSNT_SystemTrace/CollectionEnd" version="0" task="MSNT_SystemTrace" opcode="CollectionEnd" template="0xf6dddf93L"/>
+        <event value="17" symbol="MSNT_SystemTrace/Fail" version="0" task="MSNT_SystemTrace" opcode="Fail" template="0xd93cec10L"/>
+        <event value="18" symbol="MSNT_SystemTrace/TCPCopy" version="0" task="MSNT_SystemTrace" opcode="TCPCopy" template="0x9d3bb782L"/>
+        <event value="19" symbol="MSNT_SystemTrace/ARPCopy" version="0" task="MSNT_SystemTrace" opcode="ARPCopy" template="0x9d3bb782L"/>
+        <event value="20" symbol="MSNT_SystemTrace/FullACK" version="0" task="MSNT_SystemTrace" opcode="FullACK" template="0x9d3bb782L"/>
+        <event value="21" symbol="MSNT_SystemTrace/PartACK" version="0" task="MSNT_SystemTrace" opcode="PartACK" template="0x9d3bb782L"/>
+        <event value="22" symbol="MSNT_SystemTrace/DupACK" version="0" task="MSNT_SystemTrace" opcode="DupACK" template="0x9d3bb782L"/>
+        <event value="10" symbol="MSNT_SystemTrace/Send" version="0" task="MSNT_SystemTrace" opcode="Send" template="0xee1ab8e5L"/>
+        <event value="16" symbol="MSNT_SystemTrace/Reconnect" version="0" task="MSNT_SystemTrace" opcode="Reconnect" template="0x9d3bb782L"/>
+        <event value="13" symbol="MSNT_SystemTrace/Disconnect" version="0" task="MSNT_SystemTrace" opcode="Disconnect" template="0x9d3bb782L"/>
+        <event value="14" symbol="MSNT_SystemTrace/Retransmit" version="0" task="MSNT_SystemTrace" opcode="Retransmit" template="0x9d3bb782L"/>
+        <event value="12" symbol="MSNT_SystemTrace/Connect" version="0" task="MSNT_SystemTrace" opcode="Connect" template="0x8b5b8748L"/>
+        <event value="15" symbol="MSNT_SystemTrace/Accept" version="0" task="MSNT_SystemTrace" opcode="Accept" template="0x8b5b8748L"/>
+        <event value="11" symbol="MSNT_SystemTrace/Recv" version="0" task="MSNT_SystemTrace" opcode="Recv" template="0x9d3bb782L"/>
+        <event value="66" symbol="MSNT_SystemTrace/BuildInfo" version="0" task="MSNT_SystemTrace" opcode="BuildInfo" template="0x60b881d9L"/>
+        <event value="64" symbol="MSNT_SystemTrace/DbgIdRSDS" version="0" task="MSNT_SystemTrace" opcode="DbgIdRSDS" template="0x15284aa3L"/>
+        <event value="32" symbol="MSNT_SystemTrace/EndExtension" version="0" task="MSNT_SystemTrace" opcode="EndExtension" template="0xe9ef310aL"/>
+        <event value="5" symbol="MSNT_SystemTrace/Extension" version="0" task="MSNT_SystemTrace" opcode="Extension" template="0xe9ef310aL"/>
+        <event value="80" symbol="MSNT_SystemTrace/PartitionInfoExtension" version="0" task="MSNT_SystemTrace" opcode="PartitionInfoExtension" template="0xd73d93f5L"/>
+        <event value="0" symbol="MSNT_SystemTrace/Header" version="0" task="MSNT_SystemTrace" opcode="Header" template="0x2fb36826L"/>
+        <event value="67" symbol="MSNT_SystemTrace/ProviderBinaryPath" version="0" task="MSNT_SystemTrace" opcode="ProviderBinaryPath" template="0x82e6c198L"/>
+        <event value="8" symbol="MSNT_SystemTrace/RDComplete" version="0" task="MSNT_SystemTrace" opcode="RDComplete" template="0xd4cbb29L"/>
+        <event value="34" symbol="MSNT_SystemTrace/Scheduler" version="0" task="MSNT_SystemTrace" opcode="Scheduler" template="0xa58f9ee9L"/>
+        <event value="35" symbol="MSNT_SystemTrace/Wakeup" version="0" task="MSNT_SystemTrace" opcode="Wakeup" template="0x7827380cL"/>
+        <event value="32" symbol="MSNT_SystemTrace/Start" version="0" task="MSNT_SystemTrace" opcode="Start" template="0xd4cbb29L"/>
+        <event value="33" symbol="MSNT_SystemTrace/Stop" version="0" task="MSNT_SystemTrace" opcode="Stop" template="0xd4cbb29L"/>
+        <event value="36" symbol="MSNT_SystemTrace/Sleep" version="0" task="MSNT_SystemTrace" opcode="Sleep" template="0xd4cbb29L"/>
+        <event value="37" symbol="MSNT_SystemTrace/SleepResp" version="0" task="MSNT_SystemTrace" opcode="SleepResp" template="0xd4cbb29L"/>
+        <event value="12" symbol="MSNT_SystemTrace/LogDisk" version="0" task="MSNT_SystemTrace" opcode="LogDisk" template="0x2a7fc3b0L"/>
+        <event value="11" symbol="MSNT_SystemTrace/PhyDisk" version="0" task="MSNT_SystemTrace" opcode="PhyDisk" template="0xd68c0bd3L"/>
+        <event value="21" symbol="MSNT_SystemTrace/IRQ" version="0" task="MSNT_SystemTrace" opcode="IRQ" template="0x7c7073eaL"/>
+        <event value="10" symbol="MSNT_SystemTrace/CPU" version="0" task="MSNT_SystemTrace" opcode="CPU" template="0x6a587f4L"/>
+        <event value="16" symbol="MSNT_SystemTrace/Power" version="0" task="MSNT_SystemTrace" opcode="Power" template="0x5bc3277aL"/>
+        <event value="14" symbol="MSNT_SystemTrace/Video" version="0" task="MSNT_SystemTrace" opcode="Video" template="0x9bf786c2L"/>
+        <event value="15" symbol="MSNT_SystemTrace/Services" version="0" task="MSNT_SystemTrace" opcode="Services" template="0x7aeb034cL"/>
+        <event value="22" symbol="MSNT_SystemTrace/PnP" version="0" task="MSNT_SystemTrace" opcode="PnP" template="0x7a6c7fb2L"/>
+        <event value="13" symbol="MSNT_SystemTrace/NIC" version="0" task="MSNT_SystemTrace" opcode="NIC" template="0x962af533L"/>
+        <event value="40" symbol="MSNT_SystemTrace/HiveDirty" version="0" task="MSNT_SystemTrace" opcode="HiveDirty" template="0xbbbd80daL"/>
+        <event value="35" symbol="MSNT_SystemTrace/Config" version="0" task="MSNT_SystemTrace" opcode="Config" template="0x2423d536L"/>
+        <event value="37" symbol="MSNT_SystemTrace/HiveDestroy" version="0" task="MSNT_SystemTrace" opcode="HiveDestroy" template="0xbf11cb27L"/>
+        <event value="34" symbol="MSNT_SystemTrace/Counters" version="0" task="MSNT_SystemTrace" opcode="Counters" template="0xee13e046L"/>
+        <event value="10" symbol="MSNT_SystemTrace/Create" version="0" task="MSNT_SystemTrace" opcode="Create" template="0xd39192b0L"/>
+        <event value="11" symbol="MSNT_SystemTrace/Open" version="0" task="MSNT_SystemTrace" opcode="Open" template="0xd39192b0L"/>
+        <event value="12" symbol="MSNT_SystemTrace/Delete" version="0" task="MSNT_SystemTrace" opcode="Delete" template="0xd39192b0L"/>
+        <event value="13" symbol="MSNT_SystemTrace/Query" version="0" task="MSNT_SystemTrace" opcode="Query" template="0xd39192b0L"/>
+        <event value="14" symbol="MSNT_SystemTrace/SetValue" version="0" task="MSNT_SystemTrace" opcode="SetValue" template="0xd39192b0L"/>
+        <event value="15" symbol="MSNT_SystemTrace/DeleteValue" version="0" task="MSNT_SystemTrace" opcode="DeleteValue" template="0xd39192b0L"/>
+        <event value="16" symbol="MSNT_SystemTrace/QueryValue" version="0" task="MSNT_SystemTrace" opcode="QueryValue" template="0xd39192b0L"/>
+        <event value="17" symbol="MSNT_SystemTrace/EnumerateKey" version="0" task="MSNT_SystemTrace" opcode="EnumerateKey" template="0xd39192b0L"/>
+        <event value="18" symbol="MSNT_SystemTrace/EnumerateValueKey" version="0" task="MSNT_SystemTrace" opcode="EnumerateValueKey" template="0xd39192b0L"/>
+        <event value="19" symbol="MSNT_SystemTrace/QueryMultipleValue" version="0" task="MSNT_SystemTrace" opcode="QueryMultipleValue" template="0xd39192b0L"/>
+        <event value="20" symbol="MSNT_SystemTrace/SetInformation" version="0" task="MSNT_SystemTrace" opcode="SetInformation" template="0xd39192b0L"/>
+        <event value="21" symbol="MSNT_SystemTrace/Flush" version="0" task="MSNT_SystemTrace" opcode="Flush" template="0xd39192b0L"/>
+        <event value="22" symbol="MSNT_SystemTrace/KCBCreate" version="0" task="MSNT_SystemTrace" opcode="KCBCreate" template="0xd39192b0L"/>
+        <event value="23" symbol="MSNT_SystemTrace/KCBDelete" version="0" task="MSNT_SystemTrace" opcode="KCBDelete" template="0xd39192b0L"/>
+        <event value="24" symbol="MSNT_SystemTrace/KCBRundownBegin" version="0" task="MSNT_SystemTrace" opcode="KCBRundownBegin" template="0xd39192b0L"/>
+        <event value="25" symbol="MSNT_SystemTrace/KCBRundownEnd" version="0" task="MSNT_SystemTrace" opcode="KCBRundownEnd" template="0xd39192b0L"/>
+        <event value="26" symbol="MSNT_SystemTrace/Virtualize" version="0" task="MSNT_SystemTrace" opcode="Virtualize" template="0xd39192b0L"/>
+        <event value="27" symbol="MSNT_SystemTrace/Close" version="0" task="MSNT_SystemTrace" opcode="Close" template="0xd39192b0L"/>
+        <event value="28" symbol="MSNT_SystemTrace/SetSecurity" version="0" task="MSNT_SystemTrace" opcode="SetSecurity" template="0xd39192b0L"/>
+        <event value="29" symbol="MSNT_SystemTrace/QuerySecurity" version="0" task="MSNT_SystemTrace" opcode="QuerySecurity" template="0xd39192b0L"/>
+        <event value="36" symbol="MSNT_SystemTrace/HiveInit" version="0" task="MSNT_SystemTrace" opcode="HiveInit" template="0xfc39433eL"/>
+        <event value="32" symbol="MSNT_SystemTrace/TxRRollback" version="0" task="MSNT_SystemTrace" opcode="TxRRollback" template="0xd79f5e7aL"/>
+        <event value="30" symbol="MSNT_SystemTrace/TxRCommit" version="0" task="MSNT_SystemTrace" opcode="TxRCommit" template="0xd79f5e7aL"/>
+        <event value="31" symbol="MSNT_SystemTrace/TxRPrepare" version="0" task="MSNT_SystemTrace" opcode="TxRPrepare" template="0xd79f5e7aL"/>
+        <event value="39" symbol="MSNT_SystemTrace/HiveDCEnd" version="0" task="MSNT_SystemTrace" opcode="HiveDCEnd" template="0x12889635L"/>
+        <event value="48" symbol="MSNT_SystemTrace/ChangeNotify" version="0" task="MSNT_SystemTrace" opcode="ChangeNotify" template="0xa83254edL"/>
+        <event value="38" symbol="MSNT_SystemTrace/HiveLink" version="0" task="MSNT_SystemTrace" opcode="HiveLink" template="0xd23e50e8L"/>
+        <event value="100" symbol="MSNT_SystemTrace/HRRundown" version="0" task="MSNT_SystemTrace" opcode="HRRundown" template="0xe2cf45dbL"/>
+        <event value="8" symbol="MSNT_SystemTrace/RDComplete" version="0" task="MSNT_SystemTrace" opcode="RDComplete" template="0xd4cbb29L"/>
+        <event value="32" symbol="MSNT_SystemTrace/EndExtension" version="0" task="MSNT_SystemTrace" opcode="EndExtension" template="0x446bbc3eL"/>
+        <event value="5" symbol="MSNT_SystemTrace/Extension" version="0" task="MSNT_SystemTrace" opcode="Extension" template="0x446bbc3eL"/>
+        <event value="0" symbol="MSNT_SystemTrace/Header" version="0" task="MSNT_SystemTrace" opcode="Header" template="0x2fb36826L"/>
+        <event value="1" symbol="MSNT_SystemTrace/Start" version="0" task="MSNT_SystemTrace" opcode="Start" template="0xb1e36de9L"/>
+        <event value="2" symbol="MSNT_SystemTrace/End" version="0" task="MSNT_SystemTrace" opcode="End" template="0xb1e36de9L"/>
+        <event value="3" symbol="MSNT_SystemTrace/DCStart" version="0" task="MSNT_SystemTrace" opcode="DCStart" template="0xb1e36de9L"/>
+        <event value="4" symbol="MSNT_SystemTrace/DCEnd" version="0" task="MSNT_SystemTrace" opcode="DCEnd" template="0xb1e36de9L"/>
+        <event value="46" symbol="MSNT_SystemTrace/SampleProf" version="0" task="MSNT_SystemTrace" opcode="SampleProf" template="0x69f51716L"/>
+        <event value="68" symbol="MSNT_SystemTrace/DPC" version="0" task="MSNT_SystemTrace" opcode="DPC" template="0xf7330198L"/>
+        <event value="69" symbol="MSNT_SystemTrace/TimerDPC" version="0" task="MSNT_SystemTrace" opcode="TimerDPC" template="0xf7330198L"/>
+        <event value="67" symbol="MSNT_SystemTrace/ISR" version="0" task="MSNT_SystemTrace" opcode="ISR" template="0xce58b455L"/>
+        <event value="95" symbol="MSNT_SystemTrace/ISR-PASS" version="0" task="MSNT_SystemTrace" opcode="ISR-PASS" template="0xce58b455L"/>
+        <event value="33" symbol="MSNT_SystemTrace/KernelBase" version="0" task="MSNT_SystemTrace" opcode="KernelBase" template="0x7ed9cc05L"/>
+        <event value="128" symbol="MSNT_SystemTrace/LoaderLockAttempt" version="0" task="MSNT_SystemTrace" opcode="LoaderLockAttempt" template="0xd4cbb29L"/>
+        <event value="129" symbol="MSNT_SystemTrace/LoaderLockAcquire" version="0" task="MSNT_SystemTrace" opcode="LoaderLockAcquire" template="0xd4cbb29L"/>
+        <event value="130" symbol="MSNT_SystemTrace/LoaderLockTriedAndFailed" version="0" task="MSNT_SystemTrace" opcode="LoaderLockTriedAndFailed" template="0xd4cbb29L"/>
+        <event value="131" symbol="MSNT_SystemTrace/LoaderLockWait" version="0" task="MSNT_SystemTrace" opcode="LoaderLockWait" template="0xd4cbb29L"/>
+        <event value="132" symbol="MSNT_SystemTrace/ProcessInitDone" version="0" task="MSNT_SystemTrace" opcode="ProcessInitDone" template="0xd4cbb29L"/>
+        <event value="133" symbol="MSNT_SystemTrace/CreateSectionBegin" version="0" task="MSNT_SystemTrace" opcode="CreateSectionBegin" template="0xd4cbb29L"/>
+        <event value="134" symbol="MSNT_SystemTrace/CreateSectionEnd" version="0" task="MSNT_SystemTrace" opcode="CreateSectionEnd" template="0xd4cbb29L"/>
+        <event value="135" symbol="MSNT_SystemTrace/MapViewBegin" version="0" task="MSNT_SystemTrace" opcode="MapViewBegin" template="0xd4cbb29L"/>
+        <event value="160" symbol="MSNT_SystemTrace/FindDllByName" version="0" task="MSNT_SystemTrace" opcode="FindDllByName" template="0x2d70aa46L"/>
+        <event value="161" symbol="MSNT_SystemTrace/MapViewEnd" version="0" task="MSNT_SystemTrace" opcode="MapViewEnd" template="0x2d70aa46L"/>
+        <event value="162" symbol="MSNT_SystemTrace/LoaderLockRelease" version="0" task="MSNT_SystemTrace" opcode="LoaderLockRelease" template="0x2d70aa46L"/>
+        <event value="163" symbol="MSNT_SystemTrace/DllMainEnter" version="0" task="MSNT_SystemTrace" opcode="DllMainEnter" template="0x2d70aa46L"/>
+        <event value="164" symbol="MSNT_SystemTrace/LoaderError" version="0" task="MSNT_SystemTrace" opcode="LoaderError" template="0x2d70aa46L"/>
+        <event value="144" symbol="MSNT_SystemTrace/RelocateImageBegin" version="0" task="MSNT_SystemTrace" opcode="RelocateImageBegin" template="0x4618e215L"/>
+        <event value="145" symbol="MSNT_SystemTrace/RelocateImageEnd" version="0" task="MSNT_SystemTrace" opcode="RelocateImageEnd" template="0x4618e215L"/>
+        <event value="146" symbol="MSNT_SystemTrace/HandleOldDescsBegin" version="0" task="MSNT_SystemTrace" opcode="HandleOldDescsBegin" template="0x4618e215L"/>
+        <event value="147" symbol="MSNT_SystemTrace/HandleOldDescsEnd" version="0" task="MSNT_SystemTrace" opcode="HandleOldDescsEnd" template="0x4618e215L"/>
+        <event value="148" symbol="MSNT_SystemTrace/HandleNewDescsBegin" version="0" task="MSNT_SystemTrace" opcode="HandleNewDescsBegin" template="0x4618e215L"/>
+        <event value="149" symbol="MSNT_SystemTrace/HandleNewDescsEnd" version="0" task="MSNT_SystemTrace" opcode="HandleNewDescsEnd" template="0x4618e215L"/>
+        <event value="150" symbol="MSNT_SystemTrace/DllMainExit" version="0" task="MSNT_SystemTrace" opcode="DllMainExit" template="0x4618e215L"/>
+        <event value="10" symbol="MSNT_SystemTrace/Load" version="0" task="MSNT_SystemTrace" opcode="Load" template="0xc8154bfbL"/>
+        <event value="3" symbol="MSNT_SystemTrace/DCStart" version="0" task="MSNT_SystemTrace" opcode="DCStart" template="0xc8154bfbL"/>
+        <event value="4" symbol="MSNT_SystemTrace/DCEnd" version="0" task="MSNT_SystemTrace" opcode="DCEnd" template="0xc8154bfbL"/>
+        <event value="2" symbol="MSNT_SystemTrace/UnLoad" version="0" task="MSNT_SystemTrace" opcode="UnLoad" template="0xc8154bfbL"/>
+        <event value="34" symbol="MSNT_SystemTrace/HypercallPage" version="0" task="MSNT_SystemTrace" opcode="HypercallPage" template="0x991c1336L"/>
+        <event value="10" symbol="MSNT_SystemTrace/Send" version="0" task="MSNT_SystemTrace" opcode="Send" template="0xa1644d50L"/>
+        <event value="11" symbol="MSNT_SystemTrace/Recv" version="0" task="MSNT_SystemTrace" opcode="Recv" template="0xa1644d50L"/>
+        <event value="10" symbol="MSNT_SystemTrace/Create" version="0" task="MSNT_SystemTrace" opcode="Create" template="0xbbeff87L"/>
+        <event value="11" symbol="MSNT_SystemTrace/Open" version="0" task="MSNT_SystemTrace" opcode="Open" template="0xbbeff87L"/>
+        <event value="12" symbol="MSNT_SystemTrace/Delete" version="0" task="MSNT_SystemTrace" opcode="Delete" template="0xbbeff87L"/>
+        <event value="13" symbol="MSNT_SystemTrace/Query" version="0" task="MSNT_SystemTrace" opcode="Query" template="0xbbeff87L"/>
+        <event value="14" symbol="MSNT_SystemTrace/SetValue" version="0" task="MSNT_SystemTrace" opcode="SetValue" template="0xbbeff87L"/>
+        <event value="15" symbol="MSNT_SystemTrace/DeleteValue" version="0" task="MSNT_SystemTrace" opcode="DeleteValue" template="0xbbeff87L"/>
+        <event value="16" symbol="MSNT_SystemTrace/QueryValue" version="0" task="MSNT_SystemTrace" opcode="QueryValue" template="0xbbeff87L"/>
+        <event value="17" symbol="MSNT_SystemTrace/EnumerateKey" version="0" task="MSNT_SystemTrace" opcode="EnumerateKey" template="0xbbeff87L"/>
+        <event value="18" symbol="MSNT_SystemTrace/EnumerateValueKey" version="0" task="MSNT_SystemTrace" opcode="EnumerateValueKey" template="0xbbeff87L"/>
+        <event value="19" symbol="MSNT_SystemTrace/QueryMultipleValue" version="0" task="MSNT_SystemTrace" opcode="QueryMultipleValue" template="0xbbeff87L"/>
+        <event value="20" symbol="MSNT_SystemTrace/SetInformation" version="0" task="MSNT_SystemTrace" opcode="SetInformation" template="0xbbeff87L"/>
+        <event value="21" symbol="MSNT_SystemTrace/Flush" version="0" task="MSNT_SystemTrace" opcode="Flush" template="0xbbeff87L"/>
+        <event value="1" symbol="MSNT_SystemTrace/Start" version="0" task="MSNT_SystemTrace" opcode="Start" template="0xfb0f7619L"/>
+        <event value="2" symbol="MSNT_SystemTrace/End" version="0" task="MSNT_SystemTrace" opcode="End" template="0xfb0f7619L"/>
+        <event value="3" symbol="MSNT_SystemTrace/DCStart" version="0" task="MSNT_SystemTrace" opcode="DCStart" template="0xfb0f7619L"/>
+        <event value="4" symbol="MSNT_SystemTrace/DCEnd" version="0" task="MSNT_SystemTrace" opcode="DCEnd" template="0xfb0f7619L"/>
+        <event value="67" symbol="MSNT_SystemTrace/Read" version="0" task="MSNT_SystemTrace" opcode="Read" template="0x9940aefdL"/>
+        <event value="68" symbol="MSNT_SystemTrace/Write" version="0" task="MSNT_SystemTrace" opcode="Write" template="0x9940aefdL"/>
+        <event value="64" symbol="MSNT_SystemTrace/Create" version="0" task="MSNT_SystemTrace" opcode="Create" template="0x53677a4aL"/>
+        <event value="96" symbol="MSNT_SystemTrace/PreOpInit" version="0" task="MSNT_SystemTrace" opcode="PreOpInit" template="0xce8e36d8L"/>
+        <event value="97" symbol="MSNT_SystemTrace/PostOpInit" version="0" task="MSNT_SystemTrace" opcode="PostOpInit" template="0xce8e36d8L"/>
+        <event value="100" symbol="MSNT_SystemTrace/PreOpFailure" version="0" task="MSNT_SystemTrace" opcode="PreOpFailure" template="0xcd2ca5eaL"/>
+        <event value="101" symbol="MSNT_SystemTrace/PostOpFailure" version="0" task="MSNT_SystemTrace" opcode="PostOpFailure" template="0xcd2ca5eaL"/>
+        <event value="0" symbol="MSNT_SystemTrace/Name" version="0" task="MSNT_SystemTrace" opcode="Name" template="0xebfd9007L"/>
+        <event value="32" symbol="MSNT_SystemTrace/FileCreate" version="0" task="MSNT_SystemTrace" opcode="FileCreate" template="0xebfd9007L"/>
+        <event value="35" symbol="MSNT_SystemTrace/FileDelete" version="0" task="MSNT_SystemTrace" opcode="FileDelete" template="0xebfd9007L"/>
+        <event value="36" symbol="MSNT_SystemTrace/FileRundown" version="0" task="MSNT_SystemTrace" opcode="FileRundown" template="0xebfd9007L"/>
+        <event value="74" symbol="MSNT_SystemTrace/QueryInfo" version="0" task="MSNT_SystemTrace" opcode="QueryInfo" template="0x7bdb9b10L"/>
+        <event value="75" symbol="MSNT_SystemTrace/FSControl" version="0" task="MSNT_SystemTrace" opcode="FSControl" template="0x7bdb9b10L"/>
+        <event value="69" symbol="MSNT_SystemTrace/SetInfo" version="0" task="MSNT_SystemTrace" opcode="SetInfo" template="0x7bdb9b10L"/>
+        <event value="70" symbol="MSNT_SystemTrace/Delete" version="0" task="MSNT_SystemTrace" opcode="Delete" template="0x7bdb9b10L"/>
+        <event value="71" symbol="MSNT_SystemTrace/Rename" version="0" task="MSNT_SystemTrace" opcode="Rename" template="0x7bdb9b10L"/>
+        <event value="65" symbol="MSNT_SystemTrace/Cleanup" version="0" task="MSNT_SystemTrace" opcode="Cleanup" template="0x3caa3f8dL"/>
+        <event value="66" symbol="MSNT_SystemTrace/Close" version="0" task="MSNT_SystemTrace" opcode="Close" template="0x3caa3f8dL"/>
+        <event value="73" symbol="MSNT_SystemTrace/Flush" version="0" task="MSNT_SystemTrace" opcode="Flush" template="0x3caa3f8dL"/>
+        <event value="98" symbol="MSNT_SystemTrace/PreOpCompletion" version="0" task="MSNT_SystemTrace" opcode="PreOpCompletion" template="0xd2675c47L"/>
+        <event value="99" symbol="MSNT_SystemTrace/PostOpCompletion" version="0" task="MSNT_SystemTrace" opcode="PostOpCompletion" template="0xd2675c47L"/>
+        <event value="72" symbol="MSNT_SystemTrace/DirEnum" version="0" task="MSNT_SystemTrace" opcode="DirEnum" template="0x6e5cccf8L"/>
+        <event value="77" symbol="MSNT_SystemTrace/DirNotify" version="0" task="MSNT_SystemTrace" opcode="DirNotify" template="0x6e5cccf8L"/>
+        <event value="80" symbol="MSNT_SystemTrace/RenamePath" version="0" task="MSNT_SystemTrace" opcode="RenamePath" template="0x69690042L"/>
+        <event value="81" symbol="MSNT_SystemTrace/SetLinkPath" version="0" task="MSNT_SystemTrace" opcode="SetLinkPath" template="0x69690042L"/>
+        <event value="79" symbol="MSNT_SystemTrace/DletePath" version="0" task="MSNT_SystemTrace" opcode="DletePath" template="0x69690042L"/>
+        <event value="76" symbol="MSNT_SystemTrace/OperationEnd" version="0" task="MSNT_SystemTrace" opcode="OperationEnd" template="0x6630125L"/>
+        <event value="32" symbol="MSNT_SystemTrace/VolMgr" version="0" task="MSNT_SystemTrace" opcode="VolMgr" template="0x83fd5e65L"/>
+        <event value="32" symbol="MSNT_SystemTrace/ReconnectIPV6" version="0" task="MSNT_SystemTrace" opcode="ReconnectIPV6" template="0xafb7234L"/>
+        <event value="34" symbol="MSNT_SystemTrace/TCPCopyIPV6" version="0" task="MSNT_SystemTrace" opcode="TCPCopyIPV6" template="0xafb7234L"/>
+        <event value="27" symbol="MSNT_SystemTrace/RecvIPV6" version="0" task="MSNT_SystemTrace" opcode="RecvIPV6" template="0xafb7234L"/>
+        <event value="29" symbol="MSNT_SystemTrace/DisconnectIPV6" version="0" task="MSNT_SystemTrace" opcode="DisconnectIPV6" template="0xafb7234L"/>
+        <event value="30" symbol="MSNT_SystemTrace/RetransmitIPV6" version="0" task="MSNT_SystemTrace" opcode="RetransmitIPV6" template="0xafb7234L"/>
+        <event value="10" symbol="MSNT_SystemTrace/SendIPV4" version="0" task="MSNT_SystemTrace" opcode="SendIPV4" template="0xd543c8c5L"/>
+        <event value="17" symbol="MSNT_SystemTrace/Fail" version="0" task="MSNT_SystemTrace" opcode="Fail" template="0xde416463L"/>
+        <event value="12" symbol="MSNT_SystemTrace/ConnectIPV4" version="0" task="MSNT_SystemTrace" opcode="ConnectIPV4" template="0xb002f768L"/>
+        <event value="15" symbol="MSNT_SystemTrace/AcceptIPV4" version="0" task="MSNT_SystemTrace" opcode="AcceptIPV4" template="0xb002f768L"/>
+        <event value="26" symbol="MSNT_SystemTrace/SendIPV6" version="0" task="MSNT_SystemTrace" opcode="SendIPV6" template="0xc1b347edL"/>
+        <event value="16" symbol="MSNT_SystemTrace/ReconnectIPV4" version="0" task="MSNT_SystemTrace" opcode="ReconnectIPV4" template="0xa662c7a2L"/>
+        <event value="18" symbol="MSNT_SystemTrace/TCPCopyIPV4" version="0" task="MSNT_SystemTrace" opcode="TCPCopyIPV4" template="0xa662c7a2L"/>
+        <event value="11" symbol="MSNT_SystemTrace/RecvIPV4" version="0" task="MSNT_SystemTrace" opcode="RecvIPV4" template="0xa662c7a2L"/>
+        <event value="13" symbol="MSNT_SystemTrace/DisconnectIPV4" version="0" task="MSNT_SystemTrace" opcode="DisconnectIPV4" template="0xa662c7a2L"/>
+        <event value="14" symbol="MSNT_SystemTrace/RetransmitIPV4" version="0" task="MSNT_SystemTrace" opcode="RetransmitIPV4" template="0xa662c7a2L"/>
+        <event value="28" symbol="MSNT_SystemTrace/ConnectIPV6" version="0" task="MSNT_SystemTrace" opcode="ConnectIPV6" template="0x35bedc02L"/>
+        <event value="31" symbol="MSNT_SystemTrace/AcceptIPV6" version="0" task="MSNT_SystemTrace" opcode="AcceptIPV6" template="0x35bedc02L"/>
+        <event value="1" symbol="MSNT_SystemTrace/Start" version="0" task="MSNT_SystemTrace" opcode="Start" template="0x560bcec2L"/>
+        <event value="2" symbol="MSNT_SystemTrace/End" version="0" task="MSNT_SystemTrace" opcode="End" template="0x560bcec2L"/>
+        <event value="3" symbol="MSNT_SystemTrace/DCStart" version="0" task="MSNT_SystemTrace" opcode="DCStart" template="0x560bcec2L"/>
+        <event value="4" symbol="MSNT_SystemTrace/DCEnd" version="0" task="MSNT_SystemTrace" opcode="DCEnd" template="0x560bcec2L"/>
+        <event value="10" symbol="MSNT_SystemTrace/Create" version="0" task="MSNT_SystemTrace" opcode="Create" template="0x8a15ac56L"/>
+        <event value="11" symbol="MSNT_SystemTrace/Open" version="0" task="MSNT_SystemTrace" opcode="Open" template="0x8a15ac56L"/>
+        <event value="12" symbol="MSNT_SystemTrace/Delete" version="0" task="MSNT_SystemTrace" opcode="Delete" template="0x8a15ac56L"/>
+        <event value="13" symbol="MSNT_SystemTrace/Query" version="0" task="MSNT_SystemTrace" opcode="Query" template="0x8a15ac56L"/>
+        <event value="14" symbol="MSNT_SystemTrace/SetValue" version="0" task="MSNT_SystemTrace" opcode="SetValue" template="0x8a15ac56L"/>
+        <event value="15" symbol="MSNT_SystemTrace/DeleteValue" version="0" task="MSNT_SystemTrace" opcode="DeleteValue" template="0x8a15ac56L"/>
+        <event value="16" symbol="MSNT_SystemTrace/QueryValue" version="0" task="MSNT_SystemTrace" opcode="QueryValue" template="0x8a15ac56L"/>
+        <event value="17" symbol="MSNT_SystemTrace/EnumerateKey" version="0" task="MSNT_SystemTrace" opcode="EnumerateKey" template="0x8a15ac56L"/>
+        <event value="18" symbol="MSNT_SystemTrace/EnumerateValueKey" version="0" task="MSNT_SystemTrace" opcode="EnumerateValueKey" template="0x8a15ac56L"/>
+        <event value="19" symbol="MSNT_SystemTrace/QueryMultipleValue" version="0" task="MSNT_SystemTrace" opcode="QueryMultipleValue" template="0x8a15ac56L"/>
+        <event value="20" symbol="MSNT_SystemTrace/SetInformation" version="0" task="MSNT_SystemTrace" opcode="SetInformation" template="0x8a15ac56L"/>
+        <event value="21" symbol="MSNT_SystemTrace/Flush" version="0" task="MSNT_SystemTrace" opcode="Flush" template="0x8a15ac56L"/>
+        <event value="22" symbol="MSNT_SystemTrace/RunDown" version="0" task="MSNT_SystemTrace" opcode="RunDown" template="0x8a15ac56L"/>
+        <event value="10" symbol="MSNT_SystemTrace/Load" version="0" task="MSNT_SystemTrace" opcode="Load" template="0xec14ef43L"/>
+        <event value="22" symbol="MSNT_SystemTrace/PnP" version="0" task="MSNT_SystemTrace" opcode="PnP" template="0x3cf89298L"/>
+        <event value="10" symbol="MSNT_SystemTrace/Load" version="0" task="MSNT_SystemTrace" opcode="Load" template="0xd5c0383fL"/>
+        <event value="1" symbol="MSNT_SystemTrace/Start" version="0" task="MSNT_SystemTrace" opcode="Start" template="0xae58877fL"/>
+        <event value="2" symbol="MSNT_SystemTrace/End" version="0" task="MSNT_SystemTrace" opcode="End" template="0xae58877fL"/>
+        <event value="3" symbol="MSNT_SystemTrace/DCStart" version="0" task="MSNT_SystemTrace" opcode="DCStart" template="0xae58877fL"/>
+        <event value="4" symbol="MSNT_SystemTrace/DCEnd" version="0" task="MSNT_SystemTrace" opcode="DCEnd" template="0xae58877fL"/>
+        <event value="48" symbol="MSNT_SystemTrace/SetPriority" version="0" task="MSNT_SystemTrace" opcode="SetPriority" template="0xd9a2d54fL"/>
+        <event value="49" symbol="MSNT_SystemTrace/SetBasePriority" version="0" task="MSNT_SystemTrace" opcode="SetBasePriority" template="0xd9a2d54fL"/>
+        <event value="51" symbol="MSNT_SystemTrace/SetPagePriority" version="0" task="MSNT_SystemTrace" opcode="SetPagePriority" template="0xd9a2d54fL"/>
+        <event value="52" symbol="MSNT_SystemTrace/SetIoPriority" version="0" task="MSNT_SystemTrace" opcode="SetIoPriority" template="0xd9a2d54fL"/>
+        <event value="36" symbol="MSNT_SystemTrace/CSwitch" version="0" task="MSNT_SystemTrace" opcode="CSwitch" template="0x2e745ca0L"/>
+        <event value="15" symbol="MSNT_SystemTrace/Services" version="0" task="MSNT_SystemTrace" opcode="Services" template="0xa2a2e64fL"/>
+        <event value="21" symbol="MSNT_SystemTrace/IRQ" version="0" task="MSNT_SystemTrace" opcode="IRQ" template="0xd83e0a39L"/>
+        <event value="10" symbol="MSNT_SystemTrace/CPU" version="0" task="MSNT_SystemTrace" opcode="CPU" template="0x49d8be83L"/>
+        <event value="22" symbol="MSNT_SystemTrace/PnP" version="0" task="MSNT_SystemTrace" opcode="PnP" template="0xbf89d65fL"/>
+        <event value="0" symbol="MSNT_SystemTrace/Name" version="0" task="MSNT_SystemTrace" opcode="Name" template="0xebfd9007L"/>
+        <event value="1" symbol="MSNT_SystemTrace/Start" version="0" task="MSNT_SystemTrace" opcode="Start" template="0xcf25e668L"/>
+        <event value="2" symbol="MSNT_SystemTrace/End" version="0" task="MSNT_SystemTrace" opcode="End" template="0xcf25e668L"/>
+        <event value="3" symbol="MSNT_SystemTrace/DCStart" version="0" task="MSNT_SystemTrace" opcode="DCStart" template="0xcf25e668L"/>
+        <event value="4" symbol="MSNT_SystemTrace/DCEnd" version="0" task="MSNT_SystemTrace" opcode="DCEnd" template="0xcf25e668L"/>
+        <event value="36" symbol="MSNT_SystemTrace/CSwitch" version="0" task="MSNT_SystemTrace" opcode="CSwitch" template="0x2e745ca0L"/>
+        <event value="10" symbol="MSNT_SystemTrace/Read" version="0" task="MSNT_SystemTrace" opcode="Read" template="0x3e81ff3fL"/>
+        <event value="11" symbol="MSNT_SystemTrace/Write" version="0" task="MSNT_SystemTrace" opcode="Write" template="0x3e81ff3fL"/>
+        <event value="22" symbol="MSNT_SystemTrace/PnP" version="0" task="MSNT_SystemTrace" opcode="PnP" template="0x337e37f9L"/>
+        <event value="39" symbol="MSNT_SystemTrace/Defunct" version="0" task="MSNT_SystemTrace" opcode="Defunct" template="0xb34aa36fL"/>
+        <event value="32" symbol="MSNT_SystemTrace/PoolAllocation" version="0" task="MSNT_SystemTrace" opcode="PoolAllocation" template="0xf2e07945L"/>
+        <event value="34" symbol="MSNT_SystemTrace/PoolFree" version="0" task="MSNT_SystemTrace" opcode="PoolFree" template="0xf2e07945L"/>
+        <event value="33" symbol="MSNT_SystemTrace/SessionPoolAllocation" version="0" task="MSNT_SystemTrace" opcode="SessionPoolAllocation" template="0xf70cefe3L"/>
+        <event value="35" symbol="MSNT_SystemTrace/SessionPoolFree" version="0" task="MSNT_SystemTrace" opcode="SessionPoolFree" template="0xf70cefe3L"/>
+        <event value="40" symbol="MSNT_SystemTrace/PoolSnapDCStart" version="0" task="MSNT_SystemTrace" opcode="PoolSnapDCStart" template="0xd4cbb29L"/>
+        <event value="41" symbol="MSNT_SystemTrace/PoolSnapDCEnd" version="0" task="MSNT_SystemTrace" opcode="PoolSnapDCEnd" template="0xd4cbb29L"/>
+        <event value="42" symbol="MSNT_SystemTrace/BigPoolSnapDCStart" version="0" task="MSNT_SystemTrace" opcode="BigPoolSnapDCStart" template="0xd4cbb29L"/>
+        <event value="43" symbol="MSNT_SystemTrace/BigPoolSnapDCEnd" version="0" task="MSNT_SystemTrace" opcode="BigPoolSnapDCEnd" template="0xd4cbb29L"/>
+        <event value="44" symbol="MSNT_SystemTrace/SessionPoolSnapDCStart" version="0" task="MSNT_SystemTrace" opcode="SessionPoolSnapDCStart" template="0xd4cbb29L"/>
+        <event value="45" symbol="MSNT_SystemTrace/SessionPoolSnapDCEnd" version="0" task="MSNT_SystemTrace" opcode="SessionPoolSnapDCEnd" template="0xd4cbb29L"/>
+        <event value="46" symbol="MSNT_SystemTrace/SessionBigPoolSnapDCStart" version="0" task="MSNT_SystemTrace" opcode="SessionBigPoolSnapDCStart" template="0xd4cbb29L"/>
+        <event value="47" symbol="MSNT_SystemTrace/SessionBigPoolSnapDCEnd" version="0" task="MSNT_SystemTrace" opcode="SessionBigPoolSnapDCEnd" template="0xd4cbb29L"/>
+        <event value="12" symbol="MSNT_SystemTrace/ReadInit" version="0" task="MSNT_SystemTrace" opcode="ReadInit" template="0xb74bc0d2L"/>
+        <event value="13" symbol="MSNT_SystemTrace/WriteInit" version="0" task="MSNT_SystemTrace" opcode="WriteInit" template="0xb74bc0d2L"/>
+        <event value="15" symbol="MSNT_SystemTrace/FlushInit" version="0" task="MSNT_SystemTrace" opcode="FlushInit" template="0xb74bc0d2L"/>
+        <event value="58" symbol="MSNT_SystemTrace/OpticalReadInit" version="0" task="MSNT_SystemTrace" opcode="OpticalReadInit" template="0xb74bc0d2L"/>
+        <event value="59" symbol="MSNT_SystemTrace/OpticalWriteInit" version="0" task="MSNT_SystemTrace" opcode="OpticalWriteInit" template="0xb74bc0d2L"/>
+        <event value="60" symbol="MSNT_SystemTrace/OpticalFlushInit" version="0" task="MSNT_SystemTrace" opcode="OpticalFlushInit" template="0xb74bc0d2L"/>
+        <event value="56" symbol="MSNT_SystemTrace/OpticalWrite" version="0" task="MSNT_SystemTrace" opcode="OpticalWrite" template="0x33bfa638L"/>
+        <event value="10" symbol="MSNT_SystemTrace/Read" version="0" task="MSNT_SystemTrace" opcode="Read" template="0x33bfa638L"/>
+        <event value="11" symbol="MSNT_SystemTrace/Write" version="0" task="MSNT_SystemTrace" opcode="Write" template="0x33bfa638L"/>
+        <event value="55" symbol="MSNT_SystemTrace/OpticalRead" version="0" task="MSNT_SystemTrace" opcode="OpticalRead" template="0x33bfa638L"/>
+        <event value="57" symbol="MSNT_SystemTrace/OpticalFlushBuffers" version="0" task="MSNT_SystemTrace" opcode="OpticalFlushBuffers" template="0x3f2400eaL"/>
+        <event value="14" symbol="MSNT_SystemTrace/FlushBuffers" version="0" task="MSNT_SystemTrace" opcode="FlushBuffers" template="0x3f2400eaL"/>
+        <event value="32" symbol="MSNT_SystemTrace/RTLostEvent" version="0" task="MSNT_SystemTrace" opcode="RTLostEvent" template="0xd4cbb29L"/>
+        <event value="33" symbol="MSNT_SystemTrace/RTLostBuffer" version="0" task="MSNT_SystemTrace" opcode="RTLostBuffer" template="0xd4cbb29L"/>
+        <event value="34" symbol="MSNT_SystemTrace/RTLostFile" version="0" task="MSNT_SystemTrace" opcode="RTLostFile" template="0xd4cbb29L"/>
+        <event value="0" symbol="MSNT_SystemTrace/Name" version="0" task="MSNT_SystemTrace" opcode="Name" template="0xebfd9007L"/>
+        <event value="32" symbol="MSNT_SystemTrace/FileCreate" version="0" task="MSNT_SystemTrace" opcode="FileCreate" template="0xebfd9007L"/>
+        <event value="0" symbol="MSNT_SystemTrace/Header" version="0" task="MSNT_SystemTrace" opcode="Header" template="0x2fb36826L"/>
+        <event value="8" symbol="MSNT_SystemTrace/RDComplete" version="0" task="MSNT_SystemTrace" opcode="RDComplete" template="0xd4cbb29L"/>
+        <event value="32" symbol="MSNT_SystemTrace/EndExtension" version="0" task="MSNT_SystemTrace" opcode="EndExtension" template="0x446bbc3eL"/>
+        <event value="5" symbol="MSNT_SystemTrace/Extension" version="0" task="MSNT_SystemTrace" opcode="Extension" template="0x446bbc3eL"/>
+        <event value="32" symbol="MSNT_SystemTrace/DebugPrint" version="0" task="MSNT_SystemTrace" opcode="DebugPrint" template="0x9db2396cL"/>
+        <event value="10" symbol="MSNT_SystemTrace/Read" version="0" task="MSNT_SystemTrace" opcode="Read" template="0xcdd0ad82L"/>
+        <event value="11" symbol="MSNT_SystemTrace/Write" version="0" task="MSNT_SystemTrace" opcode="Write" template="0xcdd0ad82L"/>
+        <event value="35" symbol="MSNT_SystemTrace/DrvMjFnRet" version="0" task="MSNT_SystemTrace" opcode="DrvMjFnRet" template="0x27125e59L"/>
+        <event value="37" symbol="MSNT_SystemTrace/DrvComplRout" version="0" task="MSNT_SystemTrace" opcode="DrvComplRout" template="0x7098d6d0L"/>
+        <event value="34" symbol="MSNT_SystemTrace/DrvMjFnCall" version="0" task="MSNT_SystemTrace" opcode="DrvMjFnCall" template="0x795d433bL"/>
+        <event value="53" symbol="MSNT_SystemTrace/DrvComplReqRet" version="0" task="MSNT_SystemTrace" opcode="DrvComplReqRet" template="0x27125e59L"/>
+        <event value="14" symbol="MSNT_SystemTrace/FlushBuffers" version="0" task="MSNT_SystemTrace" opcode="FlushBuffers" template="0xd38d6bb0L"/>
+        <event value="12" symbol="MSNT_SystemTrace/ReadInit" version="0" task="MSNT_SystemTrace" opcode="ReadInit" template="0xcb5dbc08L"/>
+        <event value="13" symbol="MSNT_SystemTrace/WriteInit" version="0" task="MSNT_SystemTrace" opcode="WriteInit" template="0xcb5dbc08L"/>
+        <event value="15" symbol="MSNT_SystemTrace/FlushInit" version="0" task="MSNT_SystemTrace" opcode="FlushInit" template="0xcb5dbc08L"/>
+        <event value="52" symbol="MSNT_SystemTrace/DrvComplReq" version="0" task="MSNT_SystemTrace" opcode="DrvComplReq" template="0x879eff37L"/>
+        <event value="21" symbol="MSNT_SystemTrace/IRQ" version="0" task="MSNT_SystemTrace" opcode="IRQ" template="0x7c7073eaL"/>
+        <event value="10" symbol="MSNT_SystemTrace/CPU" version="0" task="MSNT_SystemTrace" opcode="CPU" template="0x6a587f4L"/>
+        <event value="15" symbol="MSNT_SystemTrace/Services" version="0" task="MSNT_SystemTrace" opcode="Services" template="0x7aeb034cL"/>
+        <event value="12" symbol="MSNT_SystemTrace/LogDisk" version="0" task="MSNT_SystemTrace" opcode="LogDisk" template="0x2a7fc3b0L"/>
+        <event value="14" symbol="MSNT_SystemTrace/Video" version="0" task="MSNT_SystemTrace" opcode="Video" template="0x9bf786c2L"/>
+        <event value="11" symbol="MSNT_SystemTrace/PhyDisk" version="0" task="MSNT_SystemTrace" opcode="PhyDisk" template="0xd68c0bd3L"/>
+        <event value="16" symbol="MSNT_SystemTrace/Power" version="0" task="MSNT_SystemTrace" opcode="Power" template="0x5bc3277aL"/>
+        <event value="22" symbol="MSNT_SystemTrace/PnP" version="0" task="MSNT_SystemTrace" opcode="PnP" template="0x7a6c7fb2L"/>
+        <event value="13" symbol="MSNT_SystemTrace/NIC" version="0" task="MSNT_SystemTrace" opcode="NIC" template="0x962af533L"/>
+        <event value="24" symbol="MSNT_SystemTrace/NumaNode" version="0" task="MSNT_SystemTrace" opcode="NumaNode" template="0x5ad8e55aL"/>
+        <event value="22" symbol="MSNT_SystemTrace/PnP" version="0" task="MSNT_SystemTrace" opcode="PnP" template="0x7a6c7fb2L"/>
+        <event value="29" symbol="MSNT_SystemTrace/CodeIntegrity" version="0" task="MSNT_SystemTrace" opcode="CodeIntegrity" template="0x73ada3b6L"/>
+        <event value="12" symbol="MSNT_SystemTrace/LogDisk" version="0" task="MSNT_SystemTrace" opcode="LogDisk" template="0x93947266L"/>
+        <event value="23" symbol="MSNT_SystemTrace/IDEChannel" version="0" task="MSNT_SystemTrace" opcode="IDEChannel" template="0x6b73fa74L"/>
+        <event value="28" symbol="MSNT_SystemTrace/DPI" version="0" task="MSNT_SystemTrace" opcode="DPI" template="0x34260c9eL"/>
+        <event value="13" symbol="MSNT_SystemTrace/NIC" version="0" task="MSNT_SystemTrace" opcode="NIC" template="0x2857ad47L"/>
+        <event value="10" symbol="MSNT_SystemTrace/CPU" version="0" task="MSNT_SystemTrace" opcode="CPU" template="0x53dce6e4L"/>
+        <event value="33" symbol="MSNT_SystemTrace/DeviceFamily" version="0" task="MSNT_SystemTrace" opcode="DeviceFamily" template="0x407be180L"/>
+        <event value="18" symbol="MSNT_SystemTrace/OpticalDisk" version="0" task="MSNT_SystemTrace" opcode="OpticalDisk" template="0xbf8caac7L"/>
+        <event value="27" symbol="MSNT_SystemTrace/ProcessorNumber" version="0" task="MSNT_SystemTrace" opcode="ProcessorNumber" template="0x10285ce6L"/>
+        <event value="14" symbol="MSNT_SystemTrace/Video" version="0" task="MSNT_SystemTrace" opcode="Video" template="0x9bf786c2L"/>
+        <event value="17" symbol="MSNT_SystemTrace/Network" version="0" task="MSNT_SystemTrace" opcode="Network" template="0xd8c415aaL"/>
+        <event value="31" symbol="MSNT_SystemTrace/Defragmentation" version="0" task="MSNT_SystemTrace" opcode="Defragmentation" template="0x189cbc37L"/>
+        <event value="35" symbol="MSNT_SystemTrace/Processors" version="0" task="MSNT_SystemTrace" opcode="Processors" template="0xada2cf2aL"/>
+        <event value="25" symbol="MSNT_SystemTrace/Platform" version="0" task="MSNT_SystemTrace" opcode="Platform" template="0xe641617bL"/>
+        <event value="26" symbol="MSNT_SystemTrace/ProcessorGroup" version="0" task="MSNT_SystemTrace" opcode="ProcessorGroup" template="0x5952053fL"/>
+        <event value="15" symbol="MSNT_SystemTrace/Services" version="0" task="MSNT_SystemTrace" opcode="Services" template="0x8475319aL"/>
+        <event value="11" symbol="MSNT_SystemTrace/PhyDisk" version="0" task="MSNT_SystemTrace" opcode="PhyDisk" template="0xd68c0bd3L"/>
+        <event value="16" symbol="MSNT_SystemTrace/Power" version="0" task="MSNT_SystemTrace" opcode="Power" template="0x5bc3277aL"/>
+        <event value="34" symbol="MSNT_SystemTrace/FlightIds" version="0" task="MSNT_SystemTrace" opcode="FlightIds" template="0x51f7bc1L"/>
+        <event value="32" symbol="MSNT_SystemTrace/MobilePlatform" version="0" task="MSNT_SystemTrace" opcode="MobilePlatform" template="0x3b208868L"/>
+        <event value="30" symbol="MSNT_SystemTrace/TelemetryConfiguration" version="0" task="MSNT_SystemTrace" opcode="TelemetryConfiguration" template="0xa2e32d87L"/>
+        <event value="21" symbol="MSNT_SystemTrace/IRQ" version="0" task="MSNT_SystemTrace" opcode="IRQ" template="0x7c7073eaL"/>
+        <event value="2" symbol="MSNT_SystemTrace/End" version="0" task="MSNT_SystemTrace" opcode="End" template="0x56f25015L"/>
+        <event value="1" symbol="MSNT_SystemTrace/Start" version="0" task="MSNT_SystemTrace" opcode="Start" template="0x8ec6a77eL"/>
+        <event value="3" symbol="MSNT_SystemTrace/DCStart" version="0" task="MSNT_SystemTrace" opcode="DCStart" template="0x8ec6a77eL"/>
+        <event value="4" symbol="MSNT_SystemTrace/DCEnd" version="0" task="MSNT_SystemTrace" opcode="DCEnd" template="0x8ec6a77eL"/>
+        <event value="36" symbol="MSNT_SystemTrace/CSwitch" version="0" task="MSNT_SystemTrace" opcode="CSwitch" template="0xc0722aa0L"/>
+        <event value="57" symbol="MSNT_SystemTrace/WorkerThread" version="0" task="MSNT_SystemTrace" opcode="WorkerThread" template="0x75f3d8e8L"/>
+        <event value="10" symbol="MSNT_SystemTrace/Send" version="0" task="MSNT_SystemTrace" opcode="Send" template="0x96448bb9L"/>
+        <event value="11" symbol="MSNT_SystemTrace/Recv" version="0" task="MSNT_SystemTrace" opcode="Recv" template="0x96448bb9L"/>
+        <event value="12" symbol="MSNT_SystemTrace/Connect" version="0" task="MSNT_SystemTrace" opcode="Connect" template="0x96448bb9L"/>
+        <event value="13" symbol="MSNT_SystemTrace/Disconnect" version="0" task="MSNT_SystemTrace" opcode="Disconnect" template="0x96448bb9L"/>
+        <event value="14" symbol="MSNT_SystemTrace/Retransmit" version="0" task="MSNT_SystemTrace" opcode="Retransmit" template="0x96448bb9L"/>
+        <event value="15" symbol="MSNT_SystemTrace/Accept" version="0" task="MSNT_SystemTrace" opcode="Accept" template="0x96448bb9L"/>
+        <event value="96" symbol="MSNT_SystemTrace/WakeEventUser" version="0" task="MSNT_SystemTrace" opcode="WakeEventUser" template="0xe09b5e0dL"/>
+        <event value="97" symbol="MSNT_SystemTrace/WakeEventExecution" version="0" task="MSNT_SystemTrace" opcode="WakeEventExecution" template="0xe09b5e0dL"/>
+        <event value="98" symbol="MSNT_SystemTrace/WakeEventKernel" version="0" task="MSNT_SystemTrace" opcode="WakeEventKernel" template="0xe09b5e0dL"/>
+        <event value="99" symbol="MSNT_SystemTrace/WakeEventInstrumentation" version="0" task="MSNT_SystemTrace" opcode="WakeEventInstrumentation" template="0xe09b5e0dL"/>
+        <event value="64" symbol="MSNT_SystemTrace/WakeReleaseUser" version="0" task="MSNT_SystemTrace" opcode="WakeReleaseUser" template="0xf15a9f1dL"/>
+        <event value="65" symbol="MSNT_SystemTrace/WakeReleaseExecution" version="0" task="MSNT_SystemTrace" opcode="WakeReleaseExecution" template="0xf15a9f1dL"/>
+        <event value="66" symbol="MSNT_SystemTrace/WakeReleaseKernel" version="0" task="MSNT_SystemTrace" opcode="WakeReleaseKernel" template="0xf15a9f1dL"/>
+        <event value="67" symbol="MSNT_SystemTrace/WakeReleaseInstrumentation" version="0" task="MSNT_SystemTrace" opcode="WakeReleaseInstrumentation" template="0xf15a9f1dL"/>
+        <event value="68" symbol="MSNT_SystemTrace/WakeReleasePreserveProcess" version="0" task="MSNT_SystemTrace" opcode="WakeReleasePreserveProcess" template="0xf15a9f1dL"/>
+        <event value="81" symbol="MSNT_SystemTrace/WakeDropExecution" version="0" task="MSNT_SystemTrace" opcode="WakeDropExecution" template="0xf15a9f1dL"/>
+        <event value="80" symbol="MSNT_SystemTrace/WakeDropUser" version="0" task="MSNT_SystemTrace" opcode="WakeDropUser" template="0xf15a9f1dL"/>
+        <event value="83" symbol="MSNT_SystemTrace/WakeDropInstrumentation" version="0" task="MSNT_SystemTrace" opcode="WakeDropInstrumentation" template="0xf15a9f1dL"/>
+        <event value="82" symbol="MSNT_SystemTrace/WakeDropKernel" version="0" task="MSNT_SystemTrace" opcode="WakeDropKernel" template="0xf15a9f1dL"/>
+        <event value="48" symbol="MSNT_SystemTrace/WakeChargeUser" version="0" task="MSNT_SystemTrace" opcode="WakeChargeUser" template="0xf15a9f1dL"/>
+        <event value="49" symbol="MSNT_SystemTrace/WakeChargeExecution" version="0" task="MSNT_SystemTrace" opcode="WakeChargeExecution" template="0xf15a9f1dL"/>
+        <event value="50" symbol="MSNT_SystemTrace/WakeChargeKernel" version="0" task="MSNT_SystemTrace" opcode="WakeChargeKernel" template="0xf15a9f1dL"/>
+        <event value="51" symbol="MSNT_SystemTrace/WakeChargeInstrumentation" version="0" task="MSNT_SystemTrace" opcode="WakeChargeInstrumentation" template="0xf15a9f1dL"/>
+        <event value="52" symbol="MSNT_SystemTrace/WakeChargePreserveProcess" version="0" task="MSNT_SystemTrace" opcode="WakeChargePreserveProcess" template="0xf15a9f1dL"/>
+        <event value="84" symbol="MSNT_SystemTrace/WakeDropPreserveProcess" version="0" task="MSNT_SystemTrace" opcode="WakeDropPreserveProcess" template="0xf15a9f1dL"/>
+        <event value="32" symbol="MSNT_SystemTrace/PerfCtr" version="0" task="MSNT_SystemTrace" opcode="PerfCtr" template="0xeea20905L"/>
+        <event value="33" symbol="MSNT_SystemTrace/PerfCtrRundown" version="0" task="MSNT_SystemTrace" opcode="PerfCtrRundown" template="0xeea20905L"/>
+        <event value="1" symbol="MSNT_SystemTrace/Start" version="0" task="MSNT_SystemTrace" opcode="Start" template="0x10122ffbL"/>
+        <event value="2" symbol="MSNT_SystemTrace/End" version="0" task="MSNT_SystemTrace" opcode="End" template="0x10122ffbL"/>
+        <event value="3" symbol="MSNT_SystemTrace/DCStart" version="0" task="MSNT_SystemTrace" opcode="DCStart" template="0x10122ffbL"/>
+        <event value="4" symbol="MSNT_SystemTrace/DCEnd" version="0" task="MSNT_SystemTrace" opcode="DCEnd" template="0x10122ffbL"/>
+        <event value="39" symbol="MSNT_SystemTrace/Defunct" version="0" task="MSNT_SystemTrace" opcode="Defunct" template="0x10122ffbL"/>
+        <event value="11" symbol="MSNT_SystemTrace/Terminate" version="0" task="MSNT_SystemTrace" opcode="Terminate" template="0x73a2ab67L"/>
+        <event value="35" symbol="MSNT_SystemTrace/InSwap" version="0" task="MSNT_SystemTrace" opcode="InSwap" template="0x3f898533L"/>
+        <event value="1" symbol="MSNT_SystemTrace/Start" version="0" task="MSNT_SystemTrace" opcode="Start" template="0xad7dcf68L"/>
+        <event value="2" symbol="MSNT_SystemTrace/End" version="0" task="MSNT_SystemTrace" opcode="End" template="0xad7dcf68L"/>
+        <event value="3" symbol="MSNT_SystemTrace/DCStart" version="0" task="MSNT_SystemTrace" opcode="DCStart" template="0xad7dcf68L"/>
+        <event value="4" symbol="MSNT_SystemTrace/DCEnd" version="0" task="MSNT_SystemTrace" opcode="DCEnd" template="0xad7dcf68L"/>
+        <event value="39" symbol="MSNT_SystemTrace/Defunct" version="0" task="MSNT_SystemTrace" opcode="Defunct" template="0xad7dcf68L"/>
+        <event value="60" symbol="MSNT_SystemTrace/IdleExitLatency" version="0" task="MSNT_SystemTrace" opcode="IdleExitLatency" template="0xdb5b87c3L"/>
+        <event value="1" symbol="MSNT_SystemTrace/Start" version="0" task="MSNT_SystemTrace" opcode="Start" template="0x534155e6L"/>
+        <event value="2" symbol="MSNT_SystemTrace/End" version="0" task="MSNT_SystemTrace" opcode="End" template="0x534155e6L"/>
+        <event value="3" symbol="MSNT_SystemTrace/DCStart" version="0" task="MSNT_SystemTrace" opcode="DCStart" template="0x534155e6L"/>
+        <event value="4" symbol="MSNT_SystemTrace/DCEnd" version="0" task="MSNT_SystemTrace" opcode="DCEnd" template="0x534155e6L"/>
+        <event value="39" symbol="MSNT_SystemTrace/Defunct" version="0" task="MSNT_SystemTrace" opcode="Defunct" template="0x534155e6L"/>
+        <event value="34" symbol="MSNT_SystemTrace/ALPC-Receive-Message" version="0" task="MSNT_SystemTrace" opcode="ALPC-Receive-Message" template="0x3d0d4f80L"/>
+        <event value="35" symbol="MSNT_SystemTrace/ALPC-Wait-For-Reply" version="0" task="MSNT_SystemTrace" opcode="ALPC-Wait-For-Reply" template="0x3d0d4f80L"/>
+        <event value="33" symbol="MSNT_SystemTrace/ALPC-Send-Message" version="0" task="MSNT_SystemTrace" opcode="ALPC-Send-Message" template="0x3d0d4f80L"/>
+        <event value="37" symbol="MSNT_SystemTrace/ALPC-Unwait" version="0" task="MSNT_SystemTrace" opcode="ALPC-Unwait" template="0x61e804b6L"/>
+        <event value="36" symbol="MSNT_SystemTrace/ALPC-Wait-For-New-Message" version="0" task="MSNT_SystemTrace" opcode="ALPC-Wait-For-New-Message" template="0x6774509fL"/>
+        <event value="10" symbol="MSNT_SystemTrace/Load" version="0" task="MSNT_SystemTrace" opcode="Load" template="0xbf3a0cc5L"/>
+        <event value="3" symbol="MSNT_SystemTrace/DCStart" version="0" task="MSNT_SystemTrace" opcode="DCStart" template="0xbf3a0cc5L"/>
+        <event value="4" symbol="MSNT_SystemTrace/DCEnd" version="0" task="MSNT_SystemTrace" opcode="DCEnd" template="0xbf3a0cc5L"/>
+        <event value="2" symbol="MSNT_SystemTrace/UnLoad" version="0" task="MSNT_SystemTrace" opcode="UnLoad" template="0xbf3a0cc5L"/>
+        <event value="212" symbol="MSNT_SystemTrace/DllSearchResults" version="0" task="MSNT_SystemTrace" opcode="DllSearchResults" template="0x888c6338L"/>
+        <event value="176" symbol="MSNT_SystemTrace/NewDllLoad" version="0" task="MSNT_SystemTrace" opcode="NewDllLoad" template="0xab3f06cdL"/>
+        <event value="177" symbol="MSNT_SystemTrace/NewDllLoadAsData" version="0" task="MSNT_SystemTrace" opcode="NewDllLoadAsData" template="0xab3f06cdL"/>
+        <event value="192" symbol="MSNT_SystemTrace/DllSearchPathExternal" version="0" task="MSNT_SystemTrace" opcode="DllSearchPathExternal" template="0x1363f0fcL"/>
+        <event value="193" symbol="MSNT_SystemTrace/DllSearchPathInternal" version="0" task="MSNT_SystemTrace" opcode="DllSearchPathInternal" template="0x1363f0fcL"/>
+        <event value="165" symbol="MSNT_SystemTrace/MapViewStart" version="0" task="MSNT_SystemTrace" opcode="MapViewStart" template="0x2d70aa46L"/>
+        <event value="166" symbol="MSNT_SystemTrace/SnappingStart" version="0" task="MSNT_SystemTrace" opcode="SnappingStart" template="0x2d70aa46L"/>
+        <event value="167" symbol="MSNT_SystemTrace/SnappingEnd" version="0" task="MSNT_SystemTrace" opcode="SnappingEnd" template="0x2d70aa46L"/>
+        <event value="168" symbol="MSNT_SystemTrace/LoadingStart" version="0" task="MSNT_SystemTrace" opcode="LoadingStart" template="0x2d70aa46L"/>
+        <event value="169" symbol="MSNT_SystemTrace/LoadingEnd" version="0" task="MSNT_SystemTrace" opcode="LoadingEnd" template="0x2d70aa46L"/>
+        <event value="170" symbol="MSNT_SystemTrace/FoundKnownDll" version="0" task="MSNT_SystemTrace" opcode="FoundKnownDll" template="0x2d70aa46L"/>
+        <event value="171" symbol="MSNT_SystemTrace/AbnormalTermination" version="0" task="MSNT_SystemTrace" opcode="AbnormalTermination" template="0x2d70aa46L"/>
+        <event value="172" symbol="MSNT_SystemTrace/ModulePlaceHolder" version="0" task="MSNT_SystemTrace" opcode="ModulePlaceHolder" template="0x2d70aa46L"/>
+        <event value="173" symbol="MSNT_SystemTrace/ReadyToInit" version="0" task="MSNT_SystemTrace" opcode="ReadyToInit" template="0x2d70aa46L"/>
+        <event value="174" symbol="MSNT_SystemTrace/ReadyToRun" version="0" task="MSNT_SystemTrace" opcode="ReadyToRun" template="0x2d70aa46L"/>
+        <event value="208" symbol="MSNT_SystemTrace/ApiSetResolving" version="0" task="MSNT_SystemTrace" opcode="ApiSetResolving" template="0x2d70aa46L"/>
+        <event value="209" symbol="MSNT_SystemTrace/ApiSetHosted" version="0" task="MSNT_SystemTrace" opcode="ApiSetHosted" template="0x2d70aa46L"/>
+        <event value="210" symbol="MSNT_SystemTrace/ApiSetUnhosted" version="0" task="MSNT_SystemTrace" opcode="ApiSetUnhosted" template="0x2d70aa46L"/>
+        <event value="211" symbol="MSNT_SystemTrace/ApiSetUnresolved" version="0" task="MSNT_SystemTrace" opcode="ApiSetUnresolved" template="0x2d70aa46L"/>
+        <event value="213" symbol="MSNT_SystemTrace/DllPathSearchResults" version="0" task="MSNT_SystemTrace" opcode="DllPathSearchResults" template="0xfb27e0a4L"/>
+    </events>
+    <templates>
+     <template tid="0x49d8be83L">
+      <data name="MHz" inType="win:UInt32"/>
+      <data name="NumberOfProcessors" inType="win:UInt32"/>
+      <data name="MemSize" inType="win:UInt32"/>
+      <data name="PageSize" inType="win:UInt32"/>
+      <data name="AllocationGranularity" inType="win:UInt32"/>
+      <data name="ComputerName" inType="win:WChar" max="256"/>
+      <data name="DomainName" inType="win:WChar" max="134"/>
+      <data name="HyperThreadingFlag" inType="win:Pointer"/>
+      <data name="HighestUserAddress" inType="win:Pointer"/>
+      <data name="ProcessorArchitecture" inType="win:UInt16"/>
+      <data name="ProcessorLevel" inType="win:UInt16"/>
+      <data name="ProcessorRevision" inType="win:UInt16"/>
+      <data name="PaeEnabled" inType="win:UInt8"/>
+      <data name="NxEnabled" inType="win:UInt8"/>
+      <data name="MemorySpeed" inType="win:UInt32"/>
+     </template>
+     <template tid="0x6630125L">
+      <data name="IrpPtr" inType="win:Pointer"/>
+      <data name="ExtraInfo" inType="win:Pointer"/>
+      <data name="NtStatus" inType="win:UInt32"/>
+     </template>
+     <template tid="0x9ea581aL">
+      <data name="EventTimeStamp" inType="win:UInt64"/>
+      <data name="StackProcess" inType="win:UInt32"/>
+      <data name="StackThread" inType="win:UInt32"/>
+      <data name="StackKey" inType="win:Pointer"/>
+     </template>
+     <template tid="0xc36574a0L">
+      <data name="InstructionPointer" inType="win:Pointer"/>
+      <data name="ThreadId" inType="win:UInt32"/>
+      <data name="Count" inType="win:UInt16"/>
+      <data name="Reserved" inType="win:UInt16"/>
+     </template>
+     <template tid="0xd83e0a39L">
+      <data name="IRQAffinity" inType="win:UInt64"/>
+      <data name="IRQGroup" inType="win:UInt16"/>
+      <data name="Reserved" inType="win:UInt16"/>
+      <data name="IRQNum" inType="win:UInt32"/>
+      <data name="DeviceDescriptionLen" inType="win:UInt32"/>
+      <data name="DeviceDescription" inType="win:WString"/>
+     </template>
+     <template tid="0xd6a48836L">
+      <data name="Message" inType="win:String"/>
+      <data name="Padding" inType="win:WChar" max="1"/>
+     </template>
+     <template tid="0xca18698L">
+      <data name="Lock" inType="win:Pointer"/>
+      <data name="ThreadId" inType="win:UInt32"/>
+      <data name="NewCpuPriorityFloor" inType="win:UInt8"/>
+      <data name="OldCpuPriority" inType="win:UInt8"/>
+      <data name="IoPriorities" inType="win:UInt8"/>
+      <data name="BoostFlags" inType="win:UInt8"/>
+     </template>
+     <template tid="0xc1b347edL">
+      <data name="PID" inType="win:UInt32"/>
+      <data name="size" inType="win:UInt32"/>
+      <data name="daddr" inType="win:IPAddrV6"/>
+      <data name="saddr" inType="win:IPAddrV6"/>
+      <data name="dport" inType="win:UInt16"/>
+      <data name="sport" inType="win:UInt16"/>
+      <data name="startime" inType="win:UInt32"/>
+      <data name="endtime" inType="win:UInt32"/>
+      <data name="seqnum" inType="win:UInt32"/>
+      <data name="connid" inType="win:UInt32"/>
+     </template>
+     <template tid="0xfc39433eL">
+      <data name="Hive" inType="win:Pointer"/>
+      <data name="OperationType" inType="win:UInt32"/>
+      <data name="PoolTag" inType="win:UInt32"/>
+      <data name="Size" inType="win:UInt32"/>
+      <data name="FileName" inType="win:WString"/>
+     </template>
+     <template tid="0x61e804b6L">
+      <data name="Status" inType="win:UInt32"/>
+     </template>
+     <template tid="0xec14ef43L">
+      <data name="BaseAddress" inType="win:Pointer"/>
+      <data name="ModuleSize" inType="win:UInt32"/>
+      <data name="ImageFileName" inType="win:WString"/>
+     </template>
+     <template tid="0x73a2ab67L">
+      <data name="ProcessId" inType="win:UInt32"/>
+     </template>
+     <template tid="0x12889635L">
+      <data name="Size" inType="win:UInt64"/>
+      <data name="Hive" inType="win:Pointer"/>
+      <data name="LoadedKeyCount" inType="win:UInt32"/>
+      <data name="FileName" inType="win:WString"/>
+      <data name="LinkPath" inType="win:WString"/>
+     </template>
+     <template tid="0xeea20905L">
+      <data name="ProcessId" inType="win:UInt32"/>
+      <data name="PageFaultCount" inType="win:UInt32"/>
+      <data name="HandleCount" inType="win:UInt32"/>
+      <data name="Reserved" inType="win:UInt32"/>
+      <data name="PeakVirtualSize" inType="win:SizeT"/>
+      <data name="PeakWorkingSetSize" inType="win:SizeT"/>
+      <data name="PeakPagefileUsage" inType="win:SizeT"/>
+      <data name="QuotaPeakPagedPoolUsage" inType="win:SizeT"/>
+      <data name="QuotaPeakNonPagedPoolUsage" inType="win:SizeT"/>
+      <data name="VirtualSize" inType="win:SizeT"/>
+      <data name="WorkingSetSize" inType="win:SizeT"/>
+      <data name="PagefileUsage" inType="win:SizeT"/>
+      <data name="QuotaPagedPoolUsage" inType="win:SizeT"/>
+      <data name="QuotaNonPagedPoolUsage" inType="win:SizeT"/>
+      <data name="PrivatePageCount" inType="win:SizeT"/>
+     </template>
+     <template tid="0xcdd0ad82L">
+      <data name="DiskNumber" inType="win:UInt32"/>
+      <data name="IrpFlags" inType="win:UInt32"/>
+      <data name="TransferSize" inType="win:UInt32"/>
+      <data name="Reserved" inType="win:UInt32"/>
+      <data name="ByteOffset" inType="win:UInt64"/>
+      <data name="FileObject" inType="win:Pointer"/>
+      <data name="Irp" inType="win:Pointer"/>
+      <data name="HighResResponseTime" inType="win:UInt64"/>
+     </template>
+     <template tid="0x560bcec2L">
+      <data name="TThreadId" inType="win:UInt32"/>
+      <data name="ProcessId" inType="win:UInt32"/>
+     </template>
+     <template tid="0x446bbc3eL">
+      <data name="GroupMask1" inType="win:UInt32"/>
+      <data name="GroupMask2" inType="win:UInt32"/>
+      <data name="GroupMask3" inType="win:UInt32"/>
+      <data name="GroupMask4" inType="win:UInt32"/>
+      <data name="GroupMask5" inType="win:UInt32"/>
+      <data name="GroupMask6" inType="win:UInt32"/>
+      <data name="GroupMask7" inType="win:UInt32"/>
+      <data name="GroupMask8" inType="win:UInt32"/>
+     </template>
+     <template tid="0xf4a9250cL">
+      <data name="ScheduledThreadId" inType="win:UInt32"/>
+      <data name="SwitchCount" inType="win:UInt32"/>
+      <data name="KernelYieldCount" inType="win:UInt32"/>
+      <data name="MixedYieldCount" inType="win:UInt32"/>
+      <data name="YieldCount" inType="win:UInt32"/>
+     </template>
+     <template tid="0xe09b5e0dL">
+      <data name="Object" inType="win:Pointer"/>
+     </template>
+     <template tid="0x3e81ff3fL">
+      <data name="DiskNumber" inType="win:UInt32"/>
+      <data name="IrpFlags" inType="win:UInt32"/>
+      <data name="TransferSize" inType="win:UInt32"/>
+      <data name="Reserved" inType="win:UInt32"/>
+      <data name="ByteOffset" inType="win:UInt64"/>
+      <data name="FileObject" inType="win:Pointer"/>
+     </template>
+     <template tid="0xa1644d50L">
+      <data name="PID" inType="win:UInt32"/>
+      <data name="size" inType="win:UInt32"/>
+      <data name="daddr" inType="win:IPAddrV4"/>
+      <data name="saddr" inType="win:IPAddrV4"/>
+      <data name="dport" inType="win:UInt16"/>
+      <data name="sport" inType="win:UInt16"/>
+     </template>
+     <template tid="0x10122ffbL">
+      <data name="UniqueProcessKey" inType="win:Pointer"/>
+      <data name="ProcessId" inType="win:UInt32"/>
+      <data name="ParentId" inType="win:UInt32"/>
+      <data name="SessionId" inType="win:UInt32"/>
+      <data name="ExitStatus" inType="win:SInt32"/>
+      <data name="UserSID" inType="win:SID"/>
+      <data name="ImageFileName" inType="win:String"/>
+      <data name="CommandLine" inType="win:WString"/>
+     </template>
+     <template tid="0x1363f0fcL">
+      <data name="BaseAddress" inType="win:UInt64"/>
+      <data name="ErrorOpcode" inType="win:UInt8"/>
+      <data name="Code" inType="win:SInt8"/>
+      <data name="String1" inType="win:WString"/>
+      <data name="String2" inType="win:WString"/>
+     </template>
+     <template tid="0x3b208868L">
+      <data name="BootLoaderVersion" inType="win:WString"/>
+      <data name="FirmwareRevision" inType="win:WString"/>
+      <data name="FriendlyName" inType="win:WString"/>
+      <data name="HardwareRevision" inType="win:WString"/>
+      <data name="Manufacturer" inType="win:WString"/>
+      <data name="ManufacturerDisplayName" inType="win:WString"/>
+      <data name="ManufacturerModelName" inType="win:WString"/>
+      <data name="MobileOperatorDisplayName" inType="win:WString"/>
+      <data name="MobileOperatorName" inType="win:WString"/>
+      <data name="ModelName" inType="win:WString"/>
+      <data name="RadioHardwareRevision" inType="win:WString"/>
+      <data name="RadioSoftwareRevision" inType="win:WString"/>
+      <data name="ROMVersion" inType="win:WString"/>
+      <data name="SOCVersion" inType="win:WString"/>
+      <data name="HardwareVariant" inType="win:WString"/>
+     </template>
+     <template tid="0x5952053fL">
+      <data name="GroupCount" inType="win:UInt32"/>
+      <data name="Affinity" inType="win:Pointer"/>
+     </template>
+     <template tid="0xdc8c0e9aL">
+      <data name="InstructionPointer" inType="win:Pointer"/>
+      <data name="ThreadId" inType="win:UInt32"/>
+      <data name="ProfileSource" inType="win:UInt16"/>
+      <data name="Reserved" inType="win:UInt16"/>
+     </template>
+     <template tid="0x46833e4L">
+      <data name="Object" inType="win:Pointer"/>
+      <data name="Handle" inType="win:UInt32"/>
+      <data name="ObjectType" inType="win:UInt16"/>
+      <data name="ObjectName" inType="win:WString"/>
+     </template>
+     <template tid="0x8d125a05L">
+      <data name="Offset" inType="win:UInt64"/>
+      <data name="IrpPtr" inType="win:Pointer"/>
+      <data name="TTID" inType="win:Pointer"/>
+      <data name="FileObject" inType="win:Pointer"/>
+      <data name="FileKey" inType="win:Pointer"/>
+      <data name="IoSize" inType="win:UInt32"/>
+      <data name="IoFlags" inType="win:UInt32"/>
+     </template>
+     <template tid="0xc1c5a3c9L">
+      <data name="FileObject" inType="win:Pointer"/>
+      <data name="DeviceChar" inType="win:UInt32"/>
+      <data name="FileChar" inType="win:UInt16"/>
+      <data name="LoadFlags" inType="win:UInt16"/>
+     </template>
+     <template tid="0x15284aa3L">
+      <data name="Guid" inType="win:GUID"/>
+      <data name="Age" inType="win:UInt32"/>
+      <data name="PdbName" inType="win:String"/>
+     </template>
+     <template tid="0x6b73fa74L">
+      <data name="TargetId" inType="win:UInt32"/>
+      <data name="DeviceType" inType="win:UInt32"/>
+      <data name="DeviceTimingMode" inType="win:UInt32"/>
+      <data name="LocationInformationLen" inType="win:UInt32"/>
+      <data name="LocationInformation" inType="win:WString"/>
+     </template>
+     <template tid="0x407be180L">
+      <data name="UAPInfo" inType="win:UInt64"/>
+      <data name="DeviceFamily" inType="win:UInt32"/>
+      <data name="DeviceForm" inType="win:UInt32"/>
+     </template>
+     <template tid="0xcd2ca5eaL">
+      <data name="RoutineAddr" inType="win:Pointer"/>
+      <data name="FileObject" inType="win:Pointer"/>
+      <data name="FileContext" inType="win:Pointer"/>
+      <data name="IrpPtr" inType="win:Pointer"/>
+      <data name="CallbackDataPtr" inType="win:Pointer"/>
+      <data name="MajorFunction" inType="win:UInt32"/>
+      <data name="Status" inType="win:UInt32"/>
+     </template>
+     <template tid="0x7aeb034cL">
+      <data name="ServiceName" inType="win:WChar" max="34"/>
+      <data name="DisplayName" inType="win:WChar" max="256"/>
+      <data name="ProcessName" inType="win:WChar" max="34"/>
+      <data name="ProcessId" inType="win:UInt32"/>
+     </template>
+     <template tid="0xd2675c47L">
+      <data name="InitialTime" inType="win:Pointer"/>
+      <data name="RoutineAddr" inType="win:Pointer"/>
+      <data name="FileObject" inType="win:Pointer"/>
+      <data name="FileContext" inType="win:Pointer"/>
+      <data name="IrpPtr" inType="win:Pointer"/>
+      <data name="CallbackDataPtr" inType="win:Pointer"/>
+      <data name="MajorFunction" inType="win:UInt32"/>
+     </template>
+     <template tid="0xd543c8c5L">
+      <data name="PID" inType="win:UInt32"/>
+      <data name="size" inType="win:UInt32"/>
+      <data name="daddr" inType="win:IPAddrV4"/>
+      <data name="saddr" inType="win:IPAddrV4"/>
+      <data name="dport" inType="win:UInt16"/>
+      <data name="sport" inType="win:UInt16"/>
+      <data name="startime" inType="win:UInt32"/>
+      <data name="endtime" inType="win:UInt32"/>
+      <data name="seqnum" inType="win:UInt32"/>
+      <data name="connid" inType="win:UInt32"/>
+     </template>
+     <template tid="0x9bf786c2L">
+      <data name="MemorySize" inType="win:UInt32"/>
+      <data name="XResolution" inType="win:UInt32"/>
+      <data name="YResolution" inType="win:UInt32"/>
+      <data name="BitsPerPixel" inType="win:UInt32"/>
+      <data name="VRefresh" inType="win:UInt32"/>
+      <data name="ChipType" inType="win:WChar" max="256"/>
+      <data name="DACType" inType="win:WChar" max="256"/>
+      <data name="AdapterString" inType="win:WChar" max="256"/>
+      <data name="BiosString" inType="win:WChar" max="256"/>
+      <data name="DeviceId" inType="win:WChar" max="256"/>
+      <data name="StateFlags" inType="win:UInt32"/>
+     </template>
+     <template tid="0x83fd5e65L">
+      <data name="ParentIrp" inType="win:Pointer"/>
+      <data name="ChildIrp" inType="win:Pointer"/>
+     </template>
+     <template tid="0x9db2396cL">
+      <data name="Component" inType="win:UInt32"/>
+      <data name="Level" inType="win:UInt32"/>
+      <data name="Message" inType="win:String"/>
+     </template>
+     <template tid="0x2a7fc3b0L">
+      <data name="StartOffset" inType="win:UInt64"/>
+      <data name="PartitionSize" inType="win:UInt64"/>
+      <data name="DiskNumber" inType="win:UInt32"/>
+      <data name="Size" inType="win:UInt32"/>
+      <data name="DriveType" inType="win:UInt32"/>
+      <data name="DriveLetterString" inType="win:WChar" max="4"/>
+      <data name="Pad1" inType="win:UInt32"/>
+      <data name="PartitionNumber" inType="win:UInt32"/>
+      <data name="SectorsPerCluster" inType="win:UInt32"/>
+      <data name="BytesPerSector" inType="win:UInt32"/>
+      <data name="Pad2" inType="win:UInt32"/>
+      <data name="NumberOfFreeClusters" inType="win:SInt64"/>
+      <data name="TotalNumberOfClusters" inType="win:SInt64"/>
+      <data name="FileSystem" inType="win:WChar" max="16"/>
+      <data name="VolumeExt" inType="win:UInt32"/>
+     </template>
+     <template tid="0x8ed4e890L">
+      <data name="Object" inType="win:Pointer"/>
+      <data name="ProcessId" inType="win:UInt32"/>
+      <data name="Handle" inType="win:UInt32"/>
+      <data name="ObjectType" inType="win:UInt16"/>
+      <data name="ObjectName" inType="win:WString"/>
+     </template>
+     <template tid="0xce58b455L">
+      <data name="InitialTime" inType="win:Pointer"/>
+      <data name="Routine" inType="win:Pointer"/>
+      <data name="ReturnValue" inType="win:UInt32"/>
+     </template>
+     <template tid="0x3d0d4f80L">
+      <data name="MessageID" inType="win:UInt32"/>
+     </template>
+     <template tid="0x4b85c247L">
+      <data name="ProcessId" inType="win:UInt32"/>
+      <data name="ScheduledThreadId" inType="win:UInt32"/>
+      <data name="PrimaryThreadId" inType="win:UInt32"/>
+      <data name="UmsApcControlFlags" inType="win:UInt32"/>
+      <data name="Status" inType="win:UInt32"/>
+     </template>
+     <template tid="0x82e6c198L">
+      <data name="GuidCount" inType="win:UInt32"/>
+      <data name="Guid" inType="win:GUID"/>
+      <data name="BinaryPath" inType="win:WString"/>
+     </template>
+     <template tid="0x533880adL">
+      <data name="ThreadId" inType="win:UInt32"/>
+      <data name="ProcessorIndex" inType="win:UInt16"/>
+      <data name="Priority" inType="win:UInt8"/>
+      <data name="Reserved" inType="win:UInt8"/>
+     </template>
+     <template tid="0xc0722aa0L">
+      <data name="NewThreadId" inType="win:UInt32"/>
+      <data name="OldThreadId" inType="win:UInt32"/>
+      <data name="NewThreadPriority" inType="win:SInt8"/>
+      <data name="OldThreadPriority" inType="win:SInt8"/>
+      <data name="NewThreadQuantum" inType="win:SInt8"/>
+      <data name="OldThreadQuantum" inType="win:SInt8"/>
+      <data name="OldThreadWaitReason" inType="win:SInt8"/>
+      <data name="OldThreadWaitMode" inType="win:SInt8"/>
+      <data name="OldThreadState" inType="win:SInt8"/>
+      <data name="OldThreadWaitIdealProcessor" inType="win:SInt8"/>
+     </template>
+     <template tid="0x879eff37L">
+      <data name="RoutineAddr" inType="win:Pointer"/>
+      <data name="Irp" inType="win:Pointer"/>
+      <data name="UniqMatchId" inType="win:UInt32"/>
+     </template>
+     <template tid="0x60b881d9L">
+      <data name="BuildString" inType="win:String"/>
+     </template>
+     <template tid="0x7e798ee8L">
+      <data name="SpinLockAddress" inType="win:Pointer"/>
+      <data name="CallerAddress" inType="win:Pointer"/>
+      <data name="AcquireTime" inType="win:UInt64"/>
+      <data name="ReleaseTime" inType="win:UInt64"/>
+      <data name="WaitTimeInCycles" inType="win:UInt32"/>
+      <data name="SpinCount" inType="win:UInt32"/>
+      <data name="ThreadId" inType="win:UInt32"/>
+      <data name="InterruptCount" inType="win:UInt32"/>
+      <data name="Irql" inType="win:UInt8"/>
+      <data name="AcquireDepth" inType="win:UInt8"/>
+      <data name="Flag" inType="win:UInt8"/>
+      <data name="Reserved" inType="win:UInt8" max="5"/>
+     </template>
+     <template tid="0x7bdb9b10L">
+      <data name="IrpPtr" inType="win:Pointer"/>
+      <data name="FileObject" inType="win:Pointer"/>
+      <data name="FileKey" inType="win:Pointer"/>
+      <data name="ExtraInfo" inType="win:Pointer"/>
+      <data name="TTID" inType="win:UInt32"/>
+      <data name="InfoClass" inType="win:UInt32"/>
+     </template>
+     <template tid="0x444634a4L">
+      <data name="ObjectType" inType="win:UInt16"/>
+      <data name="Reserved" inType="win:UInt16"/>
+      <data name="TypeName" inType="win:WString"/>
+     </template>
+     <template tid="0x1feb71a2L">
+      <data name="SysCallNtStatus" inType="win:UInt32"/>
+     </template>
+     <template tid="0xbf3a0cc5L">
+      <data name="ImageBase" inType="win:Pointer"/>
+      <data name="ImageSize" inType="win:Pointer"/>
+      <data name="ProcessId" inType="win:UInt32"/>
+      <data name="ImageChecksum" inType="win:UInt32"/>
+      <data name="TimeDateStamp" inType="win:UInt32"/>
+      <data name="SignatureLevel" inType="win:UInt8"/>
+      <data name="SignatureType" inType="win:UInt8"/>
+      <data name="Reserved0" inType="win:UInt16"/>
+      <data name="DefaultBase" inType="win:Pointer"/>
+      <data name="Reserved1" inType="win:UInt32"/>
+      <data name="Reserved2" inType="win:UInt32"/>
+      <data name="Reserved3" inType="win:UInt32"/>
+      <data name="Reserved4" inType="win:UInt32"/>
+      <data name="FileName" inType="win:WString"/>
+     </template>
+     <template tid="0x5bc3277aL">
+      <data name="S1" inType="win:UInt8"/>
+      <data name="S2" inType="win:UInt8"/>
+      <data name="S3" inType="win:UInt8"/>
+      <data name="S4" inType="win:UInt8"/>
+      <data name="S5" inType="win:UInt8"/>
+      <data name="Pad1" inType="win:UInt8"/>
+      <data name="Pad2" inType="win:UInt8"/>
+      <data name="Pad3" inType="win:UInt8"/>
+     </template>
+     <template tid="0x3b8d9629L">
+      <data name="ProcessId" inType="win:UInt32"/>
+      <data name="TThreadId" inType="win:UInt32"/>
+      <data name="StackBase" inType="win:Pointer"/>
+      <data name="StackLimit" inType="win:Pointer"/>
+      <data name="UserStackBase" inType="win:Pointer"/>
+      <data name="UserStackLimit" inType="win:Pointer"/>
+      <data name="StartAddr" inType="win:Pointer"/>
+      <data name="Win32StartAddr" inType="win:Pointer"/>
+      <data name="TebBase" inType="win:Pointer"/>
+      <data name="SubProcessTag" inType="win:UInt32"/>
+     </template>
+     <template tid="0xe40f526aL">
+      <data name="CounterCount" inType="win:UInt32"/>
+      <data name="CounterName" inType="win:WString"/>
+     </template>
+     <template tid="0x5188ddd6L">
+      <data name="Object" inType="win:Pointer"/>
+      <data name="ObjectType" inType="win:UInt16"/>
+     </template>
+     <template tid="0x337e37f9L">
+      <data name="ClassGuid" inType="win:GUID"/>
+      <data name="UpperFiltersCount" inType="win:UInt32"/>
+      <data name="LowerFiltersCount" inType="win:UInt32"/>
+      <data name="DevStatus" inType="win:UInt32"/>
+      <data name="DevProblem" inType="win:UInt32"/>
+      <data name="DeviceID" inType="win:WString"/>
+      <data name="DeviceDescription" inType="win:WString"/>
+      <data name="FriendlyName" inType="win:WString"/>
+      <data name="PdoName" inType="win:WString"/>
+      <data name="ServiceName" inType="win:WString"/>
+      <data name="UpperFilters" inType="win:WString"/>
+      <data name="LowerFilters" inType="win:WString"/>
+     </template>
+     <template tid="0x53dce6e4L">
+      <data name="MHz" inType="win:UInt32"/>
+      <data name="NumberOfProcessors" inType="win:UInt32"/>
+      <data name="MemSize" inType="win:UInt32"/>
+      <data name="PageSize" inType="win:UInt32"/>
+      <data name="AllocationGranularity" inType="win:UInt32"/>
+      <data name="ComputerName" inType="win:WChar" max="256"/>
+      <data name="DomainName" inType="win:WChar" max="134"/>
+      <data name="HyperThreadingFlag" inType="win:Pointer"/>
+     </template>
+     <template tid="0xa95b98f9L">
+      <data name="InitialTime" inType="win:Pointer"/>
+      <data name="Routine" inType="win:Pointer"/>
+      <data name="ReturnValue" inType="win:UInt8"/>
+      <data name="Vector" inType="win:UInt16"/>
+      <data name="Reserved" inType="win:UInt8"/>
+      <data name="MessageNumber" inType="win:UInt32"/>
+     </template>
+     <template tid="0x93947266L">
+      <data name="StartOffset" inType="win:UInt64"/>
+      <data name="PartitionSize" inType="win:UInt64"/>
+      <data name="DiskNumber" inType="win:UInt32"/>
+      <data name="Size" inType="win:UInt32"/>
+      <data name="DriveType" inType="win:UInt32"/>
+      <data name="DriveLetterString" inType="win:WChar" max="4"/>
+      <data name="Pad1" inType="win:UInt32"/>
+      <data name="PartitionNumber" inType="win:UInt32"/>
+      <data name="SectorsPerCluster" inType="win:UInt32"/>
+      <data name="BytesPerSector" inType="win:UInt32"/>
+      <data name="Pad2" inType="win:UInt32"/>
+      <data name="NumberOfFreeClusters" inType="win:SInt64"/>
+      <data name="TotalNumberOfClusters" inType="win:SInt64"/>
+      <data name="FileSystem" inType="win:WChar" max="16"/>
+      <data name="VolumeExt" inType="win:UInt32"/>
+      <data name="Pad3" inType="win:UInt32"/>
+     </template>
+     <template tid="0xab3f06cdL">
+      <data name="NewDllBaseAddress" inType="win:Pointer"/>
+      <data name="ParentDllBaseAddress" inType="win:Pointer"/>
+      <data name="LoadReason" inType="win:UInt32"/>
+      <data name="FilePath" inType="win:WString"/>
+     </template>
+     <template tid="0xdb5b87c3L">
+      <data name="Flags" inType="win:UInt32"/>
+      <data name="PlatformState" inType="win:UInt32"/>
+      <data name="ProcessorState" inType="win:UInt32"/>
+      <data name="ReturnLatency" inType="win:UInt32"/>
+      <data name="TotalLatency" inType="win:UInt32"/>
+     </template>
+     <template tid="0x3be4124aL">
+      <data name="ProcessId" inType="win:UInt32"/>
+      <data name="ThreadId" inType="win:UInt32"/>
+      <data name="ThreadName" inType="win:WString"/>
+     </template>
+     <template tid="0xa2e32d87L">
+      <data name="MachineId" inType="win:GUID"/>
+     </template>
+     <template tid="0xb002f768L">
+      <data name="PID" inType="win:UInt32"/>
+      <data name="size" inType="win:UInt32"/>
+      <data name="daddr" inType="win:IPAddrV4"/>
+      <data name="saddr" inType="win:IPAddrV4"/>
+      <data name="dport" inType="win:UInt16"/>
+      <data name="sport" inType="win:UInt16"/>
+      <data name="mss" inType="win:UInt16"/>
+      <data name="sackopt" inType="win:UInt16"/>
+      <data name="tsopt" inType="win:UInt16"/>
+      <data name="wsopt" inType="win:UInt16"/>
+      <data name="rcvwin" inType="win:UInt32"/>
+      <data name="rcvwinscale" inType="win:SInt16"/>
+      <data name="sndwinscale" inType="win:SInt16"/>
+      <data name="seqnum" inType="win:UInt32"/>
+      <data name="connid" inType="win:UInt32"/>
+     </template>
+     <template tid="0x73c493edL">
+      <data name="UniqMatchId" inType="win:UInt32"/>
+      <data name="RoutineAddr" inType="win:Pointer"/>
+      <data name="Irp" inType="win:Pointer"/>
+      <data name="MajorFunction" inType="win:UInt32"/>
+      <data name="MinorFunction" inType="win:UInt32"/>
+      <data name="FileObject" inType="win:Pointer"/>
+     </template>
+     <template tid="0x3cf89298L">
+      <data name="ClassGuid" inType="win:GUID"/>
+      <data name="UpperFiltersCount" inType="win:UInt32"/>
+      <data name="LowerFiltersCount" inType="win:UInt32"/>
+      <data name="DeviceID" inType="win:WString"/>
+      <data name="DeviceDescription" inType="win:WString"/>
+      <data name="FriendlyName" inType="win:WString"/>
+      <data name="PdoName" inType="win:WString"/>
+      <data name="ServiceName" inType="win:WString"/>
+      <data name="UpperFilters" inType="win:WString"/>
+      <data name="LowerFilters" inType="win:WString"/>
+     </template>
+     <template tid="0xdb6b1931L">
+      <data name="ThreadId" inType="win:UInt32"/>
+      <data name="SourceProcessorIndex" inType="win:UInt16"/>
+      <data name="TargetProcessorIndex" inType="win:UInt16"/>
+      <data name="Priority" inType="win:UInt8"/>
+      <data name="IdealProcessorAdjust" inType="win:Boolean"/>
+      <data name="OldIdealProcessorIndex" inType="win:UInt16"/>
+     </template>
+     <template tid="0x10285ce6L">
+      <data name="ProcessorCount" inType="win:UInt32"/>
+      <data name="ProcessorNumber" inType="win:UInt32"/>
+     </template>
+     <template tid="0x991c1336L">
+      <data name="HypercallPageVa" inType="win:Pointer"/>
+     </template>
+     <template tid="0x4618e215L">
+      <data name="BaseAddress" inType="win:UInt64"/>
+     </template>
+     <template tid="0xb74bc0d2L">
+      <data name="Irp" inType="win:Pointer"/>
+      <data name="IssuingThreadId" inType="win:UInt32"/>
+     </template>
+     <template tid="0x69690042L">
+      <data name="IrpPtr" inType="win:Pointer"/>
+      <data name="FileObject" inType="win:Pointer"/>
+      <data name="FileKey" inType="win:Pointer"/>
+      <data name="ExtraInfo" inType="win:Pointer"/>
+      <data name="TTID" inType="win:UInt32"/>
+      <data name="InfoClass" inType="win:UInt32"/>
+      <data name="FileName" inType="win:WString"/>
+     </template>
+     <template tid="0xbf8caac7L">
+      <data name="DiskNumber" inType="win:UInt16"/>
+      <data name="BusType" inType="win:UInt16"/>
+      <data name="DeviceType" inType="win:UInt16"/>
+      <data name="MediaType" inType="win:UInt16"/>
+      <data name="StartingOffset" inType="win:UInt64"/>
+      <data name="Size" inType="win:UInt64"/>
+      <data name="NumberOfFreeBlocks" inType="win:UInt64"/>
+      <data name="TotalNumberOfBlocks" inType="win:UInt64"/>
+      <data name="NextWritableAddress" inType="win:UInt64"/>
+      <data name="NumberOfSessions" inType="win:UInt32"/>
+      <data name="NumberOfTracks" inType="win:UInt32"/>
+      <data name="BytesPerSector" inType="win:UInt32"/>
+      <data name="DiscStatus" inType="win:UInt16"/>
+      <data name="LastSessionStatus" inType="win:UInt16"/>
+      <data name="DriveLetter" inType="win:WString"/>
+      <data name="FileSystemName" inType="win:WString"/>
+      <data name="DeviceName" inType="win:AnsiString"/>
+      <data name="ManufacturerName" inType="win:AnsiString"/>
+     </template>
+     <template tid="0x4cfad473L">
+      <data name="HeapHandle" inType="win:Pointer"/>
+      <data name="FirstRangeSize" inType="win:SizeT"/>
+      <data name="HRCreateFlags" inType="win:UInt32"/>
+     </template>
+     <template tid="0x3f898533L">
+      <data name="DirectoryTableBase" inType="win:Pointer"/>
+      <data name="ProcessId" inType="win:UInt32"/>
+     </template>
+     <template tid="0x96448bb9L">
+      <data name="daddr" inType="win:IPAddrV4"/>
+      <data name="saddr" inType="win:IPAddrV4"/>
+      <data name="dport" inType="win:UInt16"/>
+      <data name="sport" inType="win:UInt16"/>
+      <data name="size" inType="win:UInt32"/>
+      <data name="PID" inType="win:UInt32"/>
+     </template>
+     <template tid="0x9ad5e6faL">
+      <data name="key" inType="win:Pointer"/>
+      <data name="StackFrame" inType="win:Pointer"/>
+     </template>
+     <template tid="0x5ad8e55aL">
+      <data name="NodeCount" inType="win:UInt32"/>
+      <data name="NodeMap" inType="win:UInt64"/>
+     </template>
+     <template tid="0x51f7bc1L">
+      <data name="UpdateId" inType="win:WString"/>
+      <data name="FlightIdList" inType="win:WString"/>
+     </template>
+     <template tid="0x6b7e88d8L">
+      <data name="context" inType="win:Pointer"/>
+      <data name="saddr" inType="win:IPAddrV4"/>
+      <data name="sport" inType="win:UInt16"/>
+      <data name="size" inType="win:UInt16"/>
+      <data name="daddr" inType="win:IPAddrV4"/>
+      <data name="dport" inType="win:UInt16"/>
+      <data name="dsize" inType="win:UInt16"/>
+     </template>
+     <template tid="0xbbbd80daL">
+      <data name="Hive" inType="win:Pointer"/>
+      <data name="LinkPath" inType="win:WString"/>
+      <data name="DirtyReason" inType="win:UInt32"/>
+     </template>
+     <template tid="0xc076952fL">
+      <data name="BaseAddress" inType="win:Pointer"/>
+      <data name="RegionSize" inType="win:SizeT"/>
+      <data name="ProcessId" inType="win:UInt32"/>
+      <data name="Flags" inType="win:UInt32"/>
+     </template>
+     <template tid="0x7827380cL">
+      <data name="Reason" inType="win:UInt32"/>
+     </template>
+     <template tid="0xcfcd7699L">
+      <data name="LockAddress" inType="win:Pointer"/>
+      <data name="ThreadId" inType="win:UInt32"/>
+      <data name="BoostBitmap" inType="win:UInt32"/>
+     </template>
+     <template tid="0xa58f9ee9L">
+      <data name="ScheduledPID" inType="win:UInt32"/>
+      <data name="ScheduledTID" inType="win:UInt32"/>
+      <data name="SchedulingPriority" inType="win:UInt32"/>
+      <data name="TaskIndex" inType="win:UInt32"/>
+     </template>
+     <template tid="0x2423d536L">
+      <data name="CurrentControlSet" inType="win:UInt32"/>
+     </template>
+     <template tid="0xd2679eafL">
+      <data name="DiskNumber" inType="win:UInt32"/>
+      <data name="IrpFlags" inType="win:UInt32"/>
+      <data name="TransferSize" inType="win:UInt32"/>
+      <data name="ResponseTime" inType="win:UInt32"/>
+      <data name="ByteOffset" inType="win:UInt64"/>
+      <data name="FileObject" inType="win:Pointer"/>
+      <data name="HighResResponseTime" inType="win:UInt64"/>
+     </template>
+     <template tid="0xfb27e0a4L">
+      <data name="SearchInfo" inType="win:UInt32"/>
+      <data name="Cwd" inType="win:WString"/>
+      <data name="AppDir" inType="win:WString"/>
+      <data name="DllDir" inType="win:WString"/>
+      <data name="DllLoadDir" inType="win:WString"/>
+     </template>
+     <template tid="0x6774509fL">
+      <data name="IsServerPort" inType="win:UInt32"/>
+      <data name="PortName" inType="win:WString"/>
+     </template>
+     <template tid="0x2d70aa46L">
+      <data name="BaseAddress" inType="win:UInt64"/>
+      <data name="ErrorOpcode" inType="win:UInt8"/>
+      <data name="Code" inType="win:SInt8"/>
+      <data name="String" inType="win:WString"/>
+     </template>
+     <template tid="0xf30f9662L">
+      <data name="IrpPtr" inType="win:Pointer"/>
+      <data name="TTID" inType="win:Pointer"/>
+      <data name="FileObject" inType="win:Pointer"/>
+      <data name="FileKey" inType="win:Pointer"/>
+      <data name="ExtraInfo" inType="win:Pointer"/>
+      <data name="InfoClass" inType="win:UInt32"/>
+     </template>
+     <template tid="0x27125e59L">
+      <data name="Irp" inType="win:Pointer"/>
+      <data name="UniqMatchId" inType="win:UInt32"/>
+     </template>
+     <template tid="0x65ba5f68L">
+      <data name="NewThreadId" inType="win:UInt32"/>
+      <data name="OldThreadId" inType="win:UInt32"/>
+      <data name="NewThreadPriority" inType="win:SInt8"/>
+      <data name="OldThreadPriority" inType="win:SInt8"/>
+      <data name="PreviousCState" inType="win:UInt8"/>
+      <data name="SpareByte" inType="win:SInt8"/>
+      <data name="OldThreadWaitReason" inType="win:SInt8"/>
+      <data name="OldThreadWaitMode" inType="win:SInt8"/>
+      <data name="OldThreadState" inType="win:SInt8"/>
+      <data name="OldThreadWaitIdealProcessor" inType="win:SInt8"/>
+      <data name="NewThreadWaitTime" inType="win:UInt32"/>
+      <data name="Reserved" inType="win:UInt32"/>
+     </template>
+     <template tid="0x2857ad47L">
+      <data name="PhysicalAddr" inType="win:UInt64"/>
+      <data name="PhysicalAddrLen" inType="win:UInt32"/>
+      <data name="Ipv4Index" inType="win:UInt32"/>
+      <data name="Ipv6Index" inType="win:UInt32"/>
+      <data name="NICDescription" inType="win:WString"/>
+      <data name="IpAddresses" inType="win:WString"/>
+      <data name="DnsServerAddresses" inType="win:WString"/>
+     </template>
+     <template tid="0xe2cf45dbL">
+      <data name="HeapHandle" inType="win:Pointer"/>
+      <data name="HRFlags" inType="win:UInt32"/>
+      <data name="HRPid" inType="win:UInt32"/>
+      <data name="HRRangeCount" inType="win:UInt32"/>
+      <data name="Reserved" inType="win:UInt32"/>
+     </template>
+     <template tid="0x3f6ca3c0L">
+      <data name="Timer" inType="win:Pointer"/>
+     </template>
+     <template tid="0x8a15ac56L">
+      <data name="Status" inType="win:Pointer"/>
+      <data name="KeyHandle" inType="win:Pointer"/>
+      <data name="ElapsedTime" inType="win:SInt64"/>
+      <data name="Index" inType="win:UInt32"/>
+      <data name="KeyName" inType="win:WString"/>
+     </template>
+     <template tid="0x8c77fa30L">
+      <data name="LockAddress" inType="win:Pointer"/>
+      <data name="ThreadId" inType="win:UInt32"/>
+     </template>
+     <template tid="0x6e5cccf8L">
+      <data name="IrpPtr" inType="win:Pointer"/>
+      <data name="FileObject" inType="win:Pointer"/>
+      <data name="FileKey" inType="win:Pointer"/>
+      <data name="TTID" inType="win:UInt32"/>
+      <data name="Length" inType="win:UInt32"/>
+      <data name="InfoClass" inType="win:UInt32"/>
+      <data name="FileIndex" inType="win:UInt32"/>
+      <data name="FileName" inType="win:WString"/>
+     </template>
+     <template tid="0xe667950L">
+      <data name="BaseAddress" inType="win:Pointer"/>
+      <data name="RegionSize" inType="win:SizeT"/>
+      <data name="ProcessId" inType="win:UInt32"/>
+      <data name="Flags" inType="win:UInt32"/>
+      <data name="CommitSizeInBytes" inType="win:SizeT"/>
+     </template>
+     <template tid="0xc8c15d1fL">
+      <data name="Source" inType="win:UInt32"/>
+      <data name="NewInterval" inType="win:UInt32"/>
+      <data name="OldInterval" inType="win:UInt32"/>
+      <data name="SourceName" inType="win:WString"/>
+     </template>
+     <template tid="0x5a7b9572L">
+      <data name="Object" inType="win:Pointer"/>
+      <data name="SourceHandle" inType="win:UInt32"/>
+      <data name="TargetHandle" inType="win:UInt32"/>
+      <data name="TargetProcessId" inType="win:UInt32"/>
+      <data name="ObjectType" inType="win:UInt16"/>
+     </template>
+     <template tid="0x6a587f4L">
+      <data name="MHz" inType="win:UInt32"/>
+      <data name="NumberOfProcessors" inType="win:UInt32"/>
+      <data name="MemSize" inType="win:UInt32"/>
+      <data name="PageSize" inType="win:UInt32"/>
+      <data name="AllocationGranularity" inType="win:UInt32"/>
+      <data name="ComputerName" inType="win:WChar" max="256"/>
+      <data name="DomainName" inType="win:WChar" max="132"/>
+      <data name="HyperThreadingFlag" inType="win:Pointer"/>
+     </template>
+     <template tid="0xde416463L">
+      <data name="Proto" inType="win:UInt16"/>
+      <data name="FailureCode" inType="win:UInt16"/>
+     </template>
+     <template tid="0x80b042c9L">
+      <data name="IrpPtr" inType="win:Pointer"/>
+      <data name="TTID" inType="win:Pointer"/>
+      <data name="FileObject" inType="win:Pointer"/>
+      <data name="FileKey" inType="win:Pointer"/>
+      <data name="Length" inType="win:UInt32"/>
+      <data name="InfoClass" inType="win:UInt32"/>
+      <data name="FileIndex" inType="win:UInt32"/>
+      <data name="FileName" inType="win:WString"/>
+     </template>
+     <template tid="0x92816abdL">
+      <data name="ThreadId" inType="win:UInt32"/>
+      <data name="EntryCount" inType="win:UInt32"/>
+      <data name="Entries" inType="win:Pointer"/>
+     </template>
+     <template tid="0x534155e6L">
+      <data name="UniqueProcessKey" inType="win:Pointer"/>
+      <data name="ProcessId" inType="win:UInt32"/>
+      <data name="ParentId" inType="win:UInt32"/>
+      <data name="SessionId" inType="win:UInt32"/>
+      <data name="ExitStatus" inType="win:SInt32"/>
+      <data name="DirectoryTableBase" inType="win:Pointer"/>
+      <data name="UserSID" inType="win:SID"/>
+      <data name="ImageFileName" inType="win:String"/>
+      <data name="CommandLine" inType="win:WString"/>
+     </template>
+     <template tid="0xa6e43bc4L">
+      <data name="ProcessId" inType="win:UInt32"/>
+      <data name="ScheduledThreadId" inType="win:UInt32"/>
+      <data name="PrimaryThreadId" inType="win:UInt32"/>
+      <data name="SwitchFlags" inType="win:UInt32"/>
+     </template>
+     <template tid="0x77f82d3bL">
+      <data name="EventTimeStamp" inType="win:UInt64"/>
+      <data name="StackProcess" inType="win:UInt32"/>
+      <data name="StackThread" inType="win:UInt32"/>
+      <data name="Stack1" inType="win:Pointer"/>
+      <data name="Stack2" inType="win:Pointer"/>
+      <data name="Stack3" inType="win:Pointer"/>
+      <data name="Stack4" inType="win:Pointer"/>
+      <data name="Stack5" inType="win:Pointer"/>
+      <data name="Stack6" inType="win:Pointer"/>
+      <data name="Stack7" inType="win:Pointer"/>
+      <data name="Stack8" inType="win:Pointer"/>
+      <data name="Stack9" inType="win:Pointer"/>
+      <data name="Stack10" inType="win:Pointer"/>
+      <data name="Stack11" inType="win:Pointer"/>
+      <data name="Stack12" inType="win:Pointer"/>
+      <data name="Stack13" inType="win:Pointer"/>
+      <data name="Stack14" inType="win:Pointer"/>
+      <data name="Stack15" inType="win:Pointer"/>
+      <data name="Stack16" inType="win:Pointer"/>
+      <data name="Stack17" inType="win:Pointer"/>
+      <data name="Stack18" inType="win:Pointer"/>
+      <data name="Stack19" inType="win:Pointer"/>
+      <data name="Stack20" inType="win:Pointer"/>
+      <data name="Stack21" inType="win:Pointer"/>
+      <data name="Stack22" inType="win:Pointer"/>
+      <data name="Stack23" inType="win:Pointer"/>
+      <data name="Stack24" inType="win:Pointer"/>
+      <data name="Stack25" inType="win:Pointer"/>
+      <data name="Stack26" inType="win:Pointer"/>
+      <data name="Stack27" inType="win:Pointer"/>
+      <data name="Stack28" inType="win:Pointer"/>
+      <data name="Stack29" inType="win:Pointer"/>
+      <data name="Stack30" inType="win:Pointer"/>
+      <data name="Stack31" inType="win:Pointer"/>
+      <data name="Stack32" inType="win:Pointer"/>
+     </template>
+     <template tid="0x7ed9cc05L">
+      <data name="ImageBase" inType="win:Pointer"/>
+     </template>
+     <template tid="0x4062caa6L">
+      <data name="InitialTime" inType="win:Pointer"/>
+      <data name="ReadOffset" inType="win:UInt64"/>
+      <data name="VirtualAddress" inType="win:Pointer"/>
+      <data name="FileObject" inType="win:Pointer"/>
+      <data name="TThreadId" inType="win:UInt32"/>
+      <data name="ByteCount" inType="win:UInt32"/>
+     </template>
+     <template tid="0xd39192b0L">
+      <data name="InitialTime" inType="win:SInt64"/>
+      <data name="Status" inType="win:UInt32"/>
+      <data name="Index" inType="win:UInt32"/>
+      <data name="KeyHandle" inType="win:Pointer"/>
+      <data name="KeyName" inType="win:WString"/>
+     </template>
+     <template tid="0xce8e36d8L">
+      <data name="RoutineAddr" inType="win:Pointer"/>
+      <data name="FileObject" inType="win:Pointer"/>
+      <data name="FileContext" inType="win:Pointer"/>
+      <data name="IrpPtr" inType="win:Pointer"/>
+      <data name="CallbackDataPtr" inType="win:Pointer"/>
+      <data name="MajorFunction" inType="win:UInt32"/>
+     </template>
+     <template tid="0x9782c89eL">
+      <data name="ViewBase" inType="win:Pointer"/>
+      <data name="FileObject" inType="win:Pointer"/>
+      <data name="MiscInfo" inType="win:UInt64"/>
+      <data name="ViewSize" inType="win:SizeT"/>
+      <data name="ProcessId" inType="win:UInt32"/>
+     </template>
+     <template tid="0x3caa3f8dL">
+      <data name="IrpPtr" inType="win:Pointer"/>
+      <data name="FileObject" inType="win:Pointer"/>
+      <data name="FileKey" inType="win:Pointer"/>
+      <data name="TTID" inType="win:UInt32"/>
+     </template>
+     <template tid="0x64005465L">
+      <data name="Timer" inType="win:Pointer"/>
+      <data name="DisableCallback" inType="win:Pointer"/>
+      <data name="DisableContext" inType="win:Pointer"/>
+      <data name="TimerFlags" inType="win:UInt8"/>
+     </template>
+     <template tid="0x54988e5bL">
+      <data name="TThreadId" inType="win:UInt32"/>
+      <data name="AdjustReason" inType="win:SInt8"/>
+      <data name="AdjustIncrement" inType="win:SInt8"/>
+      <data name="Flag" inType="win:SInt8"/>
+      <data name="Reserved" inType="win:SInt8"/>
+     </template>
+     <template tid="0xc8154bfbL">
+      <data name="ImageBase" inType="win:Pointer"/>
+      <data name="ImageSize" inType="win:Pointer"/>
+      <data name="ProcessId" inType="win:UInt32"/>
+      <data name="ImageChecksum" inType="win:UInt32"/>
+      <data name="TimeDateStamp" inType="win:UInt32"/>
+      <data name="Reserved0" inType="win:UInt32"/>
+      <data name="DefaultBase" inType="win:Pointer"/>
+      <data name="Reserved1" inType="win:UInt32"/>
+      <data name="Reserved2" inType="win:UInt32"/>
+      <data name="Reserved3" inType="win:UInt32"/>
+      <data name="Reserved4" inType="win:UInt32"/>
+      <data name="FileName" inType="win:WString"/>
+     </template>
+     <template tid="0xd23e50e8L">
+      <data name="Hive" inType="win:Pointer"/>
+      <data name="Path" inType="win:WString"/>
+     </template>
+     <template tid="0x53677a4aL">
+      <data name="IrpPtr" inType="win:Pointer"/>
+      <data name="FileObject" inType="win:Pointer"/>
+      <data name="TTID" inType="win:UInt32"/>
+      <data name="CreateOptions" inType="win:UInt32"/>
+      <data name="FileAttributes" inType="win:UInt32"/>
+      <data name="ShareAccess" inType="win:UInt32"/>
+      <data name="OpenPath" inType="win:WString"/>
+     </template>
+     <template tid="0x35bedc02L">
+      <data name="PID" inType="win:UInt32"/>
+      <data name="size" inType="win:UInt32"/>
+      <data name="daddr" inType="win:IPAddrV6"/>
+      <data name="saddr" inType="win:IPAddrV6"/>
+      <data name="dport" inType="win:UInt16"/>
+      <data name="sport" inType="win:UInt16"/>
+      <data name="mss" inType="win:UInt16"/>
+      <data name="sackopt" inType="win:UInt16"/>
+      <data name="tsopt" inType="win:UInt16"/>
+      <data name="wsopt" inType="win:UInt16"/>
+      <data name="rcvwin" inType="win:UInt32"/>
+      <data name="rcvwinscale" inType="win:SInt16"/>
+      <data name="sndwinscale" inType="win:SInt16"/>
+      <data name="seqnum" inType="win:UInt32"/>
+      <data name="connid" inType="win:UInt32"/>
+     </template>
+     <template tid="0x33bfa638L">
+      <data name="DiskNumber" inType="win:UInt32"/>
+      <data name="IrpFlags" inType="win:UInt32"/>
+      <data name="TransferSize" inType="win:UInt32"/>
+      <data name="Reserved" inType="win:UInt32"/>
+      <data name="ByteOffset" inType="win:UInt64"/>
+      <data name="FileObject" inType="win:Pointer"/>
+      <data name="Irp" inType="win:Pointer"/>
+      <data name="HighResResponseTime" inType="win:UInt64"/>
+      <data name="IssuingThreadId" inType="win:UInt32"/>
+     </template>
+     <template tid="0xd4cbb29L">
+     </template>
+     <template tid="0x7c529c47L">
+      <data name="Timer" inType="win:Pointer"/>
+      <data name="DisableCallback" inType="win:Pointer"/>
+      <data name="DisableContext" inType="win:Pointer"/>
+     </template>
+     <template tid="0xd79f5e7aL">
+      <data name="TxrGUID" inType="win:GUID"/>
+      <data name="Status" inType="win:UInt32"/>
+      <data name="UowCount" inType="win:UInt32"/>
+      <data name="OperationTime" inType="win:UInt64"/>
+      <data name="Hive" inType="win:WString"/>
+     </template>
+     <template tid="0xf2e07945L">
+      <data name="Type" inType="win:UInt32"/>
+      <data name="Tag" inType="win:UInt32"/>
+      <data name="NumberOfBytes" inType="win:SizeT"/>
+      <data name="Entry" inType="win:Pointer"/>
+     </template>
+     <template tid="0xecb3ebf8L">
+      <data name="InitialTime" inType="win:Pointer"/>
+      <data name="Routine" inType="win:Pointer"/>
+      <data name="ReturnValue" inType="win:UInt8"/>
+      <data name="Vector" inType="win:UInt16"/>
+      <data name="Reserved" inType="win:UInt8"/>
+     </template>
+     <template tid="0x56f25015L">
+      <data name="ProcessId" inType="win:UInt32"/>
+      <data name="TThreadId" inType="win:UInt32"/>
+     </template>
+     <template tid="0x888c6338L">
+      <data name="LdrLoadFlags" inType="win:UInt32"/>
+      <data name="LdrSearchFlags" inType="win:UInt32"/>
+      <data name="SearchInfo" inType="win:UInt32"/>
+      <data name="LoadReason" inType="win:UInt32"/>
+      <data name="FullDllName" inType="win:WString"/>
+     </template>
+     <template tid="0xb1e36de9L">
+      <data name="PageDirectoryBase" inType="win:Pointer"/>
+      <data name="ProcessId" inType="win:UInt32"/>
+      <data name="ParentId" inType="win:UInt32"/>
+      <data name="SessionId" inType="win:UInt32"/>
+      <data name="ExitStatus" inType="win:SInt32"/>
+      <data name="UserSID" inType="win:SID"/>
+      <data name="ImageFileName" inType="win:String"/>
+     </template>
+     <template tid="0xbf11cb27L">
+      <data name="Hive" inType="win:Pointer"/>
+      <data name="FileName" inType="win:WString"/>
+      <data name="Path" inType="win:WString"/>
+     </template>
+     <template tid="0xcf25e668L">
+      <data name="ProcessId" inType="win:UInt32"/>
+      <data name="TThreadId" inType="win:UInt32"/>
+      <data name="StackBase" inType="win:Pointer"/>
+      <data name="StackLimit" inType="win:Pointer"/>
+      <data name="UserStackBase" inType="win:Pointer"/>
+      <data name="UserStackLimit" inType="win:Pointer"/>
+      <data name="Affinity" inType="win:Pointer"/>
+      <data name="Win32StartAddr" inType="win:Pointer"/>
+      <data name="TebBase" inType="win:Pointer"/>
+      <data name="SubProcessTag" inType="win:UInt32"/>
+      <data name="BasePriority" inType="win:UInt8"/>
+      <data name="PagePriority" inType="win:UInt8"/>
+      <data name="IoPriority" inType="win:UInt8"/>
+      <data name="ThreadFlags" inType="win:UInt8"/>
+      <data name="ThreadName" inType="win:WString"/>
+     </template>
+     <template tid="0x8b5b8748L">
+      <data name="PID" inType="win:UInt32"/>
+      <data name="size" inType="win:UInt32"/>
+      <data name="daddr" inType="win:IPAddrV4"/>
+      <data name="saddr" inType="win:IPAddrV4"/>
+      <data name="dport" inType="win:UInt16"/>
+      <data name="sport" inType="win:UInt16"/>
+      <data name="mss" inType="win:UInt16"/>
+      <data name="sackopt" inType="win:UInt16"/>
+      <data name="tsopt" inType="win:UInt16"/>
+      <data name="wsopt" inType="win:UInt16"/>
+      <data name="rcvwin" inType="win:UInt32"/>
+      <data name="rcvwinscale" inType="win:SInt16"/>
+      <data name="sndwinscale" inType="win:SInt16"/>
+      <data name="connid" inType="win:UInt32"/>
+      <data name="seqnum" inType="win:UInt32"/>
+     </template>
+     <template tid="0xad7dcf68L">
+      <data name="UniqueProcessKey" inType="win:Pointer"/>
+      <data name="ProcessId" inType="win:UInt32"/>
+      <data name="ParentId" inType="win:UInt32"/>
+      <data name="SessionId" inType="win:UInt32"/>
+      <data name="ExitStatus" inType="win:SInt32"/>
+      <data name="DirectoryTableBase" inType="win:Pointer"/>
+      <data name="Flags" inType="win:UInt32"/>
+      <data name="UserSID" inType="win:SID"/>
+      <data name="ImageFileName" inType="win:String"/>
+      <data name="CommandLine" inType="win:WString"/>
+      <data name="PackageFullName" inType="win:WString"/>
+      <data name="ApplicationId" inType="win:WString"/>
+     </template>
+     <template tid="0xada2cf2aL">
+      <data name="ProcessorIndex" inType="win:UInt32"/>
+      <data name="FeatureSet" inType="win:UInt32"/>
+      <data name="ProcessorSpeed" inType="win:UInt32"/>
+      <data name="ProcessorName" inType="win:WChar" max="64"/>
+      <data name="VendorIdentifier" inType="win:WChar" max="16"/>
+      <data name="ProcessorIdentifier" inType="win:WChar" max="128"/>
+     </template>
+     <template tid="0xebfd9007L">
+      <data name="FileObject" inType="win:Pointer"/>
+      <data name="FileName" inType="win:WString"/>
+     </template>
+     <template tid="0xd93cec10L">
+      <data name="Proto" inType="win:UInt32"/>
+     </template>
+     <template tid="0x68ddc114L">
+      <data name="Object" inType="win:Pointer"/>
+      <data name="Tag" inType="win:UInt32"/>
+      <data name="Count" inType="win:UInt32"/>
+     </template>
+     <template tid="0x2e745ca0L">
+      <data name="NewThreadId" inType="win:UInt32"/>
+      <data name="OldThreadId" inType="win:UInt32"/>
+      <data name="NewThreadPriority" inType="win:SInt8"/>
+      <data name="OldThreadPriority" inType="win:SInt8"/>
+      <data name="PreviousCState" inType="win:UInt8"/>
+      <data name="SpareByte" inType="win:SInt8"/>
+      <data name="OldThreadWaitReason" inType="win:SInt8"/>
+      <data name="ThreadFlags" inType="win:SInt8"/>
+      <data name="OldThreadState" inType="win:SInt8"/>
+      <data name="OldThreadWaitIdealProcessor" inType="win:SInt8"/>
+      <data name="NewThreadWaitTime" inType="win:UInt32"/>
+      <data name="Reserved" inType="win:UInt32"/>
+     </template>
+     <template tid="0x73ada3b6L">
+      <data name="CodeIntegrityInfo" inType="win:UInt32"/>
+     </template>
+     <template tid="0xe15353bbL">
+      <data name="SysCallAddress" inType="win:Pointer"/>
+     </template>
+     <template tid="0xee1ab8e5L">
+      <data name="PID" inType="win:UInt32"/>
+      <data name="size" inType="win:UInt32"/>
+      <data name="daddr" inType="win:IPAddrV4"/>
+      <data name="saddr" inType="win:IPAddrV4"/>
+      <data name="dport" inType="win:UInt16"/>
+      <data name="sport" inType="win:UInt16"/>
+      <data name="startime" inType="win:UInt32"/>
+      <data name="endtime" inType="win:UInt32"/>
+      <data name="connid" inType="win:UInt32"/>
+      <data name="seqnum" inType="win:UInt32"/>
+     </template>
+     <template tid="0x970d3e50L">
+      <data name="DeviceObject" inType="win:Pointer"/>
+      <data name="TimerRoutine" inType="win:Pointer"/>
+     </template>
+     <template tid="0xbbeff87L">
+      <data name="Status" inType="win:Pointer"/>
+      <data name="KeyHandle" inType="win:Pointer"/>
+      <data name="ElapsedTime" inType="win:SInt64"/>
+      <data name="KeyName" inType="win:WString"/>
+     </template>
+     <template tid="0x69114465L">
+      <data name="HeapHandle" inType="win:Pointer"/>
+      <data name="HRAddress" inType="win:Pointer"/>
+      <data name="HRSize" inType="win:SizeT"/>
+     </template>
+     <template tid="0xe641617bL">
+      <data name="SystemManufacturer" inType="win:WString"/>
+      <data name="SystemProductName" inType="win:WString"/>
+      <data name="BiosDate" inType="win:WString"/>
+      <data name="BiosVersion" inType="win:WString"/>
+     </template>
+     <template tid="0x332520a1L">
+      <data name="DueTime" inType="win:UInt64"/>
+      <data name="MaximumDueTime" inType="win:UInt64"/>
+      <data name="Period" inType="win:UInt64"/>
+      <data name="Timer" inType="win:Pointer"/>
+      <data name="Callback" inType="win:Pointer"/>
+      <data name="CallbackContext" inType="win:Pointer"/>
+      <data name="TimerFlags" inType="win:UInt8"/>
+     </template>
+     <template tid="0x2fb36826L">
+      <data name="BufferSize" inType="win:UInt32"/>
+      <data name="Version" inType="win:UInt32"/>
+      <data name="ProviderVersion" inType="win:UInt32"/>
+      <data name="NumberOfProcessors" inType="win:UInt32"/>
+      <data name="EndTime" inType="win:UInt64"/>
+      <data name="TimerResolution" inType="win:UInt32"/>
+      <data name="MaxFileSize" inType="win:UInt32"/>
+      <data name="LogFileMode" inType="win:UInt32"/>
+      <data name="BuffersWritten" inType="win:UInt32"/>
+      <data name="StartBuffers" inType="win:UInt32"/>
+      <data name="PointerSize" inType="win:UInt32"/>
+      <data name="EventsLost" inType="win:UInt32"/>
+      <data name="CPUSpeed" inType="win:UInt32"/>
+      <data name="LoggerName" inType="win:Pointer"/>
+      <data name="LogFileName" inType="win:Pointer"/>
+      <data name="TimeZoneInformation" inType="win:UInt8" max="176"/>
+      <data name="BootTime" inType="win:UInt64"/>
+      <data name="PerfFreq" inType="win:UInt64"/>
+      <data name="StartTime" inType="win:UInt64"/>
+      <data name="ReservedFlags" inType="win:UInt32"/>
+      <data name="BuffersLost" inType="win:UInt32"/>
+      <data name="SessionNameString" inType="win:WString"/>
+      <data name="LogFileNameString" inType="win:WString"/>
+     </template>
+     <template tid="0x34260c9eL">
+      <data name="MachineDPI" inType="win:UInt32"/>
+      <data name="UserDPI" inType="win:UInt32"/>
+     </template>
+     <template tid="0xb148ccceL">
+      <data name="HeapHandle" inType="win:Pointer"/>
+     </template>
+     <template tid="0xe9ef310aL">
+      <data name="GroupMask1" inType="win:UInt32"/>
+      <data name="GroupMask2" inType="win:UInt32"/>
+      <data name="GroupMask3" inType="win:UInt32"/>
+      <data name="GroupMask4" inType="win:UInt32"/>
+      <data name="GroupMask5" inType="win:UInt32"/>
+      <data name="GroupMask6" inType="win:UInt32"/>
+      <data name="GroupMask7" inType="win:UInt32"/>
+      <data name="GroupMask8" inType="win:UInt32"/>
+      <data name="KernelEventVersion" inType="win:UInt32"/>
+     </template>
+     <template tid="0x795d433bL">
+      <data name="MajorFunction" inType="win:UInt32"/>
+      <data name="MinorFunction" inType="win:UInt32"/>
+      <data name="RoutineAddr" inType="win:Pointer"/>
+      <data name="FileObject" inType="win:Pointer"/>
+      <data name="Irp" inType="win:Pointer"/>
+      <data name="UniqMatchId" inType="win:UInt32"/>
+     </template>
+     <template tid="0xd8c415aaL">
+      <data name="TcbTablePartitions" inType="win:UInt32"/>
+      <data name="MaxHashTableSize" inType="win:UInt32"/>
+      <data name="MaxUserPort" inType="win:UInt32"/>
+      <data name="TcpTimedWaitDelay" inType="win:UInt32"/>
+     </template>
+     <template tid="0xd9a2d54fL">
+      <data name="ThreadId" inType="win:UInt32"/>
+      <data name="OldPriority" inType="win:UInt8"/>
+      <data name="NewPriority" inType="win:UInt8"/>
+      <data name="Reserved" inType="win:UInt16"/>
+     </template>
+     <template tid="0xbf89d65fL">
+      <data name="IDLength" inType="win:UInt32"/>
+      <data name="DescriptionLength" inType="win:UInt32"/>
+      <data name="FriendlyNameLength" inType="win:UInt32"/>
+      <data name="DeviceID" inType="win:WString"/>
+      <data name="DeviceDescription" inType="win:WString"/>
+      <data name="FriendlyName" inType="win:WString"/>
+      <data name="PdoName" inType="win:WString"/>
+     </template>
+     <template tid="0x615c47a5L">
+      <data name="SpinLockSpinThreshold" inType="win:UInt32"/>
+      <data name="SpinLockContentionSampleRate" inType="win:UInt32"/>
+      <data name="SpinLockAcquireSampleRate" inType="win:UInt32"/>
+     </template>
+     <template tid="0xd73d93f5L">
+      <data name="EventVersion" inType="win:UInt16"/>
+      <data name="Reserved" inType="win:UInt16"/>
+      <data name="PartitionType" inType="win:UInt32"/>
+      <data name="QpcOffsetFromRoot" inType="win:SInt64"/>
+      <data name="PartitionId" inType="win:GUID"/>
+      <data name="ParentId" inType="win:GUID"/>
+     </template>
+     <template tid="0xaf0876adL">
+      <data name="ProcessId" inType="win:UInt32"/>
+      <data name="ScheduledThreadId" inType="win:UInt32"/>
+      <data name="ParkFlags" inType="win:UInt32"/>
+     </template>
+     <template tid="0xf70cefe3L">
+      <data name="Type" inType="win:UInt32"/>
+      <data name="Tag" inType="win:UInt32"/>
+      <data name="NumberOfBytes" inType="win:SizeT"/>
+      <data name="Entry" inType="win:Pointer"/>
+      <data name="SessionId" inType="win:UInt32"/>
+     </template>
+     <template tid="0xa83254edL">
+      <data name="Notification" inType="win:Pointer"/>
+      <data name="KeyHandle" inType="win:Pointer"/>
+      <data name="Type" inType="win:UInt8"/>
+      <data name="WatchSubtree" inType="win:UInt8"/>
+      <data name="Primary" inType="win:UInt8"/>
+     </template>
+     <template tid="0x75f3d8e8L">
+      <data name="TThreadId" inType="win:UInt32"/>
+      <data name="StartTime" inType="win:UInt64"/>
+      <data name="ThreadRoutine" inType="win:Pointer"/>
+     </template>
+     <template tid="0x962af533L">
+      <data name="NICName" inType="win:WChar" max="256"/>
+      <data name="Index" inType="win:UInt32"/>
+      <data name="PhysicalAddrLen" inType="win:UInt32"/>
+      <data name="PhysicalAddr" inType="win:WChar" max="8"/>
+      <data name="Size" inType="win:UInt32"/>
+      <data name="IpAddress" inType="win:SInt32"/>
+      <data name="SubnetMask" inType="win:SInt32"/>
+      <data name="DhcpServer" inType="win:SInt32"/>
+      <data name="Gateway" inType="win:SInt32"/>
+      <data name="PrimaryWinsServer" inType="win:SInt32"/>
+      <data name="SecondaryWinsServer" inType="win:SInt32"/>
+      <data name="DnsServer1" inType="win:SInt32"/>
+      <data name="DnsServer2" inType="win:SInt32"/>
+      <data name="DnsServer3" inType="win:SInt32"/>
+      <data name="DnsServer4" inType="win:SInt32"/>
+      <data name="Data" inType="win:UInt32"/>
+     </template>
+     <template tid="0xcddadb84L">
+      <data name="Routine" inType="win:Pointer"/>
+     </template>
+     <template tid="0xae58877fL">
+      <data name="ProcessId" inType="win:UInt32"/>
+      <data name="TThreadId" inType="win:UInt32"/>
+      <data name="StackBase" inType="win:Pointer"/>
+      <data name="StackLimit" inType="win:Pointer"/>
+      <data name="UserStackBase" inType="win:Pointer"/>
+      <data name="UserStackLimit" inType="win:Pointer"/>
+      <data name="Affinity" inType="win:Pointer"/>
+      <data name="Win32StartAddr" inType="win:Pointer"/>
+      <data name="TebBase" inType="win:Pointer"/>
+      <data name="SubProcessTag" inType="win:UInt32"/>
+      <data name="BasePriority" inType="win:UInt8"/>
+      <data name="PagePriority" inType="win:UInt8"/>
+      <data name="IoPriority" inType="win:UInt8"/>
+      <data name="ThreadFlags" inType="win:UInt8"/>
+     </template>
+     <template tid="0x7a6c7fb2L">
+      <data name="IDLength" inType="win:UInt32"/>
+      <data name="DescriptionLength" inType="win:UInt32"/>
+      <data name="FriendlyNameLength" inType="win:UInt32"/>
+      <data name="DeviceID" inType="win:WString"/>
+      <data name="DeviceDescription" inType="win:WString"/>
+      <data name="FriendlyName" inType="win:WString"/>
+     </template>
+     <template tid="0xf7330198L">
+      <data name="InitialTime" inType="win:Pointer"/>
+      <data name="Routine" inType="win:Pointer"/>
+     </template>
+     <template tid="0xafb7234L">
+      <data name="PID" inType="win:UInt32"/>
+      <data name="size" inType="win:UInt32"/>
+      <data name="daddr" inType="win:IPAddrV6"/>
+      <data name="saddr" inType="win:IPAddrV6"/>
+      <data name="dport" inType="win:UInt16"/>
+      <data name="sport" inType="win:UInt16"/>
+      <data name="seqnum" inType="win:UInt32"/>
+      <data name="connid" inType="win:UInt32"/>
+     </template>
+     <template tid="0xe6f5032fL">
+      <data name="Entry" inType="win:Pointer"/>
+      <data name="ThreadId" inType="win:UInt32"/>
+     </template>
+     <template tid="0xb34aa36fL">
+      <data name="UniqueProcessKey" inType="win:Pointer"/>
+      <data name="ProcessId" inType="win:UInt32"/>
+      <data name="ParentId" inType="win:UInt32"/>
+      <data name="SessionId" inType="win:UInt32"/>
+      <data name="ExitStatus" inType="win:SInt32"/>
+      <data name="DirectoryTableBase" inType="win:Pointer"/>
+      <data name="Flags" inType="win:UInt32"/>
+      <data name="UserSID" inType="win:SID"/>
+      <data name="ImageFileName" inType="win:String"/>
+      <data name="CommandLine" inType="win:WString"/>
+      <data name="PackageFullName" inType="win:WString"/>
+      <data name="ApplicationId" inType="win:WString"/>
+      <data name="ExitTime" inType="win:UInt64"/>
+     </template>
+     <template tid="0x3f2400eaL">
+      <data name="DiskNumber" inType="win:UInt32"/>
+      <data name="IrpFlags" inType="win:UInt32"/>
+      <data name="HighResResponseTime" inType="win:UInt64"/>
+      <data name="Irp" inType="win:Pointer"/>
+      <data name="IssuingThreadId" inType="win:UInt32"/>
+     </template>
+     <template tid="0x3a0bcdcbL">
+      <data name="Affinity" inType="win:Pointer"/>
+      <data name="ThreadId" inType="win:UInt32"/>
+      <data name="Group" inType="win:UInt16"/>
+      <data name="Reserved" inType="win:UInt16"/>
+     </template>
+     <template tid="0x69f51716L">
+      <data name="InstructionPointer" inType="win:Pointer"/>
+      <data name="ThreadId" inType="win:UInt32"/>
+      <data name="Count" inType="win:UInt16"/>
+     </template>
+     <template tid="0xcb5dbc08L">
+      <data name="Irp" inType="win:Pointer"/>
+     </template>
+     <template tid="0x3e4b4feL">
+      <data name="IrpPtr" inType="win:Pointer"/>
+      <data name="TTID" inType="win:Pointer"/>
+      <data name="FileObject" inType="win:Pointer"/>
+      <data name="CreateOptions" inType="win:UInt32"/>
+      <data name="FileAttributes" inType="win:UInt32"/>
+      <data name="ShareAccess" inType="win:UInt32"/>
+      <data name="OpenPath" inType="win:WString"/>
+     </template>
+     <template tid="0xee13e046L">
+      <data name="Counter1" inType="win:UInt64"/>
+      <data name="Counter2" inType="win:UInt64"/>
+      <data name="Counter3" inType="win:UInt64"/>
+      <data name="Counter4" inType="win:UInt64"/>
+      <data name="Counter5" inType="win:UInt64"/>
+      <data name="Counter6" inType="win:UInt64"/>
+      <data name="Counter7" inType="win:UInt64"/>
+      <data name="Counter8" inType="win:UInt64"/>
+      <data name="Counter9" inType="win:UInt64"/>
+      <data name="Counter10" inType="win:UInt64"/>
+      <data name="Counter11" inType="win:UInt64"/>
+     </template>
+     <template tid="0xb0fc99adL">
+      <data name="IrpPtr" inType="win:Pointer"/>
+      <data name="TTID" inType="win:Pointer"/>
+      <data name="FileObject" inType="win:Pointer"/>
+      <data name="FileKey" inType="win:Pointer"/>
+     </template>
+     <template tid="0xf6dddf93L">
+      <data name="SpinLockSpinThreshold" inType="win:UInt32"/>
+      <data name="SpinLockContentionSampleRate" inType="win:UInt32"/>
+      <data name="SpinLockAcquireSampleRate" inType="win:UInt32"/>
+      <data name="SpinLockHoldThreshold" inType="win:UInt32"/>
+     </template>
+     <template tid="0xfb0f7619L">
+      <data name="ProcessId" inType="win:Pointer"/>
+      <data name="ParentId" inType="win:Pointer"/>
+      <data name="UserSID" inType="win:SID"/>
+      <data name="ImageFileName" inType="win:String"/>
+     </template>
+     <template tid="0xd68c0bd3L">
+      <data name="DiskNumber" inType="win:UInt32"/>
+      <data name="BytesPerSector" inType="win:UInt32"/>
+      <data name="SectorsPerTrack" inType="win:UInt32"/>
+      <data name="TracksPerCylinder" inType="win:UInt32"/>
+      <data name="Cylinders" inType="win:UInt64"/>
+      <data name="SCSIPort" inType="win:UInt32"/>
+      <data name="SCSIPath" inType="win:UInt32"/>
+      <data name="SCSITarget" inType="win:UInt32"/>
+      <data name="SCSILun" inType="win:UInt32"/>
+      <data name="Manufacturer" inType="win:WChar" max="256"/>
+      <data name="PartitionCount" inType="win:UInt32"/>
+      <data name="WriteCacheEnabled" inType="win:UInt8"/>
+      <data name="Pad" inType="win:UInt8"/>
+      <data name="BootDriveLetter" inType="win:WChar" max="3"/>
+      <data name="Spare" inType="win:WChar" max="2"/>
+     </template>
+     <template tid="0x189cbc37L">
+      <data name="AlignmentClusters" inType="win:UInt64"/>
+      <data name="AvgFreeSpaceSize" inType="win:UInt64"/>
+      <data name="ClustersPerSlab" inType="win:UInt64"/>
+      <data name="FragmentedDirectoryExtents" inType="win:UInt64"/>
+      <data name="FragmentedExtents" inType="win:UInt64"/>
+      <data name="FreeSpaceCount" inType="win:UInt64"/>
+      <data name="LargestFreeSpaceSize" inType="win:UInt64"/>
+      <data name="LastRunActualPurgeClusters" inType="win:UInt64"/>
+      <data name="LastRunClustersTrimmed" inType="win:UInt64"/>
+      <data name="LastRunFullDefragTime" inType="win:UInt64"/>
+      <data name="LastRunTime" inType="win:UInt64"/>
+      <data name="MFTSize" inType="win:UInt64"/>
+      <data name="TotalClusters" inType="win:UInt64"/>
+      <data name="TotalUsedClusters" inType="win:UInt64"/>
+      <data name="AvgFragmentsPerFile" inType="win:UInt32"/>
+      <data name="BytesPerCluster" inType="win:UInt32"/>
+      <data name="DirectoryCount" inType="win:UInt32"/>
+      <data name="FragmentedDirectories" inType="win:UInt32"/>
+      <data name="FragmentedFiles" inType="win:UInt32"/>
+      <data name="FragmentedSpace" inType="win:UInt32"/>
+      <data name="HardwareIssue" inType="win:UInt32"/>
+      <data name="InUseMFTRecords" inType="win:UInt32"/>
+      <data name="InUseSlabs" inType="win:UInt32"/>
+      <data name="LastRunActualPurgeSlabs" inType="win:UInt32"/>
+      <data name="LastRunInitialBackedSlabs" inType="win:UInt32"/>
+      <data name="LastRunPercentFragmentation" inType="win:UInt32"/>
+      <data name="LastRunPinnedSlabs" inType="win:UInt32"/>
+      <data name="LastRunPotentialPurgeSlabs" inType="win:UInt32"/>
+      <data name="LastRunSpaceInefficientSlabs" inType="win:UInt32"/>
+      <data name="LastRunTrimmedSlabs" inType="win:UInt32"/>
+      <data name="LastRunUnknownEvictFailSlabs" inType="win:UInt32"/>
+      <data name="LastRunVolsnapPinnedSlabs" inType="win:UInt32"/>
+      <data name="MFTFragmentCount" inType="win:UInt32"/>
+      <data name="MovableFiles" inType="win:UInt32"/>
+      <data name="TotalMFTRecords" inType="win:UInt32"/>
+      <data name="TotalSlabs" inType="win:UInt32"/>
+      <data name="UnmovableFiles" inType="win:UInt32"/>
+      <data name="VolumeId" inType="win:GUID"/>
+      <data name="VolumePathNames" inType="win:WString"/>
+     </template>
+     <template tid="0xa2a2e64fL">
+      <data name="ProcessId" inType="win:UInt32"/>
+      <data name="ServiceState" inType="win:UInt32"/>
+      <data name="SubProcessTag" inType="win:UInt32"/>
+      <data name="ServiceName" inType="win:WString"/>
+      <data name="DisplayName" inType="win:WString"/>
+      <data name="ProcessName" inType="win:WString"/>
+      <data name="LoadOrderGroup" inType="win:WString"/>
+      <data name="SvchostGroup" inType="win:WString"/>
+     </template>
+     <template tid="0x717eddb6L">
+      <data name="BaseAddress" inType="win:Pointer"/>
+      <data name="SizeInBytes" inType="win:SizeT"/>
+      <data name="Flags" inType="win:UInt32"/>
+     </template>
+     <template tid="0x8ec6a77eL">
+      <data name="ProcessId" inType="win:UInt32"/>
+      <data name="TThreadId" inType="win:UInt32"/>
+      <data name="StackBase" inType="win:Pointer"/>
+      <data name="StackLimit" inType="win:Pointer"/>
+      <data name="UserStackBase" inType="win:Pointer"/>
+      <data name="UserStackLimit" inType="win:Pointer"/>
+      <data name="StartAddr" inType="win:Pointer"/>
+      <data name="Win32StartAddr" inType="win:Pointer"/>
+      <data name="WaitMode" inType="win:SInt8"/>
+     </template>
+     <template tid="0xf15a9f1dL">
+      <data name="Object" inType="win:Pointer"/>
+      <data name="Tag" inType="win:Pointer"/>
+      <data name="ProcessId" inType="win:UInt32"/>
+      <data name="Count" inType="win:UInt32"/>
+     </template>
+     <template tid="0x16f342aL">
+      <data name="Vector" inType="win:UInt16"/>
+     </template>
+     <template tid="0x9940aefdL">
+      <data name="Offset" inType="win:UInt64"/>
+      <data name="IrpPtr" inType="win:Pointer"/>
+      <data name="FileObject" inType="win:Pointer"/>
+      <data name="FileKey" inType="win:Pointer"/>
+      <data name="TTID" inType="win:UInt32"/>
+      <data name="IoSize" inType="win:UInt32"/>
+      <data name="IoFlags" inType="win:UInt32"/>
+     </template>
+     <template tid="0x3d98ab4cL">
+      <data name="OldTag" inType="win:UInt32"/>
+      <data name="NewTag" inType="win:UInt32"/>
+     </template>
+     <template tid="0xd38d6bb0L">
+      <data name="DiskNumber" inType="win:UInt32"/>
+      <data name="IrpFlags" inType="win:UInt32"/>
+      <data name="HighResResponseTime" inType="win:UInt64"/>
+      <data name="Irp" inType="win:Pointer"/>
+     </template>
+     <template tid="0x7b22ae70L">
+      <data name="UniqMatchId" inType="win:UInt32"/>
+      <data name="Irp" inType="win:Pointer"/>
+     </template>
+     <template tid="0x508e0d4cL">
+      <data name="HeapHandle" inType="win:Pointer"/>
+      <data name="HRFlags" inType="win:UInt32"/>
+      <data name="HRPid" inType="win:UInt32"/>
+      <data name="HRRangeCount" inType="win:UInt32"/>
+     </template>
+     <template tid="0x8dbfc2c8L">
+      <data name="Source" inType="win:UInt32"/>
+      <data name="NewInterval" inType="win:UInt32"/>
+      <data name="OldInterval" inType="win:UInt32"/>
+     </template>
+     <template tid="0x7c7073eaL">
+      <data name="IRQAffinity" inType="win:UInt64"/>
+      <data name="IRQNum" inType="win:UInt32"/>
+      <data name="DeviceDescriptionLen" inType="win:UInt32"/>
+      <data name="DeviceDescription" inType="win:WString"/>
+     </template>
+     <template tid="0xa662c7a2L">
+      <data name="PID" inType="win:UInt32"/>
+      <data name="size" inType="win:UInt32"/>
+      <data name="daddr" inType="win:IPAddrV4"/>
+      <data name="saddr" inType="win:IPAddrV4"/>
+      <data name="dport" inType="win:UInt16"/>
+      <data name="sport" inType="win:UInt16"/>
+      <data name="seqnum" inType="win:UInt32"/>
+      <data name="connid" inType="win:UInt32"/>
+     </template>
+     <template tid="0x9d3bb782L">
+      <data name="PID" inType="win:UInt32"/>
+      <data name="size" inType="win:UInt32"/>
+      <data name="daddr" inType="win:IPAddrV4"/>
+      <data name="saddr" inType="win:IPAddrV4"/>
+      <data name="dport" inType="win:UInt16"/>
+      <data name="sport" inType="win:UInt16"/>
+      <data name="connid" inType="win:UInt32"/>
+      <data name="seqnum" inType="win:UInt32"/>
+     </template>
+     <template tid="0xb17aafa7L">
+      <data name="VirtualAddress" inType="win:Pointer"/>
+      <data name="ProgramCounter" inType="win:Pointer"/>
+     </template>
+     <template tid="0x7098d6d0L">
+      <data name="Routine" inType="win:Pointer"/>
+      <data name="IrpPtr" inType="win:Pointer"/>
+      <data name="UniqMatchId" inType="win:UInt32"/>
+     </template>
+     <template tid="0xd5c0383fL">
+      <data name="ImageBase" inType="win:Pointer"/>
+      <data name="ImageSize" inType="win:Pointer"/>
+      <data name="ProcessId" inType="win:UInt32"/>
+      <data name="FileName" inType="win:WString"/>
+     </template>
+     <template tid="0xe8fecf3eL">
+      <data name="CallbackRoutine" inType="win:Pointer"/>
+     </template>
+     <template tid="0x8475319aL">
+      <data name="ProcessId" inType="win:UInt32"/>
+      <data name="ServiceState" inType="win:UInt32"/>
+      <data name="SubProcessTag" inType="win:UInt32"/>
+      <data name="ServiceName" inType="win:WString"/>
+      <data name="DisplayName" inType="win:WString"/>
+      <data name="ProcessName" inType="win:WString"/>
+     </template>
+    </templates>
+   </provider>
+  </events>
+ </instrumentation>
+</instrumentationManifest>

@@ -1,0 +1,160 @@
+<instrumentationManifest xmlns="http://schemas.microsoft.com/win/2004/08/events">
+ <instrumentation xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:win="http://manifests.microsoft.com/win/2004/08/windows/events">
+  <events>
+   <provider name="Microsoft-Windows-UIAutomationCore" guid="{820a42d8-38c4-465d-b64e-d7d56ea1d612}" resourceFileName="Microsoft-Windows-UIAutomationCore" messageFileName="Microsoft-Windows-UIAutomationCore" symbol="MicrosoftWindowsUIAutomationCore" source="Xml" >
+    <keywords>
+     <keyword name="PerfInstrumentation" message="$(string.keyword_PerfInstrumentation)" mask="0x10000"/>
+    </keywords>
+    <tasks>
+     <task name="UIAutomationCore_ProviderErrors" message="$(string.task_UIAutomationCore_ProviderErrors)" value="1"/>
+     <task name="UIAutomationCore_IAccessibleErrors" message="$(string.task_UIAutomationCore_IAccessibleErrors)" value="2"/>
+     <task name="UIAutomationCore_OtherErrors" message="$(string.task_UIAutomationCore_OtherErrors)" value="3"/>
+     <task name="UIAutomationCore_ClientApiErrors" message="$(string.task_UIAutomationCore_ClientApiErrors)" value="4"/>
+     <task name="UIAutomationCore_Property_Retrieval" message="$(string.task_UIAutomationCore_Property_Retrieval)" value="101"/>
+     <task name="UIAutomationCore_Cache_Request" message="$(string.task_UIAutomationCore_Cache_Request)" value="103"/>
+     <task name="UIAutomationCore_Retrieve_HitTest" message="$(string.task_UIAutomationCore_Retrieve_HitTest)" value="105"/>
+     <task name="UIAutomationCore_Retrieve_Focused" message="$(string.task_UIAutomationCore_Retrieve_Focused)" value="107"/>
+     <task name="UIAutomationCore_Retrieve_Selected" message="$(string.task_UIAutomationCore_Retrieve_Selected)" value="109"/>
+     <task name="UIAutomationCore_Event_Registration" message="$(string.task_UIAutomationCore_Event_Registration)" value="111"/>
+     <task name="UIAutomationCore_GetClickablePoint" message="$(string.task_UIAutomationCore_GetClickablePoint)" value="113"/>
+     <task name="UIAutomationCore_TreeWalkerNavigate" message="$(string.task_UIAutomationCore_TreeWalkerNavigate)" value="115"/>
+     <task name="UIAutomationCore_BuildUpdatedCache" message="$(string.task_UIAutomationCore_BuildUpdatedCache)" value="117"/>
+     <task name="UIAutomationCore_RichEditProxy_GetText" message="$(string.task_UIAutomationCore_RichEditProxy_GetText)" value="119"/>
+     <task name="UIAutomationCore_RichEditProxy_GetVisibleRange" message="$(string.task_UIAutomationCore_RichEditProxy_GetVisibleRange)" value="121"/>
+     <task name="UIAutomationCore_EditProxy_NextWord" message="$(string.task_UIAutomationCore_EditProxy_NextWord)" value="123"/>
+     <task name="UIAutomationCore_ClientConnection_CallWithReturn" message="$(string.task_UIAutomationCore_ClientConnection_CallWithReturn)" value="125"/>
+     <task name="UIAutomationCore_CTextRange_ReadNextChunk" message="$(string.task_UIAutomationCore_CTextRange_ReadNextChunk)" value="127"/>
+     <task name="UIAutomationCore_CTextRange_Clone" message="$(string.task_UIAutomationCore_CTextRange_Clone)" value="129"/>
+     <task name="UIAutomationCore_CTextRange_Compare" message="$(string.task_UIAutomationCore_CTextRange_Compare)" value="131"/>
+     <task name="UIAutomationCore_CTextRange_CompareEndpoints" message="$(string.task_UIAutomationCore_CTextRange_CompareEndpoints)" value="133"/>
+     <task name="UIAutomationCore_CTextRange_ExpandToEnclosingUnit" message="$(string.task_UIAutomationCore_CTextRange_ExpandToEnclosingUnit)" value="135"/>
+     <task name="UIAutomationCore_CTextRange_GetAttributeValue" message="$(string.task_UIAutomationCore_CTextRange_GetAttributeValue)" value="137"/>
+     <task name="UIAutomationCore_CTextRange_GetEnclosingElement" message="$(string.task_UIAutomationCore_CTextRange_GetEnclosingElement)" value="139"/>
+     <task name="UIAutomationCore_CTextRange_GetText" message="$(string.task_UIAutomationCore_CTextRange_GetText)" value="141"/>
+     <task name="UIAutomationCore_CTextRange_Move" message="$(string.task_UIAutomationCore_CTextRange_Move)" value="143"/>
+     <task name="UIAutomationCore_CTextRange_MoveEndpointByUnit" message="$(string.task_UIAutomationCore_CTextRange_MoveEndpointByUnit)" value="145"/>
+     <task name="UIAutomationCore_CTextRange_MoveEndpointByRange" message="$(string.task_UIAutomationCore_CTextRange_MoveEndpointByRange)" value="147"/>
+     <task name="UIAutomationCore_CTextRange_GetChildren" message="$(string.task_UIAutomationCore_CTextRange_GetChildren)" value="149"/>
+     <task name="UIAutomationCore_UIAutomationCoreAPI_UiaRaiseAutomationEvent" message="$(string.task_UIAutomationCore_UIAutomationCoreAPI_UiaRaiseAutomationEvent)" value="151"/>
+    </tasks>
+    <events>
+     <event value="1" symbol="UIAutomationCore_ProviderErrors" version="0" task="UIAutomationCore_ProviderErrors" level="win:Informational" template="UIAutomationCore_ProviderErrorsArgs"/>
+     <event value="2" symbol="UIAutomationCore_IAccessibleErrors" version="0" task="UIAutomationCore_IAccessibleErrors" level="win:Informational" template="UIAutomationCore_ProviderErrorsArgs"/>
+     <event value="3" symbol="UIAutomationCore_OtherErrors" version="0" task="UIAutomationCore_OtherErrors" level="win:Informational" template="UIAutomationCore_OtherErrorsArgs"/>
+     <event value="4" symbol="UIAutomationCore_ClientApiErrors" version="0" task="UIAutomationCore_ClientApiErrors" level="win:Informational" template="UIAutomationCore_ClientApiErrorsArgs"/>
+     <event value="101" symbol="UIAutomationCore_Property_RetrievalStart" version="0" task="UIAutomationCore_Property_Retrieval" opcode="win:Start" level="win:Informational" keywords="PerfInstrumentation"/>
+     <event value="102" symbol="UIAutomationCore_Property_RetrievalStop" version="0" task="UIAutomationCore_Property_Retrieval" opcode="win:Stop" level="win:Informational" keywords="PerfInstrumentation"/>
+     <event value="103" symbol="UIAutomationCore_Cache_RequestStart" version="0" task="UIAutomationCore_Cache_Request" opcode="win:Start" level="win:Informational" keywords="PerfInstrumentation"/>
+     <event value="104" symbol="UIAutomationCore_Cache_RequestStop" version="0" task="UIAutomationCore_Cache_Request" opcode="win:Stop" level="win:Informational" keywords="PerfInstrumentation"/>
+     <event value="105" symbol="UIAutomationCore_Retrieve_HitTestStart" version="0" task="UIAutomationCore_Retrieve_HitTest" opcode="win:Start" level="win:Informational" keywords="PerfInstrumentation"/>
+     <event value="106" symbol="UIAutomationCore_Retrieve_HitTestStop" version="0" task="UIAutomationCore_Retrieve_HitTest" opcode="win:Stop" level="win:Informational" keywords="PerfInstrumentation"/>
+     <event value="107" symbol="UIAutomationCore_Retrieve_FocusedStart" version="0" task="UIAutomationCore_Retrieve_Focused" opcode="win:Start" level="win:Informational" keywords="PerfInstrumentation"/>
+     <event value="108" symbol="UIAutomationCore_Retrieve_FocusedStop" version="0" task="UIAutomationCore_Retrieve_Focused" opcode="win:Stop" level="win:Informational" keywords="PerfInstrumentation"/>
+     <event value="109" symbol="UIAutomationCore_Retrieve_SelectedStart" version="0" task="UIAutomationCore_Retrieve_Selected" opcode="win:Start" level="win:Informational" keywords="PerfInstrumentation"/>
+     <event value="110" symbol="UIAutomationCore_Retrieve_SelectedStop" version="0" task="UIAutomationCore_Retrieve_Selected" opcode="win:Stop" level="win:Informational" keywords="PerfInstrumentation"/>
+     <event value="111" symbol="UIAutomationCore_Event_RegistrationStart" version="0" task="UIAutomationCore_Event_Registration" opcode="win:Start" level="win:Informational" keywords="PerfInstrumentation"/>
+     <event value="112" symbol="UIAutomationCore_Event_RegistrationStop" version="0" task="UIAutomationCore_Event_Registration" opcode="win:Stop" level="win:Informational" keywords="PerfInstrumentation"/>
+     <event value="113" symbol="UIAutomationCore_GetClickablePointStart" version="0" task="UIAutomationCore_GetClickablePoint" opcode="win:Start" level="win:Informational" keywords="PerfInstrumentation"/>
+     <event value="114" symbol="UIAutomationCore_GetClickablePointStop" version="0" task="UIAutomationCore_GetClickablePoint" opcode="win:Stop" level="win:Informational" keywords="PerfInstrumentation"/>
+     <event value="115" symbol="UIAutomationCore_TreeWalkerNavigateStart" version="0" task="UIAutomationCore_TreeWalkerNavigate" opcode="win:Start" level="win:Informational" keywords="PerfInstrumentation"/>
+     <event value="116" symbol="UIAutomationCore_TreeWalkerNavigateStop" version="0" task="UIAutomationCore_TreeWalkerNavigate" opcode="win:Stop" level="win:Informational" keywords="PerfInstrumentation"/>
+     <event value="117" symbol="UIAutomationCore_BuildUpdatedCacheStart" version="0" task="UIAutomationCore_BuildUpdatedCache" opcode="win:Start" level="win:Informational" keywords="PerfInstrumentation"/>
+     <event value="118" symbol="UIAutomationCore_BuildUpdatedCacheStop" version="0" task="UIAutomationCore_BuildUpdatedCache" opcode="win:Stop" level="win:Informational" keywords="PerfInstrumentation"/>
+     <event value="119" symbol="UIAutomationCore_RichEditProxy_GetTextStart" version="0" task="UIAutomationCore_RichEditProxy_GetText" opcode="win:Start" level="win:Informational" keywords="PerfInstrumentation"/>
+     <event value="120" symbol="UIAutomationCore_RichEditProxy_GetTextStop" version="0" task="UIAutomationCore_RichEditProxy_GetText" opcode="win:Stop" level="win:Informational" keywords="PerfInstrumentation"/>
+     <event value="121" symbol="UIAutomationCore_RichEditProxy_GetVisibleRangeStart" version="0" task="UIAutomationCore_RichEditProxy_GetVisibleRange" opcode="win:Start" level="win:Informational" keywords="PerfInstrumentation"/>
+     <event value="122" symbol="UIAutomationCore_RichEditProxy_GetVisibleRangeStop" version="0" task="UIAutomationCore_RichEditProxy_GetVisibleRange" opcode="win:Stop" level="win:Informational" keywords="PerfInstrumentation"/>
+     <event value="123" symbol="UIAutomationCore_EditProxy_NextWordStart" version="0" task="UIAutomationCore_EditProxy_NextWord" opcode="win:Start" level="win:Informational" keywords="PerfInstrumentation"/>
+     <event value="124" symbol="UIAutomationCore_EditProxy_NextWordStop" version="0" task="UIAutomationCore_EditProxy_NextWord" opcode="win:Stop" level="win:Informational" keywords="PerfInstrumentation"/>
+     <event value="125" symbol="UIAutomationCore_ClientConnection_CallWithReturnStart" version="0" task="UIAutomationCore_ClientConnection_CallWithReturn" opcode="win:Start" level="win:Informational" keywords="PerfInstrumentation"/>
+     <event value="126" symbol="UIAutomationCore_ClientConnection_CallWithReturnStop" version="0" task="UIAutomationCore_ClientConnection_CallWithReturn" opcode="win:Stop" level="win:Informational" keywords="PerfInstrumentation"/>
+     <event value="127" symbol="UIAutomationCore_CTextRange_ReadNextChunkStart" version="0" task="UIAutomationCore_CTextRange_ReadNextChunk" opcode="win:Start" level="win:Informational" keywords="PerfInstrumentation"/>
+     <event value="128" symbol="UIAutomationCore_CTextRange_ReadNextChunkStop" version="0" task="UIAutomationCore_CTextRange_ReadNextChunk" opcode="win:Stop" level="win:Informational" keywords="PerfInstrumentation"/>
+     <event value="129" symbol="UIAutomationCore_CTextRange_CloneStart" version="0" task="UIAutomationCore_CTextRange_Clone" opcode="win:Start" level="win:Informational" keywords="PerfInstrumentation"/>
+     <event value="130" symbol="UIAutomationCore_CTextRange_CloneStop" version="0" task="UIAutomationCore_CTextRange_Clone" opcode="win:Stop" level="win:Informational" keywords="PerfInstrumentation"/>
+     <event value="131" symbol="UIAutomationCore_CTextRange_CompareStart" version="0" task="UIAutomationCore_CTextRange_Compare" opcode="win:Start" level="win:Informational" keywords="PerfInstrumentation"/>
+     <event value="132" symbol="UIAutomationCore_CTextRange_CompareStop" version="0" task="UIAutomationCore_CTextRange_Compare" opcode="win:Stop" level="win:Informational" keywords="PerfInstrumentation"/>
+     <event value="133" symbol="UIAutomationCore_CTextRange_CompareEndpointsStart" version="0" task="UIAutomationCore_CTextRange_CompareEndpoints" opcode="win:Start" level="win:Informational" keywords="PerfInstrumentation"/>
+     <event value="134" symbol="UIAutomationCore_CTextRange_CompareEndpointsStop" version="0" task="UIAutomationCore_CTextRange_CompareEndpoints" opcode="win:Stop" level="win:Informational" keywords="PerfInstrumentation"/>
+     <event value="135" symbol="UIAutomationCore_CTextRange_ExpandToEnclosingUnitStart" version="0" task="UIAutomationCore_CTextRange_ExpandToEnclosingUnit" opcode="win:Start" level="win:Informational" keywords="PerfInstrumentation"/>
+     <event value="136" symbol="UIAutomationCore_CTextRange_ExpandToEnclosingUnitStop" version="0" task="UIAutomationCore_CTextRange_ExpandToEnclosingUnit" opcode="win:Stop" level="win:Informational" keywords="PerfInstrumentation"/>
+     <event value="137" symbol="UIAutomationCore_CTextRange_GetAttributeValueStart" version="0" task="UIAutomationCore_CTextRange_GetAttributeValue" opcode="win:Start" level="win:Informational" keywords="PerfInstrumentation"/>
+     <event value="138" symbol="UIAutomationCore_CTextRange_GetAttributeValueStop" version="0" task="UIAutomationCore_CTextRange_GetAttributeValue" opcode="win:Stop" level="win:Informational" keywords="PerfInstrumentation"/>
+     <event value="139" symbol="UIAutomationCore_CTextRange_GetEnclosingElementStart" version="0" task="UIAutomationCore_CTextRange_GetEnclosingElement" opcode="win:Start" level="win:Informational" keywords="PerfInstrumentation"/>
+     <event value="140" symbol="UIAutomationCore_CTextRange_GetEnclosingElementStop" version="0" task="UIAutomationCore_CTextRange_GetEnclosingElement" opcode="win:Stop" level="win:Informational" keywords="PerfInstrumentation"/>
+     <event value="141" symbol="UIAutomationCore_CTextRange_GetTextStart" version="0" task="UIAutomationCore_CTextRange_GetText" opcode="win:Start" level="win:Informational" keywords="PerfInstrumentation"/>
+     <event value="142" symbol="UIAutomationCore_CTextRange_GetTextStop" version="0" task="UIAutomationCore_CTextRange_GetText" opcode="win:Stop" level="win:Informational" keywords="PerfInstrumentation"/>
+     <event value="143" symbol="UIAutomationCore_CTextRange_MoveStart" version="0" task="UIAutomationCore_CTextRange_Move" opcode="win:Start" level="win:Informational" keywords="PerfInstrumentation"/>
+     <event value="144" symbol="UIAutomationCore_CTextRange_MoveStop" version="0" task="UIAutomationCore_CTextRange_Move" opcode="win:Stop" level="win:Informational" keywords="PerfInstrumentation"/>
+     <event value="145" symbol="UIAutomationCore_CTextRange_MoveEndpointByUnitStart" version="0" task="UIAutomationCore_CTextRange_MoveEndpointByUnit" opcode="win:Start" level="win:Informational" keywords="PerfInstrumentation"/>
+     <event value="146" symbol="UIAutomationCore_CTextRange_MoveEndpointByUnitStop" version="0" task="UIAutomationCore_CTextRange_MoveEndpointByUnit" opcode="win:Stop" level="win:Informational" keywords="PerfInstrumentation"/>
+     <event value="147" symbol="UIAutomationCore_CTextRange_MoveEndpointByRangeStart" version="0" task="UIAutomationCore_CTextRange_MoveEndpointByRange" opcode="win:Start" level="win:Informational" keywords="PerfInstrumentation"/>
+     <event value="148" symbol="UIAutomationCore_CTextRange_MoveEndpointByRangeStop" version="0" task="UIAutomationCore_CTextRange_MoveEndpointByRange" opcode="win:Stop" level="win:Informational" keywords="PerfInstrumentation"/>
+     <event value="149" symbol="UIAutomationCore_CTextRange_GetChildrenStart" version="0" task="UIAutomationCore_CTextRange_GetChildren" opcode="win:Start" level="win:Informational" keywords="PerfInstrumentation"/>
+     <event value="150" symbol="UIAutomationCore_CTextRange_GetChildrenStop" version="0" task="UIAutomationCore_CTextRange_GetChildren" opcode="win:Stop" level="win:Informational" keywords="PerfInstrumentation"/>
+     <event value="151" symbol="UIAutomationCore_UIAutomationCoreAPI_UiaRaiseAutomationEventStart" version="0" task="UIAutomationCore_UIAutomationCoreAPI_UiaRaiseAutomationEvent" opcode="win:Start" level="win:Informational" keywords="PerfInstrumentation" template="UIAutomationCore_UIAutomationCoreAPI_UiaRaiseAutomationEventStartArgs"/>
+     <event value="152" symbol="UIAutomationCore_UIAutomationCoreAPI_UiaRaiseAutomationEventStop" version="0" task="UIAutomationCore_UIAutomationCoreAPI_UiaRaiseAutomationEvent" opcode="win:Stop" level="win:Informational" keywords="PerfInstrumentation" template="UIAutomationCore_UIAutomationCoreAPI_UiaRaiseAutomationEventStartArgs"/>
+    </events>
+    <templates>
+     <template tid="UIAutomationCore_ProviderErrorsArgs">
+      <data name="Method" inType="win:UnicodeString"/>
+      <data name="Hresult" inType="win:UInt32"/>
+      <data name="Details" inType="win:UnicodeString"/>
+      <data name="SourceHwnd" inType="win:UnicodeString"/>
+      <data name="Provider" inType="win:UnicodeString"/>
+     </template>
+     <template tid="UIAutomationCore_OtherErrorsArgs">
+      <data name="Method" inType="win:UnicodeString"/>
+      <data name="ErrorCode" inType="win:UInt32"/>
+      <data name="Details" inType="win:UnicodeString"/>
+     </template>
+     <template tid="UIAutomationCore_ClientApiErrorsArgs">
+      <data name="Method" inType="win:UnicodeString"/>
+      <data name="Parameter" inType="win:UnicodeString"/>
+      <data name="Details" inType="win:UnicodeString"/>
+     </template>
+     <template tid="UIAutomationCore_UIAutomationCoreAPI_UiaRaiseAutomationEventStartArgs">
+      <data name="EventId" inType="win:UInt32"/>
+     </template>
+    </templates>
+   </provider>
+  </events>
+ </instrumentation>
+ <localization>
+  <resources culture="en-US">
+   <stringTable>
+    <string id="keyword_PerfInstrumentation" value="PerfInstrumentation"/>
+    <string id="task_UIAutomationCore_ProviderErrors" value="UIAutomationCore_ProviderErrors"/>
+    <string id="task_UIAutomationCore_IAccessibleErrors" value="UIAutomationCore_IAccessibleErrors"/>
+    <string id="task_UIAutomationCore_OtherErrors" value="UIAutomationCore_OtherErrors"/>
+    <string id="task_UIAutomationCore_ClientApiErrors" value="UIAutomationCore_ClientApiErrors"/>
+    <string id="task_UIAutomationCore_Property_Retrieval" value="UIAutomationCore_Property_Retrieval"/>
+    <string id="task_UIAutomationCore_Cache_Request" value="UIAutomationCore_Cache_Request"/>
+    <string id="task_UIAutomationCore_Retrieve_HitTest" value="UIAutomationCore_Retrieve_HitTest"/>
+    <string id="task_UIAutomationCore_Retrieve_Focused" value="UIAutomationCore_Retrieve_Focused"/>
+    <string id="task_UIAutomationCore_Retrieve_Selected" value="UIAutomationCore_Retrieve_Selected"/>
+    <string id="task_UIAutomationCore_Event_Registration" value="UIAutomationCore_Event_Registration"/>
+    <string id="task_UIAutomationCore_GetClickablePoint" value="UIAutomationCore_GetClickablePoint"/>
+    <string id="task_UIAutomationCore_TreeWalkerNavigate" value="UIAutomationCore_TreeWalkerNavigate"/>
+    <string id="task_UIAutomationCore_BuildUpdatedCache" value="UIAutomationCore_BuildUpdatedCache"/>
+    <string id="task_UIAutomationCore_RichEditProxy_GetText" value="UIAutomationCore_RichEditProxy_GetText"/>
+    <string id="task_UIAutomationCore_RichEditProxy_GetVisibleRange" value="UIAutomationCore_RichEditProxy_GetVisibleRange"/>
+    <string id="task_UIAutomationCore_EditProxy_NextWord" value="UIAutomationCore_EditProxy_NextWord"/>
+    <string id="task_UIAutomationCore_ClientConnection_CallWithReturn" value="UIAutomationCore_ClientConnection_CallWithReturn"/>
+    <string id="task_UIAutomationCore_CTextRange_ReadNextChunk" value="UIAutomationCore_CTextRange_ReadNextChunk"/>
+    <string id="task_UIAutomationCore_CTextRange_Clone" value="UIAutomationCore_CTextRange_Clone"/>
+    <string id="task_UIAutomationCore_CTextRange_Compare" value="UIAutomationCore_CTextRange_Compare"/>
+    <string id="task_UIAutomationCore_CTextRange_CompareEndpoints" value="UIAutomationCore_CTextRange_CompareEndpoints"/>
+    <string id="task_UIAutomationCore_CTextRange_ExpandToEnclosingUnit" value="UIAutomationCore_CTextRange_ExpandToEnclosingUnit"/>
+    <string id="task_UIAutomationCore_CTextRange_GetAttributeValue" value="UIAutomationCore_CTextRange_GetAttributeValue"/>
+    <string id="task_UIAutomationCore_CTextRange_GetEnclosingElement" value="UIAutomationCore_CTextRange_GetEnclosingElement"/>
+    <string id="task_UIAutomationCore_CTextRange_GetText" value="UIAutomationCore_CTextRange_GetText"/>
+    <string id="task_UIAutomationCore_CTextRange_Move" value="UIAutomationCore_CTextRange_Move"/>
+    <string id="task_UIAutomationCore_CTextRange_MoveEndpointByUnit" value="UIAutomationCore_CTextRange_MoveEndpointByUnit"/>
+    <string id="task_UIAutomationCore_CTextRange_MoveEndpointByRange" value="UIAutomationCore_CTextRange_MoveEndpointByRange"/>
+    <string id="task_UIAutomationCore_CTextRange_GetChildren" value="UIAutomationCore_CTextRange_GetChildren"/>
+    <string id="task_UIAutomationCore_UIAutomationCoreAPI_UiaRaiseAutomationEvent" value="UIAutomationCore_UIAutomationCoreAPI_UiaRaiseAutomationEvent"/>
+   </stringTable>
+  </resources>
+ </localization>
+</instrumentationManifest>

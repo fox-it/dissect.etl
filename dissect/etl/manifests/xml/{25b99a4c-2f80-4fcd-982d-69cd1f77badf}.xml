@@ -1,0 +1,106 @@
+<instrumentationManifest xmlns="http://schemas.microsoft.com/win/2004/08/events">
+ <instrumentation xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:win="http://manifests.microsoft.com/win/2004/08/windows/events">
+  <events>
+   <provider name="Microsoft-Windows-MCCS-NetworkHelper" guid="{25b99a4c-2f80-4fcd-982d-69cd1f77badf}" resourceFileName="Microsoft-Windows-MCCS-NetworkHelper" messageFileName="Microsoft-Windows-MCCS-NetworkHelper" symbol="MicrosoftWindowsMCCSNetworkHelper" source="Xml" >
+    <keywords>
+     <keyword name="Error" message="$(string.keyword_Error)" mask="0x1"/>
+     <keyword name="Performance" message="$(string.keyword_Performance)" mask="0x2"/>
+     <keyword name="Debug" message="$(string.keyword_Debug)" mask="0x4"/>
+     <keyword name="Warning" message="$(string.keyword_Warning)" mask="0x4000000000"/>
+     <keyword name="StateTransition" message="$(string.keyword_StateTransition)" mask="0x8000000000"/>
+     <keyword name="keyword_200000000000" message="$(string.keyword_keyword_200000000000)" mask="0x200000000000"/>
+    </keywords>
+    <tasks>
+     <task name="task_0" message="$(string.task_task_0)" value="0"/>
+     <task name="Trace" message="$(string.task_Trace)" value="19"/>
+    </tasks>
+    <events>
+     <event value="1" symbol="task_0" version="0" task="task_0" level="win:Error" keywords="Error" template="task_0Args"/>
+     <event value="2" symbol="task_02" version="0" task="task_0" level="win:Warning" keywords="Warning" template="task_0Args"/>
+     <event value="3" symbol="Trace" version="0" task="Trace" level="win:Verbose" keywords="Debug" template="TraceArgs"/>
+     <event value="101" symbol="task_0101" version="0" task="task_0" level="win:Warning" keywords="Warning" template="task_0101Args"/>
+     <event value="102" symbol="task_0102" version="0" task="task_0" level="win:Warning" keywords="Warning" template="task_0101Args"/>
+     <event value="103" symbol="task_0103" version="0" task="task_0" level="win:Warning" keywords="Warning" template="task_0103Args"/>
+     <event value="104" symbol="task_0104" version="0" task="task_0" level="win:Warning" keywords="Warning" template="task_0101Args"/>
+     <event value="105" symbol="task_0105" version="0" task="task_0" level="win:Warning" keywords="Warning" template="task_0101Args"/>
+     <event value="106" symbol="task_0106" version="0" task="task_0" level="win:Warning" keywords="Warning" template="task_0101Args"/>
+     <event value="107" symbol="task_0107" version="0" task="task_0" level="win:Warning" keywords="Warning" template="task_0103Args"/>
+     <event value="109" symbol="task_0109" version="0" task="task_0" level="win:Warning" keywords="Warning" template="task_0101Args"/>
+     <event value="110" symbol="task_0110" version="0" task="task_0" level="win:Warning" keywords="Warning" template="task_0110Args"/>
+     <event value="111" symbol="task_0111" version="0" task="task_0" level="win:Error" keywords="Error" template="task_0111Args"/>
+     <event value="201" symbol="task_0201" version="0" task="task_0" level="win:Warning" keywords="Warning" template="task_0201Args"/>
+     <event value="202" symbol="task_0202" version="0" task="task_0" level="win:Informational" keywords="StateTransition" template="task_0202Args"/>
+     <event value="203" symbol="task_0203" version="0" task="task_0" level="win:Informational" keywords="StateTransition" template="task_0203Args"/>
+     <event value="204" symbol="task_0204" version="0" task="task_0" level="win:Warning" keywords="Warning"/>
+     <event value="205" symbol="task_0205" version="0" task="task_0" level="win:Warning" keywords="Warning"/>
+     <event value="206" symbol="task_0206" version="0" task="task_0" level="win:Informational" keywords="StateTransition" template="task_0206Args"/>
+     <event value="207" symbol="task_0207" version="0" task="task_0" level="win:Warning" keywords="Warning keyword_200000000000" template="task_0207Args"/>
+     <event value="208" symbol="task_0208" version="0" task="task_0" level="win:Warning" keywords="Warning"/>
+     <event value="209" symbol="task_0209" version="0" task="task_0" level="win:Warning" keywords="Warning" template="TraceArgs"/>
+    </events>
+    <templates>
+     <template tid="task_0Args">
+      <data name="P1_HexInt32" inType="win:Int32"/>
+      <data name="P2_String" inType="win:AnsiString"/>
+      <data name="P3_UInt32" inType="win:UInt32"/>
+     </template>
+     <template tid="TraceArgs">
+      <data name="Message" inType="win:Pointer"/>
+     </template>
+     <template tid="task_0101Args">
+      <data name="P1_UInt32" inType="win:UInt32"/>
+      <data name="P2_UInt32" inType="win:UInt32"/>
+     </template>
+     <template tid="task_0103Args">
+      <data name="P1_UInt32" inType="win:UInt32"/>
+      <data name="P2_UInt32" inType="win:UInt32"/>
+      <data name="P3_UInt32" inType="win:UInt32"/>
+     </template>
+     <template tid="task_0110Args">
+      <data name="P1_String" inType="win:AnsiString"/>
+      <data name="P2_UInt32" inType="win:UInt32"/>
+      <data name="P3_UInt32" inType="win:UInt32"/>
+     </template>
+     <template tid="task_0111Args">
+      <data name="P1_UInt32" inType="win:Int32"/>
+      <data name="P2_String" inType="win:UnicodeString"/>
+     </template>
+     <template tid="task_0201Args">
+      <data name="P1_Boolean" inType="win:Boolean"/>
+      <data name="P2_Int32" inType="win:Int32"/>
+     </template>
+     <template tid="task_0202Args">
+      <data name="P1_String" inType="win:UnicodeString"/>
+      <data name="P2_Boolean" inType="win:Boolean"/>
+      <data name="P3_String" inType="win:UnicodeString"/>
+      <data name="P4_Handle" inType="win:Pointer"/>
+     </template>
+     <template tid="task_0203Args">
+      <data name="P1_String" inType="win:UnicodeString"/>
+     </template>
+     <template tid="task_0206Args">
+      <data name="P1_String" inType="win:UnicodeString"/>
+      <data name="P2_Boolean" inType="win:Boolean"/>
+     </template>
+     <template tid="task_0207Args">
+      <data name="P1_Int32" inType="win:Int32"/>
+     </template>
+    </templates>
+   </provider>
+  </events>
+ </instrumentation>
+ <localization>
+  <resources culture="en-US">
+   <stringTable>
+    <string id="keyword_Error" value="Error"/>
+    <string id="keyword_Performance" value="Performance"/>
+    <string id="keyword_Debug" value="Debug"/>
+    <string id="keyword_Warning" value="Warning"/>
+    <string id="keyword_StateTransition" value="StateTransition"/>
+    <string id="keyword_keyword_200000000000" value="keyword_200000000000"/>
+    <string id="task_task_0" value="task_0"/>
+    <string id="task_Trace" value="Trace"/>
+   </stringTable>
+  </resources>
+ </localization>
+</instrumentationManifest>

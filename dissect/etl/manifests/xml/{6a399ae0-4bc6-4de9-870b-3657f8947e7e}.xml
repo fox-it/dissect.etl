@@ -1,0 +1,18 @@
+<instrumentationManifest xmlns="http://schemas.microsoft.com/win/2004/08/events">
+ <instrumentation xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:win="http://manifests.microsoft.com/win/2004/08/windows/events">
+  <events>
+
+   <provider name="Windows Kernel" guid="{6a399ae0-4bc6-4de9-870b-3657f8947e7e}">
+    <events>
+        <event value="32" symbol="Lost_Event/RTLostEvent" version="0" task="Lost_Event" opcode="RTLostEvent" template="0xd4cbb29L"/>
+        <event value="33" symbol="Lost_Event/RTLostBuffer" version="0" task="Lost_Event" opcode="RTLostBuffer" template="0xd4cbb29L"/>
+        <event value="34" symbol="Lost_Event/RTLostFile" version="0" task="Lost_Event" opcode="RTLostFile" template="0xd4cbb29L"/>
+    </events>
+    <templates>
+     <template tid="0xd4cbb29L">
+     </template>
+    </templates>
+   </provider>
+  </events>
+ </instrumentation>
+</instrumentationManifest>

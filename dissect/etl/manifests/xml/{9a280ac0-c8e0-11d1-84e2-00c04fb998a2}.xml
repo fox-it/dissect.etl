@@ -1,0 +1,181 @@
+<instrumentationManifest xmlns="http://schemas.microsoft.com/win/2004/08/events">
+ <instrumentation xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:win="http://manifests.microsoft.com/win/2004/08/windows/events">
+  <events>
+
+   <provider name="Windows Kernel" guid="{9a280ac0-c8e0-11d1-84e2-00c04fb998a2}">
+    <events>
+        <event value="17" symbol="TcpIp/Fail" version="1" task="TcpIp" opcode="Fail" template="0xd93cec10L"/>
+        <event value="18" symbol="TcpIp/TCPCopy" version="1" task="TcpIp" opcode="TCPCopy" template="0x9d3bb782L"/>
+        <event value="19" symbol="TcpIp/ARPCopy" version="1" task="TcpIp" opcode="ARPCopy" template="0x9d3bb782L"/>
+        <event value="20" symbol="TcpIp/FullACK" version="1" task="TcpIp" opcode="FullACK" template="0x9d3bb782L"/>
+        <event value="21" symbol="TcpIp/PartACK" version="1" task="TcpIp" opcode="PartACK" template="0x9d3bb782L"/>
+        <event value="22" symbol="TcpIp/DupACK" version="1" task="TcpIp" opcode="DupACK" template="0x9d3bb782L"/>
+        <event value="10" symbol="TcpIp/Send" version="1" task="TcpIp" opcode="Send" template="0xee1ab8e5L"/>
+        <event value="16" symbol="TcpIp/Reconnect" version="1" task="TcpIp" opcode="Reconnect" template="0x9d3bb782L"/>
+        <event value="13" symbol="TcpIp/Disconnect" version="1" task="TcpIp" opcode="Disconnect" template="0x9d3bb782L"/>
+        <event value="14" symbol="TcpIp/Retransmit" version="1" task="TcpIp" opcode="Retransmit" template="0x9d3bb782L"/>
+        <event value="12" symbol="TcpIp/Connect" version="1" task="TcpIp" opcode="Connect" template="0x8b5b8748L"/>
+        <event value="15" symbol="TcpIp/Accept" version="1" task="TcpIp" opcode="Accept" template="0x8b5b8748L"/>
+        <event value="11" symbol="TcpIp/Recv" version="1" task="TcpIp" opcode="Recv" template="0x9d3bb782L"/>
+        <event value="32" symbol="TcpIp/ReconnectIPV6" version="2" task="TcpIp" opcode="ReconnectIPV6" template="0xafb7234L"/>
+        <event value="34" symbol="TcpIp/TCPCopyIPV6" version="2" task="TcpIp" opcode="TCPCopyIPV6" template="0xafb7234L"/>
+        <event value="27" symbol="TcpIp/RecvIPV6" version="2" task="TcpIp" opcode="RecvIPV6" template="0xafb7234L"/>
+        <event value="29" symbol="TcpIp/DisconnectIPV6" version="2" task="TcpIp" opcode="DisconnectIPV6" template="0xafb7234L"/>
+        <event value="30" symbol="TcpIp/RetransmitIPV6" version="2" task="TcpIp" opcode="RetransmitIPV6" template="0xafb7234L"/>
+        <event value="10" symbol="TcpIp/SendIPV4" version="2" task="TcpIp" opcode="SendIPV4" template="0xd543c8c5L"/>
+        <event value="17" symbol="TcpIp/Fail" version="2" task="TcpIp" opcode="Fail" template="0xde416463L"/>
+        <event value="12" symbol="TcpIp/ConnectIPV4" version="2" task="TcpIp" opcode="ConnectIPV4" template="0xb002f768L"/>
+        <event value="15" symbol="TcpIp/AcceptIPV4" version="2" task="TcpIp" opcode="AcceptIPV4" template="0xb002f768L"/>
+        <event value="26" symbol="TcpIp/SendIPV6" version="2" task="TcpIp" opcode="SendIPV6" template="0xc1b347edL"/>
+        <event value="16" symbol="TcpIp/ReconnectIPV4" version="2" task="TcpIp" opcode="ReconnectIPV4" template="0xa662c7a2L"/>
+        <event value="18" symbol="TcpIp/TCPCopyIPV4" version="2" task="TcpIp" opcode="TCPCopyIPV4" template="0xa662c7a2L"/>
+        <event value="11" symbol="TcpIp/RecvIPV4" version="2" task="TcpIp" opcode="RecvIPV4" template="0xa662c7a2L"/>
+        <event value="13" symbol="TcpIp/DisconnectIPV4" version="2" task="TcpIp" opcode="DisconnectIPV4" template="0xa662c7a2L"/>
+        <event value="14" symbol="TcpIp/RetransmitIPV4" version="2" task="TcpIp" opcode="RetransmitIPV4" template="0xa662c7a2L"/>
+        <event value="28" symbol="TcpIp/ConnectIPV6" version="2" task="TcpIp" opcode="ConnectIPV6" template="0x35bedc02L"/>
+        <event value="31" symbol="TcpIp/AcceptIPV6" version="2" task="TcpIp" opcode="AcceptIPV6" template="0x35bedc02L"/>
+        <event value="10" symbol="TcpIp/Send" version="0" task="TcpIp" opcode="Send" template="0x96448bb9L"/>
+        <event value="11" symbol="TcpIp/Recv" version="0" task="TcpIp" opcode="Recv" template="0x96448bb9L"/>
+        <event value="12" symbol="TcpIp/Connect" version="0" task="TcpIp" opcode="Connect" template="0x96448bb9L"/>
+        <event value="13" symbol="TcpIp/Disconnect" version="0" task="TcpIp" opcode="Disconnect" template="0x96448bb9L"/>
+        <event value="14" symbol="TcpIp/Retransmit" version="0" task="TcpIp" opcode="Retransmit" template="0x96448bb9L"/>
+        <event value="15" symbol="TcpIp/Accept" version="0" task="TcpIp" opcode="Accept" template="0x96448bb9L"/>
+    </events>
+    <templates>
+     <template tid="0xb002f768L">
+      <data name="PID" inType="win:UInt32"/>
+      <data name="size" inType="win:UInt32"/>
+      <data name="daddr" inType="win:IPAddrV4"/>
+      <data name="saddr" inType="win:IPAddrV4"/>
+      <data name="dport" inType="win:UInt16"/>
+      <data name="sport" inType="win:UInt16"/>
+      <data name="mss" inType="win:UInt16"/>
+      <data name="sackopt" inType="win:UInt16"/>
+      <data name="tsopt" inType="win:UInt16"/>
+      <data name="wsopt" inType="win:UInt16"/>
+      <data name="rcvwin" inType="win:UInt32"/>
+      <data name="rcvwinscale" inType="win:SInt16"/>
+      <data name="sndwinscale" inType="win:SInt16"/>
+      <data name="seqnum" inType="win:UInt32"/>
+      <data name="connid" inType="win:UInt32"/>
+     </template>
+     <template tid="0x96448bb9L">
+      <data name="daddr" inType="win:IPAddrV4"/>
+      <data name="saddr" inType="win:IPAddrV4"/>
+      <data name="dport" inType="win:UInt16"/>
+      <data name="sport" inType="win:UInt16"/>
+      <data name="size" inType="win:UInt32"/>
+      <data name="PID" inType="win:UInt32"/>
+     </template>
+     <template tid="0xd93cec10L">
+      <data name="Proto" inType="win:UInt32"/>
+     </template>
+     <template tid="0xa662c7a2L">
+      <data name="PID" inType="win:UInt32"/>
+      <data name="size" inType="win:UInt32"/>
+      <data name="daddr" inType="win:IPAddrV4"/>
+      <data name="saddr" inType="win:IPAddrV4"/>
+      <data name="dport" inType="win:UInt16"/>
+      <data name="sport" inType="win:UInt16"/>
+      <data name="seqnum" inType="win:UInt32"/>
+      <data name="connid" inType="win:UInt32"/>
+     </template>
+     <template tid="0xd543c8c5L">
+      <data name="PID" inType="win:UInt32"/>
+      <data name="size" inType="win:UInt32"/>
+      <data name="daddr" inType="win:IPAddrV4"/>
+      <data name="saddr" inType="win:IPAddrV4"/>
+      <data name="dport" inType="win:UInt16"/>
+      <data name="sport" inType="win:UInt16"/>
+      <data name="startime" inType="win:UInt32"/>
+      <data name="endtime" inType="win:UInt32"/>
+      <data name="seqnum" inType="win:UInt32"/>
+      <data name="connid" inType="win:UInt32"/>
+     </template>
+     <template tid="0xafb7234L">
+      <data name="PID" inType="win:UInt32"/>
+      <data name="size" inType="win:UInt32"/>
+      <data name="daddr" inType="win:IPAddrV6"/>
+      <data name="saddr" inType="win:IPAddrV6"/>
+      <data name="dport" inType="win:UInt16"/>
+      <data name="sport" inType="win:UInt16"/>
+      <data name="seqnum" inType="win:UInt32"/>
+      <data name="connid" inType="win:UInt32"/>
+     </template>
+     <template tid="0xee1ab8e5L">
+      <data name="PID" inType="win:UInt32"/>
+      <data name="size" inType="win:UInt32"/>
+      <data name="daddr" inType="win:IPAddrV4"/>
+      <data name="saddr" inType="win:IPAddrV4"/>
+      <data name="dport" inType="win:UInt16"/>
+      <data name="sport" inType="win:UInt16"/>
+      <data name="startime" inType="win:UInt32"/>
+      <data name="endtime" inType="win:UInt32"/>
+      <data name="connid" inType="win:UInt32"/>
+      <data name="seqnum" inType="win:UInt32"/>
+     </template>
+     <template tid="0xc1b347edL">
+      <data name="PID" inType="win:UInt32"/>
+      <data name="size" inType="win:UInt32"/>
+      <data name="daddr" inType="win:IPAddrV6"/>
+      <data name="saddr" inType="win:IPAddrV6"/>
+      <data name="dport" inType="win:UInt16"/>
+      <data name="sport" inType="win:UInt16"/>
+      <data name="startime" inType="win:UInt32"/>
+      <data name="endtime" inType="win:UInt32"/>
+      <data name="seqnum" inType="win:UInt32"/>
+      <data name="connid" inType="win:UInt32"/>
+     </template>
+     <template tid="0x9d3bb782L">
+      <data name="PID" inType="win:UInt32"/>
+      <data name="size" inType="win:UInt32"/>
+      <data name="daddr" inType="win:IPAddrV4"/>
+      <data name="saddr" inType="win:IPAddrV4"/>
+      <data name="dport" inType="win:UInt16"/>
+      <data name="sport" inType="win:UInt16"/>
+      <data name="connid" inType="win:UInt32"/>
+      <data name="seqnum" inType="win:UInt32"/>
+     </template>
+     <template tid="0xde416463L">
+      <data name="Proto" inType="win:UInt16"/>
+      <data name="FailureCode" inType="win:UInt16"/>
+     </template>
+     <template tid="0x35bedc02L">
+      <data name="PID" inType="win:UInt32"/>
+      <data name="size" inType="win:UInt32"/>
+      <data name="daddr" inType="win:IPAddrV6"/>
+      <data name="saddr" inType="win:IPAddrV6"/>
+      <data name="dport" inType="win:UInt16"/>
+      <data name="sport" inType="win:UInt16"/>
+      <data name="mss" inType="win:UInt16"/>
+      <data name="sackopt" inType="win:UInt16"/>
+      <data name="tsopt" inType="win:UInt16"/>
+      <data name="wsopt" inType="win:UInt16"/>
+      <data name="rcvwin" inType="win:UInt32"/>
+      <data name="rcvwinscale" inType="win:SInt16"/>
+      <data name="sndwinscale" inType="win:SInt16"/>
+      <data name="seqnum" inType="win:UInt32"/>
+      <data name="connid" inType="win:UInt32"/>
+     </template>
+     <template tid="0x8b5b8748L">
+      <data name="PID" inType="win:UInt32"/>
+      <data name="size" inType="win:UInt32"/>
+      <data name="daddr" inType="win:IPAddrV4"/>
+      <data name="saddr" inType="win:IPAddrV4"/>
+      <data name="dport" inType="win:UInt16"/>
+      <data name="sport" inType="win:UInt16"/>
+      <data name="mss" inType="win:UInt16"/>
+      <data name="sackopt" inType="win:UInt16"/>
+      <data name="tsopt" inType="win:UInt16"/>
+      <data name="wsopt" inType="win:UInt16"/>
+      <data name="rcvwin" inType="win:UInt32"/>
+      <data name="rcvwinscale" inType="win:SInt16"/>
+      <data name="sndwinscale" inType="win:SInt16"/>
+      <data name="connid" inType="win:UInt32"/>
+      <data name="seqnum" inType="win:UInt32"/>
+     </template>
+    </templates>
+   </provider>
+  </events>
+ </instrumentation>
+</instrumentationManifest>

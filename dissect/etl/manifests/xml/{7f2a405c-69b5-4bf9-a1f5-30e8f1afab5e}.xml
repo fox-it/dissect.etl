@@ -1,0 +1,435 @@
+<instrumentationManifest xmlns="http://schemas.microsoft.com/win/2004/08/events">
+ <instrumentation xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:win="http://manifests.microsoft.com/win/2004/08/windows/events">
+  <events>
+
+   <provider name="Windows Kernel" guid="{7f2a405c-69b5-4bf9-a1f5-30e8f1afab5e}">
+    <events>
+        <event value="7484" symbol="HvEvent/PauseLoopExit" version="0" task="HvEvent" opcode="PauseLoopExit" template="0x468cf365L"/>
+        <event value="7508" symbol="HvEvent/Unthrottle" version="0" task="HvEvent" opcode="Unthrottle" template="0x6abc3c47L"/>
+        <event value="7656" symbol="HvEvent/PpmPerfCheckStart" version="0" task="HvEvent" opcode="PpmPerfCheckStart" template="0x627f1637L"/>
+        <event value="7499" symbol="HvEvent/CreateVp" version="0" task="HvEvent" opcode="CreateVp" template="0x6c128668L"/>
+        <event value="7457" symbol="HvEvent/MsrRead" version="0" task="HvEvent" opcode="MsrRead" template="0x5325474fL"/>
+        <event value="7481" symbol="HvEvent/ApicWrite" version="0" task="HvEvent" opcode="ApicWrite" template="0x9ad126b6L"/>
+        <event value="7659" symbol="HvEvent/PpmExpectedUtility" version="0" task="HvEvent" opcode="PpmExpectedUtility" template="0x7fc3221dL"/>
+        <event value="7468" symbol="HvEvent/GuestShutdown" version="0" task="HvEvent" opcode="GuestShutdown" template="0x468cf365L"/>
+        <event value="7467" symbol="HvEvent/InterruptPending" version="0" task="HvEvent" opcode="InterruptPending" template="0x468cf365L"/>
+        <event value="7600" symbol="HvEvent/ContextSwitch" version="0" task="HvEvent" opcode="ContextSwitch" template="0x16e39cfeL"/>
+        <event value="7648" symbol="HvEvent/Overrun" version="0" task="HvEvent" opcode="Overrun" template="0xb35fe88eL"/>
+        <event value="7504" symbol="HvEvent/DumpIntMapping" version="0" task="HvEvent" opcode="DumpIntMapping" template="0xe7c71e48L"/>
+        <event value="7636" symbol="HvEvent/PpmSummaryInfo" version="0" task="HvEvent" opcode="PpmSummaryInfo" template="0x68ba0b9L"/>
+        <event value="7634" symbol="HvEvent/Livedump" version="0" task="HvEvent" opcode="Livedump" template="0x4c624576L"/>
+        <event value="7616" symbol="HvEvent/SchedulingUnitSwitch" version="0" task="HvEvent" opcode="SchedulingUnitSwitch" template="0x550077f2L"/>
+        <event value="7505" symbol="HvEvent/CreateIntMapping" version="0" task="HvEvent" opcode="CreateIntMapping" template="0xe7c71e48L"/>
+        <event value="7506" symbol="HvEvent/FreeIntMapping" version="0" task="HvEvent" opcode="FreeIntMapping" template="0xe7c71e48L"/>
+        <event value="7653" symbol="HvEvent/PpmCorePark" version="0" task="HvEvent" opcode="PpmCorePark" template="0x30183b1bL"/>
+        <event value="7466" symbol="HvEvent/ExternalInterrupt" version="0" task="HvEvent" opcode="ExternalInterrupt" template="0x194620b1L"/>
+        <event value="7536" symbol="HvEvent/GvaGrowVirtualTlb" version="0" task="HvEvent" opcode="GvaGrowVirtualTlb" template="0x62c7c77fL"/>
+        <event value="7620" symbol="HvEvent/ExpressScheduleFail" version="0" task="HvEvent" opcode="ExpressScheduleFail" template="0x8881ec78L"/>
+        <event value="7641" symbol="HvEvent/PpmRundownCstateInfo" version="0" task="HvEvent" opcode="PpmRundownCstateInfo" template="0x2e0a4076L"/>
+        <event value="7471" symbol="HvEvent/InvlpgInstruction" version="0" task="HvEvent" opcode="InvlpgInstruction" template="0x8433f337L"/>
+        <event value="7619" symbol="HvEvent/ExpressSchedule" version="0" task="HvEvent" opcode="ExpressSchedule" template="0xcdf03fcL"/>
+        <event value="7606" symbol="HvEvent/SetCapTimer" version="0" task="HvEvent" opcode="SetCapTimer" template="0xba2c16b5L"/>
+        <event value="7509" symbol="HvEvent/LpsetIntMapping" version="0" task="HvEvent" opcode="LpsetIntMapping" template="0xfc59fa40L"/>
+        <event value="7655" symbol="HvEvent/PpmCapEvent" version="0" task="HvEvent" opcode="PpmCapEvent" template="0xe4695090L"/>
+        <event value="7459" symbol="HvEvent/CrRead" version="0" task="HvEvent" opcode="CrRead" template="0x5325474fL"/>
+        <event value="7489" symbol="HvEvent/DeletePartition" version="0" task="HvEvent" opcode="DeletePartition" template="0x826ae0eaL"/>
+        <event value="7462" symbol="HvEvent/MwaitInstruction" version="0" task="HvEvent" opcode="MwaitInstruction" template="0x12f2377L"/>
+        <event value="7602" symbol="HvEvent/ThreadRunnableDefer" version="0" task="HvEvent" opcode="ThreadRunnableDefer" template="0xe73d7e97L"/>
+        <event value="7601" symbol="HvEvent/ThreadRunnableLocal" version="0" task="HvEvent" opcode="ThreadRunnableLocal" template="0x673933cL"/>
+        <event value="7473" symbol="HvEvent/TaskSwitch" version="0" task="HvEvent" opcode="TaskSwitch" template="0x468cf365L"/>
+        <event value="7664" symbol="HvEvent/Sample" version="0" task="HvEvent" opcode="Sample" template="0xdafecbe3L"/>
+        <event value="7618" symbol="HvEvent/SchedulingUnitRunnableDeferred" version="0" task="HvEvent" opcode="SchedulingUnitRunnableDeferred" template="0xdccc3e6L"/>
+        <event value="7491" symbol="HvEvent/RundownPartition" version="0" task="HvEvent" opcode="RundownPartition" template="0x11c79aL"/>
+        <event value="7638" symbol="HvEvent/PpmPstateInfo" version="0" task="HvEvent" opcode="PpmPstateInfo" template="0x4df8efcdL"/>
+        <event value="7643" symbol="HvEvent/PpmRundownTstateInfo" version="0" task="HvEvent" opcode="PpmRundownTstateInfo" template="0xf1f455dbL"/>
+        <event value="7650" symbol="HvEvent/CpuMapping" version="0" task="HvEvent" opcode="CpuMapping" template="0x9478336fL"/>
+        <event value="7537" symbol="HvEvent/GvaShrinkVirtualTlb" version="0" task="HvEvent" opcode="GvaShrinkVirtualTlb" template="0x14c722ccL"/>
+        <event value="7622" symbol="HvEvent/SchedulingUnitUpdateTimeslice" version="0" task="HvEvent" opcode="SchedulingUnitUpdateTimeslice" template="0x72ca1925L"/>
+        <event value="7657" symbol="HvEvent/PpmPerfCheckStop" version="0" task="HvEvent" opcode="PpmPerfCheckStop" template="0x627f1637L"/>
+        <event value="7476" symbol="HvEvent/FerrFreeze" version="0" task="HvEvent" opcode="FerrFreeze" template="0x468cf365L"/>
+        <event value="7470" symbol="HvEvent/NmiInterrupt" version="0" task="HvEvent" opcode="NmiInterrupt" template="0x468cf365L"/>
+        <event value="7665" symbol="HvEvent/HvModule" version="0" task="HvEvent" opcode="HvModule" template="0xc673242eL"/>
+        <event value="7464" symbol="HvEvent/IoPortRead" version="0" task="HvEvent" opcode="IoPortRead" template="0xd080111L"/>
+        <event value="7604" symbol="HvEvent/ExpressFail" version="0" task="HvEvent" opcode="ExpressFail" template="0x2320e06bL"/>
+        <event value="7660" symbol="HvEvent/PpmDomainPerfStateChange" version="0" task="HvEvent" opcode="PpmDomainPerfStateChange" template="0x2605e0c0L"/>
+        <event value="7474" symbol="HvEvent/InvdInstruction" version="0" task="HvEvent" opcode="InvdInstruction" template="0x468cf365L"/>
+        <event value="7483" symbol="HvEvent/NestedPageFault" version="0" task="HvEvent" opcode="NestedPageFault" template="0xf4b70bcL"/>
+        <event value="7617" symbol="HvEvent/SchedulingUnitRunnableLocal" version="0" task="HvEvent" opcode="SchedulingUnitRunnableLocal" template="0xdccc3e6L"/>
+        <event value="7469" symbol="HvEvent/EmulatedInstruction" version="0" task="HvEvent" opcode="EmulatedInstruction" template="0x468cf365L"/>
+        <event value="7463" symbol="HvEvent/CpuidInstruction" version="0" task="HvEvent" opcode="CpuidInstruction" template="0x69881acfL"/>
+        <event value="7637" symbol="HvEvent/PpmCstateInfo" version="0" task="HvEvent" opcode="PpmCstateInfo" template="0x2e0a4076L"/>
+        <event value="7605" symbol="HvEvent/ApplyCap" version="0" task="HvEvent" opcode="ApplyCap" template="0x9e553d12L"/>
+        <event value="7642" symbol="HvEvent/PpmRundownPstateInfo" version="0" task="HvEvent" opcode="PpmRundownPstateInfo" template="0x4df8efcdL"/>
+        <event value="7478" symbol="HvEvent/MemoryIntercept" version="0" task="HvEvent" opcode="MemoryIntercept" template="0x7c088489L"/>
+        <event value="7458" symbol="HvEvent/MsrWrite" version="0" task="HvEvent" opcode="MsrWrite" template="0x5325474fL"/>
+        <event value="7500" symbol="HvEvent/DeleteVp" version="0" task="HvEvent" opcode="DeleteVp" template="0x6c128668L"/>
+        <event value="7662" symbol="HvEvent/PpmPlatformStateChange" version="0" task="HvEvent" opcode="PpmPlatformStateChange" template="0x8c1f3716L"/>
+        <event value="7482" symbol="HvEvent/ApicAccess" version="0" task="HvEvent" opcode="ApicAccess" template="0x468cf365L"/>
+        <event value="7480" symbol="HvEvent/ApicEoi" version="0" task="HvEvent" opcode="ApicEoi" template="0xfad33313L"/>
+        <event value="7479" symbol="HvEvent/ReflectedException" version="0" task="HvEvent" opcode="ReflectedException" template="0xdfdb69edL"/>
+        <event value="7472" symbol="HvEvent/IretInstruction" version="0" task="HvEvent" opcode="IretInstruction" template="0x468cf365L"/>
+        <event value="7475" symbol="HvEvent/DrAccess" version="0" task="HvEvent" opcode="DrAccess" template="0x468cf365L"/>
+        <event value="7494" symbol="HvEvent/ReferenceTime" version="0" task="HvEvent" opcode="ReferenceTime" template="0x35011b2dL"/>
+        <event value="7621" symbol="HvEvent/SchedulingUnitActivateCap" version="0" task="HvEvent" opcode="SchedulingUnitActivateCap" template="0x9e513926L"/>
+        <event value="7490" symbol="HvEvent/RestorePartition" version="0" task="HvEvent" opcode="RestorePartition" template="0x11c79aL"/>
+        <event value="7652" symbol="HvEvent/PpmPolicyChange" version="0" task="HvEvent" opcode="PpmPolicyChange" template="0xf8608080L"/>
+        <event value="7669" symbol="HvEvent/String" version="0" task="HvEvent" opcode="String" template="0xbe787d72L"/>
+        <event value="7493" symbol="HvEvent/ScrubPartition" version="0" task="HvEvent" opcode="ScrubPartition" template="0x11c79aL"/>
+        <event value="7658" symbol="HvEvent/PpmRecordedUtility" version="0" task="HvEvent" opcode="PpmRecordedUtility" template="0x54376cfaL"/>
+        <event value="7603" symbol="HvEvent/Express" version="0" task="HvEvent" opcode="Express" template="0x311994e1L"/>
+        <event value="7651" symbol="HvEvent/PpmIdle" version="0" task="HvEvent" opcode="PpmIdle" template="0xc195f172L"/>
+        <event value="7607" symbol="HvEvent/ComputeTimeslice" version="0" task="HvEvent" opcode="ComputeTimeslice" template="0x8a6bb36L"/>
+        <event value="7654" symbol="HvEvent/PpmCoreUnpark" version="0" task="HvEvent" opcode="PpmCoreUnpark" template="0x30183b1bL"/>
+        <event value="7639" symbol="HvEvent/PpmTstateInfo" version="0" task="HvEvent" opcode="PpmTstateInfo" template="0xf1f455dbL"/>
+        <event value="7640" symbol="HvEvent/PpmRundownSummaryInfo" version="0" task="HvEvent" opcode="PpmRundownSummaryInfo" template="0xcee79bdaL"/>
+        <event value="7649" symbol="HvEvent/OverrunParams" version="0" task="HvEvent" opcode="OverrunParams" template="0x7ba46333L"/>
+        <event value="7661" symbol="HvEvent/PpmProcessorPerfStateChange" version="0" task="HvEvent" opcode="PpmProcessorPerfStateChange" template="0x33fb12a2L"/>
+        <event value="7477" symbol="HvEvent/RealModeInterrupt" version="0" task="HvEvent" opcode="RealModeInterrupt" template="0x468cf365L"/>
+        <event value="7450" symbol="HvEvent/Hypercall" version="0" task="HvEvent" opcode="Hypercall" template="0x44bb0affL"/>
+        <event value="7456" symbol="HvEvent/GuestException" version="0" task="HvEvent" opcode="GuestException" template="0xc9e0aef3L"/>
+        <event value="7460" symbol="HvEvent/CrWrite" version="0" task="HvEvent" opcode="CrWrite" template="0x5325474fL"/>
+        <event value="7507" symbol="HvEvent/Throttle" version="0" task="HvEvent" opcode="Throttle" template="0x55389f8aL"/>
+        <event value="7465" symbol="HvEvent/IoPortWrite" version="0" task="HvEvent" opcode="IoPortWrite" template="0xd080111L"/>
+        <event value="7492" symbol="HvEvent/InitPartition" version="0" task="HvEvent" opcode="InitPartition" template="0x11c79aL"/>
+        <event value="7538" symbol="HvEvent/GvaFlushVirtualTlb" version="0" task="HvEvent" opcode="GvaFlushVirtualTlb" template="0xb3738d74L"/>
+        <event value="7488" symbol="HvEvent/CreatePartition" version="0" task="HvEvent" opcode="CreatePartition" template="0x826ae0eaL"/>
+        <event value="7461" symbol="HvEvent/HltInstruction" version="0" task="HvEvent" opcode="HltInstruction" template="0x468cf365L"/>
+    </events>
+    <templates>
+     <template tid="0x30183b1bL">
+      <data name="PerfCheckTime" inType="win:UInt64"/>
+      <data name="LpIndex" inType="win:UInt64"/>
+     </template>
+     <template tid="0x194620b1L">
+      <data name="Vector" inType="win:UInt64"/>
+     </template>
+     <template tid="0x5325474fL">
+      <data name="GuestRip" inType="win:UInt64"/>
+      <data name="Index" inType="win:UInt64"/>
+      <data name="Value" inType="win:UInt64"/>
+     </template>
+     <template tid="0x9e553d12L">
+      <data name="NowTime" inType="win:UInt64"/>
+      <data name="PreviousDeadline" inType="win:UInt64"/>
+      <data name="BaseCap" inType="win:UInt64"/>
+      <data name="Utilization" inType="win:UInt64"/>
+      <data name="InputTimeSliceRatio" inType="win:UInt64"/>
+      <data name="AdjustedCap" inType="win:UInt64"/>
+     </template>
+     <template tid="0x2e0a4076L">
+      <data name="Type0" inType="win:UInt64"/>
+      <data name="PowerConsumption0" inType="win:UInt64"/>
+      <data name="Type1" inType="win:UInt64"/>
+      <data name="PowerConsumption1" inType="win:UInt64"/>
+      <data name="Type2" inType="win:UInt64"/>
+      <data name="PowerConsumption2" inType="win:UInt64"/>
+     </template>
+     <template tid="0x7ba46333L">
+      <data name="Param1" inType="win:UInt64"/>
+      <data name="Param2" inType="win:UInt64"/>
+      <data name="Param3" inType="win:UInt64"/>
+     </template>
+     <template tid="0xdccc3e6L">
+      <data name="SchedulerId" inType="win:UInt64"/>
+      <data name="ProcessId" inType="win:UInt64"/>
+      <data name="SchedulingUnitId" inType="win:UInt64"/>
+      <data name="LocalRunListSize" inType="win:UInt64"/>
+      <data name="SchedulerReserves" inType="win:UInt64"/>
+     </template>
+     <template tid="0x8a6bb36L">
+      <data name="TimeSlice" inType="win:UInt64"/>
+      <data name="TimeSliceRatio" inType="win:UInt64"/>
+      <data name="NowTime" inType="win:UInt64"/>
+      <data name="SchedulingInterval" inType="win:UInt64"/>
+      <data name="LocalRunListSize" inType="win:UInt64"/>
+     </template>
+     <template tid="0xb35fe88eL">
+      <data name="RunTime" inType="win:UInt64"/>
+      <data name="InterceptState" inType="win:UInt64"/>
+      <data name="CallCode" inType="win:UInt64"/>
+      <data name="Param1" inType="win:UInt64"/>
+      <data name="Param2" inType="win:UInt64"/>
+     </template>
+     <template tid="0x9ad126b6L">
+      <data name="GuestRip" inType="win:UInt64"/>
+      <data name="ByteOffset" inType="win:UInt64"/>
+      <data name="Data" inType="win:UInt64"/>
+     </template>
+     <template tid="0x9e513926L">
+      <data name="SchedulerId" inType="win:UInt64"/>
+      <data name="ProcessId" inType="win:UInt64"/>
+      <data name="SchedulingUnitId" inType="win:UInt64"/>
+      <data name="Cap" inType="win:UInt64"/>
+      <data name="MaxCappedQuantum" inType="win:UInt64"/>
+      <data name="CapEndTime" inType="win:UInt64"/>
+     </template>
+     <template tid="0xc9e0aef3L">
+      <data name="GuestRip" inType="win:UInt64"/>
+      <data name="Type" inType="win:UInt64"/>
+     </template>
+     <template tid="0xfad33313L">
+      <data name="GuestRip" inType="win:UInt64"/>
+      <data name="Vector" inType="win:UInt64"/>
+     </template>
+     <template tid="0x54376cfaL">
+      <data name="PerfCheckTime" inType="win:UInt64"/>
+      <data name="IdleTime" inType="win:UInt64"/>
+      <data name="BusyTime" inType="win:UInt64"/>
+      <data name="PercentageOfMaxFrequency" inType="win:UInt64"/>
+      <data name="Utility" inType="win:UInt64"/>
+      <data name="LpIndex" inType="win:UInt64"/>
+     </template>
+     <template tid="0x8881ec78L">
+      <data name="SchedulerId" inType="win:UInt64"/>
+      <data name="ProcessId" inType="win:UInt64"/>
+      <data name="SchedulingUnitId" inType="win:UInt64"/>
+      <data name="RequestCounter" inType="win:UInt64"/>
+     </template>
+     <template tid="0x14c722ccL">
+      <data name="OldCount" inType="win:UInt64"/>
+      <data name="NewCount" inType="win:UInt64"/>
+      <data name="FreeCount" inType="win:UInt64"/>
+     </template>
+     <template tid="0x6c128668L">
+      <data name="PartitionId" inType="win:UInt64"/>
+      <data name="ThreadId" inType="win:UInt64"/>
+      <data name="HvStatus" inType="win:UInt64"/>
+     </template>
+     <template tid="0x550077f2L">
+      <data name="SchedulerId" inType="win:UInt64"/>
+      <data name="ProcessId" inType="win:UInt64"/>
+      <data name="SchedulingUnitId" inType="win:UInt64"/>
+      <data name="SwitchReason" inType="win:UInt64"/>
+      <data name="WaitTime" inType="win:UInt64"/>
+      <data name="Quantum" inType="win:UInt64"/>
+     </template>
+     <template tid="0x55389f8aL">
+      <data name="PhysicalVector" inType="win:UInt64"/>
+      <data name="PartitionId" inType="win:UInt64"/>
+      <data name="VirtualVector" inType="win:UInt64"/>
+      <data name="EndTime" inType="win:UInt64"/>
+     </template>
+     <template tid="0xf8608080L">
+      <data name="SettingId" inType="win:UInt64"/>
+      <data name="ValueRequested" inType="win:UInt64"/>
+      <data name="ValueCurrent" inType="win:UInt64"/>
+      <data name="ValueApplied" inType="win:UInt64"/>
+     </template>
+     <template tid="0x8433f337L">
+      <data name="GuestRip" inType="win:UInt64"/>
+      <data name="GuestVa" inType="win:UInt64"/>
+     </template>
+     <template tid="0xc195f172L">
+      <data name="IdleDuration" inType="win:UInt64"/>
+      <data name="IdleState" inType="win:UInt64"/>
+      <data name="InterruptVector" inType="win:UInt64"/>
+     </template>
+     <template tid="0x627f1637L">
+      <data name="PerfCheckTime" inType="win:UInt64"/>
+     </template>
+     <template tid="0x62c7c77fL">
+      <data name="OldCount" inType="win:UInt64"/>
+      <data name="NewCount" inType="win:UInt64"/>
+     </template>
+     <template tid="0xb3738d74L">
+      <data name="PartitionId" inType="win:UInt64"/>
+     </template>
+     <template tid="0x68ba0b9L">
+      <data name="LpIndex" inType="win:UInt64"/>
+      <data name="DomainId" inType="win:UInt64"/>
+      <data name="IdleStateCount" inType="win:UInt64"/>
+      <data name="PerfStateCount" inType="win:UInt64"/>
+      <data name="ThrottleStateCount" inType="win:UInt64"/>
+      <data name="PccEnabled" inType="win:UInt64"/>
+     </template>
+     <template tid="0xbe787d72L">
+      <data name="Text" inType="win:String"/>
+     </template>
+     <template tid="0xdfdb69edL">
+      <data name="GuestRip" inType="win:UInt64"/>
+      <data name="ExceptionNumber" inType="win:UInt64"/>
+     </template>
+     <template tid="0x69881acfL">
+      <data name="GuestRip" inType="win:UInt64"/>
+      <data name="EaxInput" inType="win:UInt64"/>
+      <data name="EcxInput" inType="win:UInt64"/>
+     </template>
+     <template tid="0x35011b2dL">
+      <data name="TscOffset" inType="win:UInt64"/>
+      <data name="ReferenceTimeOffset" inType="win:UInt64"/>
+     </template>
+     <template tid="0x826ae0eaL">
+      <data name="PartitionId" inType="win:UInt64"/>
+      <data name="HvStatus" inType="win:UInt64"/>
+     </template>
+     <template tid="0x2605e0c0L">
+      <data name="PerfCheckTime" inType="win:UInt64"/>
+      <data name="Currentstate" inType="win:UInt64"/>
+      <data name="CurrentPercentageOfMaxFrequency" inType="win:UInt64"/>
+      <data name="TargetPercentageOfMaxFrequency" inType="win:UInt64"/>
+      <data name="DesiredPercentageOfMaxFrequency" inType="win:UInt64"/>
+      <data name="DomainId" inType="win:UInt64"/>
+     </template>
+     <template tid="0x2320e06bL">
+      <data name="RequestCounter" inType="win:UInt64"/>
+     </template>
+     <template tid="0xf1f455dbL">
+      <data name="PercentageOfFrequency0" inType="win:UInt64"/>
+      <data name="PercentageOfMinFrequency0" inType="win:UInt64"/>
+      <data name="PercentageOfFrequency1" inType="win:UInt64"/>
+      <data name="PercentageOfMinFrequency1" inType="win:UInt64"/>
+      <data name="PercentageOfFrequency2" inType="win:UInt64"/>
+      <data name="PercentageOfMinFrequency2" inType="win:UInt64"/>
+     </template>
+     <template tid="0x4df8efcdL">
+      <data name="Frequency0" inType="win:UInt64"/>
+      <data name="PercentageOfMaxFrequency0" inType="win:UInt64"/>
+      <data name="Frequency1" inType="win:UInt64"/>
+      <data name="PercentageOfMaxFrequency1" inType="win:UInt64"/>
+      <data name="Frequency2" inType="win:UInt64"/>
+      <data name="PercentageOfMaxFrequency2" inType="win:UInt64"/>
+     </template>
+     <template tid="0xfc59fa40L">
+      <data name="TargetLpset2" inType="win:UInt64"/>
+      <data name="TargetLpset3" inType="win:UInt64"/>
+      <data name="TargetLpset4" inType="win:UInt64"/>
+      <data name="TargetLpset5" inType="win:UInt64"/>
+      <data name="TargetLpset6" inType="win:UInt64"/>
+      <data name="TargetLpset7" inType="win:UInt64"/>
+     </template>
+     <template tid="0x8c1f3716L">
+      <data name="PlatformIdleCount" inType="win:UInt64"/>
+     </template>
+     <template tid="0xdafecbe3L">
+      <data name="PartitionId" inType="win:UInt64"/>
+      <data name="VpId" inType="win:UInt64"/>
+      <data name="Cr3" inType="win:UInt64"/>
+      <data name="Ip" inType="win:UInt64"/>
+      <data name="ProfileSource" inType="win:UInt64"/>
+      <data name="VpTsc" inType="win:UInt64"/>
+     </template>
+     <template tid="0x7fc3221dL">
+      <data name="PerfCheckTime" inType="win:UInt64"/>
+      <data name="IdleTime" inType="win:UInt64"/>
+      <data name="ExcessBusyTime" inType="win:UInt64"/>
+      <data name="PercentageOfMaxFrequency" inType="win:UInt64"/>
+      <data name="LpIndex" inType="win:UInt64"/>
+     </template>
+     <template tid="0x4c624576L">
+      <data name="PagesCopied" inType="win:UInt64"/>
+      <data name="DepositedPageCount" inType="win:UInt64"/>
+      <data name="Duration" inType="win:UInt64"/>
+     </template>
+     <template tid="0xcee79bdaL">
+      <data name="IdleStateCount" inType="win:UInt64"/>
+      <data name="PerfStateCount" inType="win:UInt64"/>
+      <data name="ThrottleStateCount" inType="win:UInt64"/>
+      <data name="PccEnabled" inType="win:UInt64"/>
+     </template>
+     <template tid="0x468cf365L">
+      <data name="GuestRip" inType="win:UInt64"/>
+     </template>
+     <template tid="0xd080111L">
+      <data name="GuestRip" inType="win:UInt64"/>
+      <data name="Port" inType="win:UInt64"/>
+      <data name="Value" inType="win:UInt64"/>
+     </template>
+     <template tid="0x6abc3c47L">
+      <data name="PhysicalVector" inType="win:UInt64"/>
+      <data name="PartitionId" inType="win:UInt64"/>
+     </template>
+     <template tid="0x12f2377L">
+      <data name="GuestRip" inType="win:UInt64"/>
+      <data name="MwaitExtension" inType="win:UInt64"/>
+      <data name="MwaitHint" inType="win:UInt64"/>
+     </template>
+     <template tid="0x72ca1925L">
+      <data name="SchedulerId" inType="win:UInt64"/>
+      <data name="ProcessId" inType="win:UInt64"/>
+      <data name="SchedulingUnitId" inType="win:UInt64"/>
+      <data name="TimeSlice" inType="win:UInt64"/>
+      <data name="SchedulingInterval" inType="win:UInt64"/>
+      <data name="LocalRunListSize" inType="win:UInt64"/>
+     </template>
+     <template tid="0x44bb0affL">
+      <data name="GuestRip" inType="win:UInt64"/>
+      <data name="InputValue" inType="win:UInt64"/>
+     </template>
+     <template tid="0x33fb12a2L">
+      <data name="PerfCheckTime" inType="win:UInt64"/>
+      <data name="Currentstate" inType="win:UInt64"/>
+      <data name="CurrentPercentageOfMaxFrequency" inType="win:UInt64"/>
+      <data name="TargetPercentageOfMaxFrequency" inType="win:UInt64"/>
+      <data name="LpIndex" inType="win:UInt64"/>
+      <data name="DomainId" inType="win:UInt64"/>
+     </template>
+     <template tid="0xba2c16b5L">
+      <data name="ExpirationTime" inType="win:UInt64"/>
+     </template>
+     <template tid="0x16e39cfeL">
+      <data name="ProcessId" inType="win:UInt64"/>
+      <data name="ThreadId" inType="win:UInt64"/>
+      <data name="TscOffset" inType="win:UInt64"/>
+      <data name="Reason" inType="win:UInt64"/>
+      <data name="WaitTime" inType="win:UInt64"/>
+      <data name="Quantum" inType="win:UInt64"/>
+     </template>
+     <template tid="0xcdf03fcL">
+      <data name="SchedulerId" inType="win:UInt64"/>
+      <data name="SignaledProcessorSet" inType="win:UInt64"/>
+     </template>
+     <template tid="0xf4b70bcL">
+      <data name="GuestRip" inType="win:UInt64"/>
+      <data name="AccessType" inType="win:UInt64"/>
+      <data name="Gpa" inType="win:UInt64"/>
+     </template>
+     <template tid="0x9478336fL">
+      <data name="CpuNumber" inType="win:UInt64"/>
+      <data name="LpIndex" inType="win:UInt64"/>
+     </template>
+     <template tid="0x673933cL">
+      <data name="ProcessId" inType="win:UInt64"/>
+      <data name="ThreadId" inType="win:UInt64"/>
+      <data name="CpuReserves" inType="win:UInt64"/>
+     </template>
+     <template tid="0x311994e1L">
+      <data name="TargetProcessorSet" inType="win:UInt64"/>
+      <data name="SignaledProcessorSet" inType="win:UInt64"/>
+     </template>
+     <template tid="0x7c088489L">
+      <data name="GuestRip" inType="win:UInt64"/>
+      <data name="GpaInterceptType" inType="win:UInt64"/>
+     </template>
+     <template tid="0xe7c71e48L">
+      <data name="DeviceId" inType="win:UInt64"/>
+      <data name="PartitionId" inType="win:UInt64"/>
+      <data name="TargetInfo" inType="win:UInt64"/>
+      <data name="TargetLpset0" inType="win:UInt64"/>
+      <data name="TargetLpset1" inType="win:UInt64"/>
+      <data name="TargetVpset" inType="win:UInt64"/>
+     </template>
+     <template tid="0xe73d7e97L">
+      <data name="ProcessId" inType="win:UInt64"/>
+      <data name="ThreadId" inType="win:UInt64"/>
+      <data name="CpuReserves" inType="win:UInt64"/>
+      <data name="CpuIndex" inType="win:UInt64"/>
+     </template>
+     <template tid="0x11c79aL">
+      <data name="PartitionId" inType="win:UInt64"/>
+      <data name="TscOffset" inType="win:UInt64"/>
+      <data name="ReferenceTimeOffset" inType="win:UInt64"/>
+     </template>
+     <template tid="0xc673242eL">
+      <data name="HypervisorBaseAddress" inType="win:UInt64"/>
+     </template>
+     <template tid="0xe4695090L">
+      <data name="LpIndex" inType="win:UInt64"/>
+      <data name="PStateCap" inType="win:UInt64"/>
+      <data name="TStateCap" inType="win:UInt64"/>
+      <data name="ThermalCap" inType="win:UInt64"/>
+     </template>
+    </templates>
+   </provider>
+  </events>
+ </instrumentation>
+</instrumentationManifest>

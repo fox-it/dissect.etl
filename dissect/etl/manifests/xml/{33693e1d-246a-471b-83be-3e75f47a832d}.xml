@@ -1,0 +1,70 @@
+<instrumentationManifest xmlns="http://schemas.microsoft.com/win/2004/08/events">
+ <instrumentation xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:win="http://manifests.microsoft.com/win/2004/08/windows/events">
+  <events>
+   <provider name="Microsoft-Windows-BTH-BTHUSB" guid="{33693e1d-246a-471b-83be-3e75f47a832d}" resourceFileName="Microsoft-Windows-BTH-BTHUSB" messageFileName="Microsoft-Windows-BTH-BTHUSB" symbol="MicrosoftWindowsBTHBTHUSB" source="Xml" >
+    <keywords>
+     <keyword name="Diagnostic" message="$(string.keyword_Diagnostic)" mask="0x1"/>
+    </keywords>
+    <tasks>
+     <task name="task_0" message="$(string.task_task_0)" value="0"/>
+     <task name="RadioHostController" message="$(string.task_RadioHostController)" value="1">
+>
+      <opcodes>
+       <opcode name="Information" message="$(string.opcode_RadioHostControllerInformation)" value="14"/>
+      </opcodes>
+     </task>
+    </tasks>
+    <maps>
+     <valueMap name="BIP_Type">
+      <map value="0x0" message="$(string.map_BIP_TypeNULL_PKT)"/>
+      <map value="0x1" message="$(string.map_BIP_TypeCMND_PKT)"/>
+      <map value="0x2" message="$(string.map_BIP_TypeEVENT_PKT)"/>
+      <map value="0x3" message="$(string.map_BIP_TypeDATA_PKT_R)"/>
+      <map value="0x4" message="$(string.map_BIP_TypeDATA_PKT_W)"/>
+      <map value="0x5" message="$(string.map_BIP_TypeSCO_PKT_R)"/>
+      <map value="0x6" message="$(string.map_BIP_TypeSCO_PKT_W)"/>
+      <map value="0x7" message="$(string.map_BIP_TypePOWER_PKT_ENTER_SUSPEND)"/>
+     </valueMap>
+    </maps>
+    <events>
+     <event value="1" symbol="RadioHostControllerInformation" version="0" task="RadioHostController" opcode="Information" level="win:Informational" keywords="Diagnostic" template="RadioHostControllerInformationArgs"/>
+     <event value="2" symbol="task_0" version="0" task="task_0" level="win:Informational" template="task_0Args"/>
+     <event value="3" symbol="task_03" version="0" task="task_0" level="win:Informational" template="task_03Args"/>
+    </events>
+    <templates>
+     <template tid="RadioHostControllerInformationArgs">
+      <data name="fid_BTHUSB_HC" inType="win:Int8"/>
+      <data name="fid_BTHUSB_HC_SELECTIVE_SUSPEND" inType="win:Int16"/>
+      <data name="fid_BTHUSB_HC_Pdo_Name" inType="win:UnicodeString"/>
+     </template>
+     <template tid="task_0Args">
+      <data name="BIP_Type" inType="win:UInt8" map="BIP_Type"/>
+      <data name="BIP_Length" inType="win:UInt32"/>
+     </template>
+     <template tid="task_03Args">
+      <data name="BIP_Type" inType="win:UInt8"/>
+      <data name="BIP_Length" inType="win:UInt32"/>
+     </template>
+    </templates>
+   </provider>
+  </events>
+ </instrumentation>
+ <localization>
+  <resources culture="en-US">
+   <stringTable>
+    <string id="keyword_Diagnostic" value="Diagnostic"/>
+    <string id="task_task_0" value="task_0"/>
+    <string id="task_RadioHostController" value="RadioHostController"/>
+    <string id="opcode_RadioHostControllerInformation" value="Information"/>
+    <string id="map_BIP_TypeNULL_PKT" value="NULL_PKT"/>
+    <string id="map_BIP_TypeCMND_PKT" value="CMND_PKT"/>
+    <string id="map_BIP_TypeEVENT_PKT" value="EVENT_PKT"/>
+    <string id="map_BIP_TypeDATA_PKT_R" value="DATA_PKT_R"/>
+    <string id="map_BIP_TypeDATA_PKT_W" value="DATA_PKT_W"/>
+    <string id="map_BIP_TypeSCO_PKT_R" value="SCO_PKT_R"/>
+    <string id="map_BIP_TypeSCO_PKT_W" value="SCO_PKT_W"/>
+    <string id="map_BIP_TypePOWER_PKT_ENTER_SUSPEND" value="POWER_PKT_ENTER_SUSPEND"/>
+   </stringTable>
+  </resources>
+ </localization>
+</instrumentationManifest>

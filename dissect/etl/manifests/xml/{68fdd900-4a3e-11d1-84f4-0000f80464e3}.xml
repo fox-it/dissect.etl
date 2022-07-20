@@ -1,0 +1,98 @@
+<instrumentationManifest xmlns="http://schemas.microsoft.com/win/2004/08/events">
+ <instrumentation xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:win="http://manifests.microsoft.com/win/2004/08/windows/events">
+  <events>
+
+   <provider name="Windows Kernel" guid="{68fdd900-4a3e-11d1-84f4-0000f80464e3}">
+    <events>
+        <event value="66" symbol="EventTraceEvent/BuildInfo" version="2" task="EventTraceEvent" opcode="BuildInfo" template="0x60b881d9L"/>
+        <event value="64" symbol="EventTraceEvent/DbgIdRSDS" version="2" task="EventTraceEvent" opcode="DbgIdRSDS" template="0x15284aa3L"/>
+        <event value="32" symbol="EventTraceEvent/EndExtension" version="2" task="EventTraceEvent" opcode="EndExtension" template="Header_Extension_TypeGroup"/>
+        <event value="5" symbol="EventTraceEvent/Extension" version="2" task="EventTraceEvent" opcode="Extension" template="Header_Extension_TypeGroup"/>
+        <event value="80" symbol="EventTraceEvent/PartitionInfoExtension" version="2" task="EventTraceEvent" opcode="PartitionInfoExtension" template="Header_PartitionInformation_TypeGroup"/>
+        <event value="0" symbol="EventTraceEvent/Header" version="2" task="EventTraceEvent" opcode="Header" template="EventTrace_Header"/>
+        <event value="67" symbol="EventTraceEvent/ProviderBinaryPath" version="2" task="EventTraceEvent" opcode="ProviderBinaryPath" template="0x82e6c198L"/>
+        <event value="8" symbol="EventTraceEvent/RDComplete" version="2" task="EventTraceEvent" opcode="RDComplete" template="CompCS"/>
+        <event value="8" symbol="EventTraceEvent/RDComplete" version="0" task="EventTraceEvent" opcode="RDComplete" template="CompCS"/>
+        <event value="32" symbol="EventTraceEvent/EndExtension" version="0" task="EventTraceEvent" opcode="EndExtension" template="0x446bbc3eL"/>
+        <event value="5" symbol="EventTraceEvent/Extension" version="0" task="EventTraceEvent" opcode="Extension" template="0x446bbc3eL"/>
+        <event value="0" symbol="EventTraceEvent/Header" version="0" task="EventTraceEvent" opcode="Header" template="EventTrace_Header"/>
+        <event value="0" symbol="EventTraceEvent/Header" version="1" task="EventTraceEvent" opcode="Header" template="EventTrace_Header"/>
+        <event value="8" symbol="EventTraceEvent/RDComplete" version="1" task="EventTraceEvent" opcode="RDComplete" template="CompCS"/>
+        <event value="32" symbol="EventTraceEvent/EndExtension" version="1" task="EventTraceEvent" opcode="EndExtension" template="0x446bbc3eL"/>
+        <event value="5" symbol="EventTraceEvent/Extension" version="1" task="EventTraceEvent" opcode="Extension" template="0x446bbc3eL"/>
+    </events>
+    <templates>
+     <template tid="0x15284aa3L">
+      <data name="Guid" inType="win:GUID"/>
+      <data name="Age" inType="win:UInt32"/>
+      <data name="PdbName" inType="win:String"/>
+     </template>
+     <template tid="0x82e6c198L">
+      <data name="GuidCount" inType="win:UInt32"/>
+      <data name="Guid" inType="win:GUID" max="GuidCount"/>
+      <data name="BinaryPath" inType="win:WString"/>
+     </template>
+     <template tid="EventTrace_Header">
+      <data name="BufferSize" inType="win:UInt32"/>
+      <data name="Version" inType="win:UInt32"/>
+      <data name="ProviderVersion" inType="win:UInt32"/>
+      <data name="NumberOfProcessors" inType="win:UInt32"/>
+      <data name="EndTime" inType="win:UInt64"/>
+      <data name="TimerResolution" inType="win:UInt32"/>
+      <data name="MaxFileSize" inType="win:UInt32"/>
+      <data name="LogFileMode" inType="win:UInt32"/>
+      <data name="BuffersWritten" inType="win:UInt32"/>
+      <data name="StartBuffers" inType="win:UInt32"/>
+      <data name="PointerSize" inType="win:UInt32"/>
+      <data name="EventsLost" inType="win:UInt32"/>
+      <data name="CPUSpeed" inType="win:UInt32"/>
+      <data name="LoggerName" inType="win:Pointer"/>
+      <data name="LogFileName" inType="win:Pointer"/>
+      <data name="TimeZoneInformation" inType="win:UInt8" max="176"/>
+      <data name="BootTime" inType="win:UInt64"/>
+      <data name="PerfFreq" inType="win:UInt64"/>
+      <data name="StartTime" inType="win:UInt64"/>
+      <data name="ReservedFlags" inType="win:UInt32"/>
+      <data name="BuffersLost" inType="win:UInt32"/>
+      <data name="SessionNameString" inType="win:WString"/>
+      <data name="LogFileNameString" inType="win:WString"/>
+     </template>
+     <template tid="Header_Extension_TypeGroup">
+      <data name="GroupMask1" inType="win:UInt32"/>
+      <data name="GroupMask2" inType="win:UInt32"/>
+      <data name="GroupMask3" inType="win:UInt32"/>
+      <data name="GroupMask4" inType="win:UInt32"/>
+      <data name="GroupMask5" inType="win:UInt32"/>
+      <data name="GroupMask6" inType="win:UInt32"/>
+      <data name="GroupMask7" inType="win:UInt32"/>
+      <data name="GroupMask8" inType="win:UInt32"/>
+      <data name="KernelEventVersion" inType="win:UInt32"/>
+     </template>
+     <template tid="0x446bbc3eL">
+      <data name="GroupMask1" inType="win:UInt32"/>
+      <data name="GroupMask2" inType="win:UInt32"/>
+      <data name="GroupMask3" inType="win:UInt32"/>
+      <data name="GroupMask4" inType="win:UInt32"/>
+      <data name="GroupMask5" inType="win:UInt32"/>
+      <data name="GroupMask6" inType="win:UInt32"/>
+      <data name="GroupMask7" inType="win:UInt32"/>
+      <data name="GroupMask8" inType="win:UInt32"/>
+     </template>
+     <template tid="Header_PartitionInformation_TypeGroup">
+      <data name="EventVersion" inType="win:UInt16"/>
+      <data name="Reserved" inType="win:UInt16"/>
+      <data name="PartitionType" inType="win:UInt32"/>
+      <data name="QpcOffsetFromRoot" inType="win:SInt64"/>
+      <data name="PartitionId" inType="win:GUID"/>
+      <data name="ParentId" inType="win:GUID"/>
+     </template>
+     <template tid="CompCS">
+     </template>
+     <template tid="0x60b881d9L">
+      <data name="BuildString" inType="win:String"/>
+     </template>
+    </templates>
+   </provider>
+  </events>
+ </instrumentation>
+</instrumentationManifest>

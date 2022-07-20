@@ -1,0 +1,516 @@
+<instrumentationManifest xmlns="http://schemas.microsoft.com/win/2004/08/events">
+ <instrumentation xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:win="http://manifests.microsoft.com/win/2004/08/windows/events">
+  <events>
+   <provider name="Microsoft-Office-Word3" guid="{a1b69d49-2195-4f59-9d33-bdf30c0fe473}" resourceFileName="Microsoft-Office-Word3" messageFileName="Microsoft-Office-Word3" symbol="MicrosoftOfficeWord3" source="Xml" >
+    <keywords>
+     <keyword name="OCSB" message="$(string.keyword_OCSB)" mask="0x1"/>
+     <keyword name="CoauthUndo" message="$(string.keyword_CoauthUndo)" mask="0x2"/>
+     <keyword name="Hashtags" message="$(string.keyword_Hashtags)" mask="0x4"/>
+     <keyword name="Emojis" message="$(string.keyword_Emojis)" mask="0x8"/>
+     <keyword name="AsyncEdit" message="$(string.keyword_AsyncEdit)" mask="0x10"/>
+     <keyword name="Forms" message="$(string.keyword_Forms)" mask="0x20"/>
+     <keyword name="FileNew" message="$(string.keyword_FileNew)" mask="0x40"/>
+     <keyword name="Inval" message="$(string.keyword_Inval)" mask="0x80"/>
+     <keyword name="SuggestionService" message="$(string.keyword_SuggestionService)" mask="0x100"/>
+    </keywords>
+    <tasks>
+     <task name="task_0" message="$(string.task_task_0)" value="0">
+>
+      <opcodes>
+       <opcode name="opcodeError" message="$(string.opcode_task_0opcodeError)" value="10"/>
+       <opcode name="opcodeWarning" message="$(string.opcode_task_0opcodeWarning)" value="11"/>
+      </opcodes>
+     </task>
+     <task name="tskVclok" message="$(string.task_tskVclok)" value="1">
+>
+      <opcodes>
+       <opcode name="VclokEntryPacketDelayed" message="$(string.opcode_tskVclokVclokEntryPacketDelayed)" value="12"/>
+       <opcode name="VclokOnUploadComplete" message="$(string.opcode_tskVclokVclokOnUploadComplete)" value="14"/>
+       <opcode name="VclokOnSaveComplete" message="$(string.opcode_tskVclokVclokOnSaveComplete)" value="15"/>
+      </opcodes>
+     </task>
+     <task name="tskHashtags" message="$(string.task_tskHashtags)" value="2">
+>
+      <opcodes>
+       <opcode name="HashtagAdded" message="$(string.opcode_tskHashtagsHashtagAdded)" value="10"/>
+       <opcode name="HashtagRemoved" message="$(string.opcode_tskHashtagsHashtagRemoved)" value="11"/>
+       <opcode name="HashtagError" message="$(string.opcode_tskHashtagsHashtagError)" value="12"/>
+       <opcode name="HashtagFlyoutInvoke" message="$(string.opcode_tskHashtagsHashtagFlyoutInvoke)" value="13"/>
+       <opcode name="HashtagFlyoutDismiss" message="$(string.opcode_tskHashtagsHashtagFlyoutDismiss)" value="14"/>
+       <opcode name="HashtagDocOpen" message="$(string.opcode_tskHashtagsHashtagDocOpen)" value="15"/>
+       <opcode name="HashtagNotificationCollectorProcessList" message="$(string.opcode_tskHashtagsHashtagNotificationCollectorProcessList)" value="16"/>
+       <opcode name="HashtagNotificationCollectorResetList" message="$(string.opcode_tskHashtagsHashtagNotificationCollectorResetList)" value="17"/>
+      </opcodes>
+     </task>
+     <task name="tskEmojis" message="$(string.task_tskEmojis)" value="3">
+>
+      <opcodes>
+       <opcode name="EmojiFlyoutInvoke" message="$(string.opcode_tskEmojisEmojiFlyoutInvoke)" value="10"/>
+       <opcode name="EmojiFlyoutDismiss" message="$(string.opcode_tskEmojisEmojiFlyoutDismiss)" value="11"/>
+      </opcodes>
+     </task>
+     <task name="tskCoauthUndo" message="$(string.task_tskCoauthUndo)" value="4">
+>
+      <opcodes>
+       <opcode name="CoauthUndoAttemptUndoWithConflict" message="$(string.opcode_tskCoauthUndoCoauthUndoAttemptUndoWithConflict)" value="10"/>
+      </opcodes>
+     </task>
+     <task name="tskFileNew" message="$(string.task_tskFileNew)" value="5">
+>
+      <opcodes>
+       <opcode name="DocDirtyAfterCreation" message="$(string.opcode_tskFileNewDocDirtyAfterCreation)" value="10"/>
+       <opcode name="AutoCreateStateStart" message="$(string.opcode_tskFileNewAutoCreateStateStart)" value="11"/>
+       <opcode name="AutoCreateStateUpdate" message="$(string.opcode_tskFileNewAutoCreateStateUpdate)" value="12"/>
+       <opcode name="AutoCreateStateEnd" message="$(string.opcode_tskFileNewAutoCreateStateEnd)" value="13"/>
+      </opcodes>
+     </task>
+     <task name="tskInval" message="$(string.task_tskInval)" value="6">
+>
+      <opcodes>
+       <opcode name="TrashWwdPages" message="$(string.opcode_tskInvalTrashWwdPages)" value="10"/>
+       <opcode name="InvalDoc" message="$(string.opcode_tskInvalInvalDoc)" value="11"/>
+       <opcode name="InvalCp" message="$(string.opcode_tskInvalInvalCp)" value="12"/>
+       <opcode name="InvalRegion" message="$(string.opcode_tskInvalInvalRegion)" value="13"/>
+       <opcode name="InvalRegionVerbose" message="$(string.opcode_tskInvalInvalRegionVerbose)" value="14"/>
+       <opcode name="InvalCpDisp" message="$(string.opcode_tskInvalInvalCpDisp)" value="15"/>
+      </opcodes>
+     </task>
+     <task name="tskForms" message="$(string.task_tskForms)" value="41">
+>
+      <opcodes>
+       <opcode name="DocHasFormsField" message="$(string.opcode_tskFormsDocHasFormsField)" value="10"/>
+      </opcodes>
+     </task>
+     <task name="tskOCSB" message="$(string.task_tskOCSB)" value="1065"/>
+     <task name="tskAsyncEdit" message="$(string.task_tskAsyncEdit)" value="1069"/>
+     <task name="tskSuggestionService" message="$(string.task_tskSuggestionService)" value="1073"/>
+    </tasks>
+    <maps>
+     <valueMap name="PickerDismissalReasonWord3">
+      <map value="0x0" message="$(string.map_PickerDismissalReasonWord3No Results)"/>
+      <map value="0x1" message="$(string.map_PickerDismissalReasonWord3Breaking Char Entered)"/>
+      <map value="0x2" message="$(string.map_PickerDismissalReasonWord3Escape Key Pressed)"/>
+      <map value="0x3" message="$(string.map_PickerDismissalReasonWord3IME Invoked)"/>
+      <map value="0x4" message="$(string.map_PickerDismissalReasonWord3Gesture Inserted)"/>
+      <map value="0x5" message="$(string.map_PickerDismissalReasonWord3Soft Dismiss or Other)"/>
+      <map value="0x6" message="$(string.map_PickerDismissalReasonWord3Paste)"/>
+      <map value="0x7" message="$(string.map_PickerDismissalReasonWord3Insert failure required explicit dismissal)"/>
+     </valueMap>
+     <bitMap name="Grftr">
+      <map value="0x1" message="$(string.map_GrftrRebuildDrus)"/>
+      <map value="0x2" message="$(string.map_GrftrSamePageSize)"/>
+      <map value="0x4" message="$(string.map_GrftrRebuildDrsels)"/>
+      <map value="0x8" message="$(string.map_GrftrNoRM)"/>
+      <map value="0x10" message="$(string.map_GrftrCheckDrus)"/>
+     </bitMap>
+     <bitMap name="Grfef2Low">
+      <map value="0x1" message="$(string.map_Grfef2LowCopyCasaBmks)"/>
+      <map value="0x2" message="$(string.map_Grfef2LowNoDocTabberInval)"/>
+      <map value="0x4" message="$(string.map_Grfef2LowAllowShapesInMath)"/>
+      <map value="0x8" message="$(string.map_Grfef2LowCopyAtnCasaBmks)"/>
+      <map value="0x10" message="$(string.map_Grfef2LowNoE2oTxbxsMark)"/>
+      <map value="0x20" message="$(string.map_Grfef2LowPreserveShapeId)"/>
+      <map value="0x40" message="$(string.map_Grfef2LowDontCopyTxbxs)"/>
+      <map value="0x80" message="$(string.map_Grfef2LowDontDeleteTxbxs)"/>
+      <map value="0x100" message="$(string.map_Grfef2LowInsertCustomXmlTag)"/>
+      <map value="0x200" message="$(string.map_Grfef2LowCopyObjectIds)"/>
+      <map value="0x400" message="$(string.map_Grfef2LowDontAdjustE2oSels)"/>
+      <map value="0x800" message="$(string.map_Grfef2LowNoStoreDeleteOnBkmkDelete)"/>
+      <map value="0x1000" message="$(string.map_Grfef2LowDontCloneArtos)"/>
+      <map value="0x2000" message="$(string.map_Grfef2LowDontFireUiaTextChanged)"/>
+      <map value="0x4000" message="$(string.map_Grfef2LowNoEcmanInval)"/>
+      <map value="0x8000" message="$(string.map_Grfef2LowNoMntrInval)"/>
+      <map value="0x10000" message="$(string.map_Grfef2LowNoPdodHspClone)"/>
+      <map value="0x20000" message="$(string.map_Grfef2LowInsertBufferShift)"/>
+      <map value="0x40000" message="$(string.map_Grfef2LowUimInsert)"/>
+      <map value="0x80000" message="$(string.map_Grfef2LowPreserveFXB)"/>
+     </bitMap>
+     <valueMap name="UndoConflictReason">
+      <map value="0x0" message="$(string.map_UndoConflictReasonNone)"/>
+      <map value="0x1" message="$(string.map_UndoConflictReasonOut of memory)"/>
+      <map value="0x2" message="$(string.map_UndoConflictReasonIuad invalid)"/>
+      <map value="0x3" message="$(string.map_UndoConflictReasonBad CA)"/>
+      <map value="0x4" message="$(string.map_UndoConflictReasonfciUser unsupported)"/>
+      <map value="0x5" message="$(string.map_UndoConflictReasonfciCoauth unsupported)"/>
+      <map value="0x6" message="$(string.map_UndoConflictReasonCA in header doc)"/>
+      <map value="0x7" message="$(string.map_UndoConflictReasonfSaveAll)"/>
+      <map value="0x8" message="$(string.map_UndoConflictReasonUad and domo conflict)"/>
+      <map value="0x9" message="$(string.map_UndoConflictReasonDomo overlap)"/>
+      <map value="0xa" message="$(string.map_UndoConflictReasonDomo list broken)"/>
+     </valueMap>
+    </maps>
+    <events>
+     <event value="0" symbol="tskVclok" version="0" task="tskVclok" level="win:Informational" keywords="OCSB"/>
+     <event value="2" symbol="tskVclokVclokEntryPacketDelayed" version="0" task="tskVclok" opcode="VclokEntryPacketDelayed" level="win:Informational" keywords="OCSB" template="tskVclokVclokEntryPacketDelayedArgs"/>
+     <event value="3" symbol="tskVclok3" version="0" task="tskVclok" level="win:Informational" keywords="OCSB"/>
+     <event value="4" symbol="tskVclokVclokOnUploadComplete_V1" version="1" task="tskVclok" opcode="VclokOnUploadComplete" level="win:Informational" keywords="OCSB" template="tskVclokVclokOnUploadCompleteArgs_V1"/>
+     <event value="5" symbol="tskHashtagsHashtagAdded" version="0" task="tskHashtags" opcode="HashtagAdded" level="win:Verbose" keywords="Hashtags" template="tskHashtagsHashtagAddedArgs"/>
+     <event value="6" symbol="tskHashtagsHashtagRemoved" version="0" task="tskHashtags" opcode="HashtagRemoved" level="win:Verbose" keywords="Hashtags"/>
+     <event value="7" symbol="tskHashtagsHashtagError" version="0" task="tskHashtags" opcode="HashtagError" level="win:Verbose" keywords="Hashtags"/>
+     <event value="8" symbol="tskHashtagsHashtagFlyoutInvoke" version="0" task="tskHashtags" opcode="HashtagFlyoutInvoke" level="win:Verbose" keywords="Hashtags"/>
+     <event value="9" symbol="tskHashtagsHashtagFlyoutDismiss" version="0" task="tskHashtags" opcode="HashtagFlyoutDismiss" level="win:Verbose" keywords="Hashtags" template="tskHashtagsHashtagFlyoutDismissArgs"/>
+     <event value="10" symbol="tskHashtagsHashtagDocOpen" version="0" task="tskHashtags" opcode="HashtagDocOpen" level="win:Verbose" keywords="Hashtags" template="tskHashtagsHashtagDocOpenArgs"/>
+     <event value="11" symbol="tskHashtagsHashtagDocOpen11" version="0" task="tskHashtags" opcode="HashtagDocOpen" level="win:Verbose" keywords="Hashtags" template="tskHashtagsHashtagDocOpen11Args"/>
+     <event value="12" symbol="tskHashtagsHashtagNotificationCollectorProcessList" version="0" task="tskHashtags" opcode="HashtagNotificationCollectorProcessList" level="win:Verbose" keywords="Hashtags" template="tskHashtagsHashtagNotificationCollectorProcessListArgs"/>
+     <event value="13" symbol="tskHashtagsHashtagNotificationCollectorResetList" version="0" task="tskHashtags" opcode="HashtagNotificationCollectorResetList" level="win:Verbose" keywords="Hashtags" template="tskHashtagsHashtagNotificationCollectorResetListArgs"/>
+     <event value="14" symbol="tskEmojisEmojiFlyoutInvoke" version="0" task="tskEmojis" opcode="EmojiFlyoutInvoke" level="win:Verbose" keywords="Emojis"/>
+     <event value="15" symbol="tskEmojisEmojiFlyoutDismiss" version="0" task="tskEmojis" opcode="EmojiFlyoutDismiss" level="win:Verbose" keywords="Emojis" template="tskEmojisEmojiFlyoutDismissArgs"/>
+     <event value="16" symbol="tskVclokVclokOnSaveComplete_V1" version="1" task="tskVclok" opcode="VclokOnSaveComplete" level="win:Informational" keywords="OCSB" template="tskVclokVclokOnSaveCompleteArgs_V1"/>
+     <event value="18" symbol="tskFormsDocHasFormsField" version="0" task="tskForms" opcode="DocHasFormsField" level="win:Informational" keywords="Forms" template="tskFormsDocHasFormsFieldArgs"/>
+     <event value="19" symbol="tskFileNewDocDirtyAfterCreation" version="0" task="tskFileNew" opcode="DocDirtyAfterCreation" level="win:Informational" keywords="FileNew" template="tskFileNewDocDirtyAfterCreationArgs"/>
+     <event value="20" symbol="tskInvalTrashWwdPages" version="0" task="tskInval" opcode="TrashWwdPages" level="win:Verbose" keywords="Inval" template="tskInvalTrashWwdPagesArgs"/>
+     <event value="21" symbol="tskInvalInvalDoc" version="0" task="tskInval" opcode="InvalDoc" level="win:Verbose" keywords="Inval" template="tskInvalInvalDocArgs"/>
+     <event value="22" symbol="tskInvalInvalCp" version="0" task="tskInval" opcode="InvalCp" level="win:Verbose" keywords="Inval" template="tskInvalInvalCpArgs"/>
+     <event value="23" symbol="tskInvalInvalRegion" version="0" task="tskInval" opcode="InvalRegion" level="win:Verbose" keywords="Inval" template="tskInvalInvalRegionArgs"/>
+     <event value="24" symbol="tskInvalInvalRegionVerbose" version="0" task="tskInval" opcode="InvalRegionVerbose" keywords="Inval" template="tskInvalInvalRegionVerboseArgs"/>
+     <event value="25" symbol="tskInvalInvalCpDisp" version="0" task="tskInval" opcode="InvalCpDisp" keywords="Inval" template="tskInvalInvalCpDispArgs"/>
+     <event value="26" symbol="tskFileNewAutoCreateStateStart" version="0" task="tskFileNew" opcode="AutoCreateStateStart" level="win:Informational" keywords="FileNew" template="tskFileNewAutoCreateStateStartArgs"/>
+     <event value="27" symbol="tskFileNewAutoCreateStateUpdate" version="0" task="tskFileNew" opcode="AutoCreateStateUpdate" level="win:Informational" keywords="FileNew" template="tskFileNewAutoCreateStateStartArgs"/>
+     <event value="28" symbol="tskFileNewAutoCreateStateEnd" version="0" task="tskFileNew" opcode="AutoCreateStateEnd" level="win:Informational" keywords="FileNew" template="tskFileNewAutoCreateStateStartArgs"/>
+     <event value="30" symbol="tskCoauthUndoCoauthUndoAttemptUndoWithConflict" version="0" task="tskCoauthUndo" opcode="CoauthUndoAttemptUndoWithConflict" level="win:Informational" keywords="CoauthUndo" template="tskCoauthUndoCoauthUndoAttemptUndoWithConflictArgs"/>
+     <event value="2000" symbol="task_0PCODEERRORpcodeError_V1" version="1" task="task_0" opcode="opcodeError" level="win:Error" keywords="OCSB" template="task_0PCODEERRORpcodeErrorArgs_V1"/>
+     <event value="2001" symbol="task_0PCODEERRORpcodeError2001_V1" version="1" task="task_0" opcode="opcodeError" level="win:Error" keywords="CoauthUndo" template="task_0PCODEERRORpcodeErrorArgs_V1"/>
+     <event value="2002" symbol="task_0PCODEERRORpcodeError2002_V1" version="1" task="task_0" opcode="opcodeError" level="win:Error" keywords="Hashtags" template="task_0PCODEERRORpcodeErrorArgs_V1"/>
+     <event value="2003" symbol="task_0PCODEERRORpcodeError2003_V1" version="1" task="task_0" opcode="opcodeError" level="win:Error" keywords="Emojis" template="task_0PCODEERRORpcodeErrorArgs_V1"/>
+     <event value="2004" symbol="task_0PCODEERRORpcodeError2004_V1" version="1" task="task_0" opcode="opcodeError" level="win:Error" keywords="AsyncEdit" template="task_0PCODEERRORpcodeErrorArgs_V1"/>
+     <event value="2005" symbol="task_0PCODEERRORpcodeError2005_V1" version="1" task="task_0" opcode="opcodeError" level="win:Error" keywords="Forms" template="task_0PCODEERRORpcodeErrorArgs_V1"/>
+     <event value="2006" symbol="task_0PCODEERRORpcodeError2006_V1" version="1" task="task_0" opcode="opcodeError" level="win:Error" keywords="FileNew" template="task_0PCODEERRORpcodeErrorArgs_V1"/>
+     <event value="2007" symbol="task_0PCODEERRORpcodeError2007_V1" version="1" task="task_0" opcode="opcodeError" level="win:Error" keywords="Inval" template="task_0PCODEERRORpcodeErrorArgs_V1"/>
+     <event value="2008" symbol="task_0PCODEERRORpcodeError2008_V1" version="1" task="task_0" opcode="opcodeError" level="win:Error" keywords="SuggestionService" template="task_0PCODEERRORpcodeErrorArgs_V1"/>
+     <event value="2032" symbol="task_0PCODEWARNINGpcodeWarning" version="0" task="task_0" opcode="opcodeWarning" level="win:Warning" keywords="OCSB" template="task_0PCODEWARNINGpcodeWarningArgs"/>
+     <event value="2033" symbol="task_0PCODEWARNINGpcodeWarning2033" version="0" task="task_0" opcode="opcodeWarning" level="win:Warning" keywords="CoauthUndo" template="task_0PCODEWARNINGpcodeWarningArgs"/>
+     <event value="2034" symbol="task_0PCODEWARNINGpcodeWarning2034" version="0" task="task_0" opcode="opcodeWarning" level="win:Warning" keywords="Hashtags" template="task_0PCODEWARNINGpcodeWarningArgs"/>
+     <event value="2035" symbol="task_0PCODEWARNINGpcodeWarning2035" version="0" task="task_0" opcode="opcodeWarning" level="win:Warning" keywords="Emojis" template="task_0PCODEWARNINGpcodeWarningArgs"/>
+     <event value="2036" symbol="task_0PCODEWARNINGpcodeWarning2036" version="0" task="task_0" opcode="opcodeWarning" level="win:Warning" keywords="AsyncEdit" template="task_0PCODEWARNINGpcodeWarningArgs"/>
+     <event value="2037" symbol="task_0PCODEWARNINGpcodeWarning2037" version="0" task="task_0" opcode="opcodeWarning" level="win:Warning" keywords="Forms" template="task_0PCODEWARNINGpcodeWarningArgs"/>
+     <event value="2038" symbol="task_0PCODEWARNINGpcodeWarning2038" version="0" task="task_0" opcode="opcodeWarning" level="win:Warning" keywords="FileNew" template="task_0PCODEWARNINGpcodeWarningArgs"/>
+     <event value="2039" symbol="task_0PCODEWARNINGpcodeWarning2039" version="0" task="task_0" opcode="opcodeWarning" level="win:Warning" keywords="Inval" template="task_0PCODEWARNINGpcodeWarningArgs"/>
+     <event value="2040" symbol="task_0PCODEWARNINGpcodeWarning2040" version="0" task="task_0" opcode="opcodeWarning" level="win:Warning" keywords="SuggestionService" template="task_0PCODEWARNINGpcodeWarningArgs"/>
+     <event value="30579" symbol="tskOCSB_V1" version="1" task="tskOCSB" level="win:Critical" keywords="OCSB" template="tskOCSBArgs_V1"/>
+     <event value="30580" symbol="tskOCSB30580_V1" version="1" task="tskOCSB" level="win:Error" keywords="OCSB" template="tskOCSBArgs_V1"/>
+     <event value="30581" symbol="tskOCSB30581_V1" version="1" task="tskOCSB" level="win:Warning" keywords="OCSB" template="tskOCSBArgs_V1"/>
+     <event value="30582" symbol="tskOCSB30582_V1" version="1" task="tskOCSB" level="win:Informational" keywords="OCSB" template="tskOCSBArgs_V1"/>
+     <event value="30583" symbol="tskOCSB30583_V1" version="1" task="tskOCSB" level="win:Verbose" keywords="OCSB" template="tskOCSBArgs_V1"/>
+     <event value="30584" symbol="tskOCSB30584_V1" version="1" task="tskOCSB" keywords="OCSB" template="tskOCSBArgs_V1"/>
+     <event value="30585" symbol="tskOCSB30585_V1" version="1" task="tskOCSB" keywords="OCSB" template="tskOCSBArgs_V1"/>
+     <event value="30586" symbol="tskOCSB30586_V1" version="1" task="tskOCSB" keywords="OCSB" template="tskOCSBArgs_V1"/>
+     <event value="30587" symbol="tskOCSB30587_V1" version="1" task="tskOCSB" keywords="OCSB" template="tskOCSBArgs_V1"/>
+     <event value="30588" symbol="tskCoauthUndo_V1" version="1" task="tskCoauthUndo" level="win:Critical" keywords="CoauthUndo" template="tskOCSBArgs_V1"/>
+     <event value="30589" symbol="tskCoauthUndo30589_V1" version="1" task="tskCoauthUndo" level="win:Error" keywords="CoauthUndo" template="tskOCSBArgs_V1"/>
+     <event value="30590" symbol="tskCoauthUndo30590_V1" version="1" task="tskCoauthUndo" level="win:Warning" keywords="CoauthUndo" template="tskOCSBArgs_V1"/>
+     <event value="30591" symbol="tskCoauthUndo30591_V1" version="1" task="tskCoauthUndo" level="win:Informational" keywords="CoauthUndo" template="tskOCSBArgs_V1"/>
+     <event value="30592" symbol="tskCoauthUndo30592_V1" version="1" task="tskCoauthUndo" level="win:Verbose" keywords="CoauthUndo" template="tskOCSBArgs_V1"/>
+     <event value="30593" symbol="tskCoauthUndo30593_V1" version="1" task="tskCoauthUndo" keywords="CoauthUndo" template="tskOCSBArgs_V1"/>
+     <event value="30594" symbol="tskCoauthUndo30594_V1" version="1" task="tskCoauthUndo" keywords="CoauthUndo" template="tskOCSBArgs_V1"/>
+     <event value="30595" symbol="tskCoauthUndo30595_V1" version="1" task="tskCoauthUndo" keywords="CoauthUndo" template="tskOCSBArgs_V1"/>
+     <event value="30596" symbol="tskCoauthUndo30596_V1" version="1" task="tskCoauthUndo" keywords="CoauthUndo" template="tskOCSBArgs_V1"/>
+     <event value="30597" symbol="tskHashtags_V1" version="1" task="tskHashtags" level="win:Critical" keywords="Hashtags" template="tskOCSBArgs_V1"/>
+     <event value="30598" symbol="tskHashtags30598_V1" version="1" task="tskHashtags" level="win:Error" keywords="Hashtags" template="tskOCSBArgs_V1"/>
+     <event value="30599" symbol="tskHashtags30599_V1" version="1" task="tskHashtags" level="win:Warning" keywords="Hashtags" template="tskOCSBArgs_V1"/>
+     <event value="30600" symbol="tskHashtags30600_V1" version="1" task="tskHashtags" level="win:Informational" keywords="Hashtags" template="tskOCSBArgs_V1"/>
+     <event value="30601" symbol="tskHashtags30601_V1" version="1" task="tskHashtags" level="win:Verbose" keywords="Hashtags" template="tskOCSBArgs_V1"/>
+     <event value="30602" symbol="tskHashtags30602_V1" version="1" task="tskHashtags" keywords="Hashtags" template="tskOCSBArgs_V1"/>
+     <event value="30603" symbol="tskHashtags30603_V1" version="1" task="tskHashtags" keywords="Hashtags" template="tskOCSBArgs_V1"/>
+     <event value="30604" symbol="tskHashtags30604_V1" version="1" task="tskHashtags" keywords="Hashtags" template="tskOCSBArgs_V1"/>
+     <event value="30605" symbol="tskHashtags30605_V1" version="1" task="tskHashtags" keywords="Hashtags" template="tskOCSBArgs_V1"/>
+     <event value="30606" symbol="tskEmojis_V1" version="1" task="tskEmojis" level="win:Critical" keywords="Emojis" template="tskOCSBArgs_V1"/>
+     <event value="30607" symbol="tskEmojis30607_V1" version="1" task="tskEmojis" level="win:Error" keywords="Emojis" template="tskOCSBArgs_V1"/>
+     <event value="30608" symbol="tskEmojis30608_V1" version="1" task="tskEmojis" level="win:Warning" keywords="Emojis" template="tskOCSBArgs_V1"/>
+     <event value="30609" symbol="tskEmojis30609_V1" version="1" task="tskEmojis" level="win:Informational" keywords="Emojis" template="tskOCSBArgs_V1"/>
+     <event value="30610" symbol="tskEmojis30610_V1" version="1" task="tskEmojis" level="win:Verbose" keywords="Emojis" template="tskOCSBArgs_V1"/>
+     <event value="30611" symbol="tskEmojis30611_V1" version="1" task="tskEmojis" keywords="Emojis" template="tskOCSBArgs_V1"/>
+     <event value="30612" symbol="tskEmojis30612_V1" version="1" task="tskEmojis" keywords="Emojis" template="tskOCSBArgs_V1"/>
+     <event value="30613" symbol="tskEmojis30613_V1" version="1" task="tskEmojis" keywords="Emojis" template="tskOCSBArgs_V1"/>
+     <event value="30614" symbol="tskEmojis30614_V1" version="1" task="tskEmojis" keywords="Emojis" template="tskOCSBArgs_V1"/>
+     <event value="30615" symbol="tskAsyncEdit_V1" version="1" task="tskAsyncEdit" level="win:Critical" keywords="AsyncEdit" template="tskOCSBArgs_V1"/>
+     <event value="30616" symbol="tskAsyncEdit30616_V1" version="1" task="tskAsyncEdit" level="win:Error" keywords="AsyncEdit" template="tskOCSBArgs_V1"/>
+     <event value="30617" symbol="tskAsyncEdit30617_V1" version="1" task="tskAsyncEdit" level="win:Warning" keywords="AsyncEdit" template="tskOCSBArgs_V1"/>
+     <event value="30618" symbol="tskAsyncEdit30618_V1" version="1" task="tskAsyncEdit" level="win:Informational" keywords="AsyncEdit" template="tskOCSBArgs_V1"/>
+     <event value="30619" symbol="tskAsyncEdit30619_V1" version="1" task="tskAsyncEdit" level="win:Verbose" keywords="AsyncEdit" template="tskOCSBArgs_V1"/>
+     <event value="30620" symbol="tskAsyncEdit30620_V1" version="1" task="tskAsyncEdit" keywords="AsyncEdit" template="tskOCSBArgs_V1"/>
+     <event value="30621" symbol="tskAsyncEdit30621_V1" version="1" task="tskAsyncEdit" keywords="AsyncEdit" template="tskOCSBArgs_V1"/>
+     <event value="30622" symbol="tskAsyncEdit30622_V1" version="1" task="tskAsyncEdit" keywords="AsyncEdit" template="tskOCSBArgs_V1"/>
+     <event value="30623" symbol="tskAsyncEdit30623_V1" version="1" task="tskAsyncEdit" keywords="AsyncEdit" template="tskOCSBArgs_V1"/>
+     <event value="30624" symbol="tskForms_V1" version="1" task="tskForms" level="win:Critical" keywords="Forms" template="tskOCSBArgs_V1"/>
+     <event value="30625" symbol="tskForms30625_V1" version="1" task="tskForms" level="win:Error" keywords="Forms" template="tskOCSBArgs_V1"/>
+     <event value="30626" symbol="tskForms30626_V1" version="1" task="tskForms" level="win:Warning" keywords="Forms" template="tskOCSBArgs_V1"/>
+     <event value="30627" symbol="tskForms30627_V1" version="1" task="tskForms" level="win:Informational" keywords="Forms" template="tskOCSBArgs_V1"/>
+     <event value="30628" symbol="tskForms30628_V1" version="1" task="tskForms" level="win:Verbose" keywords="Forms" template="tskOCSBArgs_V1"/>
+     <event value="30629" symbol="tskForms30629_V1" version="1" task="tskForms" keywords="Forms" template="tskOCSBArgs_V1"/>
+     <event value="30630" symbol="tskForms30630_V1" version="1" task="tskForms" keywords="Forms" template="tskOCSBArgs_V1"/>
+     <event value="30631" symbol="tskForms30631_V1" version="1" task="tskForms" keywords="Forms" template="tskOCSBArgs_V1"/>
+     <event value="30632" symbol="tskForms30632_V1" version="1" task="tskForms" keywords="Forms" template="tskOCSBArgs_V1"/>
+     <event value="30633" symbol="tskFileNew_V1" version="1" task="tskFileNew" level="win:Critical" keywords="FileNew" template="tskOCSBArgs_V1"/>
+     <event value="30634" symbol="tskFileNew30634_V1" version="1" task="tskFileNew" level="win:Error" keywords="FileNew" template="tskOCSBArgs_V1"/>
+     <event value="30635" symbol="tskFileNew30635_V1" version="1" task="tskFileNew" level="win:Warning" keywords="FileNew" template="tskOCSBArgs_V1"/>
+     <event value="30636" symbol="tskFileNew30636_V1" version="1" task="tskFileNew" level="win:Informational" keywords="FileNew" template="tskOCSBArgs_V1"/>
+     <event value="30637" symbol="tskFileNew30637_V1" version="1" task="tskFileNew" level="win:Verbose" keywords="FileNew" template="tskOCSBArgs_V1"/>
+     <event value="30638" symbol="tskFileNew30638_V1" version="1" task="tskFileNew" keywords="FileNew" template="tskOCSBArgs_V1"/>
+     <event value="30639" symbol="tskFileNew30639_V1" version="1" task="tskFileNew" keywords="FileNew" template="tskOCSBArgs_V1"/>
+     <event value="30640" symbol="tskFileNew30640_V1" version="1" task="tskFileNew" keywords="FileNew" template="tskOCSBArgs_V1"/>
+     <event value="30641" symbol="tskFileNew30641_V1" version="1" task="tskFileNew" keywords="FileNew" template="tskOCSBArgs_V1"/>
+     <event value="30642" symbol="tskInval_V1" version="1" task="tskInval" level="win:Critical" keywords="Inval" template="tskOCSBArgs_V1"/>
+     <event value="30643" symbol="tskInval30643_V1" version="1" task="tskInval" level="win:Error" keywords="Inval" template="tskOCSBArgs_V1"/>
+     <event value="30644" symbol="tskInval30644_V1" version="1" task="tskInval" level="win:Warning" keywords="Inval" template="tskOCSBArgs_V1"/>
+     <event value="30645" symbol="tskInval30645_V1" version="1" task="tskInval" level="win:Informational" keywords="Inval" template="tskOCSBArgs_V1"/>
+     <event value="30646" symbol="tskInval30646_V1" version="1" task="tskInval" level="win:Verbose" keywords="Inval" template="tskOCSBArgs_V1"/>
+     <event value="30647" symbol="tskInval30647_V1" version="1" task="tskInval" keywords="Inval" template="tskOCSBArgs_V1"/>
+     <event value="30648" symbol="tskInval30648_V1" version="1" task="tskInval" keywords="Inval" template="tskOCSBArgs_V1"/>
+     <event value="30649" symbol="tskInval30649_V1" version="1" task="tskInval" keywords="Inval" template="tskOCSBArgs_V1"/>
+     <event value="30650" symbol="tskInval30650_V1" version="1" task="tskInval" keywords="Inval" template="tskOCSBArgs_V1"/>
+     <event value="30651" symbol="tskSuggestionService_V1" version="1" task="tskSuggestionService" level="win:Critical" keywords="SuggestionService" template="tskOCSBArgs_V1"/>
+     <event value="30652" symbol="tskSuggestionService30652_V1" version="1" task="tskSuggestionService" level="win:Error" keywords="SuggestionService" template="tskOCSBArgs_V1"/>
+     <event value="30653" symbol="tskSuggestionService30653_V1" version="1" task="tskSuggestionService" level="win:Warning" keywords="SuggestionService" template="tskOCSBArgs_V1"/>
+     <event value="30654" symbol="tskSuggestionService30654_V1" version="1" task="tskSuggestionService" level="win:Informational" keywords="SuggestionService" template="tskOCSBArgs_V1"/>
+     <event value="30655" symbol="tskSuggestionService30655_V1" version="1" task="tskSuggestionService" level="win:Verbose" keywords="SuggestionService" template="tskOCSBArgs_V1"/>
+     <event value="30656" symbol="tskSuggestionService30656_V1" version="1" task="tskSuggestionService" keywords="SuggestionService" template="tskOCSBArgs_V1"/>
+     <event value="30657" symbol="tskSuggestionService30657_V1" version="1" task="tskSuggestionService" keywords="SuggestionService" template="tskOCSBArgs_V1"/>
+     <event value="30658" symbol="tskSuggestionService30658_V1" version="1" task="tskSuggestionService" keywords="SuggestionService" template="tskOCSBArgs_V1"/>
+     <event value="30659" symbol="tskSuggestionService30659_V1" version="1" task="tskSuggestionService" keywords="SuggestionService" template="tskOCSBArgs_V1"/>
+    </events>
+    <templates>
+     <template tid="tskVclokVclokEntryPacketDelayedArgs">
+      <data name="receivingClientVclokId" inType="win:GUID"/>
+      <data name="sendingClientVclokId" inType="win:GUID"/>
+      <data name="sendingClientVclokValue" inType="win:UInt32"/>
+     </template>
+     <template tid="tskHashtagsHashtagAddedArgs">
+      <data name="dk" inType="win:Int32"/>
+     </template>
+     <template tid="tskHashtagsHashtagFlyoutDismissArgs">
+      <data name="DismissalReason" inType="win:UInt32" map="PickerDismissalReasonWord3"/>
+     </template>
+     <template tid="tskHashtagsHashtagDocOpenArgs">
+      <data name="cHashtag" inType="win:Int32"/>
+      <data name="dk" inType="win:Int32"/>
+     </template>
+     <template tid="tskHashtagsHashtagDocOpen11Args">
+      <data name="cHashtag" inType="win:Int32"/>
+     </template>
+     <template tid="tskHashtagsHashtagNotificationCollectorProcessListArgs">
+      <data name="TotalNotifications" inType="win:UInt32"/>
+      <data name="AddedNotifications" inType="win:UInt32"/>
+      <data name="RemovedNotifications" inType="win:UInt32"/>
+     </template>
+     <template tid="tskHashtagsHashtagNotificationCollectorResetListArgs">
+      <data name="TotalNotifications" inType="win:UInt32"/>
+     </template>
+     <template tid="tskEmojisEmojiFlyoutDismissArgs">
+      <data name="DismissalReason" inType="win:UInt32"/>
+     </template>
+     <template tid="tskFormsDocHasFormsFieldArgs">
+      <data name="fDocHasFormsField" inType="win:Boolean"/>
+     </template>
+     <template tid="tskFileNewDocDirtyAfterCreationArgs">
+      <data name="pdod" inType="win:Pointer"/>
+      <data name="diReason" inType="win:UInt16"/>
+     </template>
+     <template tid="tskInvalTrashWwdPagesArgs">
+      <data name="hwwd" inType="win:Pointer"/>
+      <data name="pdod" inType="win:Pointer"/>
+      <data name="dk" inType="win:UnicodeString"/>
+      <data name="cpFirst" inType="win:Int32"/>
+      <data name="cpLim" inType="win:Int32"/>
+      <data name="grftr" inType="win:UInt32" map="Grftr"/>
+     </template>
+     <template tid="tskInvalInvalDocArgs">
+      <data name="pdod" inType="win:Pointer"/>
+      <data name="dk" inType="win:UnicodeString"/>
+     </template>
+     <template tid="tskInvalInvalCpArgs">
+      <data name="pdod" inType="win:Pointer"/>
+      <data name="dk" inType="win:UnicodeString"/>
+      <data name="cpFirst" inType="win:Int32"/>
+      <data name="dcp" inType="win:Int32"/>
+      <data name="grfef_low" inType="win:UInt32"/>
+      <data name="grfef_high" inType="win:UInt32"/>
+      <data name="grfef2_low" inType="win:UInt32" map="Grfef2Low"/>
+      <data name="grfef2_high" inType="win:UInt32"/>
+     </template>
+     <template tid="tskInvalInvalRegionArgs">
+      <data name="drk" inType="win:UnicodeString"/>
+      <data name="BoundingBox" inType="win:UnicodeString"/>
+     </template>
+     <template tid="tskInvalInvalRegionVerboseArgs">
+      <data name="drk" inType="win:UnicodeString"/>
+      <data name="BoundingBox" inType="win:UnicodeString"/>
+      <data name="Rectangles" inType="win:UnicodeString"/>
+     </template>
+     <template tid="tskInvalInvalCpDispArgs">
+      <data name="hwwd" inType="win:Pointer"/>
+      <data name="pdod" inType="win:Pointer"/>
+      <data name="dk" inType="win:UnicodeString"/>
+      <data name="cpFirst" inType="win:Int32"/>
+      <data name="dcp" inType="win:Int32"/>
+      <data name="fNoLayoutChange" inType="win:Boolean"/>
+      <data name="fSelectionChange" inType="win:Boolean"/>
+      <data name="fUpdateArtvNVersion" inType="win:Boolean"/>
+      <data name="fDirtyMtxi" inType="win:Boolean"/>
+      <data name="grfef_low" inType="win:UInt32"/>
+      <data name="grfef_high" inType="win:UInt32"/>
+     </template>
+     <template tid="tskFileNewAutoCreateStateStartArgs">
+      <data name="Tag" inType="win:UInt32"/>
+      <data name="pdod" inType="win:Pointer"/>
+      <data name="AutoCreateState" inType="win:UInt32"/>
+      <data name="fInitialized" inType="win:Boolean"/>
+      <data name="fDocRenamed" inType="win:Boolean"/>
+      <data name="fAcSucceeded" inType="win:Boolean"/>
+     </template>
+     <template tid="tskCoauthUndoCoauthUndoAttemptUndoWithConflictArgs">
+      <data name="ReasonforConflict" inType="win:UInt32" map="UndoConflictReason"/>
+      <data name="fciUser" inType="win:UInt32"/>
+      <data name="fciCoauth" inType="win:UInt32"/>
+      <data name="UserCAtype" inType="win:UInt32"/>
+      <data name="camoUsercp" inType="win:UInt32"/>
+      <data name="camoUserdcpOld" inType="win:UInt32"/>
+      <data name="camoUserdcpNew" inType="win:UInt32"/>
+      <data name="camoCoauthcp" inType="win:UInt32"/>
+      <data name="camoCoauthdcpOld" inType="win:UInt32"/>
+      <data name="camoCoauthdcpNew" inType="win:UInt32"/>
+      <data name="fUndo" inType="win:Boolean"/>
+     </template>
+     <template tid="task_0PCODEWARNINGpcodeWarningArgs">
+      <data name="Message" inType="win:UnicodeString"/>
+      <data name="InfoString" inType="win:UnicodeString"/>
+      <data name="ErrIdOptional" inType="win:Int32"/>
+      <data name="HROptional" inType="win:Int32"/>
+      <data name="InfoOptDeci" inType="win:UInt64"/>
+      <data name="InfoOptHex" inType="win:UInt64"/>
+      <data name="ETW_TrackbackTag" inType="win:UInt32"/>
+     </template>
+     <template tid="tskVclokVclokOnUploadCompleteArgs_V1">
+      <data name="savingClientVclokId" inType="win:GUID"/>
+      <data name="savingClientVclokValueMin" inType="win:UInt32"/>
+      <data name="savingClientVclokValueMax" inType="win:UInt32"/>
+      <data name="uploadDuration" inType="win:UInt64"/>
+      <data name="editToUploadTimeMicroseconds" inType="win:UInt64"/>
+      <data name="rtcBrkEditToUploadTimeMicroseconds" inType="win:UInt64"/>
+      <data name="saveToUploadInitTimeMicroseconds" inType="win:UInt64"/>
+     </template>
+     <template tid="tskVclokVclokOnSaveCompleteArgs_V1">
+      <data name="savingClientVclokId" inType="win:GUID"/>
+      <data name="savingClientVclokValue" inType="win:UInt32"/>
+      <data name="saveTimeMicroseconds" inType="win:UInt64"/>
+      <data name="rtcBrkEditToSaveTimeMicroseconds" inType="win:UInt64"/>
+      <data name="editToSaveTimeMicroseconds" inType="win:UInt64"/>
+      <data name="firstRtcBrkEditId" inType="win:GUID"/>
+      <data name="firstEditId" inType="win:GUID"/>
+     </template>
+     <template tid="task_0PCODEERRORpcodeErrorArgs_V1">
+      <data name="Message" inType="win:UnicodeString"/>
+      <data name="InfoString" inType="win:UnicodeString"/>
+      <data name="ErrIdOptional" inType="win:Int32"/>
+      <data name="HROptional" inType="win:Int32"/>
+      <data name="InfoOptDeci" inType="win:UInt64"/>
+      <data name="InfoOptHex" inType="win:UInt64"/>
+      <data name="Pdod" inType="win:Pointer"/>
+      <data name="VoidPtr" inType="win:Pointer"/>
+      <data name="ETW_TrackbackTag" inType="win:UInt32"/>
+     </template>
+     <template tid="tskOCSBArgs_V1">
+      <data name="tag" inType="win:UnicodeString"/>
+      <data name="xsz" inType="win:UnicodeString"/>
+     </template>
+    </templates>
+   </provider>
+  </events>
+ </instrumentation>
+ <localization>
+  <resources culture="en-US">
+   <stringTable>
+    <string id="keyword_OCSB" value="OCSB"/>
+    <string id="keyword_CoauthUndo" value="CoauthUndo"/>
+    <string id="keyword_Hashtags" value="Hashtags"/>
+    <string id="keyword_Emojis" value="Emojis"/>
+    <string id="keyword_AsyncEdit" value="AsyncEdit"/>
+    <string id="keyword_Forms" value="Forms"/>
+    <string id="keyword_FileNew" value="FileNew"/>
+    <string id="keyword_Inval" value="Inval"/>
+    <string id="keyword_SuggestionService" value="SuggestionService"/>
+    <string id="task_task_0" value="task_0"/>
+    <string id="opcode_task_0opcodeError" value="opcodeError"/>
+    <string id="opcode_task_0opcodeWarning" value="opcodeWarning"/>
+    <string id="task_tskVclok" value="tskVclok"/>
+    <string id="opcode_tskVclokVclokEntryPacketDelayed" value="VclokEntryPacketDelayed"/>
+    <string id="opcode_tskVclokVclokOnUploadComplete" value="VclokOnUploadComplete"/>
+    <string id="opcode_tskVclokVclokOnSaveComplete" value="VclokOnSaveComplete"/>
+    <string id="task_tskHashtags" value="tskHashtags"/>
+    <string id="opcode_tskHashtagsHashtagAdded" value="HashtagAdded"/>
+    <string id="opcode_tskHashtagsHashtagRemoved" value="HashtagRemoved"/>
+    <string id="opcode_tskHashtagsHashtagError" value="HashtagError"/>
+    <string id="opcode_tskHashtagsHashtagFlyoutInvoke" value="HashtagFlyoutInvoke"/>
+    <string id="opcode_tskHashtagsHashtagFlyoutDismiss" value="HashtagFlyoutDismiss"/>
+    <string id="opcode_tskHashtagsHashtagDocOpen" value="HashtagDocOpen"/>
+    <string id="opcode_tskHashtagsHashtagNotificationCollectorProcessList" value="HashtagNotificationCollectorProcessList"/>
+    <string id="opcode_tskHashtagsHashtagNotificationCollectorResetList" value="HashtagNotificationCollectorResetList"/>
+    <string id="task_tskEmojis" value="tskEmojis"/>
+    <string id="opcode_tskEmojisEmojiFlyoutInvoke" value="EmojiFlyoutInvoke"/>
+    <string id="opcode_tskEmojisEmojiFlyoutDismiss" value="EmojiFlyoutDismiss"/>
+    <string id="task_tskCoauthUndo" value="tskCoauthUndo"/>
+    <string id="opcode_tskCoauthUndoCoauthUndoAttemptUndoWithConflict" value="CoauthUndoAttemptUndoWithConflict"/>
+    <string id="task_tskFileNew" value="tskFileNew"/>
+    <string id="opcode_tskFileNewDocDirtyAfterCreation" value="DocDirtyAfterCreation"/>
+    <string id="opcode_tskFileNewAutoCreateStateStart" value="AutoCreateStateStart"/>
+    <string id="opcode_tskFileNewAutoCreateStateUpdate" value="AutoCreateStateUpdate"/>
+    <string id="opcode_tskFileNewAutoCreateStateEnd" value="AutoCreateStateEnd"/>
+    <string id="task_tskInval" value="tskInval"/>
+    <string id="opcode_tskInvalTrashWwdPages" value="TrashWwdPages"/>
+    <string id="opcode_tskInvalInvalDoc" value="InvalDoc"/>
+    <string id="opcode_tskInvalInvalCp" value="InvalCp"/>
+    <string id="opcode_tskInvalInvalRegion" value="InvalRegion"/>
+    <string id="opcode_tskInvalInvalRegionVerbose" value="InvalRegionVerbose"/>
+    <string id="opcode_tskInvalInvalCpDisp" value="InvalCpDisp"/>
+    <string id="task_tskForms" value="tskForms"/>
+    <string id="opcode_tskFormsDocHasFormsField" value="DocHasFormsField"/>
+    <string id="task_tskOCSB" value="tskOCSB"/>
+    <string id="task_tskAsyncEdit" value="tskAsyncEdit"/>
+    <string id="task_tskSuggestionService" value="tskSuggestionService"/>
+    <string id="map_PickerDismissalReasonWord3No Results" value="No Results"/>
+    <string id="map_PickerDismissalReasonWord3Breaking Char Entered" value="Breaking Char Entered"/>
+    <string id="map_PickerDismissalReasonWord3Escape Key Pressed" value="Escape Key Pressed"/>
+    <string id="map_PickerDismissalReasonWord3IME Invoked" value="IME Invoked"/>
+    <string id="map_PickerDismissalReasonWord3Gesture Inserted" value="Gesture Inserted"/>
+    <string id="map_PickerDismissalReasonWord3Soft Dismiss or Other" value="Soft Dismiss or Other"/>
+    <string id="map_PickerDismissalReasonWord3Paste" value="Paste"/>
+    <string id="map_PickerDismissalReasonWord3Insert failure required explicit dismissal" value="Insert failure required explicit dismissal"/>
+    <string id="map_GrftrRebuildDrus" value="RebuildDrus"/>
+    <string id="map_GrftrSamePageSize" value="SamePageSize"/>
+    <string id="map_GrftrRebuildDrsels" value="RebuildDrsels"/>
+    <string id="map_GrftrNoRM" value="NoRM"/>
+    <string id="map_GrftrCheckDrus" value="CheckDrus"/>
+    <string id="map_Grfef2LowCopyCasaBmks" value="CopyCasaBmks"/>
+    <string id="map_Grfef2LowNoDocTabberInval" value="NoDocTabberInval"/>
+    <string id="map_Grfef2LowAllowShapesInMath" value="AllowShapesInMath"/>
+    <string id="map_Grfef2LowCopyAtnCasaBmks" value="CopyAtnCasaBmks"/>
+    <string id="map_Grfef2LowNoE2oTxbxsMark" value="NoE2oTxbxsMark"/>
+    <string id="map_Grfef2LowPreserveShapeId" value="PreserveShapeId"/>
+    <string id="map_Grfef2LowDontCopyTxbxs" value="DontCopyTxbxs"/>
+    <string id="map_Grfef2LowDontDeleteTxbxs" value="DontDeleteTxbxs"/>
+    <string id="map_Grfef2LowInsertCustomXmlTag" value="InsertCustomXmlTag"/>
+    <string id="map_Grfef2LowCopyObjectIds" value="CopyObjectIds"/>
+    <string id="map_Grfef2LowDontAdjustE2oSels" value="DontAdjustE2oSels"/>
+    <string id="map_Grfef2LowNoStoreDeleteOnBkmkDelete" value="NoStoreDeleteOnBkmkDelete"/>
+    <string id="map_Grfef2LowDontCloneArtos" value="DontCloneArtos"/>
+    <string id="map_Grfef2LowDontFireUiaTextChanged" value="DontFireUiaTextChanged"/>
+    <string id="map_Grfef2LowNoEcmanInval" value="NoEcmanInval"/>
+    <string id="map_Grfef2LowNoMntrInval" value="NoMntrInval"/>
+    <string id="map_Grfef2LowNoPdodHspClone" value="NoPdodHspClone"/>
+    <string id="map_Grfef2LowInsertBufferShift" value="InsertBufferShift"/>
+    <string id="map_Grfef2LowUimInsert" value="UimInsert"/>
+    <string id="map_Grfef2LowPreserveFXB" value="PreserveFXB"/>
+    <string id="map_UndoConflictReasonNone" value="None"/>
+    <string id="map_UndoConflictReasonOut of memory" value="Out of memory"/>
+    <string id="map_UndoConflictReasonIuad invalid" value="Iuad invalid"/>
+    <string id="map_UndoConflictReasonBad CA" value="Bad CA"/>
+    <string id="map_UndoConflictReasonfciUser unsupported" value="fciUser unsupported"/>
+    <string id="map_UndoConflictReasonfciCoauth unsupported" value="fciCoauth unsupported"/>
+    <string id="map_UndoConflictReasonCA in header doc" value="CA in header doc"/>
+    <string id="map_UndoConflictReasonfSaveAll" value="fSaveAll"/>
+    <string id="map_UndoConflictReasonUad and domo conflict" value="Uad and domo conflict"/>
+    <string id="map_UndoConflictReasonDomo overlap" value="Domo overlap"/>
+    <string id="map_UndoConflictReasonDomo list broken" value="Domo list broken"/>
+   </stringTable>
+  </resources>
+ </localization>
+</instrumentationManifest>

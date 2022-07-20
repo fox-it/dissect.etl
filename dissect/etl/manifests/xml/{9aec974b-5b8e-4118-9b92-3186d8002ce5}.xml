@@ -1,0 +1,43 @@
+<instrumentationManifest xmlns="http://schemas.microsoft.com/win/2004/08/events">
+ <instrumentation xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:win="http://manifests.microsoft.com/win/2004/08/windows/events">
+  <events>
+
+   <provider name="Windows Kernel" guid="{9aec974b-5b8e-4118-9b92-3186d8002ce5}">
+    <events>
+        <event value="36" symbol="UmsEvent/CSwitch" version="2" task="UmsEvent" opcode="CSwitch" template="0xf4a9250cL"/>
+        <event value="33" symbol="UmsEvent/DSwitchEnd" version="2" task="UmsEvent" opcode="DSwitchEnd" template="0xa6e43bc4L"/>
+        <event value="34" symbol="UmsEvent/ScheduledPark" version="2" task="UmsEvent" opcode="ScheduledPark" template="0xaf0876adL"/>
+        <event value="35" symbol="UmsEvent/Disassociate" version="2" task="UmsEvent" opcode="Disassociate" template="0x4b85c247L"/>
+        <event value="32" symbol="UmsEvent/DSwitchStart" version="2" task="UmsEvent" opcode="DSwitchStart" template="0xa6e43bc4L"/>
+    </events>
+    <templates>
+     <template tid="0xaf0876adL">
+      <data name="ProcessId" inType="win:UInt32"/>
+      <data name="ScheduledThreadId" inType="win:UInt32"/>
+      <data name="ParkFlags" inType="win:UInt32"/>
+     </template>
+     <template tid="0x4b85c247L">
+      <data name="ProcessId" inType="win:UInt32"/>
+      <data name="ScheduledThreadId" inType="win:UInt32"/>
+      <data name="PrimaryThreadId" inType="win:UInt32"/>
+      <data name="UmsApcControlFlags" inType="win:UInt32"/>
+      <data name="Status" inType="win:UInt32"/>
+     </template>
+     <template tid="0xa6e43bc4L">
+      <data name="ProcessId" inType="win:UInt32"/>
+      <data name="ScheduledThreadId" inType="win:UInt32"/>
+      <data name="PrimaryThreadId" inType="win:UInt32"/>
+      <data name="SwitchFlags" inType="win:UInt32"/>
+     </template>
+     <template tid="0xf4a9250cL">
+      <data name="ScheduledThreadId" inType="win:UInt32"/>
+      <data name="SwitchCount" inType="win:UInt32"/>
+      <data name="KernelYieldCount" inType="win:UInt32"/>
+      <data name="MixedYieldCount" inType="win:UInt32"/>
+      <data name="YieldCount" inType="win:UInt32"/>
+     </template>
+    </templates>
+   </provider>
+  </events>
+ </instrumentation>
+</instrumentationManifest>

@@ -1,0 +1,58 @@
+<instrumentationManifest xmlns="http://schemas.microsoft.com/win/2004/08/events">
+ <instrumentation xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:win="http://manifests.microsoft.com/win/2004/08/windows/events">
+  <events>
+
+   <provider name="Windows Kernel" guid="{89497f50-effe-4440-8cf2-ce6b1cdcaca7}">
+    <events>
+        <event value="50" symbol="ObTrace/ReferenceObject" version="2" task="ObTrace" opcode="ReferenceObject" template="0x68ddc114L"/>
+        <event value="51" symbol="ObTrace/DereferenceObject" version="2" task="ObTrace" opcode="DereferenceObject" template="0x68ddc114L"/>
+        <event value="36" symbol="ObTrace/TypeDCStart" version="2" task="ObTrace" opcode="TypeDCStart" template="0x444634a4L"/>
+        <event value="37" symbol="ObTrace/TypeDCEnd" version="2" task="ObTrace" opcode="TypeDCEnd" template="0x444634a4L"/>
+        <event value="38" symbol="ObTrace/HandleDCStart" version="2" task="ObTrace" opcode="HandleDCStart" template="0x8ed4e890L"/>
+        <event value="39" symbol="ObTrace/HandleDCEnd" version="2" task="ObTrace" opcode="HandleDCEnd" template="0x8ed4e890L"/>
+        <event value="48" symbol="ObTrace/CreateObject" version="2" task="ObTrace" opcode="CreateObject" template="0x5188ddd6L"/>
+        <event value="49" symbol="ObTrace/DeleteObject" version="2" task="ObTrace" opcode="DeleteObject" template="0x5188ddd6L"/>
+        <event value="34" symbol="ObTrace/DuplicateHandle" version="2" task="ObTrace" opcode="DuplicateHandle" template="0x5a7b9572L"/>
+        <event value="32" symbol="ObTrace/CreateHandle" version="2" task="ObTrace" opcode="CreateHandle" template="0x46833e4L"/>
+        <event value="33" symbol="ObTrace/CloseHandle" version="2" task="ObTrace" opcode="CloseHandle" template="0x46833e4L"/>
+    </events>
+    <templates>
+     <template tid="0x444634a4L">
+      <data name="ObjectType" inType="win:UInt16"/>
+      <data name="Reserved" inType="win:UInt16"/>
+      <data name="TypeName" inType="win:WString"/>
+     </template>
+     <template tid="0x8ed4e890L">
+      <data name="Object" inType="win:Pointer"/>
+      <data name="ProcessId" inType="win:UInt32"/>
+      <data name="Handle" inType="win:UInt32"/>
+      <data name="ObjectType" inType="win:UInt16"/>
+      <data name="ObjectName" inType="win:WString"/>
+     </template>
+     <template tid="0x68ddc114L">
+      <data name="Object" inType="win:Pointer"/>
+      <data name="Tag" inType="win:UInt32"/>
+      <data name="Count" inType="win:UInt32"/>
+     </template>
+     <template tid="0x5188ddd6L">
+      <data name="Object" inType="win:Pointer"/>
+      <data name="ObjectType" inType="win:UInt16"/>
+     </template>
+     <template tid="0x5a7b9572L">
+      <data name="Object" inType="win:Pointer"/>
+      <data name="SourceHandle" inType="win:UInt32"/>
+      <data name="TargetHandle" inType="win:UInt32"/>
+      <data name="TargetProcessId" inType="win:UInt32"/>
+      <data name="ObjectType" inType="win:UInt16"/>
+     </template>
+     <template tid="0x46833e4L">
+      <data name="Object" inType="win:Pointer"/>
+      <data name="Handle" inType="win:UInt32"/>
+      <data name="ObjectType" inType="win:UInt16"/>
+      <data name="ObjectName" inType="win:WString"/>
+     </template>
+    </templates>
+   </provider>
+  </events>
+ </instrumentation>
+</instrumentationManifest>

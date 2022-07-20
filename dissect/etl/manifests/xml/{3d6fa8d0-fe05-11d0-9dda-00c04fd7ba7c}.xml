@@ -1,0 +1,158 @@
+<instrumentationManifest xmlns="http://schemas.microsoft.com/win/2004/08/events">
+ <instrumentation xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:win="http://manifests.microsoft.com/win/2004/08/windows/events">
+  <events>
+
+   <provider name="Windows Kernel" guid="{3d6fa8d0-fe05-11d0-9dda-00c04fd7ba7c}">
+    <events>
+        <event value="1" symbol="Process/Start" version="1" task="Process" opcode="Start" template="Process_V1_TypeGroup1"/>
+        <event value="2" symbol="Process/End" version="1" task="Process" opcode="End" template="Process_V1_TypeGroup1"/>
+        <event value="3" symbol="Process/DCStart" version="1" task="Process" opcode="DCStart" template="Process_V1_TypeGroup1"/>
+        <event value="4" symbol="Process/DCEnd" version="1" task="Process" opcode="DCEnd" template="Process_V1_TypeGroup1"/>
+        <event value="1" symbol="Process/Start" version="0" task="Process" opcode="Start" template="Process_V0_TypeGroup1"/>
+        <event value="2" symbol="Process/End" version="0" task="Process" opcode="End" template="Process_V0_TypeGroup1"/>
+        <event value="3" symbol="Process/DCStart" version="0" task="Process" opcode="DCStart" template="Process_V0_TypeGroup1"/>
+        <event value="4" symbol="Process/DCEnd" version="0" task="Process" opcode="DCEnd" template="Process_V0_TypeGroup1"/>
+        <event value="39" symbol="Process/Defunct" version="5" task="Process" opcode="Defunct" template="Process_Defunct_TypeGroup1"/>
+        <event value="96" symbol="Process/WakeEventUser" version="2" task="Process" opcode="WakeEventUser" template="Process_V2_TypeGroup5"/>
+        <event value="97" symbol="Process/WakeEventExecution" version="2" task="Process" opcode="WakeEventExecution" template="Process_V2_TypeGroup5"/>
+        <event value="98" symbol="Process/WakeEventKernel" version="2" task="Process" opcode="WakeEventKernel" template="Process_V2_TypeGroup5"/>
+        <event value="99" symbol="Process/WakeEventInstrumentation" version="2" task="Process" opcode="WakeEventInstrumentation" template="Process_V2_TypeGroup5"/>
+        <event value="64" symbol="Process/WakeReleaseUser" version="2" task="Process" opcode="WakeReleaseUser" template="Process_V2_TypeGroup4"/>
+        <event value="65" symbol="Process/WakeReleaseExecution" version="2" task="Process" opcode="WakeReleaseExecution" template="Process_V2_TypeGroup4"/>
+        <event value="66" symbol="Process/WakeReleaseKernel" version="2" task="Process" opcode="WakeReleaseKernel" template="Process_V2_TypeGroup4"/>
+        <event value="67" symbol="Process/WakeReleaseInstrumentation" version="2" task="Process" opcode="WakeReleaseInstrumentation" template="Process_V2_TypeGroup4"/>
+        <event value="68" symbol="Process/WakeReleasePreserveProcess" version="2" task="Process" opcode="WakeReleasePreserveProcess" template="Process_V2_TypeGroup4"/>
+        <event value="81" symbol="Process/WakeDropExecution" version="2" task="Process" opcode="WakeDropExecution" template="Process_V2_TypeGroup4"/>
+        <event value="80" symbol="Process/WakeDropUser" version="2" task="Process" opcode="WakeDropUser" template="Process_V2_TypeGroup4"/>
+        <event value="83" symbol="Process/WakeDropInstrumentation" version="2" task="Process" opcode="WakeDropInstrumentation" template="Process_V2_TypeGroup4"/>
+        <event value="82" symbol="Process/WakeDropKernel" version="2" task="Process" opcode="WakeDropKernel" template="Process_V2_TypeGroup4"/>
+        <event value="48" symbol="Process/WakeChargeUser" version="2" task="Process" opcode="WakeChargeUser" template="Process_V2_TypeGroup4"/>
+        <event value="49" symbol="Process/WakeChargeExecution" version="2" task="Process" opcode="WakeChargeExecution" template="Process_V2_TypeGroup4"/>
+        <event value="50" symbol="Process/WakeChargeKernel" version="2" task="Process" opcode="WakeChargeKernel" template="Process_V2_TypeGroup4"/>
+        <event value="51" symbol="Process/WakeChargeInstrumentation" version="2" task="Process" opcode="WakeChargeInstrumentation" template="Process_V2_TypeGroup4"/>
+        <event value="52" symbol="Process/WakeChargePreserveProcess" version="2" task="Process" opcode="WakeChargePreserveProcess" template="Process_V2_TypeGroup4"/>
+        <event value="84" symbol="Process/WakeDropPreserveProcess" version="2" task="Process" opcode="WakeDropPreserveProcess" template="Process_V2_TypeGroup4"/>
+        <event value="32" symbol="Process/PerfCtr" version="2" task="Process" opcode="PerfCtr" template="Process_V2_TypeGroup2"/>
+        <event value="33" symbol="Process/PerfCtrRundown" version="2" task="Process" opcode="PerfCtrRundown" template="Process_V2_TypeGroup2"/>
+        <event value="1" symbol="Process/Start" version="2" task="Process" opcode="Start" template="Process_V2_TypeGroup1"/>
+        <event value="2" symbol="Process/End" version="2" task="Process" opcode="End" template="Process_V2_TypeGroup1"/>
+        <event value="3" symbol="Process/DCStart" version="2" task="Process" opcode="DCStart" template="Process_V2_TypeGroup1"/>
+        <event value="4" symbol="Process/DCEnd" version="2" task="Process" opcode="DCEnd" template="Process_V2_TypeGroup1"/>
+        <event value="39" symbol="Process/Defunct" version="2" task="Process" opcode="Defunct" template="Process_V2_TypeGroup1"/>
+        <event value="11" symbol="Process/Terminate" version="2" task="Process" opcode="Terminate" template="Process_Terminate_TypeGroup1"/>
+        <event value="35" symbol="Process/InSwap" version="2" task="Process" opcode="InSwap" template="Process_V2_TypeGroup3"/>
+        <event value="1" symbol="Process/Start" version="4" task="Process" opcode="Start" template="Process_V4_TypeGroup1"/>
+        <event value="2" symbol="Process/End" version="4" task="Process" opcode="End" template="Process_V4_TypeGroup1"/>
+        <event value="3" symbol="Process/DCStart" version="4" task="Process" opcode="DCStart" template="Process_V4_TypeGroup1"/>
+        <event value="4" symbol="Process/DCEnd" version="4" task="Process" opcode="DCEnd" template="Process_V4_TypeGroup1"/>
+        <event value="39" symbol="Process/Defunct" version="4" task="Process" opcode="Defunct" template="Process_V4_TypeGroup1"/>
+        <event value="1" symbol="Process/Start" version="3" task="Process" opcode="Start" template="Process_V3_TypeGroup1"/>
+        <event value="2" symbol="Process/End" version="3" task="Process" opcode="End" template="Process_V3_TypeGroup1"/>
+        <event value="3" symbol="Process/DCStart" version="3" task="Process" opcode="DCStart" template="Process_V3_TypeGroup1"/>
+        <event value="4" symbol="Process/DCEnd" version="3" task="Process" opcode="DCEnd" template="Process_V3_TypeGroup1"/>
+        <event value="39" symbol="Process/Defunct" version="3" task="Process" opcode="Defunct" template="Process_V3_TypeGroup1"/>
+    </events>
+    <templates>
+     <template tid="Process_V2_TypeGroup3">
+      <data name="DirectoryTableBase" inType="win:Pointer"/>
+      <data name="ProcessId" inType="win:UInt32"/>
+     </template>
+     <template tid="Process_V4_TypeGroup1">
+      <data name="UniqueProcessKey" inType="win:Pointer"/>
+      <data name="ProcessId" inType="win:UInt32"/>
+      <data name="ParentId" inType="win:UInt32"/>
+      <data name="SessionId" inType="win:UInt32"/>
+      <data name="ExitStatus" inType="win:SInt32"/>
+      <data name="DirectoryTableBase" inType="win:Pointer"/>
+      <data name="Flags" inType="win:UInt32"/>
+      <data name="UserSID" inType="win:SID"/>
+      <data name="ImageFileName" inType="win:String"/>
+      <data name="CommandLine" inType="win:WString"/>
+      <data name="PackageFullName" inType="win:WString"/>
+      <data name="ApplicationId" inType="win:WString"/>
+     </template>
+     <template tid="Process_V1_TypeGroup1">
+      <data name="PageDirectoryBase" inType="win:Pointer"/>
+      <data name="ProcessId" inType="win:UInt32"/>
+      <data name="ParentId" inType="win:UInt32"/>
+      <data name="SessionId" inType="win:UInt32"/>
+      <data name="ExitStatus" inType="win:SInt32"/>
+      <data name="UserSID" inType="win:SID"/>
+      <data name="ImageFileName" inType="win:String"/>
+     </template>
+     <template tid="Process_V2_TypeGroup1">
+      <data name="UniqueProcessKey" inType="win:Pointer"/>
+      <data name="ProcessId" inType="win:UInt32"/>
+      <data name="ParentId" inType="win:UInt32"/>
+      <data name="SessionId" inType="win:UInt32"/>
+      <data name="ExitStatus" inType="win:SInt32"/>
+      <data name="UserSID" inType="win:SID"/>
+      <data name="ImageFileName" inType="win:String"/>
+      <data name="CommandLine" inType="win:WString"/>
+     </template>
+     <template tid="Process_V0_TypeGroup1">
+      <data name="ProcessId" inType="win:Pointer"/>
+      <data name="ParentId" inType="win:Pointer"/>
+      <data name="UserSID" inType="win:SID"/>
+      <data name="ImageFileName" inType="win:String"/>
+     </template>
+     <template tid="Process_V2_TypeGroup5">
+      <data name="Object" inType="win:Pointer"/>
+     </template>
+     <template tid="Process_Defunct_TypeGroup1">
+      <data name="UniqueProcessKey" inType="win:Pointer"/>
+      <data name="ProcessId" inType="win:UInt32"/>
+      <data name="ParentId" inType="win:UInt32"/>
+      <data name="SessionId" inType="win:UInt32"/>
+      <data name="ExitStatus" inType="win:SInt32"/>
+      <data name="DirectoryTableBase" inType="win:Pointer"/>
+      <data name="Flags" inType="win:UInt32"/>
+      <data name="UserSID" inType="win:SID"/>
+      <data name="ImageFileName" inType="win:String"/>
+      <data name="CommandLine" inType="win:WString"/>
+      <data name="PackageFullName" inType="win:WString"/>
+      <data name="ApplicationId" inType="win:WString"/>
+      <data name="ExitTime" inType="win:UInt64"/>
+     </template>
+     <template tid="Process_V2_TypeGroup4">
+      <data name="Object" inType="win:Pointer"/>
+      <data name="Tag" inType="win:Pointer"/>
+      <data name="ProcessId" inType="win:UInt32"/>
+      <data name="Count" inType="win:UInt32"/>
+     </template>
+     <template tid="Process_Terminate_TypeGroup1">
+      <data name="ProcessId" inType="win:UInt32"/>
+     </template>
+     <template tid="Process_V3_TypeGroup1">
+      <data name="UniqueProcessKey" inType="win:Pointer"/>
+      <data name="ProcessId" inType="win:UInt32"/>
+      <data name="ParentId" inType="win:UInt32"/>
+      <data name="SessionId" inType="win:UInt32"/>
+      <data name="ExitStatus" inType="win:SInt32"/>
+      <data name="DirectoryTableBase" inType="win:Pointer"/>
+      <data name="UserSID" inType="win:SID"/>
+      <data name="ImageFileName" inType="win:String"/>
+      <data name="CommandLine" inType="win:WString"/>
+     </template>
+     <template tid="Process_V2_TypeGroup2">
+      <data name="ProcessId" inType="win:UInt32"/>
+      <data name="PageFaultCount" inType="win:UInt32"/>
+      <data name="HandleCount" inType="win:UInt32"/>
+      <data name="Reserved" inType="win:UInt32"/>
+      <data name="PeakVirtualSize" inType="win:SizeT"/>
+      <data name="PeakWorkingSetSize" inType="win:SizeT"/>
+      <data name="PeakPagefileUsage" inType="win:SizeT"/>
+      <data name="QuotaPeakPagedPoolUsage" inType="win:SizeT"/>
+      <data name="QuotaPeakNonPagedPoolUsage" inType="win:SizeT"/>
+      <data name="VirtualSize" inType="win:SizeT"/>
+      <data name="WorkingSetSize" inType="win:SizeT"/>
+      <data name="PagefileUsage" inType="win:SizeT"/>
+      <data name="QuotaPagedPoolUsage" inType="win:SizeT"/>
+      <data name="QuotaNonPagedPoolUsage" inType="win:SizeT"/>
+      <data name="PrivatePageCount" inType="win:SizeT"/>
+     </template>
+    </templates>
+   </provider>
+  </events>
+ </instrumentation>
+</instrumentationManifest>

@@ -1,0 +1,606 @@
+<instrumentationManifest xmlns="http://schemas.microsoft.com/win/2004/08/events">
+ <instrumentation xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:win="http://manifests.microsoft.com/win/2004/08/windows/events">
+  <events>
+   <provider name="Microsoft-Windows-Kernel-Boot" guid="{15ca44ff-4d7a-4baa-bba5-0998955e531e}" resourceFileName="Microsoft-Windows-Kernel-Boot" messageFileName="Microsoft-Windows-Kernel-Boot" symbol="MicrosoftWindowsKernelBoot" source="Xml" >
+    <keywords>
+     <keyword name="SoftRestart" message="$(string.keyword_SoftRestart)" mask="0x1"/>
+     <keyword name="MemoryPreservation" message="$(string.keyword_MemoryPreservation)" mask="0x2"/>
+     <keyword name="MemoryBlockRundown" message="$(string.keyword_MemoryBlockRundown)" mask="0x4"/>
+     <keyword name="PhysicalMemory" message="$(string.keyword_PhysicalMemory)" mask="0x8"/>
+     <keyword name="MemoryMapRundown" message="$(string.keyword_MemoryMapRundown)" mask="0x10"/>
+     <keyword name="MemoryPartitions" message="$(string.keyword_MemoryPartitions)" mask="0x20"/>
+     <keyword name="keyword_200000000000" message="$(string.keyword_keyword_200000000000)" mask="0x200000000000"/>
+     <keyword name="keyword_400000000000" message="$(string.keyword_keyword_400000000000)" mask="0x400000000000"/>
+    </keywords>
+    <tasks>
+     <task name="task_0" message="$(string.task_task_0)" value="0"/>
+     <task name="InitializeLibrary" message="$(string.task_InitializeLibrary)" value="1"/>
+     <task name="PrepareTarget" message="$(string.task_PrepareTarget)" value="2"/>
+     <task name="RebuildKernelMemoryMap" message="$(string.task_RebuildKernelMemoryMap)" value="3"/>
+     <task name="FatalError" message="$(string.task_FatalError)" value="4"/>
+     <task name="PersistMemory" message="$(string.task_PersistMemory)" value="5"/>
+     <task name="ClaimPersistedMemory" message="$(string.task_ClaimPersistedMemory)" value="6"/>
+     <task name="FreePersistedMemory" message="$(string.task_FreePersistedMemory)" value="7"/>
+     <task name="CleanupPageDatabase" message="$(string.task_CleanupPageDatabase)" value="8"/>
+     <task name="CancelBoot" message="$(string.task_CancelBoot)" value="9"/>
+     <task name="AttachPersistentPageDatabase" message="$(string.task_AttachPersistentPageDatabase)" value="10"/>
+     <task name="MemoryBlockRundown" message="$(string.task_MemoryBlockRundown)" value="11"/>
+     <task name="BuildKernelMemoryMap" message="$(string.task_BuildKernelMemoryMap)" value="12"/>
+     <task name="GetMemoryMap" message="$(string.task_GetMemoryMap)" value="13"/>
+     <task name="AllocatePhysicalPagesForMdl" message="$(string.task_AllocatePhysicalPagesForMdl)" value="14"/>
+     <task name="ExecuteTransition" message="$(string.task_ExecuteTransition)" value="15"/>
+     <task name="DisconnectHypervisor" message="$(string.task_DisconnectHypervisor)" value="16"/>
+     <task name="MemoryMapRundown" message="$(string.task_MemoryMapRundown)" value="17"/>
+     <task name="PhysicalPageAllocationFailure" message="$(string.task_PhysicalPageAllocationFailure)" value="18"/>
+     <task name="BootManager" message="$(string.task_BootManager)" value="19"/>
+     <task name="PreBoot" message="$(string.task_PreBoot)" value="20"/>
+     <task name="FirmwareBootData" message="$(string.task_FirmwareBootData)" value="21"/>
+     <task name="LoadDrivers" message="$(string.task_LoadDrivers)" value="22"/>
+     <task name="LoadHive" message="$(string.task_LoadHive)" value="23"/>
+     <task name="BootApplicationExecution" message="$(string.task_BootApplicationExecution)" value="24"/>
+     <task name="WaitForPartitionsRestored" message="$(string.task_WaitForPartitionsRestored)" value="25"/>
+     <task name="MemoryPartitionRestore" message="$(string.task_MemoryPartitionRestore)" value="26"/>
+     <task name="PersistMemoryPartition" message="$(string.task_PersistMemoryPartition)" value="27"/>
+     <task name="RegisterLoader" message="$(string.task_RegisterLoader)" value="28"/>
+     <task name="SiPolicyFailure" message="$(string.task_SiPolicyFailure)" value="29"/>
+     <task name="BootTotalIo" message="$(string.task_BootTotalIo)" value="30"/>
+     <task name="DirtyBootShutdown" message="$(string.task_DirtyBootShutdown)" value="31"/>
+     <task name="BootMenuPolicy" message="$(string.task_BootMenuPolicy)" value="32"/>
+     <task name="BootType" message="$(string.task_BootType)" value="33"/>
+     <task name="MemoryPartitionsRestored" message="$(string.task_MemoryPartitionsRestored)" value="34"/>
+     <task name="QueryStatistics" message="$(string.task_QueryStatistics)" value="35"/>
+     <task name="ConnectSecureLoader" message="$(string.task_ConnectSecureLoader)" value="36"/>
+     <task name="BootFileAccess" message="$(string.task_BootFileAccess)" value="37"/>
+     <task name="RetrieveDriverListTime" message="$(string.task_RetrieveDriverListTime)" value="38"/>
+     <task name="FreePersistedMemoryBlock" message="$(string.task_FreePersistedMemoryBlock)" value="39"/>
+     <task name="PrepareNotification" message="$(string.task_PrepareNotification)" value="40"/>
+     <task name="PartitionInitialAddMemory" message="$(string.task_PartitionInitialAddMemory)" value="41"/>
+     <task name="ImageHashCheck" message="$(string.task_ImageHashCheck)" value="42"/>
+     <task name="ImageIntegrityCheck" message="$(string.task_ImageIntegrityCheck)" value="43"/>
+     <task name="BootPolicyMigration" message="$(string.task_BootPolicyMigration)" value="44"/>
+    </tasks>
+    <maps>
+     <valueMap name="EnableDisableReasonMap">
+      <map value="0x0" message="$(string.map_EnableDisableReasonMapdisabled)"/>
+      <map value="0x1" message="$(string.map_EnableDisableReasonMapdisabled due to HyperV opt-out)"/>
+      <map value="0x2" message="$(string.map_EnableDisableReasonMapdisabled due to opt-out UEFI variable)"/>
+      <map value="0x3" message="$(string.map_EnableDisableReasonMapdisabled due to secure boot being disabled)"/>
+      <map value="0x4" message="$(string.map_EnableDisableReasonMapdisabled due to DMA protection being unavailable)"/>
+      <map value="0x64" message="$(string.map_EnableDisableReasonMapenabled due to VBS registry configuration)"/>
+      <map value="0x65" message="$(string.map_EnableDisableReasonMapenabled due to HyperV)"/>
+      <map value="0x66" message="$(string.map_EnableDisableReasonMapenabled due to VBS locked configuration)"/>
+     </valueMap>
+     <bitMap name="VsmPolicyMap">
+      <map value="0x0" message="$(string.map_VsmPolicyMapNone)"/>
+      <map value="0x1" message="$(string.map_VsmPolicyMapVBS Enabled)"/>
+      <map value="0x2" message="$(string.map_VsmPolicyMapVSM Required)"/>
+      <map value="0x4" message="$(string.map_VsmPolicyMapSecure Boot)"/>
+      <map value="0x8" message="$(string.map_VsmPolicyMapIommu Protection)"/>
+      <map value="0x10" message="$(string.map_VsmPolicyMapMmio Nx)"/>
+      <map value="0x20" message="$(string.map_VsmPolicyMapStrong MSR Filtering)"/>
+      <map value="0x40" message="$(string.map_VsmPolicyMapMandatory)"/>
+      <map value="0x80" message="$(string.map_VsmPolicyMapHvci)"/>
+      <map value="0x100" message="$(string.map_VsmPolicyMapHvci Strict)"/>
+      <map value="0x200" message="$(string.map_VsmPolicyMapBoot Chain Signer Soft Enforced)"/>
+      <map value="0x400" message="$(string.map_VsmPolicyMapBoot Chain Signer Hard Enforced)"/>
+     </bitMap>
+    </maps>
+    <events>
+     <event value="1" symbol="task_0" version="0" task="task_0" level="win:Informational" template="task_0Args"/>
+     <event value="2" symbol="task_02" version="0" task="task_0" level="win:Informational" template="task_0Args"/>
+     <event value="3" symbol="task_03" version="0" task="task_0" level="win:Informational" template="task_03Args"/>
+     <event value="4" symbol="BootFileAccess" version="0" task="BootFileAccess" level="win:Informational" template="BootFileAccessArgs"/>
+     <event value="5" symbol="BootTotalIo" version="0" task="BootTotalIo" level="win:Informational" keywords="keyword_200000000000" template="BootTotalIoArgs"/>
+     <event value="6" symbol="ImageIntegrityCheck" version="0" task="ImageIntegrityCheck" level="win:Error" keywords="keyword_200000000000" template="ImageIntegrityCheckArgs"/>
+     <event value="7" symbol="BootManager" version="0" task="BootManager" level="win:Informational" keywords="keyword_200000000000" template="BootManagerArgs"/>
+     <event value="8" symbol="ImageHashCheck" version="0" task="ImageHashCheck" level="win:Warning" keywords="keyword_200000000000" template="ImageHashCheckArgs"/>
+     <event value="9" symbol="task_09" version="0" task="task_0" level="win:Warning" keywords="keyword_200000000000" template="task_09Args"/>
+     <event value="10" symbol="task_010" version="0" task="task_0" level="win:Error" keywords="keyword_200000000000" template="task_010Args"/>
+     <event value="11" symbol="PreBoot" version="0" task="PreBoot" level="win:Informational" template="PreBootArgs"/>
+     <event value="12" symbol="task_012" version="0" task="task_0" level="win:Informational" template="task_012Args"/>
+     <event value="13" symbol="task_013" version="0" task="task_0" level="win:Warning" keywords="keyword_200000000000" template="task_013Args"/>
+     <event value="14" symbol="task_014" version="0" task="task_0" level="win:Informational" template="task_014Args"/>
+     <event value="15" symbol="task_015" version="0" task="task_0" level="win:Informational" template="task_014Args"/>
+     <event value="16" symbol="task_016" version="0" task="task_0" level="win:Error" template="task_016Args"/>
+     <event value="17" symbol="task_017" version="0" task="task_0" level="win:Informational"/>
+     <event value="18" symbol="task_018" version="0" task="task_0" level="win:Informational" template="task_018Args"/>
+     <event value="19" symbol="task_019" version="0" task="task_0" level="win:Informational" template="task_019Args"/>
+     <event value="20" symbol="DirtyBootShutdown" version="0" task="DirtyBootShutdown" level="win:Informational" template="DirtyBootShutdownArgs"/>
+     <event value="21" symbol="task_021" version="0" task="task_0" level="win:Informational" template="task_021Args"/>
+     <event value="22" symbol="task_022" version="0" task="task_0" level="win:Informational"/>
+     <event value="23" symbol="task_023" version="0" task="task_0" level="win:Informational"/>
+     <event value="24" symbol="task_024" version="0" task="task_0" level="win:Informational"/>
+     <event value="25" symbol="BootMenuPolicy" version="0" task="BootMenuPolicy" level="win:Informational" template="BootMenuPolicyArgs"/>
+     <event value="26" symbol="task_026" version="0" task="task_0" level="win:Informational"/>
+     <event value="27" symbol="BootType" version="0" task="BootType" level="win:Informational" template="BootTypeArgs"/>
+     <event value="27" symbol="BootType_V1" version="1" task="BootType" level="win:Informational" template="BootTypeArgs_V1"/>
+     <event value="28" symbol="task_028" version="0" task="task_0" level="win:Informational" template="task_028Args"/>
+     <event value="29" symbol="task_029" version="0" task="task_0" level="win:Error" template="task_016Args"/>
+     <event value="30" symbol="FirmwareBootData" version="0" task="FirmwareBootData" level="win:Informational" template="FirmwareBootDataArgs"/>
+     <event value="31" symbol="task_031" version="0" task="task_0" level="win:Informational" template="task_014Args"/>
+     <event value="32" symbol="task_032" version="0" task="task_0" level="win:Informational" template="task_032Args"/>
+     <event value="33" symbol="task_033" version="0" task="task_0" level="win:Error" keywords="keyword_200000000000" template="task_033Args"/>
+     <event value="34" symbol="task_034" version="0" task="task_0" level="win:Error" keywords="keyword_200000000000" template="task_034Args"/>
+     <event value="35" symbol="task_035" version="0" task="task_0" level="win:Error" keywords="keyword_200000000000" template="task_035Args"/>
+     <event value="36" symbol="task_036" version="0" task="task_0" level="win:Informational" template="task_036Args"/>
+     <event value="37" symbol="task_037" version="0" task="task_0" level="win:Error" keywords="keyword_200000000000" template="task_033Args"/>
+     <event value="38" symbol="task_038" version="0" task="task_0" level="win:Error" keywords="keyword_200000000000" template="task_033Args"/>
+     <event value="39" symbol="task_039" version="0" task="task_0" level="win:Error" keywords="keyword_200000000000" template="task_039Args"/>
+     <event value="40" symbol="task_040" version="0" task="task_0" level="win:Error" keywords="keyword_200000000000" template="task_014Args"/>
+     <event value="41" symbol="task_041" version="0" task="task_0" level="win:Error" keywords="keyword_200000000000" template="task_014Args"/>
+     <event value="42" symbol="task_042" version="0" task="task_0" level="win:Error" keywords="keyword_200000000000" template="task_042Args"/>
+     <event value="43" symbol="task_043" version="0" task="task_0" level="win:Error" keywords="keyword_200000000000" template="task_043Args"/>
+     <event value="44" symbol="task_044" version="0" task="task_0" level="win:Error" template="task_044Args"/>
+     <event value="45" symbol="task_045" version="0" task="task_0" level="win:Informational" template="task_044Args"/>
+     <event value="46" symbol="RetrieveDriverListTime" version="0" task="RetrieveDriverListTime" level="win:Informational" template="RetrieveDriverListTimeArgs"/>
+     <event value="47" symbol="LoadDrivers" version="0" task="LoadDrivers" level="win:Informational" template="LoadDriversArgs"/>
+     <event value="48" symbol="LoadHive" version="0" task="LoadHive" level="win:Informational" template="LoadHiveArgs"/>
+     <event value="49" symbol="SiPolicyFailure" version="0" task="SiPolicyFailure" level="win:Error" template="SiPolicyFailureArgs"/>
+     <event value="50" symbol="task_050" version="0" task="task_0" level="win:Error" template="task_050Args"/>
+     <event value="51" symbol="task_051" version="0" task="task_0" level="win:Informational" template="task_050Args"/>
+     <event value="52" symbol="task_052" version="0" task="task_0" level="win:Informational" template="task_052Args"/>
+     <event value="53" symbol="BootApplicationExecution" version="0" task="BootApplicationExecution" level="win:Informational" template="BootApplicationExecutionArgs"/>
+     <event value="54" symbol="task_054" version="0" task="task_0" level="win:Error" template="task_054Args"/>
+     <event value="55" symbol="task_055" version="0" task="task_0" level="win:Error" template="task_055Args"/>
+     <event value="56" symbol="task_056" version="0" task="task_0" level="win:Error" template="task_014Args"/>
+     <event value="100" symbol="InitializeLibraryStart" version="0" task="InitializeLibrary" opcode="win:Start" level="win:Informational" keywords="SoftRestart"/>
+     <event value="100" symbol="InitializeLibraryStart_V1" version="1" task="InitializeLibrary" opcode="win:Start" level="win:Informational" keywords="SoftRestart" template="InitializeLibraryStartArgs_V1"/>
+     <event value="101" symbol="InitializeLibraryStop" version="0" task="InitializeLibrary" opcode="win:Stop" level="win:Informational" keywords="SoftRestart" template="task_014Args"/>
+     <event value="102" symbol="PrepareTargetStart" version="0" task="PrepareTarget" opcode="win:Start" level="win:Informational" keywords="SoftRestart"/>
+     <event value="102" symbol="PrepareTargetStart_V1" version="1" task="PrepareTarget" opcode="win:Start" level="win:Informational" keywords="SoftRestart" template="PrepareTargetStartArgs_V1"/>
+     <event value="102" symbol="PrepareTargetStart_V2" version="2" task="PrepareTarget" opcode="win:Start" level="win:Informational" keywords="SoftRestart" template="PrepareTargetStartArgs_V2"/>
+     <event value="103" symbol="PrepareTargetStop" version="0" task="PrepareTarget" opcode="win:Stop" level="win:Informational" keywords="SoftRestart" template="task_014Args"/>
+     <event value="104" symbol="RebuildKernelMemoryMapStart" version="0" task="RebuildKernelMemoryMap" opcode="win:Start" level="win:Informational" keywords="SoftRestart" template="RebuildKernelMemoryMapStartArgs"/>
+     <event value="105" symbol="RebuildKernelMemoryMapStop" version="0" task="RebuildKernelMemoryMap" opcode="win:Stop" level="win:Informational" keywords="SoftRestart" template="task_014Args"/>
+     <event value="106" symbol="PersistMemoryStart" version="0" task="PersistMemory" opcode="win:Start" level="win:Informational" keywords="MemoryPreservation" template="PersistMemoryStartArgs"/>
+     <event value="107" symbol="PersistMemoryStop" version="0" task="PersistMemory" opcode="win:Stop" level="win:Informational" keywords="MemoryPreservation" template="PersistMemoryStopArgs"/>
+     <event value="108" symbol="FatalError" version="0" task="FatalError" level="win:Error" keywords="SoftRestart MemoryPreservation" template="task_014Args"/>
+     <event value="109" symbol="CleanupPageDatabaseStart" version="0" task="CleanupPageDatabase" opcode="win:Start" level="win:Informational" keywords="SoftRestart MemoryPreservation" template="CleanupPageDatabaseStartArgs"/>
+     <event value="110" symbol="CleanupPageDatabaseStop" version="0" task="CleanupPageDatabase" opcode="win:Stop" level="win:Informational" keywords="SoftRestart MemoryPreservation" template="task_014Args"/>
+     <event value="111" symbol="FreePersistedMemoryStart" version="0" task="FreePersistedMemory" opcode="win:Start" level="win:Informational" keywords="MemoryPreservation" template="FreePersistedMemoryStartArgs"/>
+     <event value="112" symbol="FreePersistedMemoryStop" version="0" task="FreePersistedMemory" opcode="win:Stop" level="win:Informational" keywords="MemoryPreservation" template="task_014Args"/>
+     <event value="113" symbol="ClaimPersistedMemoryStart" version="0" task="ClaimPersistedMemory" opcode="win:Start" level="win:Informational" keywords="MemoryPreservation" template="ClaimPersistedMemoryStartArgs"/>
+     <event value="114" symbol="ClaimPersistedMemoryStop" version="0" task="ClaimPersistedMemory" opcode="win:Stop" level="win:Informational" keywords="MemoryPreservation" template="ClaimPersistedMemoryStopArgs"/>
+     <event value="115" symbol="CancelBootStart" version="0" task="CancelBoot" opcode="win:Start" level="win:Warning" keywords="SoftRestart" template="CleanupPageDatabaseStartArgs"/>
+     <event value="116" symbol="CancelBootStop" version="0" task="CancelBoot" opcode="win:Stop" level="win:Warning" keywords="SoftRestart" template="task_014Args"/>
+     <event value="117" symbol="AttachPersistentPageDatabaseStart" version="0" task="AttachPersistentPageDatabase" opcode="win:Start" level="win:Informational" keywords="SoftRestart MemoryPreservation"/>
+     <event value="118" symbol="AttachPersistentPageDatabaseStop" version="0" task="AttachPersistentPageDatabase" opcode="win:Stop" level="win:Informational" keywords="SoftRestart MemoryPreservation" template="task_014Args"/>
+     <event value="119" symbol="MemoryBlockRundown" version="0" task="MemoryBlockRundown" level="win:Informational" keywords="MemoryBlockRundown" template="MemoryBlockRundownArgs"/>
+     <event value="120" symbol="BuildKernelMemoryMapStart" version="0" task="BuildKernelMemoryMap" opcode="win:Start" level="win:Informational" keywords="SoftRestart"/>
+     <event value="121" symbol="BuildKernelMemoryMapStop" version="0" task="BuildKernelMemoryMap" opcode="win:Stop" level="win:Informational" keywords="SoftRestart" template="task_014Args"/>
+     <event value="122" symbol="GetMemoryMapStart" version="0" task="GetMemoryMap" opcode="win:Start" level="win:Informational" keywords="SoftRestart" template="GetMemoryMapStartArgs"/>
+     <event value="123" symbol="GetMemoryMapStop" version="0" task="GetMemoryMap" opcode="win:Stop" level="win:Informational" keywords="SoftRestart" template="GetMemoryMapStopArgs"/>
+     <event value="124" symbol="task_0124" version="0" task="task_0" level="win:Error" keywords="keyword_400000000000" template="task_0124Args"/>
+     <event value="126" symbol="AllocatePhysicalPagesForMdlStart" version="0" task="AllocatePhysicalPagesForMdl" opcode="win:Start" level="win:Informational" keywords="SoftRestart PhysicalMemory" template="AllocatePhysicalPagesForMdlStartArgs"/>
+     <event value="127" symbol="AllocatePhysicalPagesForMdlStop" version="0" task="AllocatePhysicalPagesForMdl" opcode="win:Stop" level="win:Informational" keywords="SoftRestart PhysicalMemory" template="AllocatePhysicalPagesForMdlStopArgs"/>
+     <event value="128" symbol="ExecuteTransitionStart" version="0" task="ExecuteTransition" opcode="win:Start" level="win:Informational" keywords="SoftRestart" template="ExecuteTransitionStartArgs"/>
+     <event value="129" symbol="DisconnectHypervisorStart" version="0" task="DisconnectHypervisor" opcode="win:Start" level="win:Informational" keywords="SoftRestart"/>
+     <event value="130" symbol="MemoryMapRundown" version="0" task="MemoryMapRundown" level="win:Informational" keywords="MemoryMapRundown" template="MemoryMapRundownArgs"/>
+     <event value="131" symbol="MemoryMapRundownStart" version="0" task="MemoryMapRundown" opcode="win:Start" level="win:Informational" keywords="MemoryMapRundown"/>
+     <event value="132" symbol="MemoryMapRundownStop" version="0" task="MemoryMapRundown" opcode="win:Stop" level="win:Informational" keywords="MemoryMapRundown" template="MemoryMapRundownStopArgs"/>
+     <event value="133" symbol="PhysicalPageAllocationFailure" version="0" task="PhysicalPageAllocationFailure" level="win:Error" keywords="SoftRestart PhysicalMemory" template="PhysicalPageAllocationFailureArgs"/>
+     <event value="134" symbol="WaitForPartitionsRestoredStart" version="0" task="WaitForPartitionsRestored" opcode="win:Start" level="win:Informational" keywords="SoftRestart"/>
+     <event value="135" symbol="WaitForPartitionsRestoredStop" version="0" task="WaitForPartitionsRestored" opcode="win:Stop" level="win:Informational" keywords="SoftRestart"/>
+     <event value="136" symbol="CleanupPageDatabase" version="0" task="CleanupPageDatabase" level="win:Error" keywords="SoftRestart MemoryPreservation" template="CleanupPageDatabaseArgs"/>
+     <event value="137" symbol="MemoryPartitionRestoreStart" version="0" task="MemoryPartitionRestore" opcode="win:Start" level="win:Informational" keywords="SoftRestart MemoryPreservation" template="MemoryPartitionRestoreStartArgs"/>
+     <event value="138" symbol="MemoryPartitionRestoreStop" version="0" task="MemoryPartitionRestore" opcode="win:Stop" level="win:Informational" keywords="SoftRestart MemoryPreservation" template="MemoryPartitionRestoreStopArgs"/>
+     <event value="139" symbol="MemoryPartitionRestore" version="0" task="MemoryPartitionRestore" level="win:Error" keywords="SoftRestart MemoryPreservation" template="MemoryPartitionRestoreArgs"/>
+     <event value="140" symbol="PersistMemoryPartitionStart" version="0" task="PersistMemoryPartition" opcode="win:Start" level="win:Informational" keywords="SoftRestart MemoryPreservation" template="PersistMemoryPartitionStartArgs"/>
+     <event value="141" symbol="PersistMemoryPartitionStop" version="0" task="PersistMemoryPartition" opcode="win:Stop" level="win:Informational" keywords="SoftRestart MemoryPreservation" template="PersistMemoryPartitionStopArgs"/>
+     <event value="142" symbol="RegisterLoader" version="0" task="RegisterLoader" level="win:Error" keywords="SoftRestart" template="RegisterLoaderArgs"/>
+     <event value="143" symbol="MemoryPartitionsRestored" version="0" task="MemoryPartitionsRestored" level="win:Informational" keywords="SoftRestart MemoryPreservation" template="task_014Args"/>
+     <event value="144" symbol="QueryStatisticsStart" version="0" task="QueryStatistics" opcode="win:Start" level="win:Informational" keywords="SoftRestart"/>
+     <event value="145" symbol="QueryStatisticsStop" version="0" task="QueryStatistics" opcode="win:Stop" level="win:Informational" keywords="SoftRestart" template="task_014Args"/>
+     <event value="146" symbol="ConnectSecureLoader" version="0" task="ConnectSecureLoader" level="win:Error" keywords="SoftRestart" template="task_014Args"/>
+     <event value="147" symbol="FreePersistedMemoryBlockStart" version="0" task="FreePersistedMemoryBlock" opcode="win:Start" level="win:Informational" keywords="MemoryPreservation" template="FreePersistedMemoryBlockStartArgs"/>
+     <event value="148" symbol="FreePersistedMemoryBlockStop" version="0" task="FreePersistedMemoryBlock" opcode="win:Stop" level="win:Informational" keywords="MemoryPreservation" template="task_014Args"/>
+     <event value="149" symbol="PrepareNotificationStart" version="0" task="PrepareNotification" opcode="win:Start" level="win:Informational" keywords="SoftRestart"/>
+     <event value="150" symbol="PrepareNotificationStop" version="0" task="PrepareNotification" opcode="win:Stop" level="win:Informational" keywords="SoftRestart" template="task_014Args"/>
+     <event value="151" symbol="PartitionInitialAddMemoryStart" version="0" task="PartitionInitialAddMemory" opcode="win:Start" level="win:Informational" keywords="MemoryPartitions" template="PartitionInitialAddMemoryStartArgs"/>
+     <event value="152" symbol="PartitionInitialAddMemoryStop" version="0" task="PartitionInitialAddMemory" opcode="win:Stop" level="win:Informational" keywords="MemoryPartitions" template="task_014Args"/>
+     <event value="153" symbol="task_0153" version="0" task="task_0" level="win:Informational" template="task_0153Args"/>
+     <event value="154" symbol="BootPolicyMigration" version="0" task="BootPolicyMigration" level="win:Informational" template="task_014Args"/>
+     <event value="155" symbol="BootPolicyMigration155" version="0" task="BootPolicyMigration" level="win:Warning" template="task_014Args"/>
+    </events>
+    <templates>
+     <template tid="task_0Args">
+      <data name="Width" inType="win:UInt32"/>
+      <data name="Height" inType="win:UInt32"/>
+      <data name="BitsPerPixel" inType="win:UInt32"/>
+     </template>
+     <template tid="task_03Args">
+      <data name="BytesPerMs" inType="win:UInt32"/>
+     </template>
+     <template tid="BootFileAccessArgs">
+      <data name="DeviceID" inType="win:UInt32"/>
+      <data name="FileName" inType="win:UnicodeString"/>
+      <data name="BytesRead" inType="win:UInt64"/>
+      <data name="BytesWritten" inType="win:UInt64"/>
+     </template>
+     <template tid="BootTotalIoArgs">
+      <data name="ApplicationGuid" inType="win:GUID"/>
+      <data name="BytesRead" inType="win:UInt64"/>
+      <data name="BytesWritten" inType="win:UInt64"/>
+     </template>
+     <template tid="ImageIntegrityCheckArgs">
+      <data name="ImageName" inType="win:UnicodeString"/>
+      <data name="ImageFlags" inType="win:UInt32"/>
+      <data name="Reason" inType="win:UInt32"/>
+      <data name="ErrorIgnored" inType="win:UInt32"/>
+     </template>
+     <template tid="BootManagerArgs">
+      <data name="BootmgrTime" inType="win:UInt64"/>
+     </template>
+     <template tid="ImageHashCheckArgs">
+      <data name="ImageName" inType="win:UnicodeString"/>
+     </template>
+     <template tid="task_09Args">
+      <data name="DriveNumber" inType="win:UInt32"/>
+     </template>
+     <template tid="task_010Args">
+      <data name="FwStartPage" inType="win:UInt64"/>
+      <data name="FwPageCount" inType="win:UInt64"/>
+      <data name="FwMemoryType" inType="win:UInt32"/>
+      <data name="FwMemoryAttributes" inType="win:UInt32"/>
+      <data name="BlStartPage" inType="win:UInt64"/>
+      <data name="BlPageCount" inType="win:UInt64"/>
+      <data name="BlMemoryType" inType="win:UInt32"/>
+      <data name="BlMemoryAttributes" inType="win:UInt32"/>
+     </template>
+     <template tid="PreBootArgs">
+      <data name="PreBootMgrTime" inType="win:UInt64"/>
+     </template>
+     <template tid="task_012Args">
+      <data name="UefiVariableName" inType="win:UnicodeString"/>
+      <data name="Size" inType="win:UInt32"/>
+      <data name="Status" inType="win:UInt32"/>
+     </template>
+     <template tid="task_013Args">
+      <data name="ApplicationGuid" inType="win:GUID"/>
+      <data name="Element" inType="win:UInt32"/>
+     </template>
+     <template tid="task_014Args">
+      <data name="Status" inType="win:UInt32"/>
+     </template>
+     <template tid="task_016Args">
+      <data name="FailureStatus" inType="win:UInt64"/>
+      <data name="FailureMsgId" inType="win:UInt64"/>
+     </template>
+     <template tid="task_018Args">
+      <data name="EntryCount" inType="win:UInt32"/>
+     </template>
+     <template tid="task_019Args">
+      <data name="ToolsCount" inType="win:UInt32"/>
+     </template>
+     <template tid="DirtyBootShutdownArgs">
+      <data name="LastShutdownGood" inType="win:Boolean"/>
+      <data name="LastBootGood" inType="win:Boolean"/>
+     </template>
+     <template tid="task_021Args">
+      <data name="OptionSelected" inType="win:UInt32"/>
+     </template>
+     <template tid="BootMenuPolicyArgs">
+      <data name="BootMenuPolicy" inType="win:UInt32"/>
+     </template>
+     <template tid="BootTypeArgs">
+      <data name="BootType" inType="win:UInt32"/>
+     </template>
+     <template tid="task_028Args">
+      <data name="SqmType" inType="win:UInt32"/>
+      <data name="SqmSessionGuid" inType="win:GUID"/>
+      <data name="SqmID" inType="win:UInt32"/>
+      <data name="SqmStreamRowLength" inType="win:UInt32"/>
+      <data name="SqmStreamRow" inType="win:Int16" count="SqmStreamRowLength"/>
+     </template>
+     <template tid="FirmwareBootDataArgs">
+      <data name="ResetEndStart" inType="win:UInt64"/>
+      <data name="LoadOSImageStart" inType="win:UInt64"/>
+      <data name="StartOSImageStart" inType="win:UInt64"/>
+      <data name="ExitBootServicesEntry" inType="win:UInt64"/>
+      <data name="ExitBootServicesExit" inType="win:UInt64"/>
+     </template>
+     <template tid="task_032Args">
+      <data name="BitlockerUserInputTime" inType="win:UInt64"/>
+     </template>
+     <template tid="task_033Args">
+      <data name="ImageName" inType="win:UnicodeString"/>
+      <data name="ImageLoadStatus" inType="win:UInt32"/>
+     </template>
+     <template tid="task_034Args">
+      <data name="PeImageName" inType="win:UnicodeString"/>
+      <data name="PeImageLoadStatus" inType="win:UInt32"/>
+     </template>
+     <template tid="task_035Args">
+      <data name="UpdateCapsuleStatus" inType="win:UInt32"/>
+     </template>
+     <template tid="task_036Args">
+      <data name="DeviceFlags" inType="win:UInt32"/>
+      <data name="PcrBitmap" inType="win:UInt32"/>
+      <data name="UpdateSupportedStatus" inType="win:UInt32"/>
+     </template>
+     <template tid="task_039Args">
+      <data name="HiveName" inType="win:UnicodeString"/>
+      <data name="HiveLoadStatus" inType="win:UInt32"/>
+     </template>
+     <template tid="task_042Args">
+      <data name="Path" inType="win:UnicodeString"/>
+      <data name="FailedPath" inType="win:UnicodeString"/>
+      <data name="Status" inType="win:UInt32"/>
+     </template>
+     <template tid="task_043Args">
+      <data name="Path" inType="win:UnicodeString"/>
+      <data name="Import" inType="win:AnsiString"/>
+      <data name="Status" inType="win:UInt32"/>
+     </template>
+     <template tid="task_044Args">
+      <data name="CachedCopyStatus" inType="win:UInt32"/>
+      <data name="IdkGenerationStatus" inType="win:UInt32"/>
+      <data name="MeasuringStatus" inType="win:UInt32"/>
+      <data name="SealingAndCachingStatus" inType="win:UInt32"/>
+     </template>
+     <template tid="RetrieveDriverListTimeArgs">
+      <data name="RetrieveDriverListTime" inType="win:UInt64"/>
+     </template>
+     <template tid="LoadDriversArgs">
+      <data name="LoadDriversTime" inType="win:UInt64"/>
+     </template>
+     <template tid="LoadHiveArgs">
+      <data name="Path" inType="win:UnicodeString"/>
+      <data name="LoadHiveTime" inType="win:UInt64"/>
+     </template>
+     <template tid="SiPolicyFailureArgs">
+      <data name="ImageName" inType="win:UnicodeString"/>
+      <data name="SiPolicyStatus" inType="win:UInt32"/>
+     </template>
+     <template tid="task_050Args">
+      <data name="CachedCopyStatus" inType="win:UInt32"/>
+      <data name="UnsealingCachedCopyStatus" inType="win:UInt32"/>
+      <data name="KeyGenerationAndSaveStatus" inType="win:UInt32"/>
+      <data name="SealingStatus" inType="win:UInt32"/>
+      <data name="TpmPcrMask" inType="win:UInt32"/>
+      <data name="ProtectorAssistedUnsealStatus" inType="win:UInt32"/>
+      <data name="ProtectorAssistedResealStatus" inType="win:UInt32"/>
+      <data name="ProtectorSealUpdateStatus" inType="win:UInt32"/>
+     </template>
+     <template tid="task_052Args">
+      <data name="ApplicationIdentifier" inType="win:GUID"/>
+      <data name="ApplicationLoadTime" inType="win:UInt64"/>
+     </template>
+     <template tid="BootApplicationExecutionArgs">
+      <data name="ApplicationIdentifier" inType="win:GUID"/>
+      <data name="ApplicationExecutionTime" inType="win:UInt64"/>
+     </template>
+     <template tid="task_054Args">
+      <data name="Status" inType="win:UInt32"/>
+      <data name="FileName" inType="win:UnicodeString"/>
+     </template>
+     <template tid="task_055Args">
+      <data name="Status" inType="win:UInt32"/>
+      <data name="FailurePoint" inType="win:UInt32"/>
+     </template>
+     <template tid="RebuildKernelMemoryMapStartArgs">
+      <data name="ReserveDescriptors" inType="win:UInt32"/>
+     </template>
+     <template tid="PersistMemoryStartArgs">
+      <data name="ApplicationId" inType="win:GUID"/>
+      <data name="RunCount" inType="win:UInt32"/>
+      <data name="PageCount" inType="win:UInt64"/>
+     </template>
+     <template tid="PersistMemoryStopArgs">
+      <data name="Status" inType="win:UInt32"/>
+      <data name="BlockId" inType="win:UInt64"/>
+     </template>
+     <template tid="CleanupPageDatabaseStartArgs">
+      <data name="FreePersistentPages" inType="win:Boolean"/>
+     </template>
+     <template tid="FreePersistedMemoryStartArgs">
+      <data name="ApplicationId" inType="win:GUID"/>
+      <data name="FreePersistentPages" inType="win:Boolean"/>
+     </template>
+     <template tid="ClaimPersistedMemoryStartArgs">
+      <data name="ApplicationId" inType="win:GUID"/>
+      <data name="BlockId" inType="win:UInt64"/>
+      <data name="Flags" inType="win:UInt32"/>
+     </template>
+     <template tid="ClaimPersistedMemoryStopArgs">
+      <data name="Status" inType="win:UInt32"/>
+      <data name="RunsClaimed" inType="win:UInt32"/>
+      <data name="PageCount" inType="win:UInt64"/>
+     </template>
+     <template tid="MemoryBlockRundownArgs">
+      <data name="ApplicationId" inType="win:GUID"/>
+      <data name="BlockId" inType="win:UInt64"/>
+     </template>
+     <template tid="GetMemoryMapStartArgs">
+      <data name="Type" inType="win:UInt32"/>
+      <data name="Flags" inType="win:UInt32"/>
+      <data name="BufferSize" inType="win:UInt32"/>
+     </template>
+     <template tid="GetMemoryMapStopArgs">
+      <data name="Status" inType="win:UInt32"/>
+      <data name="DataSize" inType="win:UInt32"/>
+      <data name="BufferSize" inType="win:UInt32"/>
+     </template>
+     <template tid="task_0124Args">
+      <data name="Phase" inType="win:UInt8"/>
+      <data name="Status" inType="win:UInt32"/>
+     </template>
+     <template tid="AllocatePhysicalPagesForMdlStartArgs">
+      <data name="LowAddress" inType="win:UInt64"/>
+      <data name="HighAddress" inType="win:UInt64"/>
+      <data name="SkipBytes" inType="win:UInt64"/>
+      <data name="TotalBytes" inType="win:UInt64"/>
+      <data name="CacheType" inType="win:UInt32"/>
+      <data name="Flags" inType="win:UInt32"/>
+     </template>
+     <template tid="AllocatePhysicalPagesForMdlStopArgs">
+      <data name="Mdl" inType="win:Pointer"/>
+     </template>
+     <template tid="ExecuteTransitionStartArgs">
+      <data name="StartTime" inType="win:FILETIME"/>
+     </template>
+     <template tid="MemoryMapRundownArgs">
+      <data name="SequenceNumber" inType="win:UInt32"/>
+      <data name="DescriptorCount" inType="win:UInt32"/>
+      <data name="MemoryDescriptor" inType="win:Int8" count="DescriptorCount"/>
+     </template>
+     <template tid="MemoryMapRundownStopArgs">
+      <data name="DescriptorCount" inType="win:UInt32"/>
+     </template>
+     <template tid="PhysicalPageAllocationFailureArgs">
+      <data name="Status" inType="win:HexInt32"/>
+      <data name="PageCount" inType="win:UInt64"/>
+      <data name="MemoryType" inType="win:UInt32"/>
+      <data name="Attributes" inType="win:UInt32"/>
+      <data name="LowAddress" inType="win:UInt64"/>
+      <data name="HighAddress" inType="win:UInt64"/>
+     </template>
+     <template tid="CleanupPageDatabaseArgs">
+      <data name="Status" inType="win:UInt32"/>
+      <data name="OutstandingCount" inType="win:UInt64"/>
+     </template>
+     <template tid="MemoryPartitionRestoreStartArgs">
+      <data name="Identifier" inType="win:GUID"/>
+      <data name="PartitionId" inType="win:UInt32"/>
+     </template>
+     <template tid="MemoryPartitionRestoreStopArgs">
+      <data name="Identifier" inType="win:GUID"/>
+      <data name="PartitionPageCount" inType="win:UInt64"/>
+      <data name="AllocatedBlockCount" inType="win:UInt64"/>
+      <data name="AllocatedRunCount" inType="win:UInt64"/>
+      <data name="AllocatedPageCount" inType="win:UInt64"/>
+      <data name="Status" inType="win:UInt32"/>
+     </template>
+     <template tid="MemoryPartitionRestoreArgs">
+      <data name="Identifier" inType="win:GUID"/>
+      <data name="Status" inType="win:UInt32"/>
+     </template>
+     <template tid="PersistMemoryPartitionStartArgs">
+      <data name="Identifier" inType="win:GUID"/>
+     </template>
+     <template tid="PersistMemoryPartitionStopArgs">
+      <data name="Identifier" inType="win:GUID"/>
+      <data name="RunCount" inType="win:UInt32"/>
+      <data name="PageCount" inType="win:UInt64"/>
+      <data name="Status" inType="win:UInt32"/>
+      <data name="PartitionNameLength" inType="win:UInt16"/>
+      <data name="PartitionName" inType="win:UnicodeString" length="PartitionNameLength"/>
+     </template>
+     <template tid="RegisterLoaderArgs">
+      <data name="Status" inType="win:UInt32"/>
+      <data name="ActualSize" inType="win:UInt32"/>
+      <data name="ExpectedSize" inType="win:UInt32"/>
+     </template>
+     <template tid="FreePersistedMemoryBlockStartArgs">
+      <data name="ApplicationId" inType="win:GUID"/>
+      <data name="BlockId" inType="win:UInt64"/>
+      <data name="FreePersistentPages" inType="win:Boolean"/>
+     </template>
+     <template tid="PartitionInitialAddMemoryStartArgs">
+      <data name="PartitionId" inType="win:UInt32"/>
+      <data name="RunCount" inType="win:UInt32"/>
+      <data name="PageCount" inType="win:UInt64"/>
+     </template>
+     <template tid="task_0153Args">
+      <data name="Status" inType="win:UInt32"/>
+      <data name="EnableDisableReason" inType="win:UInt32" map="EnableDisableReasonMap"/>
+      <data name="VsmPolicy" inType="win:UInt32" map="VsmPolicyMap"/>
+     </template>
+     <template tid="BootTypeArgs_V1">
+      <data name="BootType" inType="win:UInt32"/>
+      <data name="LoadOptions" inType="win:AnsiString"/>
+     </template>
+     <template tid="InitializeLibraryStartArgs_V1">
+      <data name="Secure" inType="win:Boolean"/>
+     </template>
+     <template tid="PrepareTargetStartArgs_V1">
+      <data name="SoftRestartCount" inType="win:UInt32"/>
+     </template>
+     <template tid="PrepareTargetStartArgs_V2">
+      <data name="SoftRestartCount" inType="win:UInt32"/>
+      <data name="Secure" inType="win:Boolean"/>
+     </template>
+    </templates>
+   </provider>
+  </events>
+ </instrumentation>
+ <localization>
+  <resources culture="en-US">
+   <stringTable>
+    <string id="keyword_SoftRestart" value="SoftRestart"/>
+    <string id="keyword_MemoryPreservation" value="MemoryPreservation"/>
+    <string id="keyword_MemoryBlockRundown" value="MemoryBlockRundown"/>
+    <string id="keyword_PhysicalMemory" value="PhysicalMemory"/>
+    <string id="keyword_MemoryMapRundown" value="MemoryMapRundown"/>
+    <string id="keyword_MemoryPartitions" value="MemoryPartitions"/>
+    <string id="keyword_keyword_200000000000" value="keyword_200000000000"/>
+    <string id="keyword_keyword_400000000000" value="keyword_400000000000"/>
+    <string id="task_task_0" value="task_0"/>
+    <string id="task_InitializeLibrary" value="InitializeLibrary"/>
+    <string id="task_PrepareTarget" value="PrepareTarget"/>
+    <string id="task_RebuildKernelMemoryMap" value="RebuildKernelMemoryMap"/>
+    <string id="task_FatalError" value="FatalError"/>
+    <string id="task_PersistMemory" value="PersistMemory"/>
+    <string id="task_ClaimPersistedMemory" value="ClaimPersistedMemory"/>
+    <string id="task_FreePersistedMemory" value="FreePersistedMemory"/>
+    <string id="task_CleanupPageDatabase" value="CleanupPageDatabase"/>
+    <string id="task_CancelBoot" value="CancelBoot"/>
+    <string id="task_AttachPersistentPageDatabase" value="AttachPersistentPageDatabase"/>
+    <string id="task_MemoryBlockRundown" value="MemoryBlockRundown"/>
+    <string id="task_BuildKernelMemoryMap" value="BuildKernelMemoryMap"/>
+    <string id="task_GetMemoryMap" value="GetMemoryMap"/>
+    <string id="task_AllocatePhysicalPagesForMdl" value="AllocatePhysicalPagesForMdl"/>
+    <string id="task_ExecuteTransition" value="ExecuteTransition"/>
+    <string id="task_DisconnectHypervisor" value="DisconnectHypervisor"/>
+    <string id="task_MemoryMapRundown" value="MemoryMapRundown"/>
+    <string id="task_PhysicalPageAllocationFailure" value="PhysicalPageAllocationFailure"/>
+    <string id="task_BootManager" value="BootManager"/>
+    <string id="task_PreBoot" value="PreBoot"/>
+    <string id="task_FirmwareBootData" value="FirmwareBootData"/>
+    <string id="task_LoadDrivers" value="LoadDrivers"/>
+    <string id="task_LoadHive" value="LoadHive"/>
+    <string id="task_BootApplicationExecution" value="BootApplicationExecution"/>
+    <string id="task_WaitForPartitionsRestored" value="WaitForPartitionsRestored"/>
+    <string id="task_MemoryPartitionRestore" value="MemoryPartitionRestore"/>
+    <string id="task_PersistMemoryPartition" value="PersistMemoryPartition"/>
+    <string id="task_RegisterLoader" value="RegisterLoader"/>
+    <string id="task_SiPolicyFailure" value="SiPolicyFailure"/>
+    <string id="task_BootTotalIo" value="BootTotalIo"/>
+    <string id="task_DirtyBootShutdown" value="DirtyBootShutdown"/>
+    <string id="task_BootMenuPolicy" value="BootMenuPolicy"/>
+    <string id="task_BootType" value="BootType"/>
+    <string id="task_MemoryPartitionsRestored" value="MemoryPartitionsRestored"/>
+    <string id="task_QueryStatistics" value="QueryStatistics"/>
+    <string id="task_ConnectSecureLoader" value="ConnectSecureLoader"/>
+    <string id="task_BootFileAccess" value="BootFileAccess"/>
+    <string id="task_RetrieveDriverListTime" value="RetrieveDriverListTime"/>
+    <string id="task_FreePersistedMemoryBlock" value="FreePersistedMemoryBlock"/>
+    <string id="task_PrepareNotification" value="PrepareNotification"/>
+    <string id="task_PartitionInitialAddMemory" value="PartitionInitialAddMemory"/>
+    <string id="task_ImageHashCheck" value="ImageHashCheck"/>
+    <string id="task_ImageIntegrityCheck" value="ImageIntegrityCheck"/>
+    <string id="task_BootPolicyMigration" value="BootPolicyMigration"/>
+    <string id="map_EnableDisableReasonMapdisabled" value="disabled"/>
+    <string id="map_EnableDisableReasonMapdisabled due to HyperV opt-out" value="disabled due to HyperV opt-out"/>
+    <string id="map_EnableDisableReasonMapdisabled due to opt-out UEFI variable" value="disabled due to opt-out UEFI variable"/>
+    <string id="map_EnableDisableReasonMapdisabled due to secure boot being disabled" value="disabled due to secure boot being disabled"/>
+    <string id="map_EnableDisableReasonMapdisabled due to DMA protection being unavailable" value="disabled due to DMA protection being unavailable"/>
+    <string id="map_EnableDisableReasonMapenabled due to VBS registry configuration" value="enabled due to VBS registry configuration"/>
+    <string id="map_EnableDisableReasonMapenabled due to HyperV" value="enabled due to HyperV"/>
+    <string id="map_EnableDisableReasonMapenabled due to VBS locked configuration" value="enabled due to VBS locked configuration"/>
+    <string id="map_VsmPolicyMapNone" value="None"/>
+    <string id="map_VsmPolicyMapVBS Enabled" value="VBS Enabled"/>
+    <string id="map_VsmPolicyMapVSM Required" value="VSM Required"/>
+    <string id="map_VsmPolicyMapSecure Boot" value="Secure Boot"/>
+    <string id="map_VsmPolicyMapIommu Protection" value="Iommu Protection"/>
+    <string id="map_VsmPolicyMapMmio Nx" value="Mmio Nx"/>
+    <string id="map_VsmPolicyMapStrong MSR Filtering" value="Strong MSR Filtering"/>
+    <string id="map_VsmPolicyMapMandatory" value="Mandatory"/>
+    <string id="map_VsmPolicyMapHvci" value="Hvci"/>
+    <string id="map_VsmPolicyMapHvci Strict" value="Hvci Strict"/>
+    <string id="map_VsmPolicyMapBoot Chain Signer Soft Enforced" value="Boot Chain Signer Soft Enforced"/>
+    <string id="map_VsmPolicyMapBoot Chain Signer Hard Enforced" value="Boot Chain Signer Hard Enforced"/>
+   </stringTable>
+  </resources>
+ </localization>
+</instrumentationManifest>

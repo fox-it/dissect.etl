@@ -1,0 +1,417 @@
+<instrumentationManifest xmlns="http://schemas.microsoft.com/win/2004/08/events">
+ <instrumentation xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:win="http://manifests.microsoft.com/win/2004/08/windows/events">
+  <events>
+
+   <provider name="Windows Kernel" guid="{01853a65-418f-4f36-aefc-dc0f1d2fd235}">
+    <events>
+        <event value="12" symbol="SystemConfig/LogDisk" version="1" task="SystemConfig" opcode="LogDisk" template="0x2a7fc3b0L"/>
+        <event value="11" symbol="SystemConfig/PhyDisk" version="1" task="SystemConfig" opcode="PhyDisk" template="0xd68c0bd3L"/>
+        <event value="21" symbol="SystemConfig/IRQ" version="1" task="SystemConfig" opcode="IRQ" template="0x7c7073eaL"/>
+        <event value="10" symbol="SystemConfig/CPU" version="1" task="SystemConfig" opcode="CPU" template="0x6a587f4L"/>
+        <event value="16" symbol="SystemConfig/Power" version="1" task="SystemConfig" opcode="Power" template="0x5bc3277aL"/>
+        <event value="14" symbol="SystemConfig/Video" version="1" task="SystemConfig" opcode="Video" template="0x9bf786c2L"/>
+        <event value="15" symbol="SystemConfig/Services" version="1" task="SystemConfig" opcode="Services" template="0x7aeb034cL"/>
+        <event value="22" symbol="SystemConfig/PnP" version="1" task="SystemConfig" opcode="PnP" template="0x7a6c7fb2L"/>
+        <event value="13" symbol="SystemConfig/NIC" version="1" task="SystemConfig" opcode="NIC" template="0x962af533L"/>
+        <event value="22" symbol="SystemConfig/PnP" version="4" task="SystemConfig" opcode="PnP" template="0x3cf89298L"/>
+        <event value="15" symbol="SystemConfig/Services" version="3" task="SystemConfig" opcode="Services" template="0xa2a2e64fL"/>
+        <event value="21" symbol="SystemConfig/IRQ" version="3" task="SystemConfig" opcode="IRQ" template="0xd83e0a39L"/>
+        <event value="10" symbol="SystemConfig/CPU" version="3" task="SystemConfig" opcode="CPU" template="0x49d8be83L"/>
+        <event value="22" symbol="SystemConfig/PnP" version="3" task="SystemConfig" opcode="PnP" template="0xbf89d65fL"/>
+        <event value="22" symbol="SystemConfig/PnP" version="5" task="SystemConfig" opcode="PnP" template="0x337e37f9L"/>
+        <event value="21" symbol="SystemConfig/IRQ" version="0" task="SystemConfig" opcode="IRQ" template="0x7c7073eaL"/>
+        <event value="10" symbol="SystemConfig/CPU" version="0" task="SystemConfig" opcode="CPU" template="0x6a587f4L"/>
+        <event value="15" symbol="SystemConfig/Services" version="0" task="SystemConfig" opcode="Services" template="0x7aeb034cL"/>
+        <event value="12" symbol="SystemConfig/LogDisk" version="0" task="SystemConfig" opcode="LogDisk" template="0x2a7fc3b0L"/>
+        <event value="14" symbol="SystemConfig/Video" version="0" task="SystemConfig" opcode="Video" template="0x9bf786c2L"/>
+        <event value="11" symbol="SystemConfig/PhyDisk" version="0" task="SystemConfig" opcode="PhyDisk" template="0xd68c0bd3L"/>
+        <event value="16" symbol="SystemConfig/Power" version="0" task="SystemConfig" opcode="Power" template="0x5bc3277aL"/>
+        <event value="22" symbol="SystemConfig/PnP" version="0" task="SystemConfig" opcode="PnP" template="0x7a6c7fb2L"/>
+        <event value="13" symbol="SystemConfig/NIC" version="0" task="SystemConfig" opcode="NIC" template="0x962af533L"/>
+        <event value="24" symbol="SystemConfig/NumaNode" version="2" task="SystemConfig" opcode="NumaNode" template="0x5ad8e55aL"/>
+        <event value="22" symbol="SystemConfig/PnP" version="2" task="SystemConfig" opcode="PnP" template="0x7a6c7fb2L"/>
+        <event value="29" symbol="SystemConfig/CodeIntegrity" version="2" task="SystemConfig" opcode="CodeIntegrity" template="0x73ada3b6L"/>
+        <event value="12" symbol="SystemConfig/LogDisk" version="2" task="SystemConfig" opcode="LogDisk" template="0x93947266L"/>
+        <event value="23" symbol="SystemConfig/IDEChannel" version="2" task="SystemConfig" opcode="IDEChannel" template="0x6b73fa74L"/>
+        <event value="28" symbol="SystemConfig/DPI" version="2" task="SystemConfig" opcode="DPI" template="0x34260c9eL"/>
+        <event value="13" symbol="SystemConfig/NIC" version="2" task="SystemConfig" opcode="NIC" template="0x2857ad47L"/>
+        <event value="10" symbol="SystemConfig/CPU" version="2" task="SystemConfig" opcode="CPU" template="0x53dce6e4L"/>
+        <event value="33" symbol="SystemConfig/DeviceFamily" version="2" task="SystemConfig" opcode="DeviceFamily" template="0x407be180L"/>
+        <event value="18" symbol="SystemConfig/OpticalDisk" version="2" task="SystemConfig" opcode="OpticalDisk" template="0xbf8caac7L"/>
+        <event value="27" symbol="SystemConfig/ProcessorNumber" version="2" task="SystemConfig" opcode="ProcessorNumber" template="0x10285ce6L"/>
+        <event value="14" symbol="SystemConfig/Video" version="2" task="SystemConfig" opcode="Video" template="0x9bf786c2L"/>
+        <event value="17" symbol="SystemConfig/Network" version="2" task="SystemConfig" opcode="Network" template="0xd8c415aaL"/>
+        <event value="31" symbol="SystemConfig/Defragmentation" version="2" task="SystemConfig" opcode="Defragmentation" template="0x189cbc37L"/>
+        <event value="35" symbol="SystemConfig/Processors" version="2" task="SystemConfig" opcode="Processors" template="0xada2cf2aL"/>
+        <event value="25" symbol="SystemConfig/Platform" version="2" task="SystemConfig" opcode="Platform" template="0xe641617bL"/>
+        <event value="26" symbol="SystemConfig/ProcessorGroup" version="2" task="SystemConfig" opcode="ProcessorGroup" template="0x5952053fL"/>
+        <event value="15" symbol="SystemConfig/Services" version="2" task="SystemConfig" opcode="Services" template="0x8475319aL"/>
+        <event value="11" symbol="SystemConfig/PhyDisk" version="2" task="SystemConfig" opcode="PhyDisk" template="0xd68c0bd3L"/>
+        <event value="16" symbol="SystemConfig/Power" version="2" task="SystemConfig" opcode="Power" template="0x5bc3277aL"/>
+        <event value="34" symbol="SystemConfig/FlightIds" version="2" task="SystemConfig" opcode="FlightIds" template="0x51f7bc1L"/>
+        <event value="32" symbol="SystemConfig/MobilePlatform" version="2" task="SystemConfig" opcode="MobilePlatform" template="0x3b208868L"/>
+        <event value="30" symbol="SystemConfig/TelemetryConfiguration" version="2" task="SystemConfig" opcode="TelemetryConfiguration" template="0xa2e32d87L"/>
+        <event value="21" symbol="SystemConfig/IRQ" version="2" task="SystemConfig" opcode="IRQ" template="0x7c7073eaL"/>
+    </events>
+    <templates>
+     <template tid="0x49d8be83L">
+      <data name="MHz" inType="win:UInt32"/>
+      <data name="NumberOfProcessors" inType="win:UInt32"/>
+      <data name="MemSize" inType="win:UInt32"/>
+      <data name="PageSize" inType="win:UInt32"/>
+      <data name="AllocationGranularity" inType="win:UInt32"/>
+      <data name="ComputerName" inType="win:WChar" max="256"/>
+      <data name="DomainName" inType="win:WChar" max="134"/>
+      <data name="HyperThreadingFlag" inType="win:Pointer"/>
+      <data name="HighestUserAddress" inType="win:Pointer"/>
+      <data name="ProcessorArchitecture" inType="win:UInt16"/>
+      <data name="ProcessorLevel" inType="win:UInt16"/>
+      <data name="ProcessorRevision" inType="win:UInt16"/>
+      <data name="PaeEnabled" inType="win:UInt8"/>
+      <data name="NxEnabled" inType="win:UInt8"/>
+      <data name="MemorySpeed" inType="win:UInt32"/>
+     </template>
+     <template tid="0x2857ad47L">
+      <data name="PhysicalAddr" inType="win:UInt64"/>
+      <data name="PhysicalAddrLen" inType="win:UInt32"/>
+      <data name="Ipv4Index" inType="win:UInt32"/>
+      <data name="Ipv6Index" inType="win:UInt32"/>
+      <data name="NICDescription" inType="win:WString"/>
+      <data name="IpAddresses" inType="win:WString"/>
+      <data name="DnsServerAddresses" inType="win:WString"/>
+     </template>
+     <template tid="0xe641617bL">
+      <data name="SystemManufacturer" inType="win:WString"/>
+      <data name="SystemProductName" inType="win:WString"/>
+      <data name="BiosDate" inType="win:WString"/>
+      <data name="BiosVersion" inType="win:WString"/>
+     </template>
+     <template tid="0x34260c9eL">
+      <data name="MachineDPI" inType="win:UInt32"/>
+      <data name="UserDPI" inType="win:UInt32"/>
+     </template>
+     <template tid="0xd83e0a39L">
+      <data name="IRQAffinity" inType="win:UInt64"/>
+      <data name="IRQGroup" inType="win:UInt16"/>
+      <data name="Reserved" inType="win:UInt16"/>
+      <data name="IRQNum" inType="win:UInt32"/>
+      <data name="DeviceDescriptionLen" inType="win:UInt32"/>
+      <data name="DeviceDescription" inType="win:WString"/>
+     </template>
+     <template tid="0x6a587f4L">
+      <data name="MHz" inType="win:UInt32"/>
+      <data name="NumberOfProcessors" inType="win:UInt32"/>
+      <data name="MemSize" inType="win:UInt32"/>
+      <data name="PageSize" inType="win:UInt32"/>
+      <data name="AllocationGranularity" inType="win:UInt32"/>
+      <data name="ComputerName" inType="win:WChar" max="256"/>
+      <data name="DomainName" inType="win:WChar" max="132"/>
+      <data name="HyperThreadingFlag" inType="win:Pointer"/>
+     </template>
+     <template tid="0x93947266L">
+      <data name="StartOffset" inType="win:UInt64"/>
+      <data name="PartitionSize" inType="win:UInt64"/>
+      <data name="DiskNumber" inType="win:UInt32"/>
+      <data name="Size" inType="win:UInt32"/>
+      <data name="DriveType" inType="win:UInt32"/>
+      <data name="DriveLetterString" inType="win:WChar" max="4"/>
+      <data name="Pad1" inType="win:UInt32"/>
+      <data name="PartitionNumber" inType="win:UInt32"/>
+      <data name="SectorsPerCluster" inType="win:UInt32"/>
+      <data name="BytesPerSector" inType="win:UInt32"/>
+      <data name="Pad2" inType="win:UInt32"/>
+      <data name="NumberOfFreeClusters" inType="win:SInt64"/>
+      <data name="TotalNumberOfClusters" inType="win:SInt64"/>
+      <data name="FileSystem" inType="win:WChar" max="16"/>
+      <data name="VolumeExt" inType="win:UInt32"/>
+      <data name="Pad3" inType="win:UInt32"/>
+     </template>
+     <template tid="0x53dce6e4L">
+      <data name="MHz" inType="win:UInt32"/>
+      <data name="NumberOfProcessors" inType="win:UInt32"/>
+      <data name="MemSize" inType="win:UInt32"/>
+      <data name="PageSize" inType="win:UInt32"/>
+      <data name="AllocationGranularity" inType="win:UInt32"/>
+      <data name="ComputerName" inType="win:WChar" max="256"/>
+      <data name="DomainName" inType="win:WChar" max="134"/>
+      <data name="HyperThreadingFlag" inType="win:Pointer"/>
+     </template>
+     <template tid="0xbf89d65fL">
+      <data name="IDLength" inType="win:UInt32"/>
+      <data name="DescriptionLength" inType="win:UInt32"/>
+      <data name="FriendlyNameLength" inType="win:UInt32"/>
+      <data name="DeviceID" inType="win:WString"/>
+      <data name="DeviceDescription" inType="win:WString"/>
+      <data name="FriendlyName" inType="win:WString"/>
+      <data name="PdoName" inType="win:WString"/>
+     </template>
+     <template tid="0x51f7bc1L">
+      <data name="UpdateId" inType="win:WString"/>
+      <data name="FlightIdList" inType="win:WString"/>
+     </template>
+     <template tid="0xa2e32d87L">
+      <data name="MachineId" inType="win:GUID"/>
+     </template>
+     <template tid="0x6b73fa74L">
+      <data name="TargetId" inType="win:UInt32"/>
+      <data name="DeviceType" inType="win:UInt32"/>
+      <data name="DeviceTimingMode" inType="win:UInt32"/>
+      <data name="LocationInformationLen" inType="win:UInt32"/>
+      <data name="LocationInformation" inType="win:WString"/>
+     </template>
+     <template tid="0x3cf89298L">
+      <data name="ClassGuid" inType="win:GUID"/>
+      <data name="UpperFiltersCount" inType="win:UInt32"/>
+      <data name="LowerFiltersCount" inType="win:UInt32"/>
+      <data name="DeviceID" inType="win:WString"/>
+      <data name="DeviceDescription" inType="win:WString"/>
+      <data name="FriendlyName" inType="win:WString"/>
+      <data name="PdoName" inType="win:WString"/>
+      <data name="ServiceName" inType="win:WString"/>
+      <data name="UpperFilters" inType="win:WString"/>
+      <data name="LowerFilters" inType="win:WString"/>
+     </template>
+     <template tid="0x962af533L">
+      <data name="NICName" inType="win:WChar" max="256"/>
+      <data name="Index" inType="win:UInt32"/>
+      <data name="PhysicalAddrLen" inType="win:UInt32"/>
+      <data name="PhysicalAddr" inType="win:WChar" max="8"/>
+      <data name="Size" inType="win:UInt32"/>
+      <data name="IpAddress" inType="win:SInt32"/>
+      <data name="SubnetMask" inType="win:SInt32"/>
+      <data name="DhcpServer" inType="win:SInt32"/>
+      <data name="Gateway" inType="win:SInt32"/>
+      <data name="PrimaryWinsServer" inType="win:SInt32"/>
+      <data name="SecondaryWinsServer" inType="win:SInt32"/>
+      <data name="DnsServer1" inType="win:SInt32"/>
+      <data name="DnsServer2" inType="win:SInt32"/>
+      <data name="DnsServer3" inType="win:SInt32"/>
+      <data name="DnsServer4" inType="win:SInt32"/>
+      <data name="Data" inType="win:UInt32"/>
+     </template>
+     <template tid="0x7a6c7fb2L">
+      <data name="IDLength" inType="win:UInt32"/>
+      <data name="DescriptionLength" inType="win:UInt32"/>
+      <data name="FriendlyNameLength" inType="win:UInt32"/>
+      <data name="DeviceID" inType="win:WString"/>
+      <data name="DeviceDescription" inType="win:WString"/>
+      <data name="FriendlyName" inType="win:WString"/>
+     </template>
+     <template tid="0x10285ce6L">
+      <data name="ProcessorCount" inType="win:UInt32"/>
+      <data name="ProcessorNumber" inType="win:UInt32"/>
+     </template>
+     <template tid="0xd8c415aaL">
+      <data name="TcbTablePartitions" inType="win:UInt32"/>
+      <data name="MaxHashTableSize" inType="win:UInt32"/>
+      <data name="MaxUserPort" inType="win:UInt32"/>
+      <data name="TcpTimedWaitDelay" inType="win:UInt32"/>
+     </template>
+     <template tid="0x3b208868L">
+      <data name="BootLoaderVersion" inType="win:WString"/>
+      <data name="FirmwareRevision" inType="win:WString"/>
+      <data name="FriendlyName" inType="win:WString"/>
+      <data name="HardwareRevision" inType="win:WString"/>
+      <data name="Manufacturer" inType="win:WString"/>
+      <data name="ManufacturerDisplayName" inType="win:WString"/>
+      <data name="ManufacturerModelName" inType="win:WString"/>
+      <data name="MobileOperatorDisplayName" inType="win:WString"/>
+      <data name="MobileOperatorName" inType="win:WString"/>
+      <data name="ModelName" inType="win:WString"/>
+      <data name="RadioHardwareRevision" inType="win:WString"/>
+      <data name="RadioSoftwareRevision" inType="win:WString"/>
+      <data name="ROMVersion" inType="win:WString"/>
+      <data name="SOCVersion" inType="win:WString"/>
+      <data name="HardwareVariant" inType="win:WString"/>
+     </template>
+     <template tid="0x5952053fL">
+      <data name="GroupCount" inType="win:UInt32"/>
+      <data name="Affinity" inType="win:Pointer"/>
+     </template>
+     <template tid="0x5bc3277aL">
+      <data name="S1" inType="win:UInt8"/>
+      <data name="S2" inType="win:UInt8"/>
+      <data name="S3" inType="win:UInt8"/>
+      <data name="S4" inType="win:UInt8"/>
+      <data name="S5" inType="win:UInt8"/>
+      <data name="Pad1" inType="win:UInt8"/>
+      <data name="Pad2" inType="win:UInt8"/>
+      <data name="Pad3" inType="win:UInt8"/>
+     </template>
+     <template tid="0x337e37f9L">
+      <data name="ClassGuid" inType="win:GUID"/>
+      <data name="UpperFiltersCount" inType="win:UInt32"/>
+      <data name="LowerFiltersCount" inType="win:UInt32"/>
+      <data name="DevStatus" inType="win:UInt32"/>
+      <data name="DevProblem" inType="win:UInt32"/>
+      <data name="DeviceID" inType="win:WString"/>
+      <data name="DeviceDescription" inType="win:WString"/>
+      <data name="FriendlyName" inType="win:WString"/>
+      <data name="PdoName" inType="win:WString"/>
+      <data name="ServiceName" inType="win:WString"/>
+      <data name="UpperFilters" inType="win:WString"/>
+      <data name="LowerFilters" inType="win:WString"/>
+     </template>
+     <template tid="0x407be180L">
+      <data name="UAPInfo" inType="win:UInt64"/>
+      <data name="DeviceFamily" inType="win:UInt32"/>
+      <data name="DeviceForm" inType="win:UInt32"/>
+     </template>
+     <template tid="0x5ad8e55aL">
+      <data name="NodeCount" inType="win:UInt32"/>
+      <data name="NodeMap" inType="win:UInt64"/>
+     </template>
+     <template tid="0xbf8caac7L">
+      <data name="DiskNumber" inType="win:UInt16"/>
+      <data name="BusType" inType="win:UInt16"/>
+      <data name="DeviceType" inType="win:UInt16"/>
+      <data name="MediaType" inType="win:UInt16"/>
+      <data name="StartingOffset" inType="win:UInt64"/>
+      <data name="Size" inType="win:UInt64"/>
+      <data name="NumberOfFreeBlocks" inType="win:UInt64"/>
+      <data name="TotalNumberOfBlocks" inType="win:UInt64"/>
+      <data name="NextWritableAddress" inType="win:UInt64"/>
+      <data name="NumberOfSessions" inType="win:UInt32"/>
+      <data name="NumberOfTracks" inType="win:UInt32"/>
+      <data name="BytesPerSector" inType="win:UInt32"/>
+      <data name="DiscStatus" inType="win:UInt16"/>
+      <data name="LastSessionStatus" inType="win:UInt16"/>
+      <data name="DriveLetter" inType="win:WString"/>
+      <data name="FileSystemName" inType="win:WString"/>
+      <data name="DeviceName" inType="win:AnsiString"/>
+      <data name="ManufacturerName" inType="win:AnsiString"/>
+     </template>
+     <template tid="0xd68c0bd3L">
+      <data name="DiskNumber" inType="win:UInt32"/>
+      <data name="BytesPerSector" inType="win:UInt32"/>
+      <data name="SectorsPerTrack" inType="win:UInt32"/>
+      <data name="TracksPerCylinder" inType="win:UInt32"/>
+      <data name="Cylinders" inType="win:UInt64"/>
+      <data name="SCSIPort" inType="win:UInt32"/>
+      <data name="SCSIPath" inType="win:UInt32"/>
+      <data name="SCSITarget" inType="win:UInt32"/>
+      <data name="SCSILun" inType="win:UInt32"/>
+      <data name="Manufacturer" inType="win:WChar" max="256"/>
+      <data name="PartitionCount" inType="win:UInt32"/>
+      <data name="WriteCacheEnabled" inType="win:UInt8"/>
+      <data name="Pad" inType="win:UInt8"/>
+      <data name="BootDriveLetter" inType="win:WChar" max="3"/>
+      <data name="Spare" inType="win:WChar" max="2"/>
+     </template>
+     <template tid="0x189cbc37L">
+      <data name="AlignmentClusters" inType="win:UInt64"/>
+      <data name="AvgFreeSpaceSize" inType="win:UInt64"/>
+      <data name="ClustersPerSlab" inType="win:UInt64"/>
+      <data name="FragmentedDirectoryExtents" inType="win:UInt64"/>
+      <data name="FragmentedExtents" inType="win:UInt64"/>
+      <data name="FreeSpaceCount" inType="win:UInt64"/>
+      <data name="LargestFreeSpaceSize" inType="win:UInt64"/>
+      <data name="LastRunActualPurgeClusters" inType="win:UInt64"/>
+      <data name="LastRunClustersTrimmed" inType="win:UInt64"/>
+      <data name="LastRunFullDefragTime" inType="win:UInt64"/>
+      <data name="LastRunTime" inType="win:UInt64"/>
+      <data name="MFTSize" inType="win:UInt64"/>
+      <data name="TotalClusters" inType="win:UInt64"/>
+      <data name="TotalUsedClusters" inType="win:UInt64"/>
+      <data name="AvgFragmentsPerFile" inType="win:UInt32"/>
+      <data name="BytesPerCluster" inType="win:UInt32"/>
+      <data name="DirectoryCount" inType="win:UInt32"/>
+      <data name="FragmentedDirectories" inType="win:UInt32"/>
+      <data name="FragmentedFiles" inType="win:UInt32"/>
+      <data name="FragmentedSpace" inType="win:UInt32"/>
+      <data name="HardwareIssue" inType="win:UInt32"/>
+      <data name="InUseMFTRecords" inType="win:UInt32"/>
+      <data name="InUseSlabs" inType="win:UInt32"/>
+      <data name="LastRunActualPurgeSlabs" inType="win:UInt32"/>
+      <data name="LastRunInitialBackedSlabs" inType="win:UInt32"/>
+      <data name="LastRunPercentFragmentation" inType="win:UInt32"/>
+      <data name="LastRunPinnedSlabs" inType="win:UInt32"/>
+      <data name="LastRunPotentialPurgeSlabs" inType="win:UInt32"/>
+      <data name="LastRunSpaceInefficientSlabs" inType="win:UInt32"/>
+      <data name="LastRunTrimmedSlabs" inType="win:UInt32"/>
+      <data name="LastRunUnknownEvictFailSlabs" inType="win:UInt32"/>
+      <data name="LastRunVolsnapPinnedSlabs" inType="win:UInt32"/>
+      <data name="MFTFragmentCount" inType="win:UInt32"/>
+      <data name="MovableFiles" inType="win:UInt32"/>
+      <data name="TotalMFTRecords" inType="win:UInt32"/>
+      <data name="TotalSlabs" inType="win:UInt32"/>
+      <data name="UnmovableFiles" inType="win:UInt32"/>
+      <data name="VolumeId" inType="win:GUID"/>
+      <data name="VolumePathNames" inType="win:WString"/>
+     </template>
+     <template tid="0x7aeb034cL">
+      <data name="ServiceName" inType="win:WChar" max="34"/>
+      <data name="DisplayName" inType="win:WChar" max="256"/>
+      <data name="ProcessName" inType="win:WChar" max="34"/>
+      <data name="ProcessId" inType="win:UInt32"/>
+     </template>
+     <template tid="0xa2a2e64fL">
+      <data name="ProcessId" inType="win:UInt32"/>
+      <data name="ServiceState" inType="win:UInt32"/>
+      <data name="SubProcessTag" inType="win:UInt32"/>
+      <data name="ServiceName" inType="win:WString"/>
+      <data name="DisplayName" inType="win:WString"/>
+      <data name="ProcessName" inType="win:WString"/>
+      <data name="LoadOrderGroup" inType="win:WString"/>
+      <data name="SvchostGroup" inType="win:WString"/>
+     </template>
+     <template tid="0x8475319aL">
+      <data name="ProcessId" inType="win:UInt32"/>
+      <data name="ServiceState" inType="win:UInt32"/>
+      <data name="SubProcessTag" inType="win:UInt32"/>
+      <data name="ServiceName" inType="win:WString"/>
+      <data name="DisplayName" inType="win:WString"/>
+      <data name="ProcessName" inType="win:WString"/>
+     </template>
+     <template tid="0x2a7fc3b0L">
+      <data name="StartOffset" inType="win:UInt64"/>
+      <data name="PartitionSize" inType="win:UInt64"/>
+      <data name="DiskNumber" inType="win:UInt32"/>
+      <data name="Size" inType="win:UInt32"/>
+      <data name="DriveType" inType="win:UInt32"/>
+      <data name="DriveLetterString" inType="win:WChar" max="4"/>
+      <data name="Pad1" inType="win:UInt32"/>
+      <data name="PartitionNumber" inType="win:UInt32"/>
+      <data name="SectorsPerCluster" inType="win:UInt32"/>
+      <data name="BytesPerSector" inType="win:UInt32"/>
+      <data name="Pad2" inType="win:UInt32"/>
+      <data name="NumberOfFreeClusters" inType="win:SInt64"/>
+      <data name="TotalNumberOfClusters" inType="win:SInt64"/>
+      <data name="FileSystem" inType="win:WChar" max="16"/>
+      <data name="VolumeExt" inType="win:UInt32"/>
+     </template>
+     <template tid="0x9bf786c2L">
+      <data name="MemorySize" inType="win:UInt32"/>
+      <data name="XResolution" inType="win:UInt32"/>
+      <data name="YResolution" inType="win:UInt32"/>
+      <data name="BitsPerPixel" inType="win:UInt32"/>
+      <data name="VRefresh" inType="win:UInt32"/>
+      <data name="ChipType" inType="win:WChar" max="256"/>
+      <data name="DACType" inType="win:WChar" max="256"/>
+      <data name="AdapterString" inType="win:WChar" max="256"/>
+      <data name="BiosString" inType="win:WChar" max="256"/>
+      <data name="DeviceId" inType="win:WChar" max="256"/>
+      <data name="StateFlags" inType="win:UInt32"/>
+     </template>
+     <template tid="0xada2cf2aL">
+      <data name="ProcessorIndex" inType="win:UInt32"/>
+      <data name="FeatureSet" inType="win:UInt32"/>
+      <data name="ProcessorSpeed" inType="win:UInt32"/>
+      <data name="ProcessorName" inType="win:WChar" max="64"/>
+      <data name="VendorIdentifier" inType="win:WChar" max="16"/>
+      <data name="ProcessorIdentifier" inType="win:WChar" max="128"/>
+     </template>
+     <template tid="0x7c7073eaL">
+      <data name="IRQAffinity" inType="win:UInt64"/>
+      <data name="IRQNum" inType="win:UInt32"/>
+      <data name="DeviceDescriptionLen" inType="win:UInt32"/>
+      <data name="DeviceDescription" inType="win:WString"/>
+     </template>
+     <template tid="0x73ada3b6L">
+      <data name="CodeIntegrityInfo" inType="win:UInt32"/>
+     </template>
+    </templates>
+   </provider>
+  </events>
+ </instrumentation>
+</instrumentationManifest>

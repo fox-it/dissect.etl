@@ -1,0 +1,200 @@
+<instrumentationManifest xmlns="http://schemas.microsoft.com/win/2004/08/events">
+ <instrumentation xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:win="http://manifests.microsoft.com/win/2004/08/windows/events">
+  <events>
+
+   <provider name="Windows Kernel" guid="{90cbdc39-4a3e-11d1-84f4-0000f80464e3}">
+    <events>
+        <event value="40" symbol="FileIo/MapFileDCEnd" version="2" task="FileIo" opcode="MapFileDCEnd" template="0x9782c89eL"/>
+        <event value="37" symbol="FileIo/MapFile" version="2" task="FileIo" opcode="MapFile" template="0x9782c89eL"/>
+        <event value="38" symbol="FileIo/UnmapFile" version="2" task="FileIo" opcode="UnmapFile" template="0x9782c89eL"/>
+        <event value="39" symbol="FileIo/MapFileDCStart" version="2" task="FileIo" opcode="MapFileDCStart" template="0x9782c89eL"/>
+        <event value="72" symbol="FileIo/DirEnum" version="2" task="FileIo" opcode="DirEnum" template="0x80b042c9L"/>
+        <event value="77" symbol="FileIo/DirNotify" version="2" task="FileIo" opcode="DirNotify" template="0x80b042c9L"/>
+        <event value="76" symbol="FileIo/OperationEnd" version="2" task="FileIo" opcode="OperationEnd" template="0x6630125L"/>
+        <event value="65" symbol="FileIo/Cleanup" version="2" task="FileIo" opcode="Cleanup" template="0xb0fc99adL"/>
+        <event value="66" symbol="FileIo/Close" version="2" task="FileIo" opcode="Close" template="0xb0fc99adL"/>
+        <event value="73" symbol="FileIo/Flush" version="2" task="FileIo" opcode="Flush" template="0xb0fc99adL"/>
+        <event value="67" symbol="FileIo/Read" version="2" task="FileIo" opcode="Read" template="0x8d125a05L"/>
+        <event value="68" symbol="FileIo/Write" version="2" task="FileIo" opcode="Write" template="0x8d125a05L"/>
+        <event value="74" symbol="FileIo/QueryInfo" version="2" task="FileIo" opcode="QueryInfo" template="0xf30f9662L"/>
+        <event value="75" symbol="FileIo/FSControl" version="2" task="FileIo" opcode="FSControl" template="0xf30f9662L"/>
+        <event value="69" symbol="FileIo/SetInfo" version="2" task="FileIo" opcode="SetInfo" template="0xf30f9662L"/>
+        <event value="70" symbol="FileIo/Delete" version="2" task="FileIo" opcode="Delete" template="0xf30f9662L"/>
+        <event value="71" symbol="FileIo/Rename" version="2" task="FileIo" opcode="Rename" template="0xf30f9662L"/>
+        <event value="0" symbol="FileIo/Name" version="2" task="FileIo" opcode="Name" template="FileIo_V2_Name"/>
+        <event value="32" symbol="FileIo/FileCreate" version="2" task="FileIo" opcode="FileCreate" template="FileIo_V2_Name"/>
+        <event value="35" symbol="FileIo/FileDelete" version="2" task="FileIo" opcode="FileDelete" template="FileIo_V2_Name"/>
+        <event value="36" symbol="FileIo/FileRundown" version="2" task="FileIo" opcode="FileRundown" template="FileIo_V2_Name"/>
+        <event value="64" symbol="FileIo/Create" version="2" task="FileIo" opcode="Create" template="0x3e4b4feL"/>
+        <event value="67" symbol="FileIo/Read" version="3" task="FileIo" opcode="Read" template="0x9940aefdL"/>
+        <event value="68" symbol="FileIo/Write" version="3" task="FileIo" opcode="Write" template="0x9940aefdL"/>
+        <event value="64" symbol="FileIo/Create" version="3" task="FileIo" opcode="Create" template="0x53677a4aL"/>
+        <event value="96" symbol="FileIo/PreOpInit" version="3" task="FileIo" opcode="PreOpInit" template="0xce8e36d8L"/>
+        <event value="97" symbol="FileIo/PostOpInit" version="3" task="FileIo" opcode="PostOpInit" template="0xce8e36d8L"/>
+        <event value="100" symbol="FileIo/PreOpFailure" version="3" task="FileIo" opcode="PreOpFailure" template="0xcd2ca5eaL"/>
+        <event value="101" symbol="FileIo/PostOpFailure" version="3" task="FileIo" opcode="PostOpFailure" template="0xcd2ca5eaL"/>
+        <event value="0" symbol="FileIo/Name" version="3" task="FileIo" opcode="Name" template="FileIo_V2_Name"/>
+        <event value="32" symbol="FileIo/FileCreate" version="3" task="FileIo" opcode="FileCreate" template="FileIo_V2_Name"/>
+        <event value="35" symbol="FileIo/FileDelete" version="3" task="FileIo" opcode="FileDelete" template="FileIo_V2_Name"/>
+        <event value="36" symbol="FileIo/FileRundown" version="3" task="FileIo" opcode="FileRundown" template="FileIo_V2_Name"/>
+        <event value="74" symbol="FileIo/QueryInfo" version="3" task="FileIo" opcode="QueryInfo" template="0x7bdb9b10L"/>
+        <event value="75" symbol="FileIo/FSControl" version="3" task="FileIo" opcode="FSControl" template="0x7bdb9b10L"/>
+        <event value="69" symbol="FileIo/SetInfo" version="3" task="FileIo" opcode="SetInfo" template="0x7bdb9b10L"/>
+        <event value="70" symbol="FileIo/Delete" version="3" task="FileIo" opcode="Delete" template="0x7bdb9b10L"/>
+        <event value="71" symbol="FileIo/Rename" version="3" task="FileIo" opcode="Rename" template="0x7bdb9b10L"/>
+        <event value="65" symbol="FileIo/Cleanup" version="3" task="FileIo" opcode="Cleanup" template="0x3caa3f8dL"/>
+        <event value="66" symbol="FileIo/Close" version="3" task="FileIo" opcode="Close" template="0x3caa3f8dL"/>
+        <event value="73" symbol="FileIo/Flush" version="3" task="FileIo" opcode="Flush" template="0x3caa3f8dL"/>
+        <event value="98" symbol="FileIo/PreOpCompletion" version="3" task="FileIo" opcode="PreOpCompletion" template="0xd2675c47L"/>
+        <event value="99" symbol="FileIo/PostOpCompletion" version="3" task="FileIo" opcode="PostOpCompletion" template="0xd2675c47L"/>
+        <event value="72" symbol="FileIo/DirEnum" version="3" task="FileIo" opcode="DirEnum" template="0x6e5cccf8L"/>
+        <event value="77" symbol="FileIo/DirNotify" version="3" task="FileIo" opcode="DirNotify" template="0x6e5cccf8L"/>
+        <event value="80" symbol="FileIo/RenamePath" version="3" task="FileIo" opcode="RenamePath" template="0x69690042L"/>
+        <event value="81" symbol="FileIo/SetLinkPath" version="3" task="FileIo" opcode="SetLinkPath" template="0x69690042L"/>
+        <event value="79" symbol="FileIo/DletePath" version="3" task="FileIo" opcode="DletePath" template="0x69690042L"/>
+        <event value="76" symbol="FileIo/OperationEnd" version="3" task="FileIo" opcode="OperationEnd" template="0x6630125L"/>
+        <event value="0" symbol="FileIo/Name" version="0" task="FileIo" opcode="Name" template="FileIo_V2_Name"/>
+        <event value="0" symbol="FileIo/Name" version="1" task="FileIo" opcode="Name" template="FileIo_V2_Name"/>
+        <event value="32" symbol="FileIo/FileCreate" version="1" task="FileIo" opcode="FileCreate" template="FileIo_V2_Name"/>
+    </events>
+    <templates>
+     <template tid="0x6630125L">
+      <data name="IrpPtr" inType="win:Pointer"/>
+      <data name="ExtraInfo" inType="win:Pointer"/>
+      <data name="NtStatus" inType="win:UInt32"/>
+     </template>
+     <template tid="0x3e4b4feL">
+      <data name="IrpPtr" inType="win:Pointer"/>
+      <data name="TTID" inType="win:Pointer"/>
+      <data name="FileObject" inType="win:Pointer"/>
+      <data name="CreateOptions" inType="win:UInt32"/>
+      <data name="FileAttributes" inType="win:UInt32"/>
+      <data name="ShareAccess" inType="win:UInt32"/>
+      <data name="OpenPath" inType="win:WString"/>
+     </template>
+     <template tid="0xb0fc99adL">
+      <data name="IrpPtr" inType="win:Pointer"/>
+      <data name="TTID" inType="win:Pointer"/>
+      <data name="FileObject" inType="win:Pointer"/>
+      <data name="FileKey" inType="win:Pointer"/>
+     </template>
+     <template tid="FileIo_V2_Name">
+      <data name="FileObject" inType="win:Pointer"/>
+      <data name="FileName" inType="win:WString"/>
+     </template>
+     <template tid="0x8d125a05L">
+      <data name="Offset" inType="win:UInt64"/>
+      <data name="IrpPtr" inType="win:Pointer"/>
+      <data name="TTID" inType="win:Pointer"/>
+      <data name="FileObject" inType="win:Pointer"/>
+      <data name="FileKey" inType="win:Pointer"/>
+      <data name="IoSize" inType="win:UInt32"/>
+      <data name="IoFlags" inType="win:UInt32"/>
+     </template>
+     <template tid="0x9782c89eL">
+      <data name="ViewBase" inType="win:Pointer"/>
+      <data name="FileObject" inType="win:Pointer"/>
+      <data name="MiscInfo" inType="win:UInt64"/>
+      <data name="ViewSize" inType="win:SizeT"/>
+      <data name="ProcessId" inType="win:UInt32"/>
+     </template>
+     <template tid="0x3caa3f8dL">
+      <data name="IrpPtr" inType="win:Pointer"/>
+      <data name="FileObject" inType="win:Pointer"/>
+      <data name="FileKey" inType="win:Pointer"/>
+      <data name="TTID" inType="win:UInt32"/>
+     </template>
+     <template tid="0x53677a4aL">
+      <data name="IrpPtr" inType="win:Pointer"/>
+      <data name="FileObject" inType="win:Pointer"/>
+      <data name="TTID" inType="win:UInt32"/>
+      <data name="CreateOptions" inType="win:UInt32"/>
+      <data name="FileAttributes" inType="win:UInt32"/>
+      <data name="ShareAccess" inType="win:UInt32"/>
+      <data name="OpenPath" inType="win:WString"/>
+     </template>
+     <template tid="0x69690042L">
+      <data name="IrpPtr" inType="win:Pointer"/>
+      <data name="FileObject" inType="win:Pointer"/>
+      <data name="FileKey" inType="win:Pointer"/>
+      <data name="ExtraInfo" inType="win:Pointer"/>
+      <data name="TTID" inType="win:UInt32"/>
+      <data name="InfoClass" inType="win:UInt32"/>
+      <data name="FileName" inType="win:WString"/>
+     </template>
+     <template tid="0x7bdb9b10L">
+      <data name="IrpPtr" inType="win:Pointer"/>
+      <data name="FileObject" inType="win:Pointer"/>
+      <data name="FileKey" inType="win:Pointer"/>
+      <data name="ExtraInfo" inType="win:Pointer"/>
+      <data name="TTID" inType="win:UInt32"/>
+      <data name="InfoClass" inType="win:UInt32"/>
+     </template>
+     <template tid="0x6e5cccf8L">
+      <data name="IrpPtr" inType="win:Pointer"/>
+      <data name="FileObject" inType="win:Pointer"/>
+      <data name="FileKey" inType="win:Pointer"/>
+      <data name="TTID" inType="win:UInt32"/>
+      <data name="Length" inType="win:UInt32"/>
+      <data name="InfoClass" inType="win:UInt32"/>
+      <data name="FileIndex" inType="win:UInt32"/>
+      <data name="FileName" inType="win:WString"/>
+     </template>
+     <template tid="0xcd2ca5eaL">
+      <data name="RoutineAddr" inType="win:Pointer"/>
+      <data name="FileObject" inType="win:Pointer"/>
+      <data name="FileContext" inType="win:Pointer"/>
+      <data name="IrpPtr" inType="win:Pointer"/>
+      <data name="CallbackDataPtr" inType="win:Pointer"/>
+      <data name="MajorFunction" inType="win:UInt32"/>
+      <data name="Status" inType="win:UInt32"/>
+     </template>
+     <template tid="0xf30f9662L">
+      <data name="IrpPtr" inType="win:Pointer"/>
+      <data name="TTID" inType="win:Pointer"/>
+      <data name="FileObject" inType="win:Pointer"/>
+      <data name="FileKey" inType="win:Pointer"/>
+      <data name="ExtraInfo" inType="win:Pointer"/>
+      <data name="InfoClass" inType="win:UInt32"/>
+     </template>
+     <template tid="0xd2675c47L">
+      <data name="InitialTime" inType="win:Pointer"/>
+      <data name="RoutineAddr" inType="win:Pointer"/>
+      <data name="FileObject" inType="win:Pointer"/>
+      <data name="FileContext" inType="win:Pointer"/>
+      <data name="IrpPtr" inType="win:Pointer"/>
+      <data name="CallbackDataPtr" inType="win:Pointer"/>
+      <data name="MajorFunction" inType="win:UInt32"/>
+     </template>
+     <template tid="0x80b042c9L">
+      <data name="IrpPtr" inType="win:Pointer"/>
+      <data name="TTID" inType="win:Pointer"/>
+      <data name="FileObject" inType="win:Pointer"/>
+      <data name="FileKey" inType="win:Pointer"/>
+      <data name="Length" inType="win:UInt32"/>
+      <data name="InfoClass" inType="win:UInt32"/>
+      <data name="FileIndex" inType="win:UInt32"/>
+      <data name="FileName" inType="win:WString"/>
+     </template>
+     <template tid="0x9940aefdL">
+      <data name="Offset" inType="win:UInt64"/>
+      <data name="IrpPtr" inType="win:Pointer"/>
+      <data name="FileObject" inType="win:Pointer"/>
+      <data name="FileKey" inType="win:Pointer"/>
+      <data name="TTID" inType="win:UInt32"/>
+      <data name="IoSize" inType="win:UInt32"/>
+      <data name="IoFlags" inType="win:UInt32"/>
+     </template>
+     <template tid="0xce8e36d8L">
+      <data name="RoutineAddr" inType="win:Pointer"/>
+      <data name="FileObject" inType="win:Pointer"/>
+      <data name="FileContext" inType="win:Pointer"/>
+      <data name="IrpPtr" inType="win:Pointer"/>
+      <data name="CallbackDataPtr" inType="win:Pointer"/>
+      <data name="MajorFunction" inType="win:UInt32"/>
+     </template>
+    </templates>
+   </provider>
+  </events>
+ </instrumentation>
+</instrumentationManifest>

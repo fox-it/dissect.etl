@@ -1,0 +1,49 @@
+<instrumentationManifest xmlns="http://schemas.microsoft.com/win/2004/08/events">
+ <instrumentation xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:win="http://manifests.microsoft.com/win/2004/08/windows/events">
+  <events>
+   <provider name="Multimedia-HEVCDECODER" guid="{3293f985-41d3-4b6a-b187-2ff4aa91f2fc}" resourceFileName="Multimedia-HEVCDECODER" messageFileName="Multimedia-HEVCDECODER" symbol="MultimediaHEVCDECODER" source="Xml" >
+    <keywords>
+    </keywords>
+    <tasks>
+     <task name="MFT_ProcessInput" message="$(string.task_MFT_ProcessInput)" value="1"/>
+     <task name="MFT_ProcessOutput" message="$(string.task_MFT_ProcessOutput)" value="2"/>
+     <task name="MFT_NotifySampleLag" message="$(string.task_MFT_NotifySampleLag)" value="3"/>
+     <task name="MFT_AllocateTexture" message="$(string.task_MFT_AllocateTexture)" value="4"/>
+    </tasks>
+    <events>
+     <event value="0" symbol="MFT_ProcessInputStart" version="0" task="MFT_ProcessInput" opcode="win:Start" level="win:Verbose"/>
+     <event value="1" symbol="MFT_ProcessInputStop" version="0" task="MFT_ProcessInput" opcode="win:Stop" level="win:Verbose"/>
+     <event value="2" symbol="MFT_ProcessOutputStart" version="0" task="MFT_ProcessOutput" opcode="win:Start" level="win:Verbose"/>
+     <event value="3" symbol="MFT_ProcessOutputStop" version="0" task="MFT_ProcessOutput" opcode="win:Stop" level="win:Verbose"/>
+     <event value="4" symbol="MFT_NotifySampleLag" version="0" task="MFT_NotifySampleLag" level="win:Verbose" template="MFT_NotifySampleLagArgs"/>
+     <event value="5" symbol="MFT_AllocateTextureStart" version="0" task="MFT_AllocateTexture" opcode="win:Start" level="win:Verbose" template="MFT_AllocateTextureStartArgs"/>
+     <event value="6" symbol="MFT_AllocateTextureStop" version="0" task="MFT_AllocateTexture" opcode="win:Stop" level="win:Verbose" template="MFT_AllocateTextureStartArgs"/>
+    </events>
+    <templates>
+     <template tid="MFT_NotifySampleLagArgs">
+      <data name="SampleLag" inType="win:Int64"/>
+     </template>
+     <template tid="MFT_AllocateTextureStartArgs">
+      <data name="DecoderGUID" inType="win:GUID"/>
+      <data name="DecoderInstance" inType="win:Pointer"/>
+      <data name="NumSurfaces" inType="win:UInt32"/>
+      <data name="Width" inType="win:UInt32"/>
+      <data name="Height" inType="win:UInt32"/>
+      <data name="RenderTarget" inType="win:UInt32"/>
+      <data name="D3DFormat" inType="win:UInt32"/>
+     </template>
+    </templates>
+   </provider>
+  </events>
+ </instrumentation>
+ <localization>
+  <resources culture="en-US">
+   <stringTable>
+    <string id="task_MFT_ProcessInput" value="MFT_ProcessInput"/>
+    <string id="task_MFT_ProcessOutput" value="MFT_ProcessOutput"/>
+    <string id="task_MFT_NotifySampleLag" value="MFT_NotifySampleLag"/>
+    <string id="task_MFT_AllocateTexture" value="MFT_AllocateTexture"/>
+   </stringTable>
+  </resources>
+ </localization>
+</instrumentationManifest>

@@ -1,0 +1,66 @@
+<instrumentationManifest xmlns="http://schemas.microsoft.com/win/2004/08/events">
+ <instrumentation xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:win="http://manifests.microsoft.com/win/2004/08/windows/events">
+  <events>
+
+   <provider name="Windows Kernel" guid="{def2fe46-7bd6-4b80-bd94-f57fe20d0ce3}">
+    <events>
+        <event value="34" symbol="StackWalk/KeyCreate" version="2" task="StackWalk" opcode="KeyCreate" template="0x9ad5e6faL"/>
+        <event value="35" symbol="StackWalk/KeyDelete" version="2" task="StackWalk" opcode="KeyDelete" template="0x9ad5e6faL"/>
+        <event value="36" symbol="StackWalk/KeyRundown" version="2" task="StackWalk" opcode="KeyRundown" template="0x9ad5e6faL"/>
+        <event value="37" symbol="StackWalk/StackKeyKernel" version="2" task="StackWalk" opcode="StackKeyKernel" template="0x9ea581aL"/>
+        <event value="38" symbol="StackWalk/StackKeyUser" version="2" task="StackWalk" opcode="StackKeyUser" template="0x9ea581aL"/>
+        <event value="32" symbol="StackWalk/Stack" version="2" task="StackWalk" opcode="Stack" template="0x77f82d3bL"/>
+    </events>
+    <templates>
+     <template tid="0x77f82d3bL">
+      <data name="EventTimeStamp" inType="win:UInt64"/>
+      <data name="StackProcess" inType="win:UInt32"/>
+      <data name="StackThread" inType="win:UInt32"/>
+      <data name="Stack1" inType="win:Pointer"/>
+      <data name="Stack2" inType="win:Pointer"/>
+      <data name="Stack3" inType="win:Pointer"/>
+      <data name="Stack4" inType="win:Pointer"/>
+      <data name="Stack5" inType="win:Pointer"/>
+      <data name="Stack6" inType="win:Pointer"/>
+      <data name="Stack7" inType="win:Pointer"/>
+      <data name="Stack8" inType="win:Pointer"/>
+      <data name="Stack9" inType="win:Pointer"/>
+      <data name="Stack10" inType="win:Pointer"/>
+      <data name="Stack11" inType="win:Pointer"/>
+      <data name="Stack12" inType="win:Pointer"/>
+      <data name="Stack13" inType="win:Pointer"/>
+      <data name="Stack14" inType="win:Pointer"/>
+      <data name="Stack15" inType="win:Pointer"/>
+      <data name="Stack16" inType="win:Pointer"/>
+      <data name="Stack17" inType="win:Pointer"/>
+      <data name="Stack18" inType="win:Pointer"/>
+      <data name="Stack19" inType="win:Pointer"/>
+      <data name="Stack20" inType="win:Pointer"/>
+      <data name="Stack21" inType="win:Pointer"/>
+      <data name="Stack22" inType="win:Pointer"/>
+      <data name="Stack23" inType="win:Pointer"/>
+      <data name="Stack24" inType="win:Pointer"/>
+      <data name="Stack25" inType="win:Pointer"/>
+      <data name="Stack26" inType="win:Pointer"/>
+      <data name="Stack27" inType="win:Pointer"/>
+      <data name="Stack28" inType="win:Pointer"/>
+      <data name="Stack29" inType="win:Pointer"/>
+      <data name="Stack30" inType="win:Pointer"/>
+      <data name="Stack31" inType="win:Pointer"/>
+      <data name="Stack32" inType="win:Pointer"/>
+     </template>
+     <template tid="0x9ea581aL">
+      <data name="EventTimeStamp" inType="win:UInt64"/>
+      <data name="StackProcess" inType="win:UInt32"/>
+      <data name="StackThread" inType="win:UInt32"/>
+      <data name="StackKey" inType="win:Pointer"/>
+     </template>
+     <template tid="0x9ad5e6faL">
+      <data name="key" inType="win:Pointer"/>
+      <data name="StackFrame" inType="win:Pointer"/>
+     </template>
+    </templates>
+   </provider>
+  </events>
+ </instrumentation>
+</instrumentationManifest>

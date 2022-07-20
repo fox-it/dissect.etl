@@ -1,0 +1,150 @@
+<instrumentationManifest xmlns="http://schemas.microsoft.com/win/2004/08/events">
+ <instrumentation xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:win="http://manifests.microsoft.com/win/2004/08/windows/events">
+  <events>
+
+   <provider name="Windows Kernel" guid="{2cb15d1d-5fc1-11d2-abe1-00a0c911f518}">
+    <events>
+        <event value="33" symbol="Image/KernelBase" version="2" task="Image" opcode="KernelBase" template="0x7ed9cc05L"/>
+        <event value="128" symbol="Image/LoaderLockAttempt" version="2" task="Image" opcode="LoaderLockAttempt" template="0xd4cbb29L"/>
+        <event value="129" symbol="Image/LoaderLockAcquire" version="2" task="Image" opcode="LoaderLockAcquire" template="0xd4cbb29L"/>
+        <event value="130" symbol="Image/LoaderLockTriedAndFailed" version="2" task="Image" opcode="LoaderLockTriedAndFailed" template="0xd4cbb29L"/>
+        <event value="131" symbol="Image/LoaderLockWait" version="2" task="Image" opcode="LoaderLockWait" template="0xd4cbb29L"/>
+        <event value="132" symbol="Image/ProcessInitDone" version="2" task="Image" opcode="ProcessInitDone" template="0xd4cbb29L"/>
+        <event value="133" symbol="Image/CreateSectionBegin" version="2" task="Image" opcode="CreateSectionBegin" template="0xd4cbb29L"/>
+        <event value="134" symbol="Image/CreateSectionEnd" version="2" task="Image" opcode="CreateSectionEnd" template="0xd4cbb29L"/>
+        <event value="135" symbol="Image/MapViewBegin" version="2" task="Image" opcode="MapViewBegin" template="0xd4cbb29L"/>
+        <event value="160" symbol="Image/FindDllByName" version="2" task="Image" opcode="FindDllByName" template="0x2d70aa46L"/>
+        <event value="161" symbol="Image/MapViewEnd" version="2" task="Image" opcode="MapViewEnd" template="0x2d70aa46L"/>
+        <event value="162" symbol="Image/LoaderLockRelease" version="2" task="Image" opcode="LoaderLockRelease" template="0x2d70aa46L"/>
+        <event value="163" symbol="Image/DllMainEnter" version="2" task="Image" opcode="DllMainEnter" template="0x2d70aa46L"/>
+        <event value="164" symbol="Image/LoaderError" version="2" task="Image" opcode="LoaderError" template="0x2d70aa46L"/>
+        <event value="144" symbol="Image/RelocateImageBegin" version="2" task="Image" opcode="RelocateImageBegin" template="0x4618e215L"/>
+        <event value="145" symbol="Image/RelocateImageEnd" version="2" task="Image" opcode="RelocateImageEnd" template="0x4618e215L"/>
+        <event value="146" symbol="Image/HandleOldDescsBegin" version="2" task="Image" opcode="HandleOldDescsBegin" template="0x4618e215L"/>
+        <event value="147" symbol="Image/HandleOldDescsEnd" version="2" task="Image" opcode="HandleOldDescsEnd" template="0x4618e215L"/>
+        <event value="148" symbol="Image/HandleNewDescsBegin" version="2" task="Image" opcode="HandleNewDescsBegin" template="0x4618e215L"/>
+        <event value="149" symbol="Image/HandleNewDescsEnd" version="2" task="Image" opcode="HandleNewDescsEnd" template="0x4618e215L"/>
+        <event value="150" symbol="Image/DllMainExit" version="2" task="Image" opcode="DllMainExit" template="0x4618e215L"/>
+        <event value="10" symbol="Image/Load" version="2" task="Image" opcode="Load" template="Image_Load_V2"/>
+        <event value="3" symbol="Image/DCStart" version="2" task="Image" opcode="DCStart" template="Image_Load_V2"/>
+        <event value="4" symbol="Image/DCEnd" version="2" task="Image" opcode="DCEnd" template="Image_Load_V2"/>
+        <event value="2" symbol="Image/UnLoad" version="2" task="Image" opcode="UnLoad" template="Image_Load_V2"/>
+        <event value="34" symbol="Image/HypercallPage" version="2" task="Image" opcode="HypercallPage" template="0x991c1336L"/>
+        <event value="10" symbol="Image/Load" version="0" task="Image" opcode="Load" template="Image_V0_Load"/>
+        <event value="10" symbol="Image/Load" version="1" task="Image" opcode="Load" template="Image_V1_Load"/>
+        <event value="10" symbol="Image/Load" version="3" task="Image" opcode="Load" template="Image_Load"/>
+        <event value="3" symbol="Image/DCStart" version="3" task="Image" opcode="DCStart" template="Image_Load"/>
+        <event value="4" symbol="Image/DCEnd" version="3" task="Image" opcode="DCEnd" template="Image_Load"/>
+        <event value="2" symbol="Image/UnLoad" version="3" task="Image" opcode="UnLoad" template="Image_Load"/>
+        <event value="212" symbol="Image/DllSearchResults" version="3" task="Image" opcode="DllSearchResults" template="LoaderDllSearchResults"/>
+        <event value="176" symbol="Image/NewDllLoad" version="3" task="Image" opcode="NewDllLoad" template="LoaderNewDllEvent"/>
+        <event value="177" symbol="Image/NewDllLoadAsData" version="3" task="Image" opcode="NewDllLoadAsData" template="LoaderNewDllEvent"/>
+        <event value="192" symbol="Image/DllSearchPathExternal" version="3" task="Image" opcode="DllSearchPathExternal" template="LoaderCodedEventPath"/>
+        <event value="193" symbol="Image/DllSearchPathInternal" version="3" task="Image" opcode="DllSearchPathInternal" template="LoaderCodedEventPath"/>
+        <event value="165" symbol="Image/MapViewStart" version="3" task="Image" opcode="MapViewStart" template="0x2d70aa46L"/>
+        <event value="166" symbol="Image/SnappingStart" version="3" task="Image" opcode="SnappingStart" template="0x2d70aa46L"/>
+        <event value="167" symbol="Image/SnappingEnd" version="3" task="Image" opcode="SnappingEnd" template="0x2d70aa46L"/>
+        <event value="168" symbol="Image/LoadingStart" version="3" task="Image" opcode="LoadingStart" template="0x2d70aa46L"/>
+        <event value="169" symbol="Image/LoadingEnd" version="3" task="Image" opcode="LoadingEnd" template="0x2d70aa46L"/>
+        <event value="170" symbol="Image/FoundKnownDll" version="3" task="Image" opcode="FoundKnownDll" template="0x2d70aa46L"/>
+        <event value="171" symbol="Image/AbnormalTermination" version="3" task="Image" opcode="AbnormalTermination" template="0x2d70aa46L"/>
+        <event value="172" symbol="Image/ModulePlaceHolder" version="3" task="Image" opcode="ModulePlaceHolder" template="0x2d70aa46L"/>
+        <event value="173" symbol="Image/ReadyToInit" version="3" task="Image" opcode="ReadyToInit" template="0x2d70aa46L"/>
+        <event value="174" symbol="Image/ReadyToRun" version="3" task="Image" opcode="ReadyToRun" template="0x2d70aa46L"/>
+        <event value="208" symbol="Image/ApiSetResolving" version="3" task="Image" opcode="ApiSetResolving" template="0x2d70aa46L"/>
+        <event value="209" symbol="Image/ApiSetHosted" version="3" task="Image" opcode="ApiSetHosted" template="0x2d70aa46L"/>
+        <event value="210" symbol="Image/ApiSetUnhosted" version="3" task="Image" opcode="ApiSetUnhosted" template="0x2d70aa46L"/>
+        <event value="211" symbol="Image/ApiSetUnresolved" version="3" task="Image" opcode="ApiSetUnresolved" template="0x2d70aa46L"/>
+        <event value="213" symbol="Image/DllPathSearchResults" version="3" task="Image" opcode="DllPathSearchResults" template="LoaderPathSearchReesults"/>
+    </events>
+    <templates>
+     <template tid="0x7ed9cc05L">
+      <data name="ImageBase" inType="win:Pointer"/>
+     </template>
+     <template tid="LoaderDllSearchResults">
+      <data name="LdrLoadFlags" inType="win:UInt32"/>
+      <data name="LdrSearchFlags" inType="win:UInt32"/>
+      <data name="SearchInfo" inType="win:UInt32"/>
+      <data name="LoadReason" inType="win:UInt32"/>
+      <data name="FullDllName" inType="win:WString"/>
+     </template>
+     <template tid="LoaderPathSearchReesults">
+      <data name="SearchInfo" inType="win:UInt32"/>
+      <data name="Cwd" inType="win:WString"/>
+      <data name="AppDir" inType="win:WString"/>
+      <data name="DllDir" inType="win:WString"/>
+      <data name="DllLoadDir" inType="win:WString"/>
+     </template>
+     <template tid="LoaderNewDllEvent">
+      <data name="NewDllBaseAddress" inType="win:Pointer"/>
+      <data name="ParentDllBaseAddress" inType="win:Pointer"/>
+      <data name="LoadReason" inType="win:UInt32"/>
+      <data name="FilePath" inType="win:WString"/>
+     </template>
+     <template tid="0x991c1336L">
+      <data name="HypercallPageVa" inType="win:Pointer"/>
+     </template>
+     <template tid="0x2d70aa46L">
+      <data name="BaseAddress" inType="win:UInt64"/>
+      <data name="ErrorOpcode" inType="win:UInt8"/>
+      <data name="Code" inType="win:SInt8"/>
+      <data name="String" inType="win:WString"/>
+     </template>
+     <template tid="0x4618e215L">
+      <data name="BaseAddress" inType="win:UInt64"/>
+     </template>
+     <template tid="Image_Load_V2">
+      <data name="ImageBase" inType="win:Pointer"/>
+      <data name="ImageSize" inType="win:Pointer"/>
+      <data name="ProcessId" inType="win:UInt32"/>
+      <data name="ImageChecksum" inType="win:UInt32"/>
+      <data name="TimeDateStamp" inType="win:UInt32"/>
+      <data name="Reserved0" inType="win:UInt32"/>
+      <data name="DefaultBase" inType="win:Pointer"/>
+      <data name="Reserved1" inType="win:UInt32"/>
+      <data name="Reserved2" inType="win:UInt32"/>
+      <data name="Reserved3" inType="win:UInt32"/>
+      <data name="Reserved4" inType="win:UInt32"/>
+      <data name="FileName" inType="win:WString"/>
+     </template>
+     <template tid="Image_V1_Load">
+      <data name="ImageBase" inType="win:Pointer"/>
+      <data name="ImageSize" inType="win:Pointer"/>
+      <data name="ProcessId" inType="win:UInt32"/>
+      <data name="FileName" inType="win:WString"/>
+     </template>
+     <template tid="Image_Load">
+      <data name="ImageBase" inType="win:Pointer"/>
+      <data name="ImageSize" inType="win:Pointer"/>
+      <data name="ProcessId" inType="win:UInt32"/>
+      <data name="ImageChecksum" inType="win:UInt32"/>
+      <data name="TimeDateStamp" inType="win:UInt32"/>
+      <data name="SignatureLevel" inType="win:UInt8"/>
+      <data name="SignatureType" inType="win:UInt8"/>
+      <data name="Reserved0" inType="win:UInt16"/>
+      <data name="DefaultBase" inType="win:Pointer"/>
+      <data name="Reserved1" inType="win:UInt32"/>
+      <data name="Reserved2" inType="win:UInt32"/>
+      <data name="Reserved3" inType="win:UInt32"/>
+      <data name="Reserved4" inType="win:UInt32"/>
+      <data name="FileName" inType="win:WString"/>
+     </template>
+     <template tid="Image_V0_Load">
+      <data name="BaseAddress" inType="win:Pointer"/>
+      <data name="ModuleSize" inType="win:UInt32"/>
+      <data name="ImageFileName" inType="win:WString"/>
+     </template>
+     <template tid="LoaderCodedEventPath">
+      <data name="BaseAddress" inType="win:UInt64"/>
+      <data name="ErrorOpcode" inType="win:UInt8"/>
+      <data name="Code" inType="win:SInt8"/>
+      <data name="String1" inType="win:WString"/>
+      <data name="String2" inType="win:WString"/>
+     </template>
+     <template tid="0xd4cbb29L">
+     </template>
+    </templates>
+   </provider>
+  </events>
+ </instrumentation>
+</instrumentationManifest>

@@ -1,0 +1,254 @@
+<instrumentationManifest xmlns="http://schemas.microsoft.com/win/2004/08/events">
+ <instrumentation xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:win="http://manifests.microsoft.com/win/2004/08/windows/events">
+  <events>
+
+   <provider name="Windows Kernel" guid="{3d6fa8d1-fe05-11d0-9dda-00c04fd7ba7c}">
+    <events>
+        <event value="67" symbol="Thread/AutoBoost Clear Floor" version="2" task="Thread" opcode="AutoBoost Clear Floor" template="0xcfcd7699L"/>
+        <event value="57" symbol="Thread/WorkerThread" version="2" task="Thread" opcode="WorkerThread" template="0x75f3d8e8L"/>
+        <event value="62" symbol="Thread/Kernel Queue Enqueue" version="2" task="Thread" opcode="Kernel Queue Enqueue" template="0xe6f5032fL"/>
+        <event value="36" symbol="Thread/CSwitch" version="2" task="Thread" opcode="CSwitch" template="0x65ba5f68L"/>
+        <event value="69" symbol="Thread/SubProcessTag Changed" version="2" task="Thread" opcode="SubProcessTag Changed" template="0x3d98ab4cL"/>
+        <event value="41" symbol="Thread/SpinLock" version="2" task="Thread" opcode="SpinLock" template="SpinLock"/>
+        <event value="61" symbol="Thread/Thread Migration" version="2" task="Thread" opcode="Thread Migration" template="0xdb6b1931L"/>
+        <event value="63" symbol="Thread/Kernel Queue Dequeue" version="2" task="Thread" opcode="Kernel Queue Dequeue" template="0x92816abdL"/>
+        <event value="66" symbol="Thread/AutoBoost Set Floor" version="2" task="Thread" opcode="AutoBoost Set Floor" template="0xca18698L"/>
+        <event value="53" symbol="Thread/ThreadAffinity" version="2" task="Thread" opcode="ThreadAffinity" template="0x3a0bcdcbL"/>
+        <event value="64" symbol="Thread/Start" version="2" task="Thread" opcode="Start" template="0xe8fecf3eL"/>
+        <event value="65" symbol="Thread/End" version="2" task="Thread" opcode="End" template="0xe8fecf3eL"/>
+        <event value="72" symbol="Thread/SetName" version="2" task="Thread" opcode="SetName" template="ThreadSetName"/>
+        <event value="37" symbol="Thread/CompCS" version="2" task="Thread" opcode="CompCS" template="CompCS"/>
+        <event value="68" symbol="Thread/AutoBoost Entry Exhaustion" version="2" task="Thread" opcode="AutoBoost Entry Exhaustion" template="0x8c77fa30L"/>
+        <event value="50" symbol="Thread/ReadyThread" version="2" task="Thread" opcode="ReadyThread" template="0x54988e5bL"/>
+        <event value="60" symbol="Thread/AntiStarvationBoost" version="2" task="Thread" opcode="AntiStarvationBoost" template="0x533880adL"/>
+        <event value="1" symbol="Thread/Start" version="2" task="Thread" opcode="Start" template="Thread_V2_TypeGroup1"/>
+        <event value="2" symbol="Thread/End" version="2" task="Thread" opcode="End" template="Thread_V2_TypeGroup1"/>
+        <event value="3" symbol="Thread/DCStart" version="2" task="Thread" opcode="DCStart" template="Thread_V2_TypeGroup1"/>
+        <event value="4" symbol="Thread/DCEnd" version="2" task="Thread" opcode="DCEnd" template="Thread_V2_TypeGroup1"/>
+        <event value="1" symbol="Thread/Start" version="0" task="Thread" opcode="Start" template="Thread_V0_TypeGroup1"/>
+        <event value="2" symbol="Thread/End" version="0" task="Thread" opcode="End" template="Thread_V0_TypeGroup1"/>
+        <event value="3" symbol="Thread/DCStart" version="0" task="Thread" opcode="DCStart" template="Thread_V0_TypeGroup1"/>
+        <event value="4" symbol="Thread/DCEnd" version="0" task="Thread" opcode="DCEnd" template="Thread_V0_TypeGroup1"/>
+        <event value="1" symbol="Thread/Start" version="3" task="Thread" opcode="Start" template="Thread_V3_TypeGroup1"/>
+        <event value="2" symbol="Thread/End" version="3" task="Thread" opcode="End" template="Thread_V3_TypeGroup1"/>
+        <event value="3" symbol="Thread/DCStart" version="3" task="Thread" opcode="DCStart" template="Thread_V3_TypeGroup1"/>
+        <event value="4" symbol="Thread/DCEnd" version="3" task="Thread" opcode="DCEnd" template="Thread_V3_TypeGroup1"/>
+        <event value="48" symbol="Thread/SetPriority" version="3" task="Thread" opcode="SetPriority" template="0xd9a2d54fL"/>
+        <event value="49" symbol="Thread/SetBasePriority" version="3" task="Thread" opcode="SetBasePriority" template="0xd9a2d54fL"/>
+        <event value="51" symbol="Thread/SetPagePriority" version="3" task="Thread" opcode="SetPagePriority" template="0xd9a2d54fL"/>
+        <event value="52" symbol="Thread/SetIoPriority" version="3" task="Thread" opcode="SetIoPriority" template="0xd9a2d54fL"/>
+        <event value="36" symbol="Thread/CSwitch" version="3" task="Thread" opcode="CSwitch" template="0x2e745ca0L"/>
+        <event value="1" symbol="Thread/Start" version="4" task="Thread" opcode="Start" template="0xcf25e668L"/>
+        <event value="2" symbol="Thread/End" version="4" task="Thread" opcode="End" template="0xcf25e668L"/>
+        <event value="3" symbol="Thread/DCStart" version="4" task="Thread" opcode="DCStart" template="0xcf25e668L"/>
+        <event value="4" symbol="Thread/DCEnd" version="4" task="Thread" opcode="DCEnd" template="0xcf25e668L"/>
+        <event value="36" symbol="Thread/CSwitch" version="4" task="Thread" opcode="CSwitch" template="0x2e745ca0L"/>
+        <event value="2" symbol="Thread/End" version="1" task="Thread" opcode="End" template="Thread_V1_TypeGroup2"/>
+        <event value="1" symbol="Thread/Start" version="1" task="Thread" opcode="Start" template="Thread_V1_TypeGroup1"/>
+        <event value="3" symbol="Thread/DCStart" version="1" task="Thread" opcode="DCStart" template="Thread_V1_TypeGroup1"/>
+        <event value="4" symbol="Thread/DCEnd" version="1" task="Thread" opcode="DCEnd" template="Thread_V1_TypeGroup1"/>
+        <event value="36" symbol="Thread/CSwitch" version="1" task="Thread" opcode="CSwitch" template="0xc0722aa0L"/>
+        <event value="57" symbol="Thread/WorkerThread" version="1" task="Thread" opcode="WorkerThread" template="0x75f3d8e8L"/>
+    </events>
+    <templates>
+     <template tid="SpinLock">
+      <data name="SpinLockAddress" inType="win:Pointer"/>
+      <data name="CallerAddress" inType="win:Pointer"/>
+      <data name="AcquireTime" inType="win:UInt64"/>
+      <data name="ReleaseTime" inType="win:UInt64"/>
+      <data name="WaitTimeInCycles" inType="win:UInt32"/>
+      <data name="SpinCount" inType="win:UInt32"/>
+      <data name="ThreadId" inType="win:UInt32"/>
+      <data name="InterruptCount" inType="win:UInt32"/>
+      <data name="Irql" inType="win:UInt8"/>
+      <data name="AcquireDepth" inType="win:UInt8"/>
+      <data name="Flag" inType="win:UInt8"/>
+      <data name="Reserved" inType="win:UInt8" max="5"/>
+     </template>
+     <template tid="Thread_V2_TypeGroup1">
+      <data name="ProcessId" inType="win:UInt32"/>
+      <data name="TThreadId" inType="win:UInt32"/>
+      <data name="StackBase" inType="win:Pointer"/>
+      <data name="StackLimit" inType="win:Pointer"/>
+      <data name="UserStackBase" inType="win:Pointer"/>
+      <data name="UserStackLimit" inType="win:Pointer"/>
+      <data name="StartAddr" inType="win:Pointer"/>
+      <data name="Win32StartAddr" inType="win:Pointer"/>
+      <data name="TebBase" inType="win:Pointer"/>
+      <data name="SubProcessTag" inType="win:UInt32"/>
+     </template>
+     <template tid="0x8c77fa30L">
+      <data name="LockAddress" inType="win:Pointer"/>
+      <data name="ThreadId" inType="win:UInt32"/>
+     </template>
+     <template tid="0xca18698L">
+      <data name="Lock" inType="win:Pointer"/>
+      <data name="ThreadId" inType="win:UInt32"/>
+      <data name="NewCpuPriorityFloor" inType="win:UInt8"/>
+      <data name="OldCpuPriority" inType="win:UInt8"/>
+      <data name="IoPriorities" inType="win:UInt8"/>
+      <data name="BoostFlags" inType="win:UInt8"/>
+     </template>
+     <template tid="0xd9a2d54fL">
+      <data name="ThreadId" inType="win:UInt32"/>
+      <data name="OldPriority" inType="win:UInt8"/>
+      <data name="NewPriority" inType="win:UInt8"/>
+      <data name="Reserved" inType="win:UInt16"/>
+     </template>
+     <template tid="0x92816abdL">
+      <data name="ThreadId" inType="win:UInt32"/>
+      <data name="EntryCount" inType="win:UInt32"/>
+      <data name="Entries" inType="win:Pointer"/>
+     </template>
+     <template tid="ThreadSetName">
+      <data name="ProcessId" inType="win:UInt32"/>
+      <data name="ThreadId" inType="win:UInt32"/>
+      <data name="ThreadName" inType="win:WString"/>
+     </template>
+     <template tid="0xcfcd7699L">
+      <data name="LockAddress" inType="win:Pointer"/>
+      <data name="ThreadId" inType="win:UInt32"/>
+      <data name="BoostBitmap" inType="win:UInt32"/>
+     </template>
+     <template tid="Thread_V0_TypeGroup1">
+      <data name="TThreadId" inType="win:UInt32"/>
+      <data name="ProcessId" inType="win:UInt32"/>
+     </template>
+     <template tid="0x75f3d8e8L">
+      <data name="TThreadId" inType="win:UInt32"/>
+      <data name="StartTime" inType="win:UInt64"/>
+      <data name="ThreadRoutine" inType="win:Pointer"/>
+     </template>
+     <template tid="0xdb6b1931L">
+      <data name="ThreadId" inType="win:UInt32"/>
+      <data name="SourceProcessorIndex" inType="win:UInt16"/>
+      <data name="TargetProcessorIndex" inType="win:UInt16"/>
+      <data name="Priority" inType="win:UInt8"/>
+      <data name="IdealProcessorAdjust" inType="win:Boolean"/>
+      <data name="OldIdealProcessorIndex" inType="win:UInt16"/>
+     </template>
+     <template tid="Thread_V3_TypeGroup1">
+      <data name="ProcessId" inType="win:UInt32"/>
+      <data name="TThreadId" inType="win:UInt32"/>
+      <data name="StackBase" inType="win:Pointer"/>
+      <data name="StackLimit" inType="win:Pointer"/>
+      <data name="UserStackBase" inType="win:Pointer"/>
+      <data name="UserStackLimit" inType="win:Pointer"/>
+      <data name="Affinity" inType="win:Pointer"/>
+      <data name="Win32StartAddr" inType="win:Pointer"/>
+      <data name="TebBase" inType="win:Pointer"/>
+      <data name="SubProcessTag" inType="win:UInt32"/>
+      <data name="BasePriority" inType="win:UInt8"/>
+      <data name="PagePriority" inType="win:UInt8"/>
+      <data name="IoPriority" inType="win:UInt8"/>
+      <data name="ThreadFlags" inType="win:UInt8"/>
+     </template>
+     <template tid="0xe6f5032fL">
+      <data name="Entry" inType="win:Pointer"/>
+      <data name="ThreadId" inType="win:UInt32"/>
+     </template>
+     <template tid="0x54988e5bL">
+      <data name="TThreadId" inType="win:UInt32"/>
+      <data name="AdjustReason" inType="win:SInt8"/>
+      <data name="AdjustIncrement" inType="win:SInt8"/>
+      <data name="Flag" inType="win:SInt8"/>
+      <data name="Reserved" inType="win:SInt8"/>
+     </template>
+     <template tid="0x3a0bcdcbL">
+      <data name="Affinity" inType="win:Pointer"/>
+      <data name="ThreadId" inType="win:UInt32"/>
+      <data name="Group" inType="win:UInt16"/>
+      <data name="Reserved" inType="win:UInt16"/>
+     </template>
+     <template tid="0xc0722aa0L">
+      <data name="NewThreadId" inType="win:UInt32"/>
+      <data name="OldThreadId" inType="win:UInt32"/>
+      <data name="NewThreadPriority" inType="win:SInt8"/>
+      <data name="OldThreadPriority" inType="win:SInt8"/>
+      <data name="NewThreadQuantum" inType="win:SInt8"/>
+      <data name="OldThreadQuantum" inType="win:SInt8"/>
+      <data name="OldThreadWaitReason" inType="win:SInt8"/>
+      <data name="OldThreadWaitMode" inType="win:SInt8"/>
+      <data name="OldThreadState" inType="win:SInt8"/>
+      <data name="OldThreadWaitIdealProcessor" inType="win:SInt8"/>
+     </template>
+     <template tid="CompCS">
+     </template>
+     <template tid="Thread_V1_TypeGroup2">
+      <data name="ProcessId" inType="win:UInt32"/>
+      <data name="TThreadId" inType="win:UInt32"/>
+     </template>
+     <template tid="Thread_V1_TypeGroup1">
+      <data name="ProcessId" inType="win:UInt32"/>
+      <data name="TThreadId" inType="win:UInt32"/>
+      <data name="StackBase" inType="win:Pointer"/>
+      <data name="StackLimit" inType="win:Pointer"/>
+      <data name="UserStackBase" inType="win:Pointer"/>
+      <data name="UserStackLimit" inType="win:Pointer"/>
+      <data name="StartAddr" inType="win:Pointer"/>
+      <data name="Win32StartAddr" inType="win:Pointer"/>
+      <data name="WaitMode" inType="win:SInt8"/>
+     </template>
+     <template tid="0xcf25e668L">
+      <data name="ProcessId" inType="win:UInt32"/>
+      <data name="TThreadId" inType="win:UInt32"/>
+      <data name="StackBase" inType="win:Pointer"/>
+      <data name="StackLimit" inType="win:Pointer"/>
+      <data name="UserStackBase" inType="win:Pointer"/>
+      <data name="UserStackLimit" inType="win:Pointer"/>
+      <data name="Affinity" inType="win:Pointer"/>
+      <data name="Win32StartAddr" inType="win:Pointer"/>
+      <data name="TebBase" inType="win:Pointer"/>
+      <data name="SubProcessTag" inType="win:UInt32"/>
+      <data name="BasePriority" inType="win:UInt8"/>
+      <data name="PagePriority" inType="win:UInt8"/>
+      <data name="IoPriority" inType="win:UInt8"/>
+      <data name="ThreadFlags" inType="win:UInt8"/>
+      <data name="ThreadName" inType="win:WString"/>
+     </template>
+     <template tid="0x3d98ab4cL">
+      <data name="OldTag" inType="win:UInt32"/>
+      <data name="NewTag" inType="win:UInt32"/>
+     </template>
+     <template tid="0x2e745ca0L">
+      <data name="NewThreadId" inType="win:UInt32"/>
+      <data name="OldThreadId" inType="win:UInt32"/>
+      <data name="NewThreadPriority" inType="win:SInt8"/>
+      <data name="OldThreadPriority" inType="win:SInt8"/>
+      <data name="PreviousCState" inType="win:UInt8"/>
+      <data name="SpareByte" inType="win:SInt8"/>
+      <data name="OldThreadWaitReason" inType="win:SInt8"/>
+      <data name="ThreadFlags" inType="win:SInt8"/>
+      <data name="OldThreadState" inType="win:SInt8"/>
+      <data name="OldThreadWaitIdealProcessor" inType="win:SInt8"/>
+      <data name="NewThreadWaitTime" inType="win:UInt32"/>
+      <data name="Reserved" inType="win:UInt32"/>
+     </template>
+     <template tid="0x533880adL">
+      <data name="ThreadId" inType="win:UInt32"/>
+      <data name="ProcessorIndex" inType="win:UInt16"/>
+      <data name="Priority" inType="win:UInt8"/>
+      <data name="Reserved" inType="win:UInt8"/>
+     </template>
+     <template tid="0x65ba5f68L">
+      <data name="NewThreadId" inType="win:UInt32"/>
+      <data name="OldThreadId" inType="win:UInt32"/>
+      <data name="NewThreadPriority" inType="win:SInt8"/>
+      <data name="OldThreadPriority" inType="win:SInt8"/>
+      <data name="PreviousCState" inType="win:UInt8"/>
+      <data name="SpareByte" inType="win:SInt8"/>
+      <data name="OldThreadWaitReason" inType="win:SInt8"/>
+      <data name="OldThreadWaitMode" inType="win:SInt8"/>
+      <data name="OldThreadState" inType="win:SInt8"/>
+      <data name="OldThreadWaitIdealProcessor" inType="win:SInt8"/>
+      <data name="NewThreadWaitTime" inType="win:UInt32"/>
+      <data name="Reserved" inType="win:UInt32"/>
+     </template>
+     <template tid="0xe8fecf3eL">
+      <data name="CallbackRoutine" inType="win:Pointer"/>
+     </template>
+    </templates>
+   </provider>
+  </events>
+ </instrumentation>
+</instrumentationManifest>

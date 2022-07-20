@@ -1,0 +1,18 @@
+<instrumentationManifest xmlns="http://schemas.microsoft.com/win/2004/08/events">
+ <instrumentation xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:win="http://manifests.microsoft.com/win/2004/08/windows/events">
+  <events>
+
+   <provider name="Windows Kernel" guid="{d837ca92-12b9-44a5-ad6a-3a65b3578aa8}">
+    <events>
+        <event value="32" symbol="SplitIo/VolMgr" version="2" task="SplitIo" opcode="VolMgr" template="0x83fd5e65L"/>
+    </events>
+    <templates>
+     <template tid="0x83fd5e65L">
+      <data name="ParentIrp" inType="win:Pointer"/>
+      <data name="ChildIrp" inType="win:Pointer"/>
+     </template>
+    </templates>
+   </provider>
+  </events>
+ </instrumentation>
+</instrumentationManifest>

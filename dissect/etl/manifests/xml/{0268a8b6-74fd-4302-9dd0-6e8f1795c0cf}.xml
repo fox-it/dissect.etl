@@ -1,0 +1,40 @@
+<instrumentationManifest xmlns="http://schemas.microsoft.com/win/2004/08/events">
+ <instrumentation xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:win="http://manifests.microsoft.com/win/2004/08/windows/events">
+  <events>
+
+   <provider name="Windows Kernel" guid="{0268a8b6-74fd-4302-9dd0-6e8f1795c0cf}">
+    <events>
+        <event value="32" symbol="PoolTrace/PoolAllocation" version="2" task="PoolTrace" opcode="PoolAllocation" template="0xf2e07945L"/>
+        <event value="34" symbol="PoolTrace/PoolFree" version="2" task="PoolTrace" opcode="PoolFree" template="0xf2e07945L"/>
+        <event value="33" symbol="PoolTrace/SessionPoolAllocation" version="2" task="PoolTrace" opcode="SessionPoolAllocation" template="0xf70cefe3L"/>
+        <event value="35" symbol="PoolTrace/SessionPoolFree" version="2" task="PoolTrace" opcode="SessionPoolFree" template="0xf70cefe3L"/>
+        <event value="40" symbol="PoolTrace/PoolSnapDCStart" version="2" task="PoolTrace" opcode="PoolSnapDCStart" template="0xd4cbb29L"/>
+        <event value="41" symbol="PoolTrace/PoolSnapDCEnd" version="2" task="PoolTrace" opcode="PoolSnapDCEnd" template="0xd4cbb29L"/>
+        <event value="42" symbol="PoolTrace/BigPoolSnapDCStart" version="2" task="PoolTrace" opcode="BigPoolSnapDCStart" template="0xd4cbb29L"/>
+        <event value="43" symbol="PoolTrace/BigPoolSnapDCEnd" version="2" task="PoolTrace" opcode="BigPoolSnapDCEnd" template="0xd4cbb29L"/>
+        <event value="44" symbol="PoolTrace/SessionPoolSnapDCStart" version="2" task="PoolTrace" opcode="SessionPoolSnapDCStart" template="0xd4cbb29L"/>
+        <event value="45" symbol="PoolTrace/SessionPoolSnapDCEnd" version="2" task="PoolTrace" opcode="SessionPoolSnapDCEnd" template="0xd4cbb29L"/>
+        <event value="46" symbol="PoolTrace/SessionBigPoolSnapDCStart" version="2" task="PoolTrace" opcode="SessionBigPoolSnapDCStart" template="0xd4cbb29L"/>
+        <event value="47" symbol="PoolTrace/SessionBigPoolSnapDCEnd" version="2" task="PoolTrace" opcode="SessionBigPoolSnapDCEnd" template="0xd4cbb29L"/>
+    </events>
+    <templates>
+     <template tid="0xf70cefe3L">
+      <data name="Type" inType="win:UInt32"/>
+      <data name="Tag" inType="win:UInt32"/>
+      <data name="NumberOfBytes" inType="win:SizeT"/>
+      <data name="Entry" inType="win:Pointer"/>
+      <data name="SessionId" inType="win:UInt32"/>
+     </template>
+     <template tid="0xf2e07945L">
+      <data name="Type" inType="win:UInt32"/>
+      <data name="Tag" inType="win:UInt32"/>
+      <data name="NumberOfBytes" inType="win:SizeT"/>
+      <data name="Entry" inType="win:Pointer"/>
+     </template>
+     <template tid="0xd4cbb29L">
+     </template>
+    </templates>
+   </provider>
+  </events>
+ </instrumentation>
+</instrumentationManifest>
