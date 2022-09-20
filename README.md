@@ -4,6 +4,16 @@ A Dissect module implementing a parser for Event Trace Log (ETL) files, used by 
 kernel events. For more information, please see [the
 documentation](https://dissect.readthedocs.io/en/latest/projects/dissect.etl).
 
+## Installation
+
+`dissect.etl` is available on [PyPI](https://pypi.org/project/dissect.etl/).
+
+```bash
+pip install dissect.etl
+```
+
+This module is also automatically installed if you install the `dissect` package.
+
 ## Build and test instructions
 
 This project uses `tox` to build source and wheel distributions. Run the following command from the root folder to build
