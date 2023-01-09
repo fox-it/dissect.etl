@@ -1,13 +1,13 @@
 import importlib
-import os
+import importlib.resources
 import types
 from collections import defaultdict
+from pathlib import Path
 from string import Formatter
 from xml.etree import ElementTree
 
-import pkg_resources
-
 from dissect import cstruct
+
 from dissect.etl.exceptions import ManifestNotFoundError
 
 MODPATH = "dissect.etl.manifests"
@@ -43,14 +43,14 @@ class VariableType(RawType):
     def as_32bit(self):
         raise NotImplementedError()
 
-    def _read(self, stream):
-        return self._t._read(stream)
+    def _read(self, stream, context):
+        return self._t._read(stream, context)
 
-    def _read_array(self, stream, count):
-        return self._t._read_array(stream, count)
+    def _read_array(self, stream, count, context):
+        return self._t._read_array(stream, count, context)
 
-    def _read_0(self, stream):
-        return self._t._read_0(stream)
+    def _read_0(self, stream, context):
+        return self._t._read_0(stream, context)
 
     def _write(self, stream, data):
         return self._t._write(stream, data)
@@ -290,24 +290,18 @@ def generate_from_xml(s):
 
 
 def get_resource_string(path):
-    if __package__:
-        return pkg_resources.resource_string(__package__, path)
-
-    fpath = _get_resource_path(path)
-    with open(fpath, "r") as fh:
-        return fh.read()
+    return _get_resource_path(path).read_text()
 
 
 def get_resource_stream(path):
-    if __package__:
-        return pkg_resources.resource_stream(__package__, path)
-
-    fpath = _get_resource_path(path)
-    return open(fpath, "rb")
+    return _get_resource_path(path).open("rb")
 
 
 def _get_resource_path(path):
-    fpath = os.path.join(os.path.dirname(__file__), path)
-    if not os.path.exists(fpath):
-        raise IOError("Can't find resource {}".format(path))
+    root = importlib.resources.files(__package__) if __package__ else Path(__file__).parent
+    fpath = root.joinpath(path)
+
+    if not fpath.exists():
+        raise IOError(f"Can't find resource {path}")
+
     return fpath
