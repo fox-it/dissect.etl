@@ -4,6 +4,8 @@ import types
 from collections import defaultdict
 from pathlib import Path
 from string import Formatter
+from typing import BinaryIO
+from uuid import UUID
 from xml.etree import ElementTree
 
 from dissect import cstruct
@@ -43,13 +45,13 @@ class VariableType(RawType):
     def as_32bit(self):
         raise NotImplementedError()
 
-    def _read(self, stream, context):
+    def _read(self, stream, context=None):
         return self._t._read(stream, context)
 
-    def _read_array(self, stream, count, context):
+    def _read_array(self, stream, count, context=None):
         return self._t._read_array(stream, count, context)
 
-    def _read_0(self, stream, context):
+    def _read_0(self, stream, context=None):
         return self._t._read_0(stream, context)
 
     def _write(self, stream, data):
@@ -162,12 +164,12 @@ FIELD_MAP = {
     "UnicodeString": "wchar {name}[]",
 }
 
-CACHE = {}
+CACHE: dict[UUID, types.ModuleType] = {}
 
 c_parser = cstruct.cstruct()
 
 
-def lookup(guid):
+def lookup(guid: UUID) -> types.ModuleType:
     global CACHE
 
     try:
@@ -176,14 +178,14 @@ def lookup(guid):
         pass
 
     try:
-        mod = importlib.import_module("{}.{{{}}}".format(MODPATH, guid))
+        mod = importlib.import_module(f"{MODPATH}.{{{guid}}}")
         CACHE[guid] = mod
         return mod
     except ImportError:
         pass
 
     try:
-        mod = compile_xml(guid, get_resource_string("manifests/xml/{{{}}}.xml".format(guid)))
+        mod = compile_xml(guid, get_resource_string(f"manifests/xml/{{{guid}}}.xml"))
         CACHE[guid] = mod
         return mod
     except IOError:
@@ -192,12 +194,12 @@ def lookup(guid):
     raise ManifestNotFoundError(guid)
 
 
-def compile_file(guid, path):
+def compile_file(guid: UUID, path: str) -> types.ModuleType:
     with open(path, "r") as fh:
         return compile_xml(guid, fh.read())
 
 
-def compile_xml(guid, s):
+def compile_xml(guid: UUID, s: str) -> types.ModuleType:
     generated = generate_from_xml(s)
     # print generated
     code = compile(generated, f"<manifest {guid}>", "exec")
@@ -206,12 +208,12 @@ def compile_xml(guid, s):
     return module
 
 
-def generate_from_file(path):
+def generate_from_file(path: str) -> str:
     with open(path, "r") as fh:
         return generate_from_xml(fh.read())
 
 
-def generate_from_xml(s):
+def generate_from_xml(s: str) -> str:
     e = ElementTree.fromstring(s)
     formatter = Formatter()
 
@@ -289,15 +291,15 @@ def generate_from_xml(s):
     )
 
 
-def get_resource_string(path):
+def get_resource_string(path: str) -> str:
     return _get_resource_path(path).read_text()
 
 
-def get_resource_stream(path):
+def get_resource_stream(path: str) -> BinaryIO:
     return _get_resource_path(path).open("rb")
 
 
-def _get_resource_path(path):
+def _get_resource_path(path: str) -> Path:
     root = importlib.resources.files(__package__) if __package__ else Path(__file__).parent
     fpath = root.joinpath(path)
 
