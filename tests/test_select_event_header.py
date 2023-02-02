@@ -7,7 +7,6 @@ from dissect.etl.headers.utils import select_event_header
 
 
 def create_header(marker: int, min_size: int = 0, other_bytes=b"\xAD\xDE"):
-
     marker_bytes = int.to_bytes(marker, 4, "little")
     amount_of_padding = min_size - len(marker_bytes) - len(other_bytes)
     padding_bytes = b"\x00" * amount_of_padding
