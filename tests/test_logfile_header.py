@@ -1,10 +1,11 @@
 from unittest.mock import Mock, patch
 
 import pytest
-from .testutils import buffer_system_data
 
 from dissect.etl.headers.logfile import LogfileHeader
 from dissect.etl.headers.utils import select_event_header
+
+from .testutils import buffer_system_data
 
 
 def create_header(marker):

@@ -1,15 +1,14 @@
 from unittest.mock import MagicMock, patch
 
 import pytest
-
 from dissect import cstruct
-
-from .test_wmi_buffer_header import RAW_BUFFER_HEADER as RAW_BUFFER_HEADER
 
 import dissect.etl.etl as etl
 from dissect.etl.etl import Buffer
 from dissect.etl.exceptions import InvalidBufferError
 from dissect.etl.utils import c_etl_definitions
+
+from .test_wmi_buffer_header import RAW_BUFFER_HEADER as RAW_BUFFER_HEADER
 
 
 def load_etl_definition():
