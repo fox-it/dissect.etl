@@ -10,7 +10,6 @@ from dissect.etl.exceptions import (
     ManifestNotFoundError,
 )
 
-
 __all__ = [
     "ETL",
     "Buffer",

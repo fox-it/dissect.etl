@@ -1,4 +1,5 @@
 import pytest
+
 from dissect.etl.exceptions import InvalidMarkerError
 from dissect.etl.headers.headers import Marker
 

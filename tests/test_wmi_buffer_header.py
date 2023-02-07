@@ -1,6 +1,7 @@
 from unittest.mock import Mock
 
 from dissect import cstruct
+
 from dissect.etl.utils import c_etl_definitions
 
 RAW_BUFFER_HEADER = (
