@@ -69,17 +69,22 @@ class ETL:
 
         self._buffer_cache = {0: first_buffer}
 
-    def buffer(self, index) -> Buffer:
+    def buffer(self, index: int) -> Buffer:
         """Reads a specific buffer into memory."""
 
         if index < 0 or index >= self.logfile_header.buffers_written:
             raise IndexError("buffer index out of range")
 
+        if index == 0:
+            self._buffer_cache[index] = buf = Buffer(self, 0)
+
         try:
             buf = self._buffer_cache[index]
         except KeyError:
-            buf = Buffer(self, index * self.buffer_size)
+            prev_buf = self.buffer(index - 1)
+            buf = Buffer(self, prev_buf.next_buffer)
             self._buffer_cache[index] = buf
+
         return buf
 
     def buffers(self) -> Iterable[Buffer]:
@@ -107,19 +112,46 @@ class Buffer:
         self.etl = etl
         self.offset = offset
 
-        self.fh.seek(offset)
-        self.header = c_etl.BufferHeader(self.fh)
+        self._header = None
+        self._data = None
 
-        self.data_size = self.header.Offset
-        self.data_offset = self.fh.tell()
-        data_len = self.data_size - (self.data_offset - offset)
-        if data_len < 0:
-            raise InvalidBufferError("Invalid data length")
-        self.data = memoryview(self.fh.read(data_len))
+    @property
+    def header(self):
+        if not self._header:
+            self.fh.seek(self.offset)
+            self._header = c_etl.BufferHeader(self.fh)
+
+        return self._header
+
+    @property
+    def size(self) -> int:
+        return self.header.BufferSize
+
+    @property
+    def data(self) -> memoryview:
+        if not self._data:
+            data_len = self.filled_bytes - len(c_etl.BufferHeader)
+            if data_len < 0:
+                raise InvalidBufferError("Invalid data length")
+            self.fh.seek(self.data_offset)
+            self._data = memoryview(self.fh.read(data_len))
+        return self._data
+
+    @property
+    def data_offset(self) -> int:
+        return self.offset + len(c_etl.BufferHeader)
+
+    @property
+    def filled_bytes(self) -> int:
+        return self.header.FilledBytes
+
+    @property
+    def next_buffer(self) -> int:
+        return self.offset + self.size
 
     def __iter__(self) -> Iterable[EventRecord]:
         offset = 0
-        while offset < self.data_size:
+        while offset < self.filled_bytes:
             try:
                 event = self.read_record(offset)
                 offset += event.aligned_size
@@ -156,17 +188,17 @@ class EventRecord:
         self._header = None
 
     @property
-    def header(self):
+    def header(self) -> Header:
         """A header of the type Header"""
         return self._header
 
     @property
-    def size(self):
+    def size(self) -> int:
         """Size of the whole record."""
         return self.header.size
 
     @property
-    def event(self):
+    def event(self) -> Event:
         """Parse payload inside the event header."""
         if not self._event:
             self._event = parse_payload(self._header)
@@ -209,11 +241,11 @@ class Event:
         else:
             self._struct = None
 
-    def __getattr__(self, k):
+    def __getattr__(self, attribute: str):
         try:
-            return getattr(self._struct, k)
+            return getattr(self._struct, attribute)
         except AttributeError:
-            return object.__getattribute__(self, k)
+            return object.__getattribute__(self, attribute)
 
     def provider_name(self) -> Optional[str]:
         """Returns the manifest provider name."""

@@ -36,7 +36,7 @@ def test_buffer_header_parsed_correctly():
     assert header.ProcessorIndex == 0x0
     assert header.LoggerId == 0x12
     assert header.ETW_BUFFER_STATE == 0x3
-    assert header.Offset == 0x2A8
+    assert header.FilledBytes == 0x2A8
     assert header.BufferFlag == 0x21
     assert header.BufferType == 0x4
     assert header.unk17 == 0

@@ -105,7 +105,7 @@ struct BufferHeader {
     uint16  ProcessorIndex;   /* 0x28 ETW_BUFFER_CONTEXT */
     uint16  LoggerId;         /* 0x2A ETW_BUFFER_CONTEXT */
     uint32  ETW_BUFFER_STATE; /* 0x2C */
-    uint32  Offset;           /* 0x30, Filled? */
+    uint32  FilledBytes;      /* 0x30, Filled bytes inside the buffer. */
     uint16  BufferFlag;       /* 0x34 */
     uint16  BufferType;       /* 0x36 */
     uint32  unk17;            /* 0x38 different for multiple iterations*/
