@@ -24,9 +24,8 @@ from typing import Any, Iterable, Optional
 from uuid import UUID
 
 from dissect.cstruct import cstruct
-from dissect.util.ts import wintimestamp
 from dissect.util.compression.lzxpress import decompress as xpress_decompress
-
+from dissect.util.ts import wintimestamp
 
 from dissect.etl import manifest
 from dissect.etl.exceptions import (
@@ -38,7 +37,7 @@ from dissect.etl.exceptions import (
 from dissect.etl.headers.headers import Header
 from dissect.etl.headers.logfile import LogfileHeader
 from dissect.etl.headers.utils import select_event_header
-from dissect.etl.utils import c_etl_definitions, BufferFlag
+from dissect.etl.utils import BufferFlag, c_etl_definitions
 
 c_etl = cstruct()
 c_etl.load(c_etl_definitions)

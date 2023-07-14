@@ -1,3 +1,4 @@
+from dissect.etl.exceptions import NoMoreEventsError
 from dissect.etl.headers.event import EventHeader
 from dissect.etl.headers.headers import (
     ErrorHeader,
@@ -15,7 +16,6 @@ from dissect.etl.headers.system import (
     SystemHeader,
 )
 from dissect.etl.utils import c_etl_headers
-from dissect.etl.exceptions import NoMoreEventsError
 
 HEADERS: dict[int, Header] = {
     c_etl_headers.TRACE_HEADER_TYPE_SYSTEM32: SystemHeader,
