@@ -29,6 +29,7 @@ def setup_buffer_with_offsets(data_offset, start_offset=0):
     mocked_etl = setup_mocked_etlfile()
     etl.c_etl = MagicMock()
     etl.c_etl.BufferHeader.return_value.FilledBytes = data_offset
+    etl.c_etl.BufferHeader.return_value.BufferSize = data_offset
     etl.c_etl.BufferHeader.__len__.return_value = 0x48
     return Buffer(mocked_etl, start_offset)
 
