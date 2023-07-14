@@ -235,7 +235,11 @@ class Event:
         self._manifest = event_manifest
         self._event = None
 
-        key = (header.opcode, header.version)
+        # Not every header has an opcode and version, so check it like this.
+        opcode = getattr(header, "opcode", None)
+        version = getattr(header, "version", None)
+        key = (opcode, version)
+
         if event_manifest:
             try:
                 self._event = event_manifest.EVENTS[key]
