@@ -20,7 +20,7 @@ from __future__ import annotations
 
 import io
 from datetime import datetime
-from typing import Any, Dict, Iterable, Optional
+from typing import Any, Iterable, Optional
 from uuid import UUID
 
 from dissect.cstruct import cstruct
@@ -215,10 +215,6 @@ class EventRecord:
         return self._event
 
     @property
-    def Event(self):
-        return self.event
-
-    @property
     def aligned_size(self):
         return (self.size + 7) & 0xFFFFFFF8
 
@@ -271,7 +267,7 @@ class Event:
     def symbol(self):
         return self._event.symbol if self._event else None
 
-    def event_values(self) -> Dict[str, Any]:
+    def event_values(self) -> dict[str, Any]:
         """Create an items view that holds event and header data.
 
         The header data is additional information provided from a specific header.

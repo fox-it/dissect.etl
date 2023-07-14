@@ -2,7 +2,7 @@ from abc import abstractmethod
 from datetime import datetime
 from enum import IntEnum
 from io import BytesIO
-from typing import Any, Dict
+from typing import Any
 from uuid import UUID
 
 from dissect.cstruct.types.structure import Structure
@@ -137,13 +137,13 @@ class Header:
         return self._header
 
     @abstractmethod
-    def additional_header_fields(self) -> Dict[str, Any]:
+    def additional_header_fields(self) -> dict[str, Any]:
         """Additional fields that hold interesting information.
 
         each header subclass defines what additional information it wants to return to a record."""
         pass
 
-    def standard_header_fields(self) -> Dict[str, Any]:
+    def standard_header_fields(self) -> dict[str, Any]:
         """Some standard header information that can be retrieved for any header."""
         standard_fields = {
             "version": self.version,
@@ -264,7 +264,7 @@ class MessageTraceHeader(Header):
             event_property = self.event_property & (EventProperty.GUID | EventProperty.COMPONENT_ID)
             return event_property == EventProperty.GUID
 
-    def additional_header_fields(self) -> Dict[str, Any]:
+    def additional_header_fields(self) -> dict[str, Any]:
         return {
             "ThreadId": self.thread_id,
             "ProcessId": self.process_id,
@@ -290,7 +290,7 @@ class EventTraceHeader(Header):
         """The process id that created this event."""
         return self.header.ProcessId
 
-    def additional_header_fields(self) -> Dict[str, Any]:
+    def additional_header_fields(self) -> dict[str, Any]:
         return {
             "ThreadId": self.thread_id,
             "ProcessId": self.process_id,
@@ -306,7 +306,7 @@ class EventInstanceHeader(Header):
     def _header_type(self) -> Structure:
         return c_etl_headers.EventInstanceHeader
 
-    def additional_header_fields(self) -> Dict[str, Any]:
+    def additional_header_fields(self) -> dict[str, Any]:
         return {
             "ThreadId": self.header.ids.information.ThreadId,
             "ProcessId": self.header.ids.information.ProcessId,
@@ -341,7 +341,7 @@ class EventInstanceGUIDHeader(Header):
     def parent_guid(self):
         return UUID(bytes_le=self.header.ParentGuid)
 
-    def additional_header_fields(self) -> Dict[str, Any]:
+    def additional_header_fields(self) -> dict[str, Any]:
         return {
             "ThreadId": self.thread_id,
             "ProcessId": self.process_id,
@@ -360,5 +360,5 @@ class ErrorHeader(Header):
     def _header_type(self) -> Structure:
         return None
 
-    def additional_header_fields(self) -> Dict[str, Any]:
+    def additional_header_fields(self) -> dict[str, Any]:
         return {}

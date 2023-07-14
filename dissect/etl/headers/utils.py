@@ -42,7 +42,8 @@ def select_event_header(data: memoryview, etl) -> Header:
     marker_int = c_etl_headers.uint32(data[:4])
 
     if marker_int == 0xFFFFFFFF:
-        # We are usually at the padding in this point in time.
+        # In this case, we reached the padding inside a buffer.
+        # WHich marks it as the end of data.
         raise NoMoreEventsError("We are at the end of the events inside the buffer.")
 
     marker = Marker(marker_int)
