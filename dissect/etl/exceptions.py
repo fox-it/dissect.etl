@@ -28,3 +28,7 @@ class ExtendedDataItemException(Error):
 
 class InvalidHookIdException(Error):
     pass
+
+
+class NoMoreEventsError(Error):
+    pass

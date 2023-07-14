@@ -93,25 +93,48 @@ struct TimeZoneInformation {
     LONG        DaylightBias;
 };
 
+flag ETW_BUFFER_FLAG: uint16 {
+    NORMAL           = 0x0000
+    FLUSH_MARKER     = 0x0001
+    EVENTS_LOST      = 0x0002
+    BUFFER_LOST      = 0x0004
+    RTBACKUP_CORRUPT = 0x0008
+    RTBACKUP         = 0x0010
+    PROC_INDEX       = 0x0020
+    COMPRESSED  = 0x0040
+};
+
+enum ETW_BUFFER_TYPE: uint16 {
+    GENERIC      = 0x0000
+    RUNDOWN      = 0x0001
+    CTX_SWAP     = 0x0002
+    REFTIME      = 0x0003
+    HEADER       = 0x0004
+    BATCHED      = 0x0005
+    EMPTY_MARKER = 0x0006
+    DBG_INFO     = 0x0007
+    MAXIMUM      = 0x0008
+};
+
 /* WMI_BUFFER_HEADER (latest)*/
 struct BufferHeader {
-    uint32  BufferSize;       /* 0x00 */
-    uint32  SavedOffset;      /* 0x04 */
-    uint32  CurrentOffset;    /* 0x08 */
-    uint32  ReferenceCounter; /* 0x0C */
-    uint64  TimeDelta;        /* 0x10 */
-    int64   SequenceNumber;   /* 0x18 */
-    uint64  Defined_1;        /* 0x20 */
-    uint16  ProcessorIndex;   /* 0x28 ETW_BUFFER_CONTEXT */
-    uint16  LoggerId;         /* 0x2A ETW_BUFFER_CONTEXT */
-    uint32  ETW_BUFFER_STATE; /* 0x2C */
-    uint32  FilledBytes;      /* 0x30, Filled bytes inside the buffer. */
-    uint16  BufferFlag;       /* 0x34 */
-    uint16  BufferType;       /* 0x36 */
-    uint32  unk17;            /* 0x38 different for multiple iterations*/
-    uint32  unk18;            /* 0x3C different for multiple iterations*/
-    uint32  unk19;            /* 0x40 different for multiple iterations*/
-    uint32  unk20;            /* 0x44 different for multiple iterations*/
+    uint32           BufferSize;       /* 0x00 */
+    uint32           SavedOffset;      /* 0x04 */
+    uint32           CurrentOffset;    /* 0x08 */
+    uint32           ReferenceCounter; /* 0x0C */
+    uint64           TimeDelta;        /* 0x10 */
+    int64            SequenceNumber;   /* 0x18 */
+    uint64           Defined_1;        /* 0x20 */
+    uint16           ProcessorIndex;   /* 0x28 ETW_BUFFER_CONTEXT */
+    uint16           LoggerId;         /* 0x2A ETW_BUFFER_CONTEXT */
+    uint32           ETW_BUFFER_STATE; /* 0x2C */
+    uint32           FilledBytes;      /* 0x30, Filled bytes inside the buffer. */
+    ETW_BUFFER_FLAG  BufferFlag;       /* 0x34 */
+    ETW_BUFFER_TYPE  BufferType;       /* 0x36 */
+    uint32           unk17;            /* 0x38 different for multiple iterations*/
+    uint32           unk18;            /* 0x3C different for multiple iterations*/
+    uint32           unk19;            /* 0x40 different for multiple iterations*/
+    uint32           unk20;            /* 0x44 different for multiple iterations*/
 };
 
 /* TRACE_HEADER_TYPE_SYSTEM32, TRACE_HEADER_TYPE_SYSTEM64 */
@@ -287,6 +310,11 @@ struct EVENT_HEADER_EXT_TYPE_PROVIDER_TRAIT {
 c_etl_headers = cstruct()
 c_etl_headers.load(c_etl_definitions)
 
+# Flags and enumerations
+BufferType = c_etl_headers.ETW_BUFFER_TYPE
+BufferFlag = c_etl_headers.ETW_BUFFER_FLAG
+
+# Known UUIDs
 NullGuid = UUID("{00000000-0000-0000-0000-000000000000}")
 EventTraceGuid = UUID("{68fdd900-4a3e-11d1-84f4-0000f80464e3}")
 DiskIoGuid = UUID("{3d6fa8d4-fe05-11d0-9dda-00c04fd7ba7c}")

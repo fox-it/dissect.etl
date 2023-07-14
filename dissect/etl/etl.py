@@ -25,17 +25,20 @@ from uuid import UUID
 
 from dissect.cstruct import cstruct
 from dissect.util.ts import wintimestamp
+from dissect.util.compression.lzxpress import decompress as xpress_decompress
+
 
 from dissect.etl import manifest
 from dissect.etl.exceptions import (
     InvalidBufferError,
     InvalidHeaderError,
     ManifestNotFoundError,
+    NoMoreEventsError,
 )
 from dissect.etl.headers.headers import Header
 from dissect.etl.headers.logfile import LogfileHeader
 from dissect.etl.headers.utils import select_event_header
-from dissect.etl.utils import c_etl_definitions
+from dissect.etl.utils import c_etl_definitions, BufferFlag
 
 c_etl = cstruct()
 c_etl.load(c_etl_definitions)
@@ -130,11 +133,17 @@ class Buffer:
     @property
     def data(self) -> memoryview:
         if not self._data:
-            data_len = self.filled_bytes - len(c_etl.BufferHeader)
+            data_len = min(self.size, self.filled_bytes) - len(c_etl.BufferHeader)
             if data_len < 0:
                 raise InvalidBufferError("Invalid data length")
             self.fh.seek(self.data_offset)
-            self._data = memoryview(self.fh.read(data_len))
+
+            tmp_data = self.fh.read(data_len)
+
+            if self.header.BufferFlag & BufferFlag.COMPRESSED:
+                tmp_data = xpress_decompress(tmp_data)
+
+            self._data = memoryview(tmp_data)
         return self._data
 
     @property
@@ -156,7 +165,7 @@ class Buffer:
                 event = self.read_record(offset)
                 offset += event.aligned_size
                 yield event
-            except EOFError:
+            except (EOFError, NoMoreEventsError):
                 break
 
     def read_record(self, offset):
