@@ -78,9 +78,6 @@ class ETL:
         if index < 0 or index >= self.logfile_header.buffers_written:
             raise IndexError("buffer index out of range")
 
-        if index == 0:
-            self._buffer_cache[index] = buf = Buffer(self, 0)
-
         try:
             buf = self._buffer_cache[index]
         except KeyError:
