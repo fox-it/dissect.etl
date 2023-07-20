@@ -1,5 +1,5 @@
 from abc import abstractmethod
-from typing import Any, Dict
+from typing import Any
 from uuid import UUID
 
 from dissect.cstruct.types.structure import Structure
@@ -95,7 +95,7 @@ class SystemHeader(SystemSpecificHeader):
         """The thread id that created this event."""
         return self.header.ThreadId
 
-    def additional_header_fields(self) -> Dict[str, Any]:
+    def additional_header_fields(self) -> dict[str, Any]:
         return {
             "ThreadId": self.thread_id,
             "ProcessId": self.process_id,
@@ -136,7 +136,7 @@ class CompactSystemHeader(SystemSpecificHeader):
         """The thread id that created this event."""
         return self.header.ThreadId
 
-    def additional_header_fields(self) -> Dict[str, Any]:
+    def additional_header_fields(self) -> dict[str, Any]:
         return {
             "ThreadId": self.thread_id,
             "ProcessId": self.process_id,
@@ -154,5 +154,5 @@ class PerfinfoTraceHeader(SystemSpecificHeader):
     def _header_type(self) -> Structure:
         return c_etl_headers.PerformanceInfoHeader
 
-    def additional_header_fields(self) -> Dict[str, Any]:
+    def additional_header_fields(self) -> dict[str, Any]:
         return {}

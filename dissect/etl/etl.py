@@ -20,10 +20,12 @@ from __future__ import annotations
 
 import io
 from datetime import datetime
-from typing import Any, Dict, Iterable, Optional
+from typing import Any, Iterable, Optional
 from uuid import UUID
 
-from dissect.cstruct import cstruct
+from dissect.cstruct import Instance, cstruct
+from dissect.util.compression.lzxpress import decompress as xpress_decompress
+from dissect.util.sid import read_sid
 from dissect.util.ts import wintimestamp
 
 from dissect.etl import manifest
@@ -31,11 +33,12 @@ from dissect.etl.exceptions import (
     InvalidBufferError,
     InvalidHeaderError,
     ManifestNotFoundError,
+    NoMoreEventsError,
 )
 from dissect.etl.headers.headers import Header
 from dissect.etl.headers.logfile import LogfileHeader
 from dissect.etl.headers.utils import select_event_header
-from dissect.etl.utils import c_etl_definitions
+from dissect.etl.utils import BufferFlag, c_etl_definitions
 
 c_etl = cstruct()
 c_etl.load(c_etl_definitions)
@@ -69,7 +72,7 @@ class ETL:
 
         self._buffer_cache = {0: first_buffer}
 
-    def buffer(self, index) -> Buffer:
+    def buffer(self, index: int) -> Buffer:
         """Reads a specific buffer into memory."""
 
         if index < 0 or index >= self.logfile_header.buffers_written:
@@ -78,8 +81,10 @@ class ETL:
         try:
             buf = self._buffer_cache[index]
         except KeyError:
-            buf = Buffer(self, index * self.buffer_size)
+            prev_buf = self.buffer(index - 1)
+            buf = Buffer(self, prev_buf.next_buffer)
             self._buffer_cache[index] = buf
+
         return buf
 
     def buffers(self) -> Iterable[Buffer]:
@@ -107,24 +112,57 @@ class Buffer:
         self.etl = etl
         self.offset = offset
 
-        self.fh.seek(offset)
-        self.header = c_etl.BufferHeader(self.fh)
+        self._header = None
+        self._data = None
 
-        self.data_size = self.header.Offset
-        self.data_offset = self.fh.tell()
-        data_len = self.data_size - (self.data_offset - offset)
-        if data_len < 0:
-            raise InvalidBufferError("Invalid data length")
-        self.data = memoryview(self.fh.read(data_len))
+    @property
+    def header(self):
+        if not self._header:
+            self.fh.seek(self.offset)
+            self._header = c_etl.BufferHeader(self.fh)
+
+        return self._header
+
+    @property
+    def size(self) -> int:
+        return self.header.BufferSize
+
+    @property
+    def data(self) -> memoryview:
+        if not self._data:
+            data_len = min(self.size, self.filled_bytes) - len(c_etl.BufferHeader)
+            if data_len < 0:
+                raise InvalidBufferError("Invalid data length")
+            self.fh.seek(self.data_offset)
+
+            tmp_data = self.fh.read(data_len)
+
+            if self.header.BufferFlag & BufferFlag.COMPRESSED:
+                tmp_data = xpress_decompress(tmp_data)
+
+            self._data = memoryview(tmp_data)
+        return self._data
+
+    @property
+    def data_offset(self) -> int:
+        return self.offset + len(c_etl.BufferHeader)
+
+    @property
+    def filled_bytes(self) -> int:
+        return self.header.FilledBytes
+
+    @property
+    def next_buffer(self) -> int:
+        return self.offset + self.size
 
     def __iter__(self) -> Iterable[EventRecord]:
         offset = 0
-        while offset < self.data_size:
+        while offset < self.filled_bytes:
             try:
                 event = self.read_record(offset)
                 offset += event.aligned_size
                 yield event
-            except EOFError:
+            except (EOFError, NoMoreEventsError):
                 break
 
     def read_record(self, offset):
@@ -156,26 +194,22 @@ class EventRecord:
         self._header = None
 
     @property
-    def header(self):
+    def header(self) -> Header:
         """A header of the type Header"""
         return self._header
 
     @property
-    def size(self):
+    def size(self) -> int:
         """Size of the whole record."""
         return self.header.size
 
     @property
-    def event(self):
+    def event(self) -> Event:
         """Parse payload inside the event header."""
         if not self._event:
             self._event = parse_payload(self._header)
 
         return self._event
-
-    @property
-    def Event(self):
-        return self.event
 
     @property
     def aligned_size(self):
@@ -199,7 +233,11 @@ class Event:
         self._manifest = event_manifest
         self._event = None
 
-        key = (header.opcode, header.version)
+        # Not every header has an opcode and version, so check it like this.
+        opcode = getattr(header, "opcode", None)
+        version = getattr(header, "version", None)
+        key = (opcode, version)
+
         if event_manifest:
             try:
                 self._event = event_manifest.EVENTS[key]
@@ -209,11 +247,11 @@ class Event:
         else:
             self._struct = None
 
-    def __getattr__(self, k):
+    def __getattr__(self, attribute: str):
         try:
-            return getattr(self._struct, k)
+            return getattr(self._struct, attribute)
         except AttributeError:
-            return object.__getattribute__(self, k)
+            return object.__getattribute__(self, attribute)
 
     def provider_name(self) -> Optional[str]:
         """Returns the manifest provider name."""
@@ -230,7 +268,7 @@ class Event:
     def symbol(self):
         return self._event.symbol if self._event else None
 
-    def event_values(self) -> Dict[str, Any]:
+    def event_values(self) -> dict[str, Any]:
         """Create an items view that holds event and header data.
 
         The header data is additional information provided from a specific header.
@@ -238,7 +276,16 @@ class Event:
         """
         event_values = self._header.additional_header_fields()
         struct_events = self._struct._values if self._struct else {}
+
+        # Pretty print Instance values.
+        update_event = {}
+        instance_values = ((key, value) for key, value in struct_events.items() if isinstance(value, Instance))
+        for key, value in instance_values:
+            if hasattr(value, "sid"):
+                update_event[key] = read_sid(value.sid.dumps())
+
         event_values.update(struct_events)
+        event_values.update(update_event)
         return event_values
 
     def __repr__(self):

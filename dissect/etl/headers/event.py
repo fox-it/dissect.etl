@@ -1,5 +1,5 @@
 from enum import IntEnum
-from typing import Any, Dict, List, OrderedDict
+from typing import Any, OrderedDict
 from uuid import UUID
 
 from dissect.util.sid import read_sid
@@ -176,7 +176,7 @@ class EventHeader(Header):
         return EventDescriptor(self.header)
 
     @property
-    def header_extensions(self) -> List[EventHeaderExtendedDataItem]:
+    def header_extensions(self) -> list[EventHeaderExtendedDataItem]:
         """A list with all the extended data items for this Event."""
         return self._read_extensions()
 
@@ -190,7 +190,7 @@ class EventHeader(Header):
         """Type of header that will get parsed."""
         return c_etl_headers.EventHeader
 
-    def _read_extensions(self) -> List[EventHeaderExtendedDataItem]:
+    def _read_extensions(self) -> list[EventHeaderExtendedDataItem]:
         """Read header extensions from the payload"""
         count = 0
         items = []
@@ -243,7 +243,7 @@ class EventHeader(Header):
         """The process id that created this event."""
         return self.header.ProcessId
 
-    def additional_header_fields(self) -> Dict[str, Any]:
+    def additional_header_fields(self) -> dict[str, Any]:
         basic_information = {
             "ThreadId": self.thread_id,
             "ProcessId": self.process_id,
