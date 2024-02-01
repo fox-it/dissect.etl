@@ -181,7 +181,7 @@ def lookup(guid: UUID) -> types.ModuleType:
         mod = importlib.import_module(f"{MODPATH}.{{{guid}}}")
         CACHE[guid] = mod
         return mod
-    except ImportError:
+    except (AttributeError, ImportError):
         pass
 
     try:
