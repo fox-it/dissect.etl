@@ -35,7 +35,7 @@ Event = namedtuple('Event', ['symbol', 'value', 'version', 'opcode', 'level', 't
 
 class VariableType(BaseType):
     type: MetaType
-    size: int 
+    size: int
 
     @classmethod
     def as_64bit(cls):
