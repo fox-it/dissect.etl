@@ -51,8 +51,7 @@ c_global_def = """
 #define EVENT_TRACE_TYPE_WINEVT_SEND        0x09  // Send Event (WinEvent compatible)
 #define EVENT_TRACE_TYPE_WINEVT_RECEIVE     0xF0  // Receive Event (WinEvent compatible)
 """
-c_etl_global = cstruct()
-c_etl_global.load(c_global_def)
+c_etl_global = cstruct().load(c_global_def)
 
 c_etl_definitions = """
 #define TRACE_HEADER_TYPE_SYSTEM32          0x01
@@ -307,8 +306,7 @@ struct EVENT_HEADER_EXT_TYPE_PROVIDER_TRAIT {
 
 
 """
-c_etl_headers = cstruct()
-c_etl_headers.load(c_etl_definitions)
+c_etl_headers = cstruct().load(c_etl_definitions)
 
 # Flags and enumerations
 BufferType = c_etl_headers.ETW_BUFFER_TYPE

@@ -24,7 +24,7 @@ from types import ModuleType
 from typing import Any, BinaryIO, Iterable, Optional
 from uuid import UUID
 
-from dissect.cstruct import Structure, cstruct
+from dissect.cstruct import Structure
 from dissect.util.compression.lzxpress import decompress as xpress_decompress
 from dissect.util.sid import read_sid
 from dissect.util.ts import wintimestamp
@@ -39,10 +39,8 @@ from dissect.etl.exceptions import (
 from dissect.etl.headers.headers import Header
 from dissect.etl.headers.logfile import LogfileHeader
 from dissect.etl.headers.utils import select_event_header
-from dissect.etl.utils import BufferFlag, c_etl_definitions
-
-c_etl = cstruct()
-c_etl.load(c_etl_definitions)
+from dissect.etl.utils import BufferFlag
+from dissect.etl.utils import c_etl_headers as c_etl
 
 
 class ETL:

@@ -2,7 +2,7 @@ from typing import Iterator
 from unittest.mock import MagicMock, patch
 
 import pytest
-from dissect import cstruct
+from dissect.cstruct import cstruct
 
 import dissect.etl.etl as etl
 from dissect.etl.etl import Buffer
@@ -13,9 +13,7 @@ from .test_wmi_buffer_header import RAW_BUFFER_HEADER as RAW_BUFFER_HEADER
 
 
 def load_etl_definition() -> cstruct:
-    c_etl = cstruct.cstruct()
-    c_etl.load(c_etl_definitions)
-    return c_etl
+    return cstruct().load(c_etl_definitions)
 
 
 def setup_mocked_etlfile(start_offset: int = 0) -> MagicMock:
