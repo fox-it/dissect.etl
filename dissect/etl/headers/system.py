@@ -2,8 +2,6 @@ from abc import abstractmethod
 from typing import Any
 from uuid import UUID
 
-from dissect.cstruct.types.structure import Structure
-
 from dissect.etl.headers.headers import Header
 from dissect.etl.utils import c_etl_headers, lookup_guid
 
@@ -77,7 +75,7 @@ class SystemHeader(SystemSpecificHeader):
         return 0x20
 
     @property
-    def _header_type(self) -> Structure:
+    def _header_type(self) -> type[c_etl_headers.SystemHeader]:
         return c_etl_headers.SystemHeader
 
     @property
@@ -119,7 +117,7 @@ class CompactSystemHeader(SystemSpecificHeader):
     """
 
     @property
-    def _header_type(self) -> Structure:
+    def _header_type(self) -> type[c_etl_headers.CompactSystemHeader]:
         return c_etl_headers.CompactSystemHeader
 
     @property
@@ -151,7 +149,7 @@ class PerfinfoTraceHeader(SystemSpecificHeader):
         return 0x10
 
     @property
-    def _header_type(self) -> Structure:
+    def _header_type(self) -> type[c_etl_headers.PerformanceInfoHeader]:
         return c_etl_headers.PerformanceInfoHeader
 
     def additional_header_fields(self) -> dict[str, Any]:

@@ -81,7 +81,7 @@ class Header:
 
     @property
     @abstractmethod
-    def _header_type(self) -> Structure:
+    def _header_type(self) -> type[Structure] | None:
         """Type of header that will get parsed."""
         pass
 
@@ -207,7 +207,7 @@ class MessageTraceHeader(Header):
         return 0x8
 
     @property
-    def _header_type(self) -> Structure:
+    def _header_type(self) -> type[c_etl_headers.MessageHeader]:
         return c_etl_headers.MessageHeader
 
     def _parse_event_properties(self) -> None:
@@ -283,7 +283,7 @@ class EventTraceHeader(Header):
         return 0x30
 
     @property
-    def _header_type(self) -> Structure:
+    def _header_type(self) -> type[c_etl_headers.EventTraceHeader]:
         return c_etl_headers.EventTraceHeader
 
     @property
@@ -309,7 +309,7 @@ class EventInstanceHeader(Header):
         return 0x38
 
     @property
-    def _header_type(self) -> Structure:
+    def _header_type(self) -> type[c_etl_headers.EventInstanceHeader]:
         return c_etl_headers.EventInstanceHeader
 
     def additional_header_fields(self) -> dict[str, Any]:
@@ -330,7 +330,7 @@ class EventInstanceGUIDHeader(Header):
         return 0x48
 
     @property
-    def _header_type(self) -> Structure:
+    def _header_type(self) -> type[c_etl_headers.EventInstanceGUIDHeader]:
         return c_etl_headers.EventInstanceGUIDHeader
 
     @property
@@ -363,7 +363,7 @@ class ErrorHeader(Header):
         return 0x50
 
     @property
-    def _header_type(self) -> Structure:
+    def _header_type(self) -> None:
         return None
 
     def additional_header_fields(self) -> dict[str, Any]:
