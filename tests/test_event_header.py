@@ -34,13 +34,13 @@ EVENT_HEADER_EVENT = (
 )
 
 
-def create_header():
+def create_header() -> EventHeader:
     header_data = memoryview(EVENT_HEADER_EVENT)
     marker = Marker(0xC000A0112)
     return EventHeader(marker, header_data, Mock())
 
 
-def test_event_header():
+def test_event_header() -> None:
     event = create_header()
     header = event.header
 
@@ -63,7 +63,7 @@ def test_event_header():
     assert header.ActivityId == bytes([0x00] * 16)
 
 
-def test_event_payload():
+def test_event_payload() -> None:
     event = create_header()
     assert len(event.payload) == 0x112 - event.minimal_size
 
@@ -76,13 +76,13 @@ def test_event_payload():
         (16, 20, r".*larger than DataItem size."),
     ],
 )
-def test_event_small_dataitem(size, data_size, exception_match):
+def test_event_small_dataitem(size: int, data_size: int, exception_match: str) -> None:
     event_data = create_extended_item_header(Size=size, DataSize=data_size)
     with pytest.raises(ExtendedDataItemException, match=exception_match):
         EventHeaderExtendedDataItem(event_data)
 
 
-def create_extended_item_header(**kwargs):
+def create_extended_item_header(**kwargs: dict) -> EventHeaderExtendedDataItem:
     if "Data" in kwargs and "DataSize" not in kwargs:
         data_size = len(kwargs["Data"])
         data = kwargs["Data"]
@@ -109,7 +109,7 @@ def create_extended_item_header(**kwargs):
     return c_etl_headers.EventHeaderExtendedDataItemHeader(Size=size, DataSize=data_size, Data=data, **kwargs).dumps()
 
 
-def test_event_header_extension():
+def test_event_header_extension() -> None:
     EventHeaderExtendedDataItem(memoryview(create_extended_item_header()))
 
 
@@ -134,7 +134,7 @@ def test_event_header_extension():
         (0xF, "UNKNOWN"),
     ],
 )
-def test_extension_ext_type(item_type, expected_value):
+def test_extension_ext_type(item_type: int, expected_value: str) -> None:
     header = create_extended_item_header()
 
     data = EventHeaderExtendedDataItem(header)
@@ -166,26 +166,26 @@ def test_extension_ext_type(item_type, expected_value):
         (ExtType.UNKNOWN, {}),
     ],
 )
-def test_extension_output_data(item_type, expected_value):
+def test_extension_output_data(item_type: ExtType, expected_value: dict) -> None:
     header = create_extended_item_header()
     data = EventHeaderExtendedDataItem(header)
     input_data = b"\x00" * 24
     assert data._read_extension_type(item_type, input_data) == expected_value
 
 
-def test_extension_key_in_data():
+def test_extension_key_in_data() -> None:
     header = create_extended_item_header(ExtType=ExtType.RELATED_ACTIVITY_ID, Data=b"\x00" * 16)
     data = EventHeaderExtendedDataItem(header)
     assert data.Guid == "00000000-0000-0000-0000-000000000000"
 
 
-def test_extension_key_not_in_data():
+def test_extension_key_not_in_data() -> None:
     header = create_extended_item_header(ExtType=ExtType.UNKNOWN, Data=b"\x00" * 16)
     data = EventHeaderExtendedDataItem(header)
     assert data.Guid is None
 
 
-def test_extension_provider_trait():
+def test_extension_provider_trait() -> None:
     trait_data = (
         b"=\x00Microsoft.Windows.ServiceControlManager\x00\x13\x00\x01\x1asPO\xcf\x89\x82G\xb3\xe0\xdc\xe8\xc9\x04v\xba"
     )

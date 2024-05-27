@@ -1,3 +1,5 @@
+from typing import TYPE_CHECKING
+
 from dissect.etl.exceptions import NoMoreEventsError
 from dissect.etl.headers.event import EventHeader
 from dissect.etl.headers.headers import (
@@ -16,6 +18,11 @@ from dissect.etl.headers.system import (
     SystemHeader,
 )
 from dissect.etl.utils import c_etl_headers
+
+if TYPE_CHECKING:
+    from dissect.etl.etl import ETL
+else:
+    ETL = "ETL"
 
 HEADERS: dict[int, Header] = {
     c_etl_headers.TRACE_HEADER_TYPE_SYSTEM32: SystemHeader,
@@ -37,7 +44,7 @@ HEADERS: dict[int, Header] = {
 }
 
 
-def select_event_header(data: memoryview, etl) -> Header:
+def select_event_header(data: memoryview, etl: ETL) -> Header:
     """Select event header with marker"""
     marker_int = c_etl_headers.uint32(data[:4])
 

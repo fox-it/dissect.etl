@@ -24,13 +24,13 @@ EVENT_TRACE_EVENT = (
 )
 
 
-def create_event():
+def create_event() -> EventTraceHeader:
     header_data = memoryview(EVENT_TRACE_EVENT)
     marker = Marker(0xC000A0112)
     return EventTraceHeader(marker, header_data, Mock())
 
 
-def test_event_header():
+def test_event_header() -> None:
     header = create_event().header
     assert header.Size == 0x112
     assert header.Marker == 0xC013

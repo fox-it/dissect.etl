@@ -2,13 +2,19 @@ from abc import abstractmethod
 from datetime import datetime
 from enum import IntEnum
 from io import BytesIO
-from typing import Any
+from typing import TYPE_CHECKING, Any
 from uuid import UUID
 
 from dissect.cstruct.types.structure import Structure
 
 from dissect.etl.exceptions import InvalidHeaderError, InvalidMarkerError
 from dissect.etl.utils import bytes_left, c_etl_headers
+
+if TYPE_CHECKING:
+    from dissect.etl.etl import ETL
+else:
+    ETL = "ETL"
+
 
 BIT64_HEADERS = [
     c_etl_headers.TRACE_HEADER_TYPE_SYSTEM64,
@@ -34,11 +40,11 @@ class Marker:
         self.marker = marker
 
     @property
-    def flags(self):
+    def flags(self) -> int:
         return (self.marker & self.MARKER_MASK) >> 24
 
     @property
-    def header_type(self):
+    def header_type(self) -> int:
         if self.flags == self.HEADER_FLAGS:
             return (self.marker & self.HEADER_MASK) >> 16
         elif self.flags == self.MESSAGE_FLAGS:
@@ -47,14 +53,14 @@ class Marker:
             raise InvalidMarkerError("Unknown flags combination")
 
     @property
-    def remainder(self):
+    def remainder(self) -> int:
         return self.marker & self.REMAINDER_MASK
 
 
 class Header:
     """A baseclass for the different ETL headers."""
 
-    def __init__(self, marker: Marker, data: memoryview, etl):
+    def __init__(self, marker: Marker, data: memoryview, etl: ETL):
         self._etl = etl
         self._marker = marker
         self._header = None
@@ -152,7 +158,7 @@ class Header:
         }
         return standard_fields
 
-    def __repr__(self):
+    def __repr__(self) -> str:
         standard_output = " ".join(f"{key}={value}" for key, value in self.standard_header_fields().items())
         additional_output = " ".join(f"{key}={value}" for key, value in self.additional_header_fields().items())
         return f"<{self.__class__.__name__} {standard_output} {additional_output}>"
@@ -161,7 +167,7 @@ class Header:
 class InvalidHeader(Header):
     """An invalid header."""
 
-    def __init__(self, marker, data, etl):
+    def __init__(self, marker: Marker, data: memoryview, etl: ETL):
         raise InvalidHeaderError()
 
 
@@ -185,7 +191,7 @@ class EventProperty(IntEnum):
 
 
 class MessageTraceHeader(Header):
-    def __init__(self, marker: Marker, data: memoryview, etl):
+    def __init__(self, marker: Marker, data: memoryview, etl: ETL):
         super().__init__(marker, data, etl)
         self.payload_offset = 0
         self.opcode = None
@@ -204,7 +210,7 @@ class MessageTraceHeader(Header):
     def _header_type(self) -> Structure:
         return c_etl_headers.MessageHeader
 
-    def _parse_event_properties(self):
+    def _parse_event_properties(self) -> None:
         payload = BytesIO(self.payload)
 
         if self.event_property & EventProperty.SEQUENCE:
@@ -328,17 +334,17 @@ class EventInstanceGUIDHeader(Header):
         return c_etl_headers.EventInstanceGUIDHeader
 
     @property
-    def thread_id(self):
+    def thread_id(self) -> int:
         """The thread id that created this event."""
         return self.header.ThreadId
 
     @property
-    def process_id(self):
+    def process_id(self) -> int:
         """The process id that created this event."""
         return self.header.ProcessId
 
     @property
-    def parent_guid(self):
+    def parent_guid(self) -> int:
         return UUID(bytes_le=self.header.ParentGuid)
 
     def additional_header_fields(self) -> dict[str, Any]:

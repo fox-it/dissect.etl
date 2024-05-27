@@ -2,6 +2,7 @@ from enum import IntEnum
 from typing import Any, OrderedDict
 from uuid import UUID
 
+from dissect.cstruct import CharArray
 from dissect.util.sid import read_sid
 
 from dissect.etl.exceptions import ExtendedDataItemException
@@ -62,7 +63,7 @@ class EventDescriptor:
         "keywords",
     ]
 
-    def __init__(self, header):
+    def __init__(self, header: Header):
         self.id = header.Id
         self.version = header.Version
         self.channel = header.Channel
@@ -122,7 +123,7 @@ class EventHeaderExtendedDataItem:
         "raw_data",
     ]
 
-    def __init__(self, payload):
+    def __init__(self, payload: memoryview):
         header = c_etl_headers.EventHeaderExtendedDataItemHeader(payload)
         self.size = header.Size
         self.ext_type = self._extension_type(header.ExtType)
@@ -151,7 +152,7 @@ class EventHeaderExtendedDataItem:
         except ValueError:
             return ExtType.UNKNOWN
 
-    def _read_extension_type(self, ext_type, data) -> dict:
+    def _read_extension_type(self, ext_type: ExtType, data: CharArray) -> dict[str, Any]:
         reader = extended_data_item_reader.get(ext_type)
         return reader(data) if reader else {}
 
@@ -162,7 +163,7 @@ class EventHeaderExtendedDataItem:
             pass
         return self.data.get(name)
 
-    def __repr__(self):
+    def __repr__(self) -> str:
         return (
             f"<EventHeaderExtendedDataItem Size={self.size} Reserved1={self.reserved1} ExtType={self.ext_type} "
             f"Linkage={self.linkage} Reserved2={self.reserved2} DataSize={self.data_size}>"
@@ -171,7 +172,7 @@ class EventHeaderExtendedDataItem:
 
 class EventHeader(Header):
     @property
-    def descriptor(self):
+    def descriptor(self) -> EventDescriptor:
         """Event descriptor of the header."""
         return EventDescriptor(self.header)
 
@@ -181,12 +182,12 @@ class EventHeader(Header):
         return self._read_extensions()
 
     @property
-    def minimal_size(self):
+    def minimal_size(self) -> int:
         """Minimum header size."""
         return 0x50
 
     @property
-    def _header_type(self):
+    def _header_type(self) -> c_etl_headers.EventHeader:
         """Type of header that will get parsed."""
         return c_etl_headers.EventHeader
 
@@ -217,29 +218,29 @@ class EventHeader(Header):
         return items
 
     @property
-    def provider_id(self):
+    def provider_id(self) -> UUID:
         """Provider that generated this event."""
         return UUID(bytes=self.header.ProviderId)
 
     @property
-    def activity_id(self):
+    def activity_id(self) -> UUID:
         """The ID associated with the activity in the event.
 
         At least, that is my assumption."""
         return UUID(bytes_le=self.header.ActivityId)
 
     @property
-    def opcode(self):
+    def opcode(self) -> int:
         """The opcode used in this event."""
         return self.header.OpCode
 
     @property
-    def thread_id(self):
+    def thread_id(self) -> int:
         """The thread id that created this event."""
         return self.header.ThreadId
 
     @property
-    def process_id(self):
+    def process_id(self) -> int:
         """The process id that created this event."""
         return self.header.ProcessId
 

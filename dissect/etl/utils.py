@@ -383,7 +383,7 @@ GROUP_GUID_MAP = {
 }
 
 
-def lookup_guid(group, opcode):
+def lookup_guid(group: int, opcode: int) -> UUID:
     # Magic number were grabbed by reverse engineering sechost.dll
     # https://www.geoffchappell.com/studies/windows/km/ntoskrnl/api/etw/callouts/hookid.htm
     lookup = group
@@ -396,6 +396,6 @@ def lookup_guid(group, opcode):
     return GROUP_GUID_MAP[lookup << 8]
 
 
-def bytes_left(stream: BytesIO):
+def bytes_left(stream: BytesIO) -> int:
     """Get number of bytes left in the buffer."""
     return stream.getbuffer().nbytes - stream.tell()

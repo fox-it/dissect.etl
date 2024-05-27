@@ -45,5 +45,5 @@ FIRST_BUFFER = (
 )
 
 
-def buffer_system_data():
+def buffer_system_data() -> memoryview:
     return memoryview(FIRST_BUFFER)[0x48:]
