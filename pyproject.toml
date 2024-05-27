@@ -27,6 +27,7 @@ classifiers = [
 dependencies = [
     "dissect.cstruct>3,<5",
     "dissect.util>2,<4",
+    "defusedxml"
 ]
 dynamic = ["version"]
 

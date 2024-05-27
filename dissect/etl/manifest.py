@@ -6,8 +6,8 @@ from pathlib import Path
 from string import Formatter
 from typing import BinaryIO
 from uuid import UUID
-from xml.etree import ElementTree
 
+from defusedxml import ElementTree
 from dissect import cstruct
 
 from dissect.etl.exceptions import ManifestNotFoundError
