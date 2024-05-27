@@ -123,7 +123,7 @@ class EventHeaderExtendedDataItem:
         "raw_data",
     ]
 
-    def __init__(self, payload: memoryview):
+    def __init__(self, payload: bytes):
         header = c_etl_headers.EventHeaderExtendedDataItemHeader(payload)
         self.size = header.Size
         self.ext_type = self._extension_type(header.ExtType)

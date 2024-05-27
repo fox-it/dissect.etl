@@ -167,7 +167,7 @@ class Header:
 class InvalidHeader(Header):
     """An invalid header."""
 
-    def __init__(self, marker: Marker, data: memoryview, etl: ETL):
+    def __init__(self, marker: Marker, data: bytes, etl: ETL):
         raise InvalidHeaderError()
 
 
@@ -191,7 +191,7 @@ class EventProperty(IntEnum):
 
 
 class MessageTraceHeader(Header):
-    def __init__(self, marker: Marker, data: memoryview, etl: ETL):
+    def __init__(self, marker: Marker, data: bytes, etl: ETL):
         super().__init__(marker, data, etl)
         self.payload_offset = 0
         self.opcode = None
