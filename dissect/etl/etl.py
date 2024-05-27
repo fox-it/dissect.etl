@@ -23,7 +23,7 @@ from datetime import datetime
 from typing import Any, Iterable, Optional
 from uuid import UUID
 
-from dissect.cstruct import Instance, cstruct
+from dissect.cstruct import Structure, cstruct
 from dissect.util.compression.lzxpress import decompress as xpress_decompress
 from dissect.util.sid import read_sid
 from dissect.util.ts import wintimestamp
@@ -279,7 +279,7 @@ class Event:
 
         # Pretty print Instance values.
         update_event = {}
-        instance_values = ((key, value) for key, value in struct_events.items() if isinstance(value, Instance))
+        instance_values = ((key, value) for key, value in struct_events.items() if isinstance(value, Structure))
         for key, value in instance_values:
             if hasattr(value, "sid"):
                 update_event[key] = read_sid(value.sid.dumps())
