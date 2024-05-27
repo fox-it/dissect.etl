@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from typing import TYPE_CHECKING
 
 from dissect.etl.exceptions import NoMoreEventsError
@@ -21,8 +23,6 @@ from dissect.etl.utils import c_etl_headers
 
 if TYPE_CHECKING:
     from dissect.etl.etl import ETL
-else:
-    ETL = "ETL"
 
 HEADERS: dict[int, Header] = {
     c_etl_headers.TRACE_HEADER_TYPE_SYSTEM32: SystemHeader,

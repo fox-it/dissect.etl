@@ -7,13 +7,13 @@ from dissect.cstruct import cstruct
 import dissect.etl.etl as etl
 from dissect.etl.etl import Buffer
 from dissect.etl.exceptions import InvalidBufferError
-from dissect.etl.utils import c_etl_definitions
+from dissect.etl.utils import etl_def
 
 from .test_wmi_buffer_header import RAW_BUFFER_HEADER as RAW_BUFFER_HEADER
 
 
 def load_etl_definition() -> cstruct:
-    return cstruct().load(c_etl_definitions)
+    return cstruct().load(etl_def)
 
 
 def setup_mocked_etlfile(start_offset: int = 0) -> MagicMock:

@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from abc import abstractmethod
 from datetime import datetime
 from enum import IntEnum
@@ -12,8 +14,6 @@ from dissect.etl.utils import bytes_left, c_etl_headers
 
 if TYPE_CHECKING:
     from dissect.etl.etl import ETL
-else:
-    ETL = "ETL"
 
 
 BIT64_HEADERS = [

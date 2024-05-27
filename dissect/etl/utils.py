@@ -3,7 +3,7 @@ from uuid import UUID
 
 from dissect.cstruct import cstruct
 
-c_global_def = """
+global_def = """
 #define EVENT_TRACE_GROUP_HEADER            0x0000
 #define EVENT_TRACE_GROUP_IO                0x0100
 #define EVENT_TRACE_GROUP_MEMORY            0x0200
@@ -51,9 +51,9 @@ c_global_def = """
 #define EVENT_TRACE_TYPE_WINEVT_SEND        0x09  // Send Event (WinEvent compatible)
 #define EVENT_TRACE_TYPE_WINEVT_RECEIVE     0xF0  // Receive Event (WinEvent compatible)
 """
-c_etl_global = cstruct().load(c_global_def)
+c_etl_global = cstruct().load(global_def)
 
-c_etl_definitions = """
+etl_def = """
 #define TRACE_HEADER_TYPE_SYSTEM32          0x01
 #define TRACE_HEADER_TYPE_SYSTEM64          0x02
 #define TRACE_HEADER_TYPE_COMPACT32         0x03
@@ -306,7 +306,7 @@ struct EVENT_HEADER_EXT_TYPE_PROVIDER_TRAIT {
 
 
 """
-c_etl_headers = cstruct().load(c_etl_definitions)
+c_etl_headers = cstruct().load(etl_def)
 
 # Flags and enumerations
 BufferType = c_etl_headers.ETW_BUFFER_TYPE
