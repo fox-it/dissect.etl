@@ -23,16 +23,16 @@ from dissect.etl.headers.headers import Marker
         (0x90000000, 0x0F),
     ],
 )
-def test_marker_headertype(marker, expected_headertype):
+def test_marker_headertype(marker: int, expected_headertype: int) -> None:
     marker = Marker(marker)
     assert marker.header_type == expected_headertype
 
 
-def test_marker_remainder():
+def test_marker_remainder() -> None:
     marker = Marker(0xC00ADEAD)
     assert marker.remainder == 0xDEAD
 
 
-def test_marker_invalidstart():
+def test_marker_invalidstart() -> None:
     with pytest.raises(InvalidMarkerError):
         Marker(0xD0000000).header_type

@@ -20,10 +20,11 @@ from __future__ import annotations
 
 import io
 from datetime import datetime
-from typing import Any, Iterable, Optional
+from types import ModuleType
+from typing import Any, BinaryIO, Iterable, Optional
 from uuid import UUID
 
-from dissect.cstruct import Instance, cstruct
+from dissect.cstruct import Structure
 from dissect.util.compression.lzxpress import decompress as xpress_decompress
 from dissect.util.sid import read_sid
 from dissect.util.ts import wintimestamp
@@ -38,16 +39,14 @@ from dissect.etl.exceptions import (
 from dissect.etl.headers.headers import Header
 from dissect.etl.headers.logfile import LogfileHeader
 from dissect.etl.headers.utils import select_event_header
-from dissect.etl.utils import BufferFlag, c_etl_definitions
-
-c_etl = cstruct()
-c_etl.load(c_etl_definitions)
+from dissect.etl.utils import BufferFlag
+from dissect.etl.utils import c_etl_headers as c_etl
 
 
 class ETL:
     """The main interface when controlling an ETL file."""
 
-    def __init__(self, fh):
+    def __init__(self, fh: BinaryIO):
         self.fh = fh
 
         # Load the first buffer inside the file,
@@ -107,7 +106,7 @@ class ETL:
 
 
 class Buffer:
-    def __init__(self, etl, offset):
+    def __init__(self, etl: ETL, offset: int):
         self.fh = etl.fh
         self.etl = etl
         self.offset = offset
@@ -116,7 +115,7 @@ class Buffer:
         self._data = None
 
     @property
-    def header(self):
+    def header(self) -> c_etl.BufferHeader:
         if not self._header:
             self.fh.seek(self.offset)
             self._header = c_etl.BufferHeader(self.fh)
@@ -165,7 +164,7 @@ class Buffer:
             except (EOFError, NoMoreEventsError):
                 break
 
-    def read_record(self, offset):
+    def read_record(self, offset: int) -> EventRecord:
         """Parse a record from a given offset inside a buffer."""
 
         event_record = EventRecord()
@@ -179,7 +178,7 @@ class Buffer:
 
         return event_record
 
-    def open(self):
+    def open(self) -> BinaryIO:
         return io.BytesIO(self.data)
 
 
@@ -212,10 +211,10 @@ class EventRecord:
         return self._event
 
     @property
-    def aligned_size(self):
+    def aligned_size(self) -> int:
         return (self.size + 7) & 0xFFFFFFF8
 
-    def __repr__(self):
+    def __repr__(self) -> str:
         return "<EventRecord>"
 
 
@@ -228,7 +227,7 @@ class Event:
         "_header",
     ]
 
-    def __init__(self, header: Header, event_manifest):
+    def __init__(self, header: Header, event_manifest: ModuleType):
         self._header = header
         self._manifest = event_manifest
         self._event = None
@@ -247,7 +246,7 @@ class Event:
         else:
             self._struct = None
 
-    def __getattr__(self, attribute: str):
+    def __getattr__(self, attribute: str) -> Any:
         try:
             return getattr(self._struct, attribute)
         except AttributeError:
@@ -265,7 +264,7 @@ class Event:
         """Returns the GUID of the provider from the header."""
         return self._header.provider_id
 
-    def symbol(self):
+    def symbol(self) -> Optional[str]:
         return self._event.symbol if self._event else None
 
     def event_values(self) -> dict[str, Any]:
@@ -279,7 +278,7 @@ class Event:
 
         # Pretty print Instance values.
         update_event = {}
-        instance_values = ((key, value) for key, value in struct_events.items() if isinstance(value, Instance))
+        instance_values = ((key, value) for key, value in struct_events.items() if isinstance(value, Structure))
         for key, value in instance_values:
             if hasattr(value, "sid"):
                 update_event[key] = read_sid(value.sid.dumps())
@@ -288,12 +287,12 @@ class Event:
         event_values.update(update_event)
         return event_values
 
-    def __repr__(self):
+    def __repr__(self) -> str:
         symbol = self._event.symbol if self._event else None
         return f"{self._header} <{symbol} {self._struct!r}>"
 
 
-def parse_payload(header: Header):
+def parse_payload(header: Header) -> Event:
     """Parse the event payload using the appropriate manifest, if available."""
 
     try:

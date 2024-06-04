@@ -3,10 +3,11 @@ from unittest.mock import Mock
 import pytest
 
 from dissect.etl.exceptions import InvalidHeaderError
+from dissect.etl.headers.headers import Header
 from dissect.etl.headers.utils import select_event_header
 
 
-def create_header(marker: int, min_size: int = 0, other_bytes=b"\xAD\xDE"):
+def create_header(marker: int, min_size: int = 0, other_bytes: bytes = b"\xAD\xDE") -> Header:
     marker_bytes = int.to_bytes(marker, 4, "little")
     amount_of_padding = min_size - len(marker_bytes) - len(other_bytes)
     padding_bytes = b"\x00" * amount_of_padding
@@ -41,17 +42,17 @@ def create_header(marker: int, min_size: int = 0, other_bytes=b"\xAD\xDE"):
         (0xC015ADDE, 0x48),
     ],
 )
-def test_header_size(marker, expected_size):
+def test_header_size(marker: int, expected_size: int) -> None:
     header = create_header(marker=marker, min_size=expected_size)
     assert header.minimal_size == expected_size
 
 
-def test_message_headersize():
+def test_message_headersize() -> None:
     header = create_header(marker=0x9000ADDE, other_bytes=b"\x00\x00\x00\x00")
     assert header.minimal_size == 0x8
 
 
-def test_header_size_events():
+def test_header_size_events() -> None:
     header = create_header(0xC00ADEAD)
     assert header.size == 0xDEAD
 
@@ -67,17 +68,17 @@ def test_header_size_events():
         0xC0110000,
     ],
 )
-def test_header_kernel_event_size(marker):
+def test_header_kernel_event_size(marker: int) -> None:
     header = create_header(marker)
     assert header.size == 0xDEAD
 
 
-def test_invalid_header():
+def test_invalid_header() -> None:
     with pytest.raises(InvalidHeaderError):
         create_header(0xC0FF0000)
 
 
-def test_invalid_size():
+def test_invalid_size() -> None:
     with pytest.raises(InvalidHeaderError):
         create_header(0xC00A0000)
 
@@ -93,7 +94,7 @@ def test_invalid_size():
         0xC015DEAD,
     ],
 )
-def test_is_64bit(marker):
+def test_is_64bit(marker: int) -> None:
     header = create_header(marker=marker, min_size=80)
     assert header.is_64bit
 
@@ -111,7 +112,7 @@ def test_is_64bit(marker):
         0xC00DDEAD,
     ],
 )
-def test_is_32bit(marker):
+def test_is_32bit(marker: int) -> None:
     header = create_header(marker=marker, min_size=80)
     assert not header.is_64bit
 
@@ -126,7 +127,7 @@ def test_is_32bit(marker):
         (0xC0010000, 0),
     ],
 )
-def test_additional_header_size(marker, expected_size):
+def test_additional_header_size(marker: int, expected_size: int) -> None:
     sys_header = create_header(marker)
     assert sys_header._additional_header_bytes() == expected_size
     assert sys_header.minimal_size == 0x20 + expected_size
@@ -156,6 +157,6 @@ def test_additional_header_size(marker, expected_size):
         (0xC015ADDE, {"ThreadId": 0, "ProcessId": 0, "ParentGuid": "00000000-0000-0000-0000-000000000000"}),
     ],
 )
-def test_additional_fields(marker, expected_fields):
+def test_additional_fields(marker: int, expected_fields: dict) -> None:
     header = create_header(marker)
     assert header.additional_header_fields() == expected_fields

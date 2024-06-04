@@ -6,8 +6,8 @@ from pathlib import Path
 from string import Formatter
 from typing import BinaryIO
 from uuid import UUID
-from xml.etree import ElementTree
 
+from defusedxml import ElementTree
 from dissect import cstruct
 
 from dissect.etl.exceptions import ManifestNotFoundError
@@ -25,8 +25,7 @@ from uuid import UUID
 from collections import namedtuple
 
 from dissect import cstruct
-from dissect.cstruct import RawType
-from dissect.cstruct import Structure
+from dissect.cstruct import BaseType, MetaType, Structure
 
 Structure._calc_offsets = lambda _: None
 Keyword = namedtuple('Keyword', ['name', 'message', 'mask'])
@@ -34,68 +33,60 @@ Task = namedtuple('Task', ['name', 'message', 'value'])
 Event = namedtuple('Event', ['symbol', 'value', 'version', 'opcode', 'level', 'task', 'keywords', 'template'])
 
 
-class VariableType(RawType):
-    def __init__(self, cstruct, type_, size):
-        self._t = type_
-        super().__init__(cstruct, 'VariableType', size)
+class VariableType(BaseType):
+    type: MetaType
+    size: int
 
-    def as_64bit(self):
+    @classmethod
+    def as_64bit(cls):
         raise NotImplementedError()
 
-    def as_32bit(self):
+    @classmethod
+    def as_32bit(cls):
         raise NotImplementedError()
 
-    def _read(self, stream, context=None):
-        return self._t._read(stream, context)
+    @classmethod
+    def _read(cls, stream, context=None):
+        return cls.type._read(stream, context)
 
-    def _read_array(self, stream, count, context=None):
-        return self._t._read_array(stream, count, context)
+    @classmethod
+    def _read_0(cls, stream, context=None):
+        return cls.type._read_0(stream, context)
 
-    def _read_0(self, stream, context=None):
-        return self._t._read_0(stream, context)
-
-    def _write(self, stream, data):
-        return self._t._write(stream, data)
-
-    def _write_array(self, stream, data):
-        return self._t._write_array(stream, data)
-
-    def _write_0(self, stream, data):
-        return self._t._write_0(stream, data)
+    @classmethod
+    def _write(cls, stream, data):
+        return cls.type._write(stream, data)
 
 
 class EtwPointer(VariableType):
-    def __init__(self, cstruct):
-        super().__init__(cstruct, cstruct.uint64, 8)
-
-    def as_64bit(self):
-        if self.size == 8:
+    @classmethod
+    def as_64bit(cls):
+        if cls.size == 8:
             return
-        self.size = 8
-        self._t = self.cstruct.uint64
+        cls.size = 8
+        cls.type = cls.cs.uint64
 
-    def as_32bit(self):
-        if self.size == 4:
+    def as_32bit(cls):
+        if cls.size == 4:
             return
-        self.size = 4
-        self._t = self.cstruct.uint32
+        cls.size = 4
+        cls.type = cls.cs.uint32
 
 
 class UserSID_blob(VariableType):
-    def __init__(self, cstruct):
-        super().__init__(cstruct, cstruct.char[16], 16)
-
-    def as_64bit(self):
-        if self.size == 16:
+    @classmethod
+    def as_64bit(cls):
+        if cls.size == 16:
             return
-        self.size = 16
-        self._t = self.cstruct.char[16]
+        cls.size = 16
+        cls.type = cls.cs.char[16]
 
-    def as_32bit(self):
-        if self.size == 8:
+    @classmethod
+    def as_32bit(cls):
+        if cls.size == 8:
             return
-        self.size = 8
-        self._t = self.cstruct.char[8]
+        cls.size = 8
+        cls.type = cls.cs.char[8]
 
 
 PROVIDER_NAME = {provider_name!r}
@@ -103,8 +94,8 @@ PROVIDER_GUID = UUID({provider_guid!r})
 PROVIDER_SYMBOL = {provider_symbol!r}
 
 c_parser = cstruct.cstruct()
-c_parser.addtype("EtwPointer", EtwPointer(c_parser))
-c_parser.addtype("UserSID_blob", UserSID_blob(c_parser))
+c_parser.add_custom_type("EtwPointer", EtwPointer)
+c_parser.add_custom_type("UserSID_blob", UserSID_blob)
 c_parser.load(\"\"\"
 struct SYSTEMTIME {{
     WORD    wYear;

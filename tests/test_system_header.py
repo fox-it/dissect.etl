@@ -3,6 +3,7 @@ from unittest.mock import Mock
 import pytest
 
 from dissect.etl.exceptions import InvalidMarkerError
+from dissect.etl.headers.headers import Header
 from dissect.etl.headers.utils import select_event_header
 
 SYSTEM_EVENT = (
@@ -14,13 +15,13 @@ SYSTEM_EVENT = (
 )
 
 
-def create_event(EVENT: bytearray):
+def create_event(EVENT: bytearray) -> Header:
     header_data = memoryview(EVENT)
     return select_event_header(header_data, Mock())
 
 
 # Parse the system header as I imagined it should
-def test_system_header():
+def test_system_header() -> None:
     event = create_event(SYSTEM_EVENT)
     header = event.header
     assert header.Version == 0x0002
@@ -34,6 +35,6 @@ def test_system_header():
     assert header.ProcessorTime == 0x1
 
 
-def test_parse_failed():
+def test_parse_failed() -> None:
     with pytest.raises(InvalidMarkerError):
         create_event(SYSTEM_EVENT[1:])

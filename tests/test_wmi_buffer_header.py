@@ -1,8 +1,8 @@
 from unittest.mock import Mock
 
-from dissect import cstruct
+from dissect.cstruct import cstruct
 
-from dissect.etl.utils import c_etl_definitions
+from dissect.etl.utils import etl_def
 
 RAW_BUFFER_HEADER = (
     b"\x00\x00\x10\x00\xA8\x02\x00\x00\xA8\x02\x00\x00\x00\x00\x00\x00"
@@ -13,13 +13,11 @@ RAW_BUFFER_HEADER = (
 )
 
 
-def load_etl_definition():
-    c_etl = cstruct.cstruct()
-    c_etl.load(c_etl_definitions)
-    return c_etl
+def load_etl_definition() -> cstruct:
+    return cstruct().load(etl_def)
 
 
-def test_buffer_header_parsed_correctly():
+def test_buffer_header_parsed_correctly() -> None:
     mocked_filehandle = Mock()
     mocked_filehandle.read.return_value = RAW_BUFFER_HEADER
     loaded_definition = load_etl_definition()
