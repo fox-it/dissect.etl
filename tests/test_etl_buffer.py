@@ -1,15 +1,20 @@
-from typing import Iterator
+from __future__ import annotations
+
+from typing import TYPE_CHECKING
 from unittest.mock import MagicMock, patch
 
 import pytest
 from dissect.cstruct import cstruct
 
 import dissect.etl.etl as etl
+from dissect.etl.c_etl import etl_def
 from dissect.etl.etl import Buffer
 from dissect.etl.exceptions import InvalidBufferError
-from dissect.etl.utils import etl_def
 
-from .test_wmi_buffer_header import RAW_BUFFER_HEADER as RAW_BUFFER_HEADER
+from .test_wmi_buffer_header import RAW_BUFFER_HEADER
+
+if TYPE_CHECKING:
+    from collections.abc import Iterator
 
 
 def load_etl_definition() -> cstruct:
@@ -36,8 +41,7 @@ def setup_buffer_with_offsets(data_offset: int, start_offset: int = 0) -> Buffer
 def setup_buffer_iterator(mocked_read_record: MagicMock, data_offset: int) -> Iterator[Buffer]:
     mocked_read_record.next_offset = 10
     buffer = setup_buffer_with_offsets(data_offset=data_offset)
-    buffer_iterator = iter(buffer)
-    return buffer_iterator
+    return iter(buffer)
 
 
 def test_buffer_data_len() -> None:
@@ -45,7 +49,7 @@ def test_buffer_data_len() -> None:
     mocked_etl.c_etl = load_etl_definition()
 
     buffer = Buffer(mocked_etl, 0)
-    buffer.data
+    assert buffer.data
 
     mocked_etl.fh.read.assert_called_with(buffer.filled_bytes - buffer.data_offset)
 
@@ -56,7 +60,10 @@ def test_buffer_iteration_succeed(mocked_read_record: Buffer) -> None:
     assert next(buffer_iterator) == mocked_read_record.return_value
 
 
-@pytest.mark.parametrize("header_offset,data_offset", [(0, 10), (0, 0)])
+@pytest.mark.parametrize(
+    ("header_offset", "data_offset"),
+    [(0, 10), (0, 0)],
+)
 @patch.object(Buffer, "read_record", side_effect=[EOFError])
 def test_buffer_iterations(mocked_read_record: Buffer, header_offset: int, data_offset: int) -> None:
     buffer_iterator = setup_buffer_iterator(mocked_read_record, data_offset)
@@ -67,7 +74,7 @@ def test_buffer_iterations(mocked_read_record: Buffer, header_offset: int, data_
 def test_negative_read_offset() -> None:
     buffer = setup_buffer_with_offsets(start_offset=10, data_offset=5)
     with pytest.raises(InvalidBufferError):
-        buffer.data
+        assert buffer.data
 
 
 def test_different_buffer_sizes() -> None:

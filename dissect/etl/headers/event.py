@@ -1,22 +1,28 @@
+from __future__ import annotations
+
 from enum import IntEnum
-from typing import Any, OrderedDict
+from typing import TYPE_CHECKING, Any
 from uuid import UUID
 
-from dissect.cstruct import CharArray
 from dissect.util.sid import read_sid
 
+from dissect.etl.c_etl import c_etl
 from dissect.etl.exceptions import ExtendedDataItemException
 from dissect.etl.headers.headers import Header
-from dissect.etl.utils import c_etl_headers
+
+if TYPE_CHECKING:
+    from collections import OrderedDict
+
+    from dissect.cstruct import CharArray
 
 
 def read_uuid(data: bytes) -> UUID:
-    uuid_data = c_etl_headers.char[16](data)
+    uuid_data = c_etl.char[16](data)
     return UUID(bytes_le=uuid_data)
 
 
 def read_instance_info(data: bytes) -> OrderedDict[str, Any]:
-    instance_info = c_etl_headers.EVENT_HEADER_EXT_TYPE_ITEM_INSTANCE(data)
+    instance_info = c_etl.EVENT_HEADER_EXT_TYPE_ITEM_INSTANCE(data)
     output_dict = instance_info._values
     parent_guid = read_uuid(output_dict.get("ParentGuid"))
     output_dict["ParentGuid"] = f"{parent_guid}"
@@ -24,26 +30,26 @@ def read_instance_info(data: bytes) -> OrderedDict[str, Any]:
 
 
 def read_stack_trace(data: bytes) -> OrderedDict[str, Any]:
-    instance_info = c_etl_headers.EVENT_HEADER_EXT_TYPE_STACK_TRACE32(data)
+    instance_info = c_etl.EVENT_HEADER_EXT_TYPE_STACK_TRACE32(data)
     address_length = (len(data) - 8) // instance_info._sizes["Address"]
-    instance_info._values["Address"] = c_etl_headers.uint32[address_length](data[8:])
+    instance_info._values["Address"] = c_etl.uint32[address_length](data[8:])
     return instance_info._values
 
 
 def read_stack_trace64(data: bytes) -> OrderedDict[str, Any]:
-    instance_info = c_etl_headers.EVENT_HEADER_EXT_TYPE_STACK_TRACE64(data)
+    instance_info = c_etl.EVENT_HEADER_EXT_TYPE_STACK_TRACE64(data)
     address_length = (len(data) - 8) // instance_info._sizes["Address"]
-    instance_info._values["Address"] = c_etl_headers.uint64[address_length](data[8:])
+    instance_info._values["Address"] = c_etl.uint64[address_length](data[8:])
     return instance_info._values
 
 
 def read_provider_traits(data: bytes) -> OrderedDict[str, Any]:
-    provider_traits = c_etl_headers.EVENT_HEADER_EXT_TYPE_PROVIDER_TRAIT(data)
+    provider_traits = c_etl.EVENT_HEADER_EXT_TYPE_PROVIDER_TRAIT(data)
     output_dict = provider_traits._values
     trait_offset = sum(provider_traits._sizes.values())
     traits = []
     while trait_offset < provider_traits.TraitSize:
-        trait = c_etl_headers.TRAIT(data[trait_offset:])
+        trait = c_etl.TRAIT(data[trait_offset:])
         traits.append(trait._values)
         trait_offset += trait.TraitSize
     output_dict.update({"Traits": traits})
@@ -54,13 +60,13 @@ class EventDescriptor:
     """An representation of the Event data in a event header."""
 
     __slots__ = [
-        "id",
-        "version",
         "channel",
+        "id",
+        "keywords",
         "level",
         "opcode",
         "task",
-        "keywords",
+        "version",
     ]
 
     def __init__(self, header: Header):
@@ -94,18 +100,18 @@ class ExtType(IntEnum):
 extended_data_item_reader = {
     ExtType.RELATED_ACTIVITY_ID: lambda x: {"Guid": f"{read_uuid(x)}"},
     ExtType.SID: lambda x: {"Sid": read_sid(x)},
-    ExtType.TS_ID: lambda x: {"SessionId": c_etl_headers.uint32(x)},
+    ExtType.TS_ID: lambda x: {"SessionId": c_etl.uint32(x)},
     ExtType.INSTANCE_INFO: read_instance_info,
     ExtType.STACK_TRACE32: read_stack_trace,
     ExtType.STACK_TRACE64: read_stack_trace64,
-    ExtType.PEBS_INDEX: lambda x: {"PebsIndex": c_etl_headers.uint32(x)},
-    ExtType.PMC_COUNTERS: lambda x: {"PmcCounters": c_etl_headers.uint64[len(x) // 8](x)},
-    ExtType.PSM_KEY: lambda x: {"PsmKey": c_etl_headers.uint64(x)},
-    ExtType.EVENT_KEY: lambda x: {"EventKey": c_etl_headers.uint64(x)},
-    ExtType.EVENT_SCHEMA_TL: lambda x: {"EventSchema": c_etl_headers.char[len(x)](x)},
+    ExtType.PEBS_INDEX: lambda x: {"PebsIndex": c_etl.uint32(x)},
+    ExtType.PMC_COUNTERS: lambda x: {"PmcCounters": c_etl.uint64[len(x) // 8](x)},
+    ExtType.PSM_KEY: lambda x: {"PsmKey": c_etl.uint64(x)},
+    ExtType.EVENT_KEY: lambda x: {"EventKey": c_etl.uint64(x)},
+    ExtType.EVENT_SCHEMA_TL: lambda x: {"EventSchema": c_etl.char[len(x)](x)},
     ExtType.PROV_TRAITS: read_provider_traits,
-    ExtType.PROCESS_START_KEY: lambda x: {"ProcessStartKey": c_etl_headers.uint64(x)},
-    ExtType.TYPE_MAX: lambda x: {"Max": c_etl_headers.char[len(x)](x)},
+    ExtType.PROCESS_START_KEY: lambda x: {"ProcessStartKey": c_etl.uint64(x)},
+    ExtType.TYPE_MAX: lambda x: {"Max": c_etl.char[len(x)](x)},
 }
 
 
@@ -113,18 +119,18 @@ class EventHeaderExtendedDataItem:
     """Loads an extended data item from payload."""
 
     __slots__ = [
-        "size",
-        "reserved1",
+        "data",
+        "data_size",
         "ext_type",
         "linkage",
-        "reserved2",
-        "data_size",
-        "data",
         "raw_data",
+        "reserved1",
+        "reserved2",
+        "size",
     ]
 
     def __init__(self, payload: bytes):
-        header = c_etl_headers.EventHeaderExtendedDataItemHeader(payload)
+        header = c_etl.EventHeaderExtendedDataItemHeader(payload)
         self.size = header.Size
         self.ext_type = self._extension_type(header.ExtType)
         self.reserved1 = header.Reserved1
@@ -187,9 +193,9 @@ class EventHeader(Header):
         return 0x50
 
     @property
-    def _header_type(self) -> c_etl_headers.EventHeader:
+    def _header_type(self) -> c_etl.EventHeader:
         """Type of header that will get parsed."""
-        return c_etl_headers.EventHeader
+        return c_etl.EventHeader
 
     def _read_extensions(self) -> list[EventHeaderExtendedDataItem]:
         """Read header extensions from the payload"""

@@ -1,9 +1,14 @@
-from abc import abstractmethod
-from typing import Any
-from uuid import UUID
+from __future__ import annotations
 
+from abc import abstractmethod
+from typing import TYPE_CHECKING, Any
+
+from dissect.etl.c_etl import c_etl
 from dissect.etl.headers.headers import Header
-from dissect.etl.utils import c_etl_headers, lookup_guid
+from dissect.etl.utils import lookup_guid
+
+if TYPE_CHECKING:
+    from uuid import UUID
 
 
 class SystemSpecificHeader(Header):
@@ -11,11 +16,10 @@ class SystemSpecificHeader(Header):
     @abstractmethod
     def _minimal_size(self) -> int:
         """Minimum size for this event."""
-        pass
 
     @property
     def size(self) -> int:
-        return c_etl_headers.uint16(self.data[4:6])
+        return c_etl.uint16(self.data[4:6])
 
     @property
     def minimal_size(self) -> int:
@@ -75,8 +79,8 @@ class SystemHeader(SystemSpecificHeader):
         return 0x20
 
     @property
-    def _header_type(self) -> type[c_etl_headers.SystemHeader]:
-        return c_etl_headers.SystemHeader
+    def _header_type(self) -> type[c_etl.SystemHeader]:
+        return c_etl.SystemHeader
 
     @property
     def process_id(self) -> int:
@@ -117,8 +121,8 @@ class CompactSystemHeader(SystemSpecificHeader):
     """
 
     @property
-    def _header_type(self) -> type[c_etl_headers.CompactSystemHeader]:
-        return c_etl_headers.CompactSystemHeader
+    def _header_type(self) -> type[c_etl.CompactSystemHeader]:
+        return c_etl.CompactSystemHeader
 
     @property
     def _minimal_size(self) -> int:
@@ -149,8 +153,8 @@ class PerfinfoTraceHeader(SystemSpecificHeader):
         return 0x10
 
     @property
-    def _header_type(self) -> type[c_etl_headers.PerformanceInfoHeader]:
-        return c_etl_headers.PerformanceInfoHeader
+    def _header_type(self) -> type[c_etl.PerformanceInfoHeader]:
+        return c_etl.PerformanceInfoHeader
 
     def additional_header_fields(self) -> dict[str, Any]:
         return {}

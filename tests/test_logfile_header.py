@@ -1,41 +1,44 @@
+from __future__ import annotations
+
+from typing import TYPE_CHECKING
 from unittest.mock import Mock, patch
 
 import pytest
 
-from dissect.etl.headers.headers import Header
+from dissect.etl.exceptions import InvalidHookIdException
 from dissect.etl.headers.logfile import LogfileHeader
 from dissect.etl.headers.utils import select_event_header
 
 from .testutils import buffer_system_data
 
+if TYPE_CHECKING:
+    from dissect.etl.headers.headers import Header
+
 
 def create_header(marker: int) -> Header:
     marker_bytes = int.to_bytes(marker, 4, "little")
-    event_data = marker_bytes + b"\xAD\xDE" + buffer_system_data()[6:].tobytes()
+    event_data = marker_bytes + b"\xad\xde" + buffer_system_data()[6:].tobytes()
     data = memoryview(event_data)
     return select_event_header(data, Mock())
 
 
 def create_event(bit64: bool) -> Header:
-    marker = 0xC0010000
-    if bit64:
-        marker = 0xC0020000
-    return create_header(marker)
+    return create_header(0xC0020000 if bit64 else 0xC0010000)
 
 
 def test_logfile_header_creation() -> None:
-    LogfileHeader(create_event(bit64=False))
+    assert LogfileHeader(create_event(bit64=False))
 
 
 def test_logfile_wrong_hookid() -> None:
     mocked_system_header = Mock()
     mocked_system_header.hook_id = 0x1
-    with pytest.raises(Exception):
+    with pytest.raises(InvalidHookIdException):
         LogfileHeader(mocked_system_header)
 
 
 @pytest.mark.parametrize(
-    "is_64_bit,expected_size",
+    ("is_64_bit", "expected_size"),
     [
         (True, 0x118),
         (False, 0x110),
@@ -70,7 +73,7 @@ def test_timscale_2(mocked_header: LogfileHeader) -> None:
 
 
 @pytest.mark.parametrize(
-    "perf_freq,expected_result",
+    ("perf_freq", "expected_result"),
     [
         (10, 1000000.0),
         (20, 500000.0),
@@ -86,7 +89,7 @@ def test_timescale_1(mocked_header: LogfileHeader, perf_freq: int, expected_resu
 
 
 @pytest.mark.parametrize(
-    "perf_freq,expected_result",
+    ("perf_freq", "expected_result"),
     [
         (10, 1.0),
         (20, 0.5),
