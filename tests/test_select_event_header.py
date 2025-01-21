@@ -1,13 +1,18 @@
+from __future__ import annotations
+
+from typing import TYPE_CHECKING
 from unittest.mock import Mock
 
 import pytest
 
 from dissect.etl.exceptions import InvalidHeaderError
-from dissect.etl.headers.headers import Header
 from dissect.etl.headers.utils import select_event_header
 
+if TYPE_CHECKING:
+    from dissect.etl.headers.headers import Header
 
-def create_header(marker: int, min_size: int = 0, other_bytes: bytes = b"\xAD\xDE") -> Header:
+
+def create_header(marker: int, min_size: int = 0, other_bytes: bytes = b"\xad\xde") -> Header:
     marker_bytes = int.to_bytes(marker, 4, "little")
     amount_of_padding = min_size - len(marker_bytes) - len(other_bytes)
     padding_bytes = b"\x00" * amount_of_padding
@@ -25,7 +30,7 @@ def create_header(marker: int, min_size: int = 0, other_bytes: bytes = b"\xAD\xD
 
 
 @pytest.mark.parametrize(
-    "marker, expected_size",
+    ("marker", "expected_size"),
     [
         (0xC0010000, 0x20),
         (0xC0020000, 0x20),
@@ -107,7 +112,6 @@ def test_is_64bit(marker: int) -> None:
         0xC0100000,
         0xC00ADEAD,
         0xC00BDEAD,
-        0xC0100000,
         0xC012DEAD,
         0xC00DDEAD,
     ],
@@ -118,7 +122,7 @@ def test_is_32bit(marker: int) -> None:
 
 
 @pytest.mark.parametrize(
-    "marker, expected_size",
+    ("marker", "expected_size"),
     [
         (0xC0018000, 8),
         (0xC0010700, 8 * 7),
@@ -134,7 +138,7 @@ def test_additional_header_size(marker: int, expected_size: int) -> None:
 
 
 @pytest.mark.parametrize(
-    "marker, expected_fields",
+    ("marker", "expected_fields"),
     [
         (0xC0010000, {"ThreadId": 0, "ProcessId": 0, "ProcessorTime": 0}),
         (0xC0020000, {"ThreadId": 0, "ProcessId": 0, "ProcessorTime": 0}),

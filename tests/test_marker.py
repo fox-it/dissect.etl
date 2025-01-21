@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 import pytest
 
 from dissect.etl.exceptions import InvalidMarkerError
@@ -5,7 +7,7 @@ from dissect.etl.headers.headers import Marker
 
 
 @pytest.mark.parametrize(
-    "marker, expected_headertype",
+    ("marker", "expected_header_type"),
     [
         (0xC0010000, 0x01),
         (0xC0020000, 0x02),
@@ -23,16 +25,14 @@ from dissect.etl.headers.headers import Marker
         (0x90000000, 0x0F),
     ],
 )
-def test_marker_headertype(marker: int, expected_headertype: int) -> None:
-    marker = Marker(marker)
-    assert marker.header_type == expected_headertype
+def test_marker_headertype(marker: int, expected_header_type: int) -> None:
+    assert Marker(marker).header_type == expected_header_type
 
 
 def test_marker_remainder() -> None:
-    marker = Marker(0xC00ADEAD)
-    assert marker.remainder == 0xDEAD
+    assert Marker(0xC00ADEAD).remainder == 0xDEAD
 
 
 def test_marker_invalidstart() -> None:
     with pytest.raises(InvalidMarkerError):
-        Marker(0xD0000000).header_type
+        assert Marker(0xD0000000).header_type

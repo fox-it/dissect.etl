@@ -1,16 +1,20 @@
+from __future__ import annotations
+
 import importlib
 import importlib.resources
 import types
 from collections import defaultdict
 from pathlib import Path
 from string import Formatter
-from typing import BinaryIO
-from uuid import UUID
+from typing import TYPE_CHECKING, BinaryIO
 
 from defusedxml import ElementTree
 from dissect import cstruct
 
 from dissect.etl.exceptions import ManifestNotFoundError
+
+if TYPE_CHECKING:
+    from uuid import UUID
 
 MODPATH = "dissect.etl.manifests"
 
@@ -170,24 +174,25 @@ def lookup(guid: UUID) -> types.ModuleType:
 
     try:
         mod = importlib.import_module(f"{MODPATH}.{{{guid}}}")
-        CACHE[guid] = mod
-        return mod
     except ImportError:
         pass
+    else:
+        CACHE[guid] = mod
+        return mod
 
     try:
         mod = compile_xml(guid, get_resource_string(f"manifests/xml/{{{guid}}}.xml"))
-        CACHE[guid] = mod
-        return mod
     except IOError:
         pass
+    else:
+        CACHE[guid] = mod
+        return mod
 
     raise ManifestNotFoundError(guid)
 
 
 def compile_file(guid: UUID, path: str) -> types.ModuleType:
-    with open(path, "r") as fh:
-        return compile_xml(guid, fh.read())
+    return compile_xml(guid, Path(path).read_text())
 
 
 def compile_xml(guid: UUID, s: str) -> types.ModuleType:
@@ -200,17 +205,17 @@ def compile_xml(guid: UUID, s: str) -> types.ModuleType:
 
 
 def generate_from_file(path: str) -> str:
-    with open(path, "r") as fh:
-        return generate_from_xml(fh.read())
+    return generate_from_xml(Path(path).read_text())
 
 
 def generate_from_xml(s: str) -> str:
     e = ElementTree.fromstring(s)
     formatter = Formatter()
 
-    strings = []
-    for string in e.iter("{http://schemas.microsoft.com/win/2004/08/events}string"):
-        strings.append("    '{id}': '{value}',".format(**string.attrib))
+    strings = [
+        "    '{id}': '{value}',".format(**string.attrib)
+        for string in e.iter("{http://schemas.microsoft.com/win/2004/08/events}string")
+    ]
 
     keywords = []
     for keyword in e.iter("{http://schemas.microsoft.com/win/2004/08/events}keyword"):
@@ -233,7 +238,7 @@ def generate_from_xml(s: str) -> str:
 
             if ftype.lower() in c_parser.typedefs:
                 ctype = ftype.lower()
-                line = "{} {{name}}".format(ctype)
+                line = f"{ctype} {{name}}"
             else:
                 line = FIELD_MAP[ftype]
 
@@ -245,7 +250,7 @@ def generate_from_xml(s: str) -> str:
         templates.append(
             STRUCT_FMT.format(
                 name=sname,
-                fields="\n".join(["    {};".format(field) for field in fields]),
+                fields="\n".join([f"    {field};" for field in fields]),
             )
         )
 

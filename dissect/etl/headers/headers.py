@@ -1,28 +1,30 @@
 from __future__ import annotations
 
 from abc import abstractmethod
-from datetime import datetime
 from enum import IntEnum
 from io import BytesIO
 from typing import TYPE_CHECKING, Any
 from uuid import UUID
 
-from dissect.cstruct.types.structure import Structure
-
+from dissect.etl.c_etl import c_etl
 from dissect.etl.exceptions import InvalidHeaderError, InvalidMarkerError
-from dissect.etl.utils import bytes_left, c_etl_headers
+from dissect.etl.utils import bytes_left
 
 if TYPE_CHECKING:
+    from datetime import datetime
+
+    from dissect.cstruct.types.structure import Structure
+
     from dissect.etl.etl import ETL
 
 
 BIT64_HEADERS = [
-    c_etl_headers.TRACE_HEADER_TYPE_SYSTEM64,
-    c_etl_headers.TRACE_HEADER_TYPE_COMPACT64,
-    c_etl_headers.TRACE_HEADER_TYPE_PERFINFO64,
-    c_etl_headers.TRACE_HEADER_TYPE_EVENT_HEADER64,
-    c_etl_headers.TRACE_HEADER_TYPE_FULL_HEADER64,
-    c_etl_headers.TRACE_HEADER_TYPE_INSTANCE64,
+    c_etl.TRACE_HEADER_TYPE_SYSTEM64,
+    c_etl.TRACE_HEADER_TYPE_COMPACT64,
+    c_etl.TRACE_HEADER_TYPE_PERFINFO64,
+    c_etl.TRACE_HEADER_TYPE_EVENT_HEADER64,
+    c_etl.TRACE_HEADER_TYPE_FULL_HEADER64,
+    c_etl.TRACE_HEADER_TYPE_INSTANCE64,
 ]
 
 
@@ -47,10 +49,10 @@ class Marker:
     def header_type(self) -> int:
         if self.flags == self.HEADER_FLAGS:
             return (self.marker & self.HEADER_MASK) >> 16
-        elif self.flags == self.MESSAGE_FLAGS:
-            return c_etl_headers.TRACE_HEADER_TYPE_MESSAGE
-        else:
-            raise InvalidMarkerError("Unknown flags combination")
+        if self.flags == self.MESSAGE_FLAGS:
+            return c_etl.TRACE_HEADER_TYPE_MESSAGE
+
+        raise InvalidMarkerError("Unknown flags combination")
 
     @property
     def remainder(self) -> int:
@@ -77,13 +79,11 @@ class Header:
     @abstractmethod
     def minimal_size(self) -> int:
         """Minimum header size."""
-        pass
 
     @property
     @abstractmethod
     def _header_type(self) -> type[Structure] | None:
         """Type of header that will get parsed."""
-        pass
 
     @property
     def provider_id(self) -> UUID:
@@ -147,16 +147,14 @@ class Header:
         """Additional fields that hold interesting information.
 
         each header subclass defines what additional information it wants to return to a record."""
-        pass
 
     def standard_header_fields(self) -> dict[str, Any]:
         """Some standard header information that can be retrieved for any header."""
-        standard_fields = {
+        return {
             "version": self.version,
             "provider_id": self.provider_id,
             "timestamp": self.timestamp,
         }
-        return standard_fields
 
     def __repr__(self) -> str:
         standard_output = " ".join(f"{key}={value}" for key, value in self.standard_header_fields().items())
@@ -168,13 +166,11 @@ class InvalidHeader(Header):
     """An invalid header."""
 
     def __init__(self, marker: Marker, data: bytes, etl: ETL):
-        raise InvalidHeaderError()
+        raise InvalidHeaderError
 
 
 class UnimplementedHeader(Header):
     """A header that isn't implemented yet."""
-
-    pass
 
 
 class EventProperty(IntEnum):
@@ -207,27 +203,27 @@ class MessageTraceHeader(Header):
         return 0x8
 
     @property
-    def _header_type(self) -> type[c_etl_headers.MessageHeader]:
-        return c_etl_headers.MessageHeader
+    def _header_type(self) -> type[c_etl.MessageHeader]:
+        return c_etl.MessageHeader
 
     def _parse_event_properties(self) -> None:
         payload = BytesIO(self.payload)
 
         if self.event_property & EventProperty.SEQUENCE:
-            self._sequence_number = c_etl_headers.uint32(payload)
+            self._sequence_number = c_etl.uint32(payload)
 
         if self._contains_provider_id(payload):
             self._provider_id = UUID(bytes_le=payload.read(16))
 
         if bytes_left(payload) >= 8 and self.event_property & EventProperty.TIMESTAMP:
-            self._time_delta = c_etl_headers.uint64(payload)
+            self._time_delta = c_etl.uint64(payload)
 
         if self.event_property & EventProperty.COMPONENT_ID:
             raise NotImplementedError("header.EventProperty & 4")
 
         if self.event_property & EventProperty.SYSTEMINFO and bytes_left(payload) >= 8:
-            self._thread_id = c_etl_headers.uint32(payload)
-            self._process_id = c_etl_headers.uint32(payload)
+            self._thread_id = c_etl.uint32(payload)
+            self._process_id = c_etl.uint32(payload)
 
     @property
     def time_delta(self) -> int:
@@ -266,9 +262,9 @@ class MessageTraceHeader(Header):
     def _contains_provider_id(self, payload: BytesIO) -> bool:
         if not (bytes_left(payload) >= 16):
             return False
-        else:
-            event_property = self.event_property & (EventProperty.GUID | EventProperty.COMPONENT_ID)
-            return event_property == EventProperty.GUID
+
+        event_property = self.event_property & (EventProperty.GUID | EventProperty.COMPONENT_ID)
+        return event_property == EventProperty.GUID
 
     def additional_header_fields(self) -> dict[str, Any]:
         return {
@@ -283,8 +279,8 @@ class EventTraceHeader(Header):
         return 0x30
 
     @property
-    def _header_type(self) -> type[c_etl_headers.EventTraceHeader]:
-        return c_etl_headers.EventTraceHeader
+    def _header_type(self) -> type[c_etl.EventTraceHeader]:
+        return c_etl.EventTraceHeader
 
     @property
     def thread_id(self) -> int:
@@ -309,8 +305,8 @@ class EventInstanceHeader(Header):
         return 0x38
 
     @property
-    def _header_type(self) -> type[c_etl_headers.EventInstanceHeader]:
-        return c_etl_headers.EventInstanceHeader
+    def _header_type(self) -> type[c_etl.EventInstanceHeader]:
+        return c_etl.EventInstanceHeader
 
     def additional_header_fields(self) -> dict[str, Any]:
         return {
@@ -330,8 +326,8 @@ class EventInstanceGUIDHeader(Header):
         return 0x48
 
     @property
-    def _header_type(self) -> type[c_etl_headers.EventInstanceGUIDHeader]:
-        return c_etl_headers.EventInstanceGUIDHeader
+    def _header_type(self) -> type[c_etl.EventInstanceGUIDHeader]:
+        return c_etl.EventInstanceGUIDHeader
 
     @property
     def thread_id(self) -> int:

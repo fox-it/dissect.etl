@@ -1,12 +1,17 @@
 # Sources for the logfile header:
 #  - https://docs.microsoft.com/en-us/windows/win32/api/evntrace/ns-evntrace-trace_logfile_header
 #  - https://www.geoffchappell.com/studies/windows/km/ntoskrnl/api/etw/tracelog/trace_logfile_header.htm
+from __future__ import annotations
+
 from enum import IntEnum
+from typing import TYPE_CHECKING
 
 from dissect.cstruct import Structure, cstruct
 
 from dissect.etl.exceptions import InvalidHookIdException
-from dissect.etl.headers.system import SystemHeader
+
+if TYPE_CHECKING:
+    from dissect.etl.headers.system import SystemHeader
 
 logfile_def = """
 struct SYSTEMTIME {

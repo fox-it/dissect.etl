@@ -19,10 +19,7 @@
 from __future__ import annotations
 
 import io
-from datetime import datetime
-from types import ModuleType
-from typing import Any, BinaryIO, Iterable, Optional
-from uuid import UUID
+from typing import TYPE_CHECKING, Any, BinaryIO
 
 from dissect.cstruct import Structure
 from dissect.util.compression.lzxpress import decompress as xpress_decompress
@@ -30,17 +27,23 @@ from dissect.util.sid import read_sid
 from dissect.util.ts import wintimestamp
 
 from dissect.etl import manifest
+from dissect.etl.c_etl import BufferFlag, c_etl
 from dissect.etl.exceptions import (
     InvalidBufferError,
     InvalidHeaderError,
     ManifestNotFoundError,
     NoMoreEventsError,
 )
-from dissect.etl.headers.headers import Header
 from dissect.etl.headers.logfile import LogfileHeader
 from dissect.etl.headers.utils import select_event_header
-from dissect.etl.utils import BufferFlag
-from dissect.etl.utils import c_etl_headers as c_etl
+
+if TYPE_CHECKING:
+    from collections.abc import Iterator
+    from datetime import datetime
+    from types import ModuleType
+    from uuid import UUID
+
+    from dissect.etl.headers.headers import Header
 
 
 class ETL:
@@ -86,14 +89,13 @@ class ETL:
 
         return buf
 
-    def buffers(self) -> Iterable[Buffer]:
+    def buffers(self) -> Iterator[Buffer]:
         for i in range(self.logfile_header.buffers_written):
             yield self.buffer(i)
 
-    def __iter__(self) -> Iterable[Event]:
+    def __iter__(self) -> Iterator[Event]:
         for buffer in self.buffers():
-            for event in buffer:
-                yield event
+            yield from buffer
 
     def calculate_timestamp(self, time_delta: int) -> datetime:
         return wintimestamp(self.get_filetime_for_event(time_delta))
@@ -154,15 +156,15 @@ class Buffer:
     def next_buffer(self) -> int:
         return self.offset + self.size
 
-    def __iter__(self) -> Iterable[EventRecord]:
+    def __iter__(self) -> Iterator[EventRecord]:
         offset = 0
-        while offset < self.filled_bytes:
-            try:
+        try:
+            while offset < self.filled_bytes:
                 event = self.read_record(offset)
                 offset += event.aligned_size
                 yield event
-            except (EOFError, NoMoreEventsError):
-                break
+        except (EOFError, NoMoreEventsError):
+            pass
 
     def read_record(self, offset: int) -> EventRecord:
         """Parse a record from a given offset inside a buffer."""
@@ -184,8 +186,8 @@ class Buffer:
 
 class EventRecord:
     __slots__ = (
-        "_header",
         "_event",
+        "_header",
     )
 
     def __init__(self):
@@ -220,11 +222,11 @@ class EventRecord:
 
 class Event:
     __slots__ = [
-        "_record",
-        "_manifest",
-        "_struct",
         "_event",
         "_header",
+        "_manifest",
+        "_record",
+        "_struct",
     ]
 
     def __init__(self, header: Header, event_manifest: ModuleType):
@@ -252,7 +254,7 @@ class Event:
         except AttributeError:
             return object.__getattribute__(self, attribute)
 
-    def provider_name(self) -> Optional[str]:
+    def provider_name(self) -> str | None:
         """Returns the manifest provider name."""
         return self._manifest.PROVIDER_NAME if self._manifest else None
 
@@ -264,7 +266,7 @@ class Event:
         """Returns the GUID of the provider from the header."""
         return self._header.provider_id
 
-    def symbol(self) -> Optional[str]:
+    def symbol(self) -> str | None:
         return self._event.symbol if self._event else None
 
     def event_values(self) -> dict[str, Any]:
