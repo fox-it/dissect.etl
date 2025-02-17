@@ -59,9 +59,10 @@ class SystemSpecificHeader(Header):
 
 
 class SystemHeader(SystemSpecificHeader):
-    """
-    Creates a System header.
-    This header has the following types associated with them.
+    """Creates a System header.
+
+    This header has the following types associated with them::
+
         Version
         Marker
         Size
@@ -106,9 +107,10 @@ class SystemHeader(SystemSpecificHeader):
 
 
 class CompactSystemHeader(SystemSpecificHeader):
-    """
-    Creates a compact system header.
-    This header has the following types associated with them.
+    """Creates a compact system header.
+
+    This header has the following types associated with them::
+
         Version
         Marker
         Size
