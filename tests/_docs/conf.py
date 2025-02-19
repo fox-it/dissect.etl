@@ -1,3 +1,5 @@
+project = "dissect.etl"
+
 extensions = [
     "autoapi.extension",
     "sphinx.ext.autodoc",
