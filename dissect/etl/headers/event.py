@@ -23,7 +23,7 @@ def read_uuid(data: bytes) -> UUID:
 
 def read_instance_info(data: bytes) -> OrderedDict[str, Any]:
     instance_info = c_etl.EVENT_HEADER_EXT_TYPE_ITEM_INSTANCE(data)
-    output_dict = instance_info._values
+    output_dict = instance_info.__values__
     parent_guid = read_uuid(output_dict.get("ParentGuid"))
     output_dict["ParentGuid"] = f"{parent_guid}"
     return output_dict
@@ -31,26 +31,26 @@ def read_instance_info(data: bytes) -> OrderedDict[str, Any]:
 
 def read_stack_trace(data: bytes) -> OrderedDict[str, Any]:
     instance_info = c_etl.EVENT_HEADER_EXT_TYPE_STACK_TRACE32(data)
-    address_length = (len(data) - 8) // instance_info._sizes["Address"]
-    instance_info._values["Address"] = c_etl.uint32[address_length](data[8:])
-    return instance_info._values
+    address_length = (len(data) - 8) // 4
+    instance_info.__values__["Address"] = c_etl.uint32[address_length](data[8:])
+    return instance_info.__values__
 
 
 def read_stack_trace64(data: bytes) -> OrderedDict[str, Any]:
     instance_info = c_etl.EVENT_HEADER_EXT_TYPE_STACK_TRACE64(data)
-    address_length = (len(data) - 8) // instance_info._sizes["Address"]
-    instance_info._values["Address"] = c_etl.uint64[address_length](data[8:])
-    return instance_info._values
+    address_length = (len(data) - 8) // 8
+    instance_info.__values__["Address"] = c_etl.uint64[address_length](data[8:])
+    return instance_info.__values__
 
 
 def read_provider_traits(data: bytes) -> OrderedDict[str, Any]:
     provider_traits = c_etl.EVENT_HEADER_EXT_TYPE_PROVIDER_TRAIT(data)
-    output_dict = provider_traits._values
-    trait_offset = sum(provider_traits._sizes.values())
+    output_dict = provider_traits.__values__
+    trait_offset = sum(provider_traits.__sizes__.values())
     traits = []
     while trait_offset < provider_traits.TraitSize:
         trait = c_etl.TRAIT(data[trait_offset:])
-        traits.append(trait._values)
+        traits.append(trait.__values__)
         trait_offset += trait.TraitSize
     output_dict.update({"Traits": traits})
     return output_dict
