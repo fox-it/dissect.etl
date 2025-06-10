@@ -52,8 +52,7 @@ def read_provider_traits(data: bytes) -> OrderedDict[str, Any]:
         trait = c_etl.TRAIT(data[trait_offset:])
         traits.append(trait.__values__)
         trait_offset += trait.TraitSize
-    output_dict.update({"Traits": traits})
-    return output_dict
+    return {**output_dict, "Traits": traits}
 
 
 class EventDescriptor:
