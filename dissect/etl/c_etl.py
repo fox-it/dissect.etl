@@ -284,12 +284,12 @@ struct EVENT_HEADER_EXT_TYPE_ITEM_INSTANCE {
 
 struct EVENT_HEADER_EXT_TYPE_STACK_TRACE32 {
     uint64 MatchId;
-    uint32 Address[];
+    uint32 Address[EOF];
 };
 
 struct EVENT_HEADER_EXT_TYPE_STACK_TRACE64 {
     uint64 MatchId;
-    uint64 Address[];
+    uint64 Address[EOF];
 };
 
 struct TRAIT {
