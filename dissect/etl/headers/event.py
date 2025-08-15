@@ -11,8 +11,6 @@ from dissect.etl.exceptions import ExtendedDataItemException
 from dissect.etl.headers.headers import Header
 
 if TYPE_CHECKING:
-    from collections import OrderedDict
-
     from dissect.cstruct import CharArray
 
 
@@ -21,39 +19,32 @@ def read_uuid(data: bytes) -> UUID:
     return UUID(bytes_le=uuid_data)
 
 
-def read_instance_info(data: bytes) -> OrderedDict[str, Any]:
+def read_instance_info(data: bytes) -> dict[str, Any]:
     instance_info = c_etl.EVENT_HEADER_EXT_TYPE_ITEM_INSTANCE(data)
-    output_dict = instance_info._values
+    output_dict = instance_info.__values__
     parent_guid = read_uuid(output_dict.get("ParentGuid"))
     output_dict["ParentGuid"] = f"{parent_guid}"
     return output_dict
 
 
-def read_stack_trace(data: bytes) -> OrderedDict[str, Any]:
-    instance_info = c_etl.EVENT_HEADER_EXT_TYPE_STACK_TRACE32(data)
-    address_length = (len(data) - 8) // instance_info._sizes["Address"]
-    instance_info._values["Address"] = c_etl.uint32[address_length](data[8:])
-    return instance_info._values
+def read_stack_trace(data: bytes) -> dict[str, Any]:
+    return c_etl.EVENT_HEADER_EXT_TYPE_STACK_TRACE32(data).__values__
 
 
-def read_stack_trace64(data: bytes) -> OrderedDict[str, Any]:
-    instance_info = c_etl.EVENT_HEADER_EXT_TYPE_STACK_TRACE64(data)
-    address_length = (len(data) - 8) // instance_info._sizes["Address"]
-    instance_info._values["Address"] = c_etl.uint64[address_length](data[8:])
-    return instance_info._values
+def read_stack_trace64(data: bytes) -> dict[str, Any]:
+    return c_etl.EVENT_HEADER_EXT_TYPE_STACK_TRACE64(data).__values__
 
 
-def read_provider_traits(data: bytes) -> OrderedDict[str, Any]:
+def read_provider_traits(data: bytes) -> dict[str, Any]:
     provider_traits = c_etl.EVENT_HEADER_EXT_TYPE_PROVIDER_TRAIT(data)
-    output_dict = provider_traits._values
-    trait_offset = sum(provider_traits._sizes.values())
+    output_dict = provider_traits.__values__
+    trait_offset = len(provider_traits)
     traits = []
     while trait_offset < provider_traits.TraitSize:
         trait = c_etl.TRAIT(data[trait_offset:])
-        traits.append(trait._values)
+        traits.append(trait.__values__)
         trait_offset += trait.TraitSize
-    output_dict.update({"Traits": traits})
-    return output_dict
+    return {**output_dict, "Traits": traits}
 
 
 class EventDescriptor:
@@ -97,7 +88,7 @@ class ExtType(IntEnum):
     UNKNOWN = 0x0
 
 
-extended_data_item_reader = {
+EXTENDED_DATA_READERS = {
     ExtType.RELATED_ACTIVITY_ID: lambda x: {"Guid": f"{read_uuid(x)}"},
     ExtType.SID: lambda x: {"Sid": read_sid(x)},
     ExtType.TS_ID: lambda x: {"SessionId": c_etl.uint32(x)},
@@ -159,7 +150,7 @@ class EventHeaderExtendedDataItem:
             return ExtType.UNKNOWN
 
     def _read_extension_type(self, ext_type: ExtType, data: CharArray) -> dict[str, Any]:
-        reader = extended_data_item_reader.get(ext_type)
+        reader = EXTENDED_DATA_READERS.get(ext_type)
         return reader(data) if reader else {}
 
     def __getattr__(self, name: str) -> Any:
@@ -232,7 +223,8 @@ class EventHeader(Header):
     def activity_id(self) -> UUID:
         """The ID associated with the activity in the event.
 
-        At least, that is my assumption."""
+        At least, that is my assumption.
+        """
         return UUID(bytes_le=self.header.ActivityId)
 
     @property
