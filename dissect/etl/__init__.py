@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dissect.etl.etl import ETL, Buffer
 from dissect.etl.exceptions import (
     Error,

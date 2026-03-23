@@ -146,7 +146,8 @@ class Header:
     def additional_header_fields(self) -> dict[str, Any]:
         """Additional fields that hold interesting information.
 
-        each header subclass defines what additional information it wants to return to a record."""
+        each header subclass defines what additional information it wants to return to a record.
+        """
 
     def standard_header_fields(self) -> dict[str, Any]:
         """Some standard header information that can be retrieved for any header."""
@@ -319,7 +320,8 @@ class EventInstanceGUIDHeader(Header):
     """A more expanded EventInstanceHeader.
 
     This is created from an EventInstanceHeader, but it's not quite clear which one is specifically used.
-    For now, this header is default."""
+    For now, this header is default.
+    """
 
     @property
     def minimal_size(self) -> int:

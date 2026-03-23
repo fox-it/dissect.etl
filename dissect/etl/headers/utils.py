@@ -45,7 +45,7 @@ HEADERS: dict[int, Header] = {
 
 
 def select_event_header(data: memoryview, etl: ETL) -> Header:
-    """Select event header with marker"""
+    """Select event header with marker."""
     marker_int = c_etl.uint32(data[:4])
 
     if marker_int == 0xFFFFFFFF:

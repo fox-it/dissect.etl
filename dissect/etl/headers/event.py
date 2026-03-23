@@ -189,7 +189,7 @@ class EventHeader(Header):
         return c_etl.EventHeader
 
     def _read_extensions(self) -> list[EventHeaderExtendedDataItem]:
-        """Read header extensions from the payload"""
+        """Read header extensions from the payload."""
         count = 0
         items = []
         payload_pos = 0

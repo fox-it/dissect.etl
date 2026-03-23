@@ -76,7 +76,6 @@ class ETL:
 
     def buffer(self, index: int) -> Buffer:
         """Reads a specific buffer into memory."""
-
         if index < 0 or index >= self.logfile_header.buffers_written:
             raise IndexError("buffer index out of range")
 
@@ -168,7 +167,6 @@ class Buffer:
 
     def read_record(self, offset: int) -> EventRecord:
         """Parse a record from a given offset inside a buffer."""
-
         event_record = EventRecord()
         data = self.data[offset:]
         header = select_event_header(
@@ -196,7 +194,7 @@ class EventRecord:
 
     @property
     def header(self) -> Header:
-        """A header of the type Header"""
+        """A header of the type Header."""
         return self._header
 
     @property
@@ -296,7 +294,6 @@ class Event:
 
 def parse_payload(header: Header) -> Event:
     """Parse the event payload using the appropriate manifest, if available."""
-
     try:
         mf = manifest.lookup(header.provider_id)
         if header.is_64bit:
