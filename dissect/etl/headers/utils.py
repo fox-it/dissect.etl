@@ -9,7 +9,6 @@ from dissect.etl.headers.headers import (
     ErrorHeader,
     EventInstanceGUIDHeader,
     EventTraceHeader,
-    Header,
     InvalidHeader,
     Marker,
     MessageTraceHeader,
@@ -23,6 +22,9 @@ from dissect.etl.headers.system import (
 
 if TYPE_CHECKING:
     from dissect.etl.etl import ETL
+    from dissect.etl.headers.headers import (
+        Header,
+    )
 
 HEADERS: dict[int, Header] = {
     c_etl.TRACE_HEADER_TYPE_SYSTEM32: SystemHeader,

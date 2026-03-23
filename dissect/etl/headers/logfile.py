@@ -6,11 +6,13 @@ from __future__ import annotations
 from enum import IntEnum
 from typing import TYPE_CHECKING
 
-from dissect.cstruct import Structure, cstruct
+from dissect.cstruct import cstruct
 
 from dissect.etl.exceptions import InvalidHookIdException
 
 if TYPE_CHECKING:
+    from dissect.cstruct import Structure
+
     from dissect.etl.headers.system import SystemHeader
 
 logfile_def = """
