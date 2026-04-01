@@ -235,7 +235,11 @@ class Event:
         # Not every header has an opcode and version, so check it like this.
         opcode = getattr(header, "opcode", None)
         version = getattr(header, "version", None)
-        key = (opcode, version)
+        try:
+            ide = getattr(header.descriptor, "task", None)
+        except:
+            ide = opcode
+        key = (ide, version)
 
         if event_manifest:
             try:
@@ -274,7 +278,7 @@ class Event:
         The event data is from a specific manifest file if it exists.
         """
         event_values = self._header.additional_header_fields()
-        struct_events = self._struct._values if self._struct else {}
+        struct_events = self._struct.__values__ if self._struct else {}
 
         # Pretty print Instance values.
         update_event = {}

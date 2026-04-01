@@ -217,7 +217,7 @@ class EventHeader(Header):
     @property
     def provider_id(self) -> UUID:
         """Provider that generated this event."""
-        return UUID(bytes=self.header.ProviderId)
+        return UUID(bytes_le=self.header.ProviderId)
 
     @property
     def activity_id(self) -> UUID:

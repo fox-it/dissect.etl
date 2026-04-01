@@ -70,6 +70,7 @@ class EtwPointer(VariableType):
         cls.size = 8
         cls.type = cls.cs.uint64
 
+    @classmethod
     def as_32bit(cls):
         if cls.size == 4:
             return
