@@ -92,26 +92,26 @@ struct TimeZoneInformation {
 };
 
 flag ETW_BUFFER_FLAG: uint16 {
-    NORMAL           = 0x0000
-    FLUSH_MARKER     = 0x0001
-    EVENTS_LOST      = 0x0002
-    BUFFER_LOST      = 0x0004
-    RTBACKUP_CORRUPT = 0x0008
-    RTBACKUP         = 0x0010
-    PROC_INDEX       = 0x0020
-    COMPRESSED  = 0x0040
+    NORMAL           = 0x0000,
+    FLUSH_MARKER     = 0x0001,
+    EVENTS_LOST      = 0x0002,
+    BUFFER_LOST      = 0x0004,
+    RTBACKUP_CORRUPT = 0x0008,
+    RTBACKUP         = 0x0010,
+    PROC_INDEX       = 0x0020,
+    COMPRESSED       = 0x0040,
 };
 
 enum ETW_BUFFER_TYPE: uint16 {
-    GENERIC      = 0x0000
-    RUNDOWN      = 0x0001
-    CTX_SWAP     = 0x0002
-    REFTIME      = 0x0003
-    HEADER       = 0x0004
-    BATCHED      = 0x0005
-    EMPTY_MARKER = 0x0006
-    DBG_INFO     = 0x0007
-    MAXIMUM      = 0x0008
+    GENERIC      = 0x0000,
+    RUNDOWN      = 0x0001,
+    CTX_SWAP     = 0x0002,
+    REFTIME      = 0x0003,
+    HEADER       = 0x0004,
+    BATCHED      = 0x0005,
+    EMPTY_MARKER = 0x0006,
+    DBG_INFO     = 0x0007,
+    MAXIMUM      = 0x0008,
 };
 
 /* WMI_BUFFER_HEADER (latest)*/
@@ -240,7 +240,7 @@ struct EventInstanceHeader {
         };
     };
     uint64  ParentRegHandle;
-}
+};
 
 struct EventInstanceGUIDHeader {
     uint16  Size;
